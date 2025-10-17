@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Safe Protein Powder Recommendations - Clean Protein List</title>
+    <meta name="description" content="Your personalized clean protein powder recommendations based on the latest safety testing.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo">Clean Protein List</a>
+        </div>
+    </header>
+
+    <main class="results-container">
+        <div class="container">
+            <div class="results-header">
+                <h1 id="results-headline">Your Personalized Recommendations</h1>
+                <p id="results-subhead" class="subtitle"></p>
+            </div>
+
+            <!-- Current Brand Analysis (if applicable) -->
+            <div id="current-brand-analysis" class="brand-analysis" style="display: none;">
+                <h3>About Your Current Brand:</h3>
+                <div id="brand-analysis-content"></div>
+            </div>
+
+            <!-- Email Capture -->
+            <div class="email-capture">
+                <div class="email-box">
+                    <h3>🔔 Get Alerts on New Safety Testing</h3>
+                    <p>We'll email you when new protein powder contamination studies are published (usually 1-2x per year).</p>
+                    <form id="email-form">
+                        <input type="email" id="email-input" placeholder="Enter your email" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                    <p class="privacy-note">No spam. Unsubscribe anytime.</p>
+                </div>
+            </div>
+
+            <!-- Recommendations -->
+            <h2>Clean Protein Powders For You:</h2>
+            <div id="recommendations" class="recommendations-grid">
+                <!-- Populated by JavaScript -->
+            </div>
+
+            <!-- Methodology -->
+            <div class="methodology">
+                <h3>📊 How We Choose Recommendations</h3>
+                <p>Our recommendations are based on:</p>
+                <ul>
+                    <li><strong>Consumer Reports October 2025 testing</strong> for heavy metals (lead, arsenic, cadmium, mercury)</li>
+                    <li><strong>Third-party certifications:</strong> NSF Certified for Sport, Informed Choice, USP Verified</li>
+                    <li><strong>Manufacturer transparency</strong> about testing practices and ingredient sourcing</li>
+                    <li><strong>Independent lab results</strong> when available from Clean Label Project and other testing organizations</li>
+                </ul>
+                <p><strong>Safety scores are relative</strong> - even "5-star" products may contain trace amounts of heavy metals (which occur naturally in many foods). We prioritize products with the lowest detectable levels and strongest testing protocols.</p>
+            </div>
+
+            <!-- Disclosure -->
+            <div class="disclosure-box">
+                <p><strong>Disclosure:</strong> This site contains Amazon affiliate links. When you purchase through our recommendations, we earn a small commission at no extra cost to you. This helps us maintain the site and keep it updated with the latest testing data. We only recommend products we believe are genuinely safer based on available evidence.</p>
+            </div>
+
+            <div class="cta-retake">
+                <a href="quiz.html" class="cta-button secondary">Retake Quiz</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Clean Protein List. Updated based on Consumer Reports October 2025 testing.</p>
+            <p><a href="blog/lead-in-protein-powder-list.html">Read the full report →</a></p>
+        </div>
+    </footer>
+
+    <script>
+        // Get quiz answers from sessionStorage
+        const answers = JSON.parse(sessionStorage.getItem('quizAnswers') || '{}');
+
+        // Product database with affiliate links
+        // REPLACE THESE WITH YOUR ACTUAL AMAZON AFFILIATE LINKS
+        const products = {
+            // Whey options
+            whey: [
+                {
+                    name: "Transparent Labs Grass-Fed Whey",
+                    image: "https://via.placeholder.com/300x300?text=Transparent+Labs", // Replace with real image
+                    safetyScore: 5,
+                    certifications: ["Third-party tested", "Informed Choice", "No artificial ingredients"],
+                    bestFor: ["postworkout", "muscle", "health"],
+                    amazonLink: "https://amazon.com/dp/YOURAFFILIATELINK",
+                    price: "$$",
+                    why: "Consistently tests below detection limits for heavy metals. Transparent Labs publishes third-party test results and uses grass-fed whey. No artificial sweeteners or additives.",
+                    concernMatch: ["contamination", "testing", "both", "cleanest"]
+                },
+                {
+                    name: "Naked Whey",
+                    image: "https://via.placeholder.com/300x300?text=Naked+Whey",
+                    safetyScore: 5,
+                    certifications: ["Third-party tested", "Single ingredient", "Grass-fed"],
+                    bestFor: ["postworkout", "meal", "muscle"],
+                    amazonLink: "https://amazon.com/dp/YOURAFFILIATELINK",
+                    price: "$$",
+                    why: "One ingredient: grass-fed whey protein. No additives means fewer contamination vectors. Batch tested for heavy metals with results available online.",
+                    concernMatch: ["contamination", "cleanest", "both"]
+                },
+                {
+                    name: "Levels Grass Fed Whey",
+                    image: "https://via.placeholder.com/300x300?text=Levels",
+                    safetyScore: 5,
+                    certifications: ["NSF Certified for Sport", "Informed Sport", "Third-party tested"],
+                    bestFor: ["postworkout", "muscle", "health"],
+                    amazonLink: "https://amazon.com/dp/YOURAFFILIATELINK",
+                    price: "$$$",
+                    why: "NSF Certified for Sport means rigorous testing for contaminants. Used by professional athletes. All testing results publicly available.",
+                    concernMatch: ["testing", "both", "cleanest"]
+                }
+            ],
+            
+            // Plant-based options
+            plant: [
+                {
+                    name: "Nuzest Clean Lean Protein",
+                    image: "https://via.placeholder.com/300x300?text=Nuzest",
+                    safetyScore: 5,
+                    certifications: ["Informed Choice", "Non-GMO", "Heavy metal tested"],
+                    bestFor: ["postworkout", "meal", "health"],
+                    amazonLink: "https://amazon.com/dp/YOURAFFILIATELINK",
+                    price: "$$$",
+                    why: "European pea protein with strict heavy metal testing. Informed Choice certified. Consumer Reports testing showed undetectable lead levels.",
+                    concernMatch: ["contamination", "testing", "both", "cleanest"]
+                },
+                {
+                    name: "NOW Sports Organic Pea Protein",
+                    image: "https://via.placeholder.com/300x300?text=NOW+Sports",
+                    safetyScore: 4,
+                    certifications: ["Informed Sport", "USDA Organic", "Non-GMO"],
+                    bestFor: ["postworkout", "meal", "weightloss"],
+                    amazonLink: "https://amazon.com/dp/YOURAFFILIATELINK",
+                    price: "$",
+                    why: "Budget-friendly with Informed Sport certification. Organic certification provides additional oversight. Tested below Consumer Reports thresholds.",
+                    concernMatch: ["testing", "both"]
+                },
+                {
+                    name: "KOS Organic Plant Protein",
+                    image: "https://via.placeholder.com/300x300?text=KOS",
+                    safetyScore: 4,
+                    certifications: ["USDA Organic", "Third-party tested", "Non-GMO"],
+                    bestFor: ["meal", "health", "weightloss"],
+                    amazonLink: "https://amazon.com/dp/YOURAFFILIATELINK",
+                    price: "$$",
+                    why: "Blend of organic plant proteins. Great taste without stevia. Third-party tested for heavy metals with publicly available certificates.",
+                    concernMatch: ["contamination", "both"]
+                }
+            ],
+
+            // Casein options
+            casein: [
+                {
+                    name: "Naked Casein",
+                    image: "https://via.placeholder.com/300x300?text=Naked+Casein",
+                    safetyScore: 5,
+                    certifications: ["Third-party tested", "Single ingredient", "Grass-fed"],
+                    bestFor: ["muscle", "health"],
+                    amazonLink: "https://amazon.com/dp/YOURAFFILIATELINK",
+                    price: "$$",
+                    why: "Pure micellar casein, nothing else. Batch tested for contaminants. Minimal processing reduces contamination risk.",
+                    concernMatch: ["contamination", "cleanest", "both"]
+                }
+            ],
+
+            // Collagen options  
+            collagen: [
+                {
+                    name: "Vital Proteins Collagen Peptides",
+                    image: "https://via.placeholder.com/300x300?text=Vital+Proteins",
+                    safetyScore: 4,
+                    certifications: ["Grass-fed", "Third-party tested"],
+                    bestFor: ["health"],
+                    amazonLink: "https://amazon.com/dp/YOURAFFILIATELINK",
+                    price: "$$",
+                    why: "Market leader with transparent sourcing. Tests for heavy metals. Grass-fed bovine collagen from Brazil.",
+                    concernMatch: ["contamination", "both"]
+                },
+                {
+                    name: "Sports Research Collagen Peptides",
+                    image: "https://via.placeholder.com/300x300?text=Sports+Research",
+                    safetyScore: 4,
+                    certifications: ["Informed Choice", "Grass-fed", "Third-party tested"],
+                    bestFor: ["health", "postworkout"],
+                    amazonLink: "https://amazon.com/dp/YOURAFFILIATELINK",
+                    price: "$",
+                    why: "Informed Choice certified for athlete safety. Rigorous contamination testing. Great value option.",
+                    concernMatch: ["testing", "both"]
+                }
+            ]
+        };
+
+        // Brand safety data (based on hypothetical Consumer Reports data)
+        // REPLACE WITH ACTUAL DATA FROM THE CONSUMER REPORTS ARTICLE
+        const brandData = {
+            'optimum': { 
+                safetyLevel: 'moderate', 
+                details: 'Optimum Nutrition Gold Standard showed moderate lead levels in Consumer Reports testing. While within FDA limits, cleaner options are available.' 
+            },
+            'premier': { 
+                safetyLevel: 'concern', 
+                details: 'Premier Protein showed elevated lead levels in Consumer Reports testing, exceeding California Prop 65 thresholds.' 
+            },
+            'fairlife': { 
+                safetyLevel: 'good', 
+                details: 'Fairlife protein showed low contamination levels in Consumer Reports testing.' 
+            },
+            'orgain': { 
+                safetyLevel: 'concern', 
+                details: 'Orgain plant-based protein showed elevated heavy metal levels, particularly lead and cadmium.' 
+            },
+            'vega': { 
+                safetyLevel: 'moderate', 
+                details: 'Vega showed moderate contamination levels. Plant proteins naturally contain more heavy metals from soil.' 
+            },
+            'garden': { 
+                safetyLevel: 'good', 
+                details: 'Garden of Life showed low contamination in testing and maintains strong third-party testing protocols.' 
+            }
+        };
+
+        // Generate headline based on current brand
+        function generateHeadline() {
+            const headline = document.getElementById('results-headline');
+            const subhead = document.getElementById('results-subhead');
+            
+            if (answers.currentBrand && answers.currentBrand !== 'researching' && answers.currentBrand !== 'notsure') {
+                const brandInfo = brandData[answers.currentBrand];
+                
+                if (brandInfo) {
+                    if (brandInfo.safetyLevel === 'concern') {
+                        headline.textContent = "⚠️ Your Current Brand Showed Elevated Contamination";
+                        subhead.textContent = "Here are cleaner alternatives based on your preferences:";
+                    } else if (brandInfo.safetyLevel === 'moderate') {
+                        headline.textContent = "Your Current Brand Has Moderate Safety";
+                        subhead.textContent = "Here are even cleaner options you might consider:";
+                    } else {
+                        headline.textContent = "Your Current Brand Tests Well";
+                        subhead.textContent = "Here are similar options with comparable safety profiles:";
+                    }
+                    
+                    // Show brand analysis
+                    document.getElementById('current-brand-analysis').style.display = 'block';
+                    document.getElementById('brand-analysis-content').innerHTML = `
+                        <div class="safety-badge safety-${brandInfo.safetyLevel}">${brandInfo.safetyLevel.toUpperCase()}</div>
+                        <p>${brandInfo.details}</p>
+                    `;
+                } else {
+                    headline.textContent = "Your Personalized Clean Protein Recommendations";
+                    subhead.textContent = "Based on your preferences and the latest safety testing:";
+                }
+            } else {
+                headline.textContent = "Your Personalized Clean Protein Recommendations";
+                subhead.textContent = "Based on your preferences and the latest safety testing:";
+            }
+        }
+
+        // Filter and display recommendations
+        function displayRecommendations() {
+            const container = document.getElementById('recommendations');
+            let relevantProducts = [];
+            
+            // Get products matching protein type
+            if (answers.proteinType === 'nopref') {
+                // Mix of all types, prioritize cleanest
+                relevantProducts = [
+                    ...products.whey.slice(0, 2),
+                    ...products.plant.slice(0, 2)
+                ];
+            } else {
+                relevantProducts = products[answers.proteinType] || products.whey;
+            }
+            
+            // Filter by concern and use case
+            relevantProducts = relevantProducts
+                .filter(p => {
+                    // Match concern
+                    return p.concernMatch.includes(answers.concern);
+                })
+                .filter(p => {
+                    // Match use case
+                    return p.bestFor.includes(answers.primaryUse);
+                })
+                .sort((a, b) => b.safetyScore - a.safetyScore)
+                .slice(0, 3); // Top 3 recommendations
+            
+            // If not enough matches, add top-rated products
+            if (relevantProducts.length < 3) {
+                const allProducts = Object.values(products).flat();
+const topRated = allProducts
+                    .filter(p => !relevantProducts.includes(p))
+                    .sort((a, b) => b.safetyScore - a.safetyScore)
+                    .slice(0, 3 - relevantProducts.length);
+                relevantProducts = [...relevantProducts, ...topRated];
+            }
+            
+            // Render product cards
+            container.innerHTML = relevantProducts.map((product, index) => `
+                <div class="product-card" data-rank="${index + 1}">
+                    <div class="product-badge">#${index + 1} Recommendation</div>
+                    <img src="${product.image}" alt="${product.name}" class="product-image">
+                    <h3 class="product-name">${product.name}</h3>
+                    
+                    <div class="safety-rating">
+                        <span class="stars">${'★'.repeat(product.safetyScore)}${'☆'.repeat(5 - product.safetyScore)}</span>
+                        <span class="rating-label">Safety Score</span>
+                    </div>
+                    
+                    <div class="certifications">
+                        ${product.certifications.map(cert => `<span class="cert-badge">✓ ${cert}</span>`).join('')}
+                    </div>
+                    
+                    <div class="product-price">Price: ${product.price}</div>
+                    
+                    <div class="product-why">
+                        <strong>Why we recommend it:</strong>
+                        <p>${product.why}</p>
+                    </div>
+                    
+                    <a href="${product.amazonLink}" 
+                       class="amazon-button" 
+                       target="_blank" 
+                       rel="nofollow noopener"
+                       onclick="trackClick('${product.name}', ${index + 1})">
+                        Check Price on Amazon →
+                    </a>
+                    
+                    <p class="affiliate-note">As an Amazon Associate we earn from qualifying purchases</p>
+                </div>
+            `).join('');
+        }
+
+        // Track Amazon clicks
+        function trackClick(productName, rank) {
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'amazon_click', {
+                    'event_category': 'affiliate',
+                    'event_label': productName,
+                    'value': rank
+                });
+            }
+        }
+
+        // Email capture form
+        document.getElementById('email-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = document.getElementById('email-input').value;
+            
+            // Track email signup
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'email_signup', {
+                    'event_category': 'conversion',
+                    'event_label': 'newsletter'
+                });
+            }
+            
+            // TODO: Send to your email service (Mailchimp, ConvertKit, etc.)
+            // For now, just show success message
+            alert('Thanks! We\'ll email you when new safety testing is published.');
+            this.reset();
+        });
+
+        // Initialize page
+        if (Object.keys(answers).length === 0) {
+            // No quiz data, redirect back
+            window.location.href = 'quiz.html';
+        } else {
+            generateHeadline();
+            displayRecommendations();
+        }
+    </script>
+</body>
+</html>

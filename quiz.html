@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protein Powder Safety Quiz - Clean Protein List</title>
+    <meta name="description" content="Find safe protein powder alternatives in 60 seconds based on Consumer Reports testing.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo">Clean Protein List</a>
+        </div>
+    </header>
+
+    <main class="quiz-container">
+        <div class="container">
+            <div class="progress-bar">
+                <div class="progress-fill" id="progress"></div>
+            </div>
+            <p class="progress-text">Question <span id="current-q">1</span> of 5</p>
+
+            <div id="quiz-content">
+                <!-- Question 1 -->
+                <div class="question active" id="q1">
+                    <h2>Do you currently use protein powder?</h2>
+                    <div class="options">
+                        <button class="option-btn" data-value="regular">Yes, regularly (daily or most days)</button>
+                        <button class="option-btn" data-value="occasional">Yes, occasionally</button>
+                        <button class="option-btn" data-value="researching">No, I'm researching options</button>
+                    </div>
+                </div>
+
+                <!-- Question 2 -->
+                <div class="question" id="q2">
+                    <h2>Which brand do you currently use?</h2>
+                    <p class="question-subtitle">We'll check it against Consumer Reports testing data</p>
+                    <select class="brand-select" id="current-brand">
+                        <option value="">Select your brand...</option>
+                        <option value="optimum">Optimum Nutrition Gold Standard</option>
+                        <option value="premier">Premier Protein</option>
+                        <option value="fairlife">Fairlife</option>
+                        <option value="isopure">Isopure</option>
+                        <option value="orgain">Orgain</option>
+                        <option value="vega">Vega</option>
+                        <option value="garden">Garden of Life</option>
+                        <option value="bsn">BSN Syntha-6</option>
+                        <option value="dymatize">Dymatize ISO100</option>
+                        <option value="musclemilk">MuscleMilk</option>
+                        <option value="myprotein">MyProtein</option>
+                        <option value="ritual">Ritual</option>
+                        <option value="other">Other brand</option>
+                        <option value="notsure">Not sure</option>
+                    </select>
+                    <div class="other-brand-input" id="other-brand-container" style="display: none;">
+                        <input type="text" id="other-brand-name" placeholder="Enter brand name...">
+                    </div>
+                    <button class="next-btn" id="q2-next" disabled>Next →</button>
+                </div>
+
+                <!-- Question 3 -->
+                <div class="question" id="q3">
+                    <h2>What's your PRIMARY concern right now?</h2>
+                    <div class="options">
+                        <button class="option-btn" data-value="contamination">
+                            <strong>Heavy metal contamination</strong>
+                            <span>Specifically concerned about lead, arsenic, cadmium</span>
+                        </button>
+                        <button class="option-btn" data-value="testing">
+                            <strong>Third-party testing & certifications</strong>
+                            <span>Want verified clean products (NSF, Informed Choice, etc.)</span>
+                        </button>
+                        <button class="option-btn" data-value="both">
+                            <strong>Both safety AND performance</strong>
+                            <span>Need it clean but also effective for my goals</span>
+                        </button>
+                        <button class="option-btn" data-value="cleanest">
+                            <strong>Just want the cleanest option</strong>
+                            <span>Safety is my #1 priority regardless of cost</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Question 4 -->
+                <div class="question" id="q4">
+                    <h2>Protein source preference?</h2>
+                    <div class="options">
+                        <button class="option-btn" data-value="whey">
+                            <strong>Whey</strong>
+                            <span>Dairy-based, fast-absorbing</span>
+                        </button>
+                        <button class="option-btn" data-value="plant">
+                            <strong>Plant-based</strong>
+                            <span>Pea, rice, hemp, or mixed plant proteins</span>
+                        </button>
+                        <button class="option-btn" data-value="casein">
+                            <strong>Casein</strong>
+                            <span>Slow-digesting dairy protein</span>
+                        </button>
+                        <button class="option-btn" data-value="collagen">
+                            <strong>Collagen</strong>
+                            <span>For joints, skin, and gut health</span>
+                        </button>
+                        <button class="option-btn" data-value="nopref">
+                            <strong>No preference</strong>
+                            <span>Just want the cleanest option available</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Question 5 -->
+                <div class="question" id="q5">
+                    <h2>What's your primary use?</h2>
+                    <div class="options">
+                        <button class="option-btn" data-value="postworkout">
+                            <strong>Post-workout recovery</strong>
+                            <span>After gym/training sessions</span>
+                        </button>
+                        <button class="option-btn" data-value="meal">
+                            <strong>Meal replacement</strong>
+                            <span>Busy mornings or quick nutrition</span>
+                        </button>
+                        <button class="option-btn" data-value="weightloss">
+                            <strong>Weight loss</strong>
+                            <span>High protein, low calorie</span>
+                        </button>
+                        <button class="option-btn" data-value="muscle">
+                            <strong>Muscle building</strong>
+                            <span>Serious strength/mass gains</span>
+                        </button>
+                        <button class="option-btn" data-value="health">
+                            <strong>General health</strong>
+                            <span>Daily protein supplementation</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="quiz.js"></script>
+</body>
+</html>
