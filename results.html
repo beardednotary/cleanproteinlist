@@ -81,153 +81,179 @@
         // Get quiz answers from sessionStorage
         const answers = JSON.parse(sessionStorage.getItem('quizAnswers') || '{}');
 
-        // Product database with affiliate links
-        // REPLACE THESE WITH YOUR ACTUAL AMAZON AFFILIATE LINKS
         const products = {
-            // Whey options
-            whey: [
-                {
-                    name: "Transparent Labs Grass-Fed Whey",
-                    image: "images/transparent-labs-grass-fed-whey.jpg", 
-                    safetyScore: 5,
-                    certifications: ["Third-party tested", "Informed Choice", "No artificial ingredients"],
-                    bestFor: ["postworkout", "muscle", "health"],
-                    amazonLink: "https://amzn.to/4nbxj0H",
-                    price: "$$",
-                    why: "Consistently tests below detection limits for heavy metals. Transparent Labs publishes third-party test results and uses grass-fed whey. No artificial sweeteners or additives.",
-                    concernMatch: ["contamination", "testing", "both", "cleanest"]
-                },
-                {
-                    name: "Naked Whey",
-                    image: "images/naked-whey.jpg",
-                    safetyScore: 5,
-                    certifications: ["Third-party tested", "Single ingredient", "Grass-fed"],
-                    bestFor: ["postworkout", "meal", "muscle"],
-                    amazonLink: "https://amzn.to/4oJy9TJ",
-                    price: "$$",
-                    why: "One ingredient: grass-fed whey protein. No additives means fewer contamination vectors. Batch tested for heavy metals with results available online.",
-                    concernMatch: ["contamination", "cleanest", "both"]
-                },
-                {
-                    name: "Levels Grass Fed Whey",
-                    image: "images/levels-grass-fed-whey.jpg",
-                    safetyScore: 5,
-                    certifications: ["NSF Certified for Sport", "Informed Sport", "Third-party tested"],
-                    bestFor: ["postworkout", "muscle", "health"],
-                    amazonLink: "https://amzn.to/4n5s1Ul",
-                    price: "$$$",
-                    why: "NSF Certified for Sport means rigorous testing for contaminants. Used by professional athletes. All testing results publicly available.",
-                    concernMatch: ["testing", "both", "cleanest"]
-                }
-            ],
-            
-            // Plant-based options
-            plant: [
-                {
-                    name: "Nuzest Clean Lean Protein",
-                    image: "images/nuzest-clean-lean-protein.jpg",
-                    safetyScore: 5,
-                    certifications: ["Informed Choice", "Non-GMO", "Heavy metal tested"],
-                    bestFor: ["postworkout", "meal", "health"],
-                    amazonLink: "https://amzn.to/46WE0in",
-                    price: "$$$",
-                    why: "European pea protein with strict heavy metal testing. Informed Choice certified. Consumer Reports testing showed undetectable lead levels.",
-                    concernMatch: ["contamination", "testing", "both", "cleanest"]
-                },
-                {
-                    name: "NOW Sports Organic Pea Protein",
-                    image: "images/now-sports-organic-pea-protein.jpg",
-                    safetyScore: 4,
-                    certifications: ["Informed Sport", "USDA Organic", "Non-GMO"],
-                    bestFor: ["postworkout", "meal", "weightloss"],
-                    amazonLink: "https://amzn.to/3KWsOtq",
-                    price: "$",
-                    why: "Budget-friendly with Informed Sport certification. Organic certification provides additional oversight. Tested below Consumer Reports thresholds.",
-                    concernMatch: ["testing", "both"]
-                },
-                {
-                    name: "KOS Organic Plant Protein",
-                    image: "images/kos-organic-plant-protein.jpg",
-                    safetyScore: 4,
-                    certifications: ["USDA Organic", "Third-party tested", "Non-GMO"],
-                    bestFor: ["meal", "health", "weightloss"],
-                    amazonLink: "https://amzn.to/46Vto3f",
-                    price: "$$",
-                    why: "Blend of organic plant proteins. Great taste without stevia. Third-party tested for heavy metals with publicly available certificates.",
-                    concernMatch: ["contamination", "both"]
-                }
-            ],
+    // Whey options - VERIFIED SAFE
+    whey: [
+        {
+            name: "Optimum Nutrition Gold Standard 100% Whey",
+            image: "images/optimum-nutrition-gold-standard.jpg",
+            safetyScore: 5,
+            certifications: ["CR: Better for daily consumption", "Clean Label Project Clean Sixteen", "Informed Choice"],
+            bestFor: ["postworkout", "muscle", "health"],
+            amazonLink: "https://amzn.to/43soY1t",
+            price: "$$",
+            why: "Ranked #5 in Consumer Reports testing with 'Better for daily consumption' guidance. Also appears on Clean Label Project's 'Clean Sixteen' list with non-detectable levels of all heavy metals. One of the most tested and verified safe options available.",
+            concernMatch: ["contamination", "testing", "both", "cleanest"]
+        },
+        {
+            name: "Momentous Whey Protein Isolate",
+            image: "images/momentous-whey-isolate.jpg",
+            safetyScore: 5,
+            certifications: ["CR: Better for daily consumption", "NSF Certified for Sport", "Informed Sport"],
+            bestFor: ["postworkout", "muscle", "health"],
+            amazonLink: "https://amzn.to/499U1mq",
+            price: "$$$",
+            why: "Ranked #3 in Consumer Reports with 'Better for daily consumption' rating. NSF Certified for Sport means rigorous third-party testing for contaminants and banned substances. Premium option used by professional athletes.",
+            concernMatch: ["testing", "both", "cleanest"]
+        },
+        {
+            name: "Dymatize ISO100 Hydrolyzed",
+            image: "images/dymatize-iso100.jpg",
+            safetyScore: 5,
+            certifications: ["Clean Label Project Clean Sixteen", "Informed Choice", "Non-detect for heavy metals"],
+            bestFor: ["postworkout", "muscle", "weightloss"],
+            amazonLink: "https://amzn.to/47ivklf",
+            price: "$$",
+            why: "Featured on Clean Label Project's 'Clean Sixteen' with non-detectable levels of lead, arsenic, cadmium, and mercury. Fast-absorbing hydrolyzed whey isolate with excellent safety profile.",
+            concernMatch: ["contamination", "testing", "both", "cleanest"]
+        },
+        {
+            name: "Body Fortress Super Advanced Whey",
+            image: "images/body-fortress-whey.jpg",
+            safetyScore: 5,
+            certifications: ["Clean Label Project Clean Sixteen", "Non-detect for heavy metals"],
+            bestFor: ["postworkout", "meal", "muscle"],
+            amazonLink: "https://amzn.to/4hgRNUc",
+            price: "$",
+            why: "Budget-friendly option that still made the Clean Label Project 'Clean Sixteen' list. Non-detectable heavy metal levels at a fraction of the cost of premium brands. Great value for safety-conscious buyers.",
+            concernMatch: ["contamination", "both"]
+        },
+        {
+            name: "BSN Syntha-6 Protein Powder",
+            image: "images/bsn-syntha-6.jpg",
+            safetyScore: 5,
+            certifications: ["CR: Better for daily consumption"],
+            bestFor: ["postworkout", "meal", "muscle"],
+            amazonLink: "https://amzn.to/3IOOuqU",
+            price: "$$",
+            why: "Ranked #4 by Consumer Reports with 'Better for daily consumption' guidance. Protein blend provides both fast and slow-digesting proteins. Well-established brand with consistent quality.",
+            concernMatch: ["contamination", "both"]
+        }
+    ],
+    
+    // Plant-based options - LIMITED SAFE OPTIONS
+    plant: [
+        {
+            name: "OWYN Pro Elite High Protein Shake",
+            image: "images/owyn-pro-elite.jpg",
+            safetyScore: 4,
+            certifications: ["CR: Better for daily consumption", "Plant-based", "Allergen-friendly"],
+            bestFor: ["meal", "postworkout", "health"],
+            amazonLink: "https://amzn.to/4nQ8tEE",
+            price: "$$",
+            why: "The ONLY plant-based option ranked 'Better for daily consumption' by Consumer Reports (#7). Ready-to-drink format. Free from top 8 allergens. Best safety profile among plant proteins tested.",
+            concernMatch: ["contamination", "testing", "both"]
+        },
+        {
+            name: "Ritual Essential Protein (Pregnancy & Postpartum)",
+            image: "images/ritual-protein.jpg",
+            safetyScore: 5,
+            certifications: ["Clean Label Project Clean Sixteen", "Non-detect for heavy metals", "Third-party tested"],
+            bestFor: ["health", "meal"],
+            amazonLink: "https://amzn.to/4oj2hoC",
+            price: "$$$",
+            why: "Featured on Clean Label Project's 'Clean Sixteen' with non-detectable heavy metals. Specifically formulated for pregnancy and postpartum. Premium plant-based option with rigorous testing.",
+            concernMatch: ["cleanest", "testing", "both", "contamination"]
+        },
+        {
+            name: "Puori PW1 Protein",
+            image: "images/puori-pw1.jpg",
+            safetyScore: 5,
+            certifications: ["Clean Label Project Clean Sixteen", "Informed Choice", "Non-GMO"],
+            bestFor: ["postworkout", "health"],
+            amazonLink: "https://amzn.to/4qfxkn5",
+            price: "$$$",
+            why: "Clean Label Project 'Clean Sixteen' winner. European pea protein with strict sourcing standards. Informed Choice certified. One of the cleanest plant proteins available despite higher cost.",
+            concernMatch: ["cleanest", "testing", "both", "contamination"]
+        }
+    ],
 
-            // Casein options
-            casein: [
-                {
-                    name: "Naked Casein",
-                    image: "images/naked-casein.jpg",
-                    safetyScore: 5,
-                    certifications: ["Third-party tested", "Single ingredient", "Grass-fed"],
-                    bestFor: ["muscle", "health"],
-                    amazonLink: "https://amzn.to/3LeuUF2",
-                    price: "$$",
-                    why: "Pure micellar casein, nothing else. Batch tested for contaminants. Minimal processing reduces contamination risk.",
-                    concernMatch: ["contamination", "cleanest", "both"]
-                }
-            ],
+    // Collagen - Add these based on Clean Label data
+    collagen: [
+        {
+            name: "Vital Proteins Collagen Peptides",
+            image: "images/vital-proteins-collagen.jpg",
+            safetyScore: 5,
+            certifications: ["Clean Label Project Clean Sixteen", "Grass-fed", "Non-detect for heavy metals"],
+            bestFor: ["health"],
+            amazonLink: "https://amzn.to/497O1um",
+            price: "$$",
+            why: "Featured on Clean Label Project's 'Clean Sixteen' with non-detectable heavy metals. Grass-fed bovine collagen with transparent sourcing. Market leader with consistently clean testing results.",
+            concernMatch: ["contamination", "testing", "both", "cleanest"]
+        }
+    ],
 
-            // Collagen options  
-            collagen: [
-                {
-                    name: "Vital Proteins Collagen Peptides",
-                    image: "images/vital-proteins-collagen-peptides.jpg",
-                    safetyScore: 4,
-                    certifications: ["Grass-fed", "Third-party tested"],
-                    bestFor: ["health"],
-                    amazonLink: "https://amzn.to/47tM1LN",
-                    price: "$$",
-                    why: "Market leader with transparent sourcing. Tests for heavy metals. Grass-fed bovine collagen from Brazil.",
-                    concernMatch: ["contamination", "both"]
-                },
-                {
-                    name: "Sports Research Collagen Peptides",
-                    image: "images/sports-research-collagen-peptides.jpg",
-                    safetyScore: 4,
-                    certifications: ["Informed Choice", "Grass-fed", "Third-party tested"],
-                    bestFor: ["health", "postworkout"],
-                    amazonLink: "https://amzn.to/3KMVVPZ",
-                    price: "$",
-                    why: "Informed Choice certified for athlete safety. Rigorous contamination testing. Great value option.",
-                    concernMatch: ["testing", "both"]
-                }
-            ]
-        };
+    // Casein - Safe options
+    casein: [
+        {
+            name: "Optimum Nutrition Gold Standard 100% Casein",
+            image: "images/optimum-nutrition-casein.jpg",
+            safetyScore: 4,
+            certifications: ["Same brand as Clean Sixteen whey", "Established testing protocols"],
+            bestFor: ["muscle", "health"],
+            amazonLink: "https://amzn.to/4heyXgx",
+            price: "$$",
+            why: "From the same brand as the Clean Sixteen and CR-rated whey protein. While this specific casein product wasn't tested in the CR study, Optimum Nutrition's whey showed excellent safety, suggesting strong quality control across their line.",
+            concernMatch: ["contamination", "both"]
+        }
+    ]
+};
+
 
         // Brand safety data (based on hypothetical Consumer Reports data)
         // REPLACE WITH ACTUAL DATA FROM THE CONSUMER REPORTS ARTICLE
         const brandData = {
-            'optimum': { 
-                safetyLevel: 'moderate', 
-                details: 'Optimum Nutrition Gold Standard showed moderate lead levels in Consumer Reports testing. While within FDA limits, cleaner options are available.' 
-            },
-            'premier': { 
-                safetyLevel: 'concern', 
-                details: 'Premier Protein showed elevated lead levels in Consumer Reports testing, exceeding California Prop 65 thresholds.' 
-            },
-            'fairlife': { 
-                safetyLevel: 'good', 
-                details: 'Fairlife protein showed low contamination levels in Consumer Reports testing.' 
-            },
-            'orgain': { 
-                safetyLevel: 'moderate', 
-                details: 'Orgain plant-based protein showed elevated heavy metal levels, particularly lead and cadmium.' 
-            },
-            'vega': { 
-                safetyLevel: 'moderate', 
-                details: 'Vega showed moderate contamination levels. Plant proteins naturally contain more heavy metals from soil.' 
-            },
-            'garden': { 
-                safetyLevel: 'good', 
-                details: 'Garden of Life showed low contamination in testing and maintains strong third-party testing protocols.' 
-            }
-        };
+    'optimum': { 
+        safetyLevel: 'good', 
+        details: 'Optimum Nutrition Gold Standard ranked #5 in Consumer Reports testing with "Better for daily consumption" guidance. Also appears on Clean Label Project Clean Sixteen list.' 
+    },
+    'momentous': {
+        safetyLevel: 'good',
+        details: 'Momentous Whey Isolate ranked #3 in Consumer Reports with "Better for daily consumption" rating and NSF Certified for Sport certification.'
+    },
+    'bsn': {
+        safetyLevel: 'good',
+        details: 'BSN Syntha-6 ranked #4 in Consumer Reports with "Better for daily consumption" guidance.'
+    },
+    'dymatize': {
+        safetyLevel: 'good',
+        details: 'Dymatize ISO100 featured on Clean Label Project Clean Sixteen with non-detectable heavy metals.'
+    },
+    'naked': { 
+        safetyLevel: 'concern', 
+        details: 'Naked Nutrition Vegan Mass Gainer ranked #17 (LAST) in Consumer Reports testing with "AVOID" guidance and 7.7 µg of lead per serving - the highest contamination in the study.' 
+    },
+    'vega': { 
+        safetyLevel: 'moderate', 
+        details: 'Vega Sport ranked #13 with "Occasional/limit" guidance from Consumer Reports. Plant-based proteins naturally contain more heavy metals from soil absorption.' 
+    },
+    'garden': { 
+        safetyLevel: 'moderate', 
+        details: 'Garden of Life Sport Organic Plant-Based ranked #14 with "Limit to once per week" guidance. Their grass-fed whey product performs better and appears on Clean Label Clean Sixteen.' 
+    },
+    'huel': {
+        safetyLevel: 'concern',
+        details: 'Huel Black Edition ranked #16 with "AVOID" guidance and 6.3 µg of lead per serving.'
+    },
+    'owyn': {
+        safetyLevel: 'good',
+        details: 'OWYN Pro Elite ranked #7 as the only plant-based option with "Better for daily consumption" rating from Consumer Reports.'
+    },
+    'ritual': {
+        safetyLevel: 'good',
+        details: 'Ritual protein appears on Clean Label Project Clean Sixteen with non-detectable heavy metals. Premium option specifically formulated for pregnancy.'
+    }
+};
 
         // Generate headline based on current brand
         function generateHeadline() {
