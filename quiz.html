@@ -68,6 +68,66 @@
             transform: translateY(-2px) !important;
             box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4) !important;
         }
+        /* Responsive Kit Form Fixes */
+@media (max-width: 768px) {
+    .email-collection {
+        max-width: 100%;
+        padding: 30px 20px;
+        margin: 20px auto;
+    }
+    
+    .email-collection h2 {
+        font-size: 24px;
+        margin-bottom: 12px;
+    }
+    
+    .email-collection p {
+        font-size: 15px;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .email-collection {
+        padding: 25px 15px;
+        border-radius: 8px;
+    }
+    
+    .email-collection h2 {
+        font-size: 22px;
+    }
+    
+    .email-collection p {
+        font-size: 14px;
+    }
+    
+    .privacy-note {
+        font-size: 12px;
+    }
+}
+
+/* Force Kit form elements to be responsive */
+.email-collection .formkit-form,
+.email-collection .formkit-form * {
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+.email-collection .formkit-form .formkit-field {
+    width: 100% !important;
+}
+
+.email-collection .formkit-form input[type="email"],
+.email-collection .formkit-form input[type="text"] {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+}
+
+.email-collection .formkit-form button[type="submit"] {
+    width: 100% !important;
+    max-width: 100% !important;
+}
     </style>
 </head>
 <body>
