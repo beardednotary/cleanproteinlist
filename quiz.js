@@ -103,6 +103,65 @@ document.querySelectorAll('#q5 .option-btn').forEach(btn => {
                 'event_label': 'completed_quiz'
             });
         }
+
+// Your quiz results stored in variables
+let quizResults = {
+    currentBrand: '', // e.g., "Naked Nutrition"
+    concernLevel: '', // "contaminated" or "safe"
+    primaryUse: '',   // "post-workout", "meal replacement", etc.
+    budget: ''        // "budget", "mid-range", "premium"
+};
+
+// Kit API credentials
+const KIT_API_KEY = 'your_api_key_here'; // Get from Kit Settings > Advanced
+const KIT_FORM_ID = 'your_form_id_here'; // Get from Kit form URL
+
+async function submitToKit() {
+    const email = document.getElementById('userEmail').value;
+    const firstName = document.getElementById('firstName').value;
+    
+    // Validate email
+    if (!email || !email.includes('@')) {
+        alert('Please enter a valid email address');
+        return;
+    }
+    
+    // Prepare data for Kit
+    const data = {
+        api_key: KIT_API_KEY,
+        email: email,
+        first_name: firstName || '',
+        fields: {
+            current_brand: quizResults.currentBrand,
+            concern_level: quizResults.concernLevel,
+            primary_use: quizResults.primaryUse,
+            budget: quizResults.budget
+        }
+    };
+    
+    try {
+        // Submit to Kit
+        const response = await fetch(`https://api.kit.com/v3/forms/${KIT_FORM_ID}/subscribe`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(data)
+        });
+        
+        if (response.ok) {
+            // Success! Show thank you message or redirect
+            window.location.href = 'thank-you.html';
+        } else {
+            const errorData = await response.json();
+            console.error('Kit API error:', errorData);
+            alert('Error submitting form. Please try again.');
+        }
+    } catch (error) {
+        console.error('Submission error:', error);
+        alert('Network error. Please check your connection and try again.');
+    }
+}        
         
         // Go to results page
         window.location.href = 'results.html';
