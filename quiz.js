@@ -11,10 +11,6 @@ const quizData = {
     budget: 'mid-range'
 };
 
-// Kit API Configuration - REPLACE THESE WITH YOUR ACTUAL VALUES
-const KIT_API_KEY = 'RO8urFzo5psiJmVnDNZTESW2Pk-LCeIXTjIqFDKDiag'; // From Kit Settings > Advanced > API Secret
-const KIT_FORM_ID = '8692777'; // From Kit form URL
-
 // Brand Safety Data (from Consumer Reports)
 const brandSafety = {
     'naked': { name: 'Naked Nutrition', status: 'contaminated', lead: '7.7 µg', rating: 'AVOID' },
@@ -157,11 +153,15 @@ document.querySelectorAll('#q5 .option-btn').forEach(btn => {
             }
         }
         
+        // Store quiz data in sessionStorage for later use
+        sessionStorage.setItem('quizAnswers', JSON.stringify(quizData));
+        
         // Track quiz completion
         if (typeof gtag !== 'undefined') {
             gtag('event', 'quiz_complete', {
                 'event_category': 'Quiz',
-                'event_label': 'Reached Email Collection'
+                'event_label': 'Reached Email Collection',
+                'current_brand': quizData.currentBrandName
             });
         }
         
@@ -184,119 +184,10 @@ function showEmailCollection() {
     document.querySelector('.progress-text').textContent = 'Almost done!';
     
     window.scrollTo(0, 0);
+    
+    // Kit form will handle the rest automatically
+    // After user submits, Kit will redirect to your thank-you page
 }
-
-async function submitToKit() {
-    const email = document.getElementById('userEmail').value.trim();
-    const firstName = document.getElementById('firstName').value.trim();
-    const submitBtn = document.getElementById('submit-email');
-    const loadingSpinner = document.getElementById('loading-spinner');
-    const errorMessage = document.getElementById('error-message');
-    
-    // Reset error state
-    errorMessage.style.display = 'none';
-    errorMessage.textContent = '';
-    
-    // Validate email
-    if (!email || !email.includes('@') || !email.includes('.')) {
-        errorMessage.textContent = 'Please enter a valid email address';
-        errorMessage.style.display = 'block';
-        return;
-    }
-    
-    // Check API credentials are set
-    if (KIT_API_KEY === 'RO8urFzo5psiJmVnDNZTESW2Pk-LCeIXTjIqFDKDiag' || KIT_FORM_ID === '8692777') {
-        console.error('Kit API credentials not set!');
-        errorMessage.textContent = 'Configuration error. Please contact support.';
-        errorMessage.style.display = 'block';
-        return;
-    }
-    
-    // Disable button and show loading
-    submitBtn.disabled = true;
-    submitBtn.textContent = 'Sending...';
-    loadingSpinner.style.display = 'block';
-    
-    // Prepare data for Kit
-    const kitData = {
-        api_key: KIT_API_KEY,
-        email: email,
-        first_name: firstName,
-        fields: {
-            current_brand: quizData.currentBrandName,
-            concern_level: quizData.concernLevel,
-            primary_use: quizData.primaryUse,
-            budget: quizData.budget,
-            protein_source: quizData.proteinSource
-        }
-    };
-    
-    console.log('Submitting to Kit:', kitData); // Debug log
-    
-    try {
-        // Submit to Kit API
-        const response = await fetch(`https://api.kit.com/v3/forms/${KIT_FORM_ID}/subscribe`, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(kitData)
-        });
-        
-        const responseData = await response.json();
-        console.log('Kit response:', responseData); // Debug log
-        
-        if (response.ok) {
-            // Success! Track conversion
-            if (typeof gtag !== 'undefined') {
-                gtag('event', 'email_submit', {
-                    'event_category': 'Quiz',
-                    'event_label': 'Email Captured'
-                });
-            }
-            
-            // Redirect to thank you page
-            window.location.href = 'thank-you.html';
-        } else {
-            console.error('Kit API error:', responseData);
-            
-            // Show user-friendly error
-            if (responseData.error && responseData.error.includes('email')) {
-                errorMessage.textContent = 'This email is already subscribed. Check your inbox!';
-            } else {
-                errorMessage.textContent = 'Something went wrong. Please try again.';
-            }
-            errorMessage.style.display = 'block';
-            
-            // Re-enable button
-            submitBtn.disabled = false;
-            submitBtn.textContent = 'Get My Results →';
-            loadingSpinner.style.display = 'none';
-        }
-    } catch (error) {
-        console.error('Submission error:', error);
-        
-        errorMessage.textContent = 'Network error. Please check your connection and try again.';
-        errorMessage.style.display = 'block';
-        
-        // Re-enable button
-        submitBtn.disabled = false;
-        submitBtn.textContent = 'Get My Results →';
-        loadingSpinner.style.display = 'none';
-    }
-}
-
-// Allow Enter key to submit email
-document.addEventListener('DOMContentLoaded', function() {
-    const emailInput = document.getElementById('userEmail');
-    if (emailInput) {
-        emailInput.addEventListener('keypress', function(e) {
-            if (e.key === 'Enter') {
-                submitToKit();
-            }
-        });
-    }
-});
 
 // Initialize
 updateProgress();
