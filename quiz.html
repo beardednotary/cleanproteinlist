@@ -6,6 +6,93 @@
     <title>Protein Powder Safety Quiz - Clean Protein List</title>
     <meta name="description" content="Find safe protein powder alternatives in 60 seconds based on Consumer Reports testing.">
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Email Collection Styles */
+        .email-collection {
+            max-width: 550px;
+            margin: 40px auto;
+            padding: 40px 30px;
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            text-align: center;
+        }
+        .email-collection h2 {
+            color: #333;
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+        .email-collection p {
+            color: #666;
+            font-size: 16px;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+        .email-collection input {
+            width: 100%;
+            padding: 14px 16px;
+            margin-bottom: 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+            box-sizing: border-box;
+        }
+        .email-collection input:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+        .email-collection input[type="email"] {
+            border-color: #667eea;
+        }
+        .email-submit-btn {
+            width: 100%;
+            padding: 16px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .email-submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+        }
+        .email-submit-btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+        .privacy-note {
+            font-size: 13px;
+            color: #999;
+            margin-top: 20px;
+            line-height: 1.5;
+        }
+        .error-message {
+            color: #e74c3c;
+            font-size: 14px;
+            margin-top: 10px;
+            display: none;
+        }
+        .loading-spinner {
+            display: none;
+            margin: 20px auto;
+            width: 40px;
+            height: 40px;
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #667eea;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -39,18 +126,27 @@
                     <p class="question-subtitle">We'll check it against Consumer Reports testing data</p>
                     <select class="brand-select" id="current-brand">
                         <option value="">Select your brand...</option>
+                        <option value="naked">Naked Nutrition</option>
+                        <option value="huel">Huel Black Edition</option>
+                        <option value="vega">Vega Sport</option>
+                        <option value="garden">Garden of Life Sport</option>
+                        <option value="orgain">Orgain</option>
+                        <option value="momentous-plant">Momentous Plant Protein</option>
+                        <option value="musclemilk">Muscle Milk Pro</option>
+                        <option value="ensure">Ensure Plant-Based</option>
                         <option value="optimum">Optimum Nutrition Gold Standard</option>
+                        <option value="momentous">Momentous Whey Isolate</option>
+                        <option value="bsn">BSN Syntha-6</option>
+                        <option value="dymatize">Dymatize Super Mass Gainer</option>
+                        <option value="muscletech">MuscleTech Mass Gainer</option>
+                        <option value="transparent">Transparent Labs Mass Gainer</option>
+                        <option value="owyn">OWYN Pro Elite</option>
                         <option value="premier">Premier Protein</option>
                         <option value="fairlife">Fairlife</option>
                         <option value="isopure">Isopure</option>
-                        <option value="orgain">Orgain</option>
-                        <option value="vega">Vega</option>
-                        <option value="garden">Garden of Life</option>
-                        <option value="bsn">BSN Syntha-6</option>
-                        <option value="dymatize">Dymatize ISO100</option>
-                        <option value="musclemilk">MuscleMilk</option>
                         <option value="myprotein">MyProtein</option>
                         <option value="ritual">Ritual</option>
+                        <option value="bodyfortress">Body Fortress</option>
                         <option value="other">Other brand</option>
                         <option value="notsure">Not sure</option>
                     </select>
@@ -136,10 +232,308 @@
                         </button>
                     </div>
                 </div>
+
+                <!-- Email Collection (Hidden until quiz complete) -->
+                <div class="question" id="email-step" style="display: none;">
+                    <div class="email-collection">
+                        <h2>Get Your Personalized Safety Report</h2>
+                        <p>Enter your email to receive your customized protein powder recommendations based on Consumer Reports testing.</p>
+                        
+                        <input type="text" 
+                               id="firstName" 
+                               placeholder="First Name (optional)"
+                               autocomplete="given-name">
+                        
+                        <input type="email" 
+                               id="userEmail" 
+                               placeholder="your@email.com"
+                               required
+                               autocomplete="email">
+                        
+                        <button class="email-submit-btn" id="submit-email" onclick="submitToKit()">
+                            Get My Results →
+                        </button>
+                        
+                        <div class="loading-spinner" id="loading-spinner"></div>
+                        <div class="error-message" id="error-message"></div>
+                        
+                        <p class="privacy-note">
+                            ✓ Instant results &nbsp;•&nbsp; ✓ Unsubscribe anytime &nbsp;•&nbsp; ✓ No spam, ever
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
 
-    <script src="quiz.js"></script>
+    <script>
+        // Quiz Data Storage
+        const quizData = {
+            frequency: '',
+            currentBrand: '',
+            currentBrandName: '', // Full brand name for display
+            concern: '',
+            proteinSource: '',
+            primaryUse: '',
+            concernLevel: '', // Will be 'contaminated', 'safe', or 'unknown'
+            budget: 'mid-range' // Default, can be inferred from choices
+        };
+
+        // Kit API Configuration
+        const KIT_API_KEY = 'JoZDa_bAI7YHe7ZAEv4Mrg';
+        const KIT_FORM_ID = '6cf1ed408b'; 
+
+        // Brand Safety Data (from Consumer Reports)
+        const brandSafety = {
+            'naked': { name: 'Naked Nutrition', rank: 17, status: 'contaminated', lead: '7.7 µg', rating: 'AVOID' },
+            'huel': { name: 'Huel Black Edition', rank: 16, status: 'contaminated', lead: '6.3 µg', rating: 'AVOID' },
+            'momentous-plant': { name: 'Momentous Plant Protein', rank: 15, status: 'contaminated', lead: 'Elevated', rating: 'Limit to once per week' },
+            'garden': { name: 'Garden of Life Sport', rank: 14, status: 'contaminated', lead: 'Elevated', rating: 'Limit to once per week' },
+            'vega': { name: 'Vega Sport', rank: 13, status: 'contaminated', lead: 'Elevated', rating: 'Occasional/limit' },
+            'ensure': { name: 'Ensure Plant-Based', rank: 12, status: 'moderate', lead: 'Moderate', rating: 'OK up to 5 servings/week' },
+            'musclemilk': { name: 'Muscle Milk Pro', rank: 11, status: 'moderate', lead: 'Moderate', rating: 'OK up to 5 servings/week' },
+            'orgain': { name: 'Orgain', rank: 10, status: 'moderate', lead: 'Moderate', rating: 'Limit use' },
+            'owyn': { name: 'OWYN Pro Elite', rank: 7, status: 'safe', lead: '<0.5 µg', rating: 'Better for daily consumption' },
+            'transparent': { name: 'Transparent Labs Mass Gainer', rank: 6, status: 'safe', lead: '<0.5 µg', rating: 'Better for daily consumption' },
+            'optimum': { name: 'Optimum Nutrition Gold Standard', rank: 5, status: 'safe', lead: '<0.5 µg', rating: 'Better for daily consumption' },
+            'bsn': { name: 'BSN Syntha-6', rank: 4, status: 'safe', lead: '<0.5 µg', rating: 'Better for daily consumption' },
+            'momentous': { name: 'Momentous Whey Isolate', rank: 3, status: 'safe', lead: '<0.5 µg', rating: 'Better for daily consumption' },
+            'dymatize': { name: 'Dymatize Super Mass Gainer', rank: 2, status: 'safe', lead: '<0.5 µg', rating: 'Better for daily consumption' },
+            'muscletech': { name: 'MuscleTech Mass Gainer', rank: 1, status: 'safe', lead: 'Undetectable', rating: 'Better for daily consumption' }
+        };
+
+        let currentQuestion = 1;
+        const totalQuestions = 5;
+
+        // Question 1 handlers
+        document.querySelectorAll('#q1 .option-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                quizData.frequency = this.dataset.value;
+                nextQuestion(1);
+            });
+        });
+
+        // Question 2 handlers
+        const brandSelect = document.getElementById('current-brand');
+        const otherContainer = document.getElementById('other-brand-container');
+        const otherInput = document.getElementById('other-brand-name');
+        const q2NextBtn = document.getElementById('q2-next');
+
+        brandSelect.addEventListener('change', function() {
+            const value = this.value;
+            
+            if (value === 'other') {
+                otherContainer.style.display = 'block';
+                q2NextBtn.disabled = !otherInput.value;
+            } else if (value) {
+                otherContainer.style.display = 'none';
+                q2NextBtn.disabled = false;
+                
+                // Store brand data
+                quizData.currentBrand = value;
+                if (brandSafety[value]) {
+                    quizData.currentBrandName = brandSafety[value].name;
+                    quizData.concernLevel = brandSafety[value].status;
+                } else {
+                    quizData.currentBrandName = this.options[this.selectedIndex].text;
+                    quizData.concernLevel = 'unknown';
+                }
+            } else {
+                q2NextBtn.disabled = true;
+            }
+        });
+
+        otherInput.addEventListener('input', function() {
+            if (this.value.trim()) {
+                q2NextBtn.disabled = false;
+                quizData.currentBrand = 'other';
+                quizData.currentBrandName = this.value.trim();
+                quizData.concernLevel = 'unknown';
+            } else {
+                q2NextBtn.disabled = true;
+            }
+        });
+
+        q2NextBtn.addEventListener('click', function() {
+            if (!q2NextBtn.disabled) {
+                nextQuestion(2);
+            }
+        });
+
+        // Question 3 handlers
+        document.querySelectorAll('#q3 .option-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                quizData.concern = this.dataset.value;
+                
+                // Infer budget from concern
+                if (this.dataset.value === 'cleanest') {
+                    quizData.budget = 'premium';
+                }
+                
+                nextQuestion(3);
+            });
+        });
+
+        // Question 4 handlers
+        document.querySelectorAll('#q4 .option-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                quizData.proteinSource = this.dataset.value;
+                nextQuestion(4);
+            });
+        });
+
+        // Question 5 handlers
+        document.querySelectorAll('#q5 .option-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                quizData.primaryUse = this.dataset.value;
+                
+                // Infer budget from use case
+                if (this.dataset.value === 'muscle') {
+                    quizData.budget = quizData.budget === 'premium' ? 'premium' : 'mid-range';
+                } else if (this.dataset.value === 'weightloss' || this.dataset.value === 'health') {
+                    quizData.budget = quizData.budget === 'premium' ? 'premium' : 'budget';
+                }
+                
+                // Quiz complete - show email collection
+                showEmailCollection();
+            });
+        });
+
+        function nextQuestion(current) {
+            // Hide current question
+            document.getElementById(`q${current}`).classList.remove('active');
+            
+            // Show next question
+            currentQuestion = current + 1;
+            document.getElementById(`q${currentQuestion}`).classList.add('active');
+            
+            // Update progress
+            updateProgress();
+        }
+
+        function updateProgress() {
+            const progress = (currentQuestion / totalQuestions) * 100;
+            document.getElementById('progress').style.width = progress + '%';
+            document.getElementById('current-q').textContent = currentQuestion;
+        }
+
+        function showEmailCollection() {
+            // Hide question 5
+            document.getElementById('q5').classList.remove('active');
+            
+            // Show email collection
+            document.getElementById('email-step').style.display = 'block';
+            
+            // Update progress to 100%
+            document.getElementById('progress').style.width = '100%';
+            document.querySelector('.progress-text').textContent = 'Almost done!';
+            
+            // Track quiz completion
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'quiz_complete', {
+                    'event_category': 'Quiz',
+                    'event_label': 'Reached Email Collection',
+                    'current_brand': quizData.currentBrandName
+                });
+            }
+        }
+
+        async function submitToKit() {
+            const email = document.getElementById('userEmail').value.trim();
+            const firstName = document.getElementById('firstName').value.trim();
+            const submitBtn = document.getElementById('submit-email');
+            const loadingSpinner = document.getElementById('loading-spinner');
+            const errorMessage = document.getElementById('error-message');
+            
+            // Reset error state
+            errorMessage.style.display = 'none';
+            errorMessage.textContent = '';
+            
+            // Validate email
+            if (!email || !email.includes('@') || !email.includes('.')) {
+                errorMessage.textContent = 'Please enter a valid email address';
+                errorMessage.style.display = 'block';
+                return;
+            }
+            
+            // Disable button and show loading
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Sending...';
+            loadingSpinner.style.display = 'block';
+            
+            // Prepare data for Kit
+            const kitData = {
+                api_key: KIT_API_KEY,
+                email: email,
+                first_name: firstName,
+                fields: {
+                    current_brand: quizData.currentBrandName,
+                    concern_level: quizData.concernLevel,
+                    primary_use: quizData.primaryUse,
+                    budget: quizData.budget,
+                    protein_source: quizData.proteinSource
+                }
+            };
+            
+            try {
+                // Submit to Kit API
+                const response = await fetch(`https://api.kit.com/v3/forms/${KIT_FORM_ID}/subscribe`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(kitData)
+                });
+                
+                if (response.ok) {
+                    // Success! Track conversion
+                    if (typeof gtag !== 'undefined') {
+                        gtag('event', 'email_submit', {
+                            'event_category': 'Quiz',
+                            'event_label': 'Email Captured',
+                            'current_brand': quizData.currentBrandName
+                        });
+                    }
+                    
+                    // Redirect to thank you page
+                    window.location.href = 'thank-you.html';
+                } else {
+                    const errorData = await response.json();
+                    console.error('Kit API error:', errorData);
+                    
+                    // Show user-friendly error
+                    errorMessage.textContent = 'Something went wrong. Please try again.';
+                    errorMessage.style.display = 'block';
+                    
+                    // Re-enable button
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = 'Get My Results →';
+                    loadingSpinner.style.display = 'none';
+                }
+            } catch (error) {
+                console.error('Submission error:', error);
+                
+                errorMessage.textContent = 'Network error. Please check your connection and try again.';
+                errorMessage.style.display = 'block';
+                
+                // Re-enable button
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Get My Results →';
+                loadingSpinner.style.display = 'none';
+            }
+        }
+
+        // Allow Enter key to submit email
+        document.addEventListener('DOMContentLoaded', function() {
+            const emailInput = document.getElementById('userEmail');
+            if (emailInput) {
+                emailInput.addEventListener('keypress', function(e) {
+                    if (e.key === 'Enter') {
+                        submitToKit();
+                    }
+                });
+            }
+        });
+    </script>
 </body>
 </html>
