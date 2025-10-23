@@ -68,65 +68,256 @@
             transform: translateY(-2px) !important;
             box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4) !important;
         }
-        /* Responsive Kit Form Fixes */
-@media (max-width: 768px) {
-    .email-collection {
-        max-width: 100%;
-        padding: 30px 20px;
-        margin: 20px auto;
-    }
-    
-    .email-collection h2 {
-        font-size: 24px;
-        margin-bottom: 12px;
-    }
-    
-    .email-collection p {
-        font-size: 15px;
-        margin-bottom: 20px;
-    }
+        /* Results Section */
+.results-container {
+    max-width: 800px;
+    margin: 0 auto;
 }
 
-@media (max-width: 480px) {
-    .email-collection {
-        padding: 25px 15px;
-        border-radius: 8px;
-    }
-    
-    .email-collection h2 {
-        font-size: 22px;
-    }
-    
-    .email-collection p {
-        font-size: 14px;
-    }
-    
-    .privacy-note {
-        font-size: 12px;
-    }
+.result-header {
+    text-align: center;
+    margin-bottom: 40px;
 }
 
-/* Force Kit form elements to be responsive */
-.email-collection .formkit-form,
-.email-collection .formkit-form * {
-    max-width: 100% !important;
-    box-sizing: border-box !important;
+.result-header h2 {
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 15px;
 }
 
-.email-collection .formkit-form .formkit-field {
-    width: 100% !important;
+.result-header p {
+    font-size: 18px;
+    color: #666;
 }
 
-.email-collection .formkit-form input[type="email"],
-.email-collection .formkit-form input[type="text"] {
-    width: 100% !important;
-    max-width: 100% !important;
-    min-width: 0 !important;
+.result-card {
+    background: white;
+    border-radius: 8px;
+    padding: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
-.email-collection .formkit-form button[type="submit"] {
-    width: 100% !important;
-    max-width: 100% !important;
+.brand-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.brand-info h3 {
+    font-size: 24px;
+    color: #333;
+    margin: 0;
+}
+
+.rank-badge {
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.rank-safe {
+    background: #d4edda;
+    color: #155724;
+}
+
+.rank-moderate {
+    background: #fff3cd;
+    color: #856404;
+}
+
+.rank-bad {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+.safety-details {
+    margin: 20px 0;
+}
+
+.detail-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.detail-row:last-child {
+    border-bottom: none;
+}
+
+.safe {
+    color: #2ecc71;
+    font-weight: 600;
+}
+
+.moderate {
+    color: #f39c12;
+    font-weight: 600;
+}
+
+.bad {
+    color: #e74c3c;
+    font-weight: 600;
+}
+
+.learn-more-link {
+    display: inline-block;
+    margin-top: 20px;
+    color: #667eea;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.learn-more-link:hover {
+    text-decoration: underline;
+}
+
+.recommendations-section {
+    margin: 40px 0;
+}
+
+.recommendations-section h3 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+#recommendations {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.recommendation-card {
+    background: #f8f9fa;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.rec-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    margin-bottom: 15px;
+    gap: 10px;
+}
+
+.rec-header h4 {
+    margin: 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.rec-rank {
+    background: #d4edda;
+    color: #155724;
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.recommendation-card p {
+    margin: 8px 0;
+    font-size: 14px;
+    color: #666;
+}
+
+.amazon-button {
+    display: inline-block;
+    background: #FF9900;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 15px;
+    transition: background 0.3s;
+}
+
+.amazon-button:hover {
+    background: #e88700;
+}
+
+.read-more-small {
+    display: inline-block;
+    margin-top: 10px;
+    color: #667eea;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.read-more-small:hover {
+    text-decoration: underline;
+}
+
+.action-steps {
+    background: white;
+    border-radius: 8px;
+    padding: 30px;
+    margin: 30px 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.action-steps h3 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.action-steps ol {
+    margin-left: 20px;
+}
+
+.action-steps li {
+    margin-bottom: 15px;
+    line-height: 1.6;
+    color: #444;
+}
+
+.cta-box {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 40px;
+    border-radius: 12px;
+    text-align: center;
+    margin: 40px 0;
+}
+
+.cta-box h3 {
+    font-size: 26px;
+    margin-bottom: 15px;
+    color: white;
+}
+
+.cta-box p {
+    margin-bottom: 25px;
+    opacity: 0.95;
+    color: white;
+}
+
+.secondary-button {
+    background: white;
+    color: #667eea;
+    border: 2px solid #667eea;
+    padding: 12px 30px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.secondary-button:hover {
+    background: #667eea;
+    color: white;
 }
     </style>
 </head>
@@ -268,22 +459,48 @@
                         </button>
                     </div>
                 </div>
+                
+                <!-- RESULTS SECTION - Shows immediately after quiz -->
+<div id="results" style="display: none;">
+    <div class="results-container">
+        <div class="result-header">
+            <h2>Your Personalized Protein Powder Safety Report</h2>
+            <p id="result-summary"></p>
+        </div>
 
-                <!-- Email Collection with Kit Embed -->
-                <div class="question" id="email-step" style="display: none;">
-                    <div class="email-collection">
-                        <h2>Get Your Personalized Safety Report</h2>
-                        <p>Enter your email to receive your customized protein powder recommendations based on Consumer Reports testing.</p>
-                        
-                        <!-- Kit Embed Form -->
-                        <script async data-uid="6cf1ed408b" src="https://clean-protein-list.kit.com/6cf1ed408b/index.js"></script>
-                        
-                        <p class="privacy-note">
-                            ✓ Instant results &nbsp;•&nbsp; ✓ Unsubscribe anytime &nbsp;•&nbsp; ✓ No spam, ever
-                        </p>
-                    </div>
-                </div>
+        <!-- Brand-Specific Result Card -->
+        <div id="brand-result" class="result-card">
+            <!-- Will be populated by JavaScript -->
+        </div>
+
+        <!-- Recommendations Section -->
+        <div class="recommendations-section">
+            <h3>✅ Verified Safe Alternatives:</h3>
+            <div id="recommendations">
+                <!-- Will be populated by JavaScript -->
             </div>
+        </div>
+
+        <!-- Action Steps -->
+        <div class="action-steps">
+            <h3>What You Should Do Next:</h3>
+            <ol id="action-list">
+                <!-- Will be populated by JavaScript -->
+            </ol>
+        </div>
+
+        <!-- Full Report CTA -->
+        <div class="cta-box">
+            <h3>📊 See Complete Rankings</h3>
+            <p>View all 23 products tested by Consumer Reports, ranked from safest to most contaminated.</p>
+            <a href="blog/lead-in-protein-powder-list.html" class="cta-button">View Full Report →</a>
+        </div>
+
+        <!-- Restart Quiz -->
+        <button onclick="restartQuiz()" class="secondary-button">Check Another Brand</button>
+    </div>
+</div>
+            </div> 
         </div>
     </main>
 
