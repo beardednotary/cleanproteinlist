@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lead in Protein Powder Brands List: All 23 Tested Products Ranked (2025)</title>
-    <meta name="description" content="Consumer Reports tested 23 popular protein powders for lead and heavy metals in October 2025. See which brands are safe and which ones to avoid.">
+    <title>Lead in Protein Powder: Complete List of 23 Tested Brands (Consumer Reports 2025)</title>
+    <meta name="description" content="Consumer Reports tested 23 protein powders for lead contamination. See the complete rankings from safest to most contaminated, with detailed analysis of each product.">
     <link rel="stylesheet" href="../style.css">
     <style>
         .blog-post {
-            max-width: 800px;
+            max-width: 1000px;
             margin: 40px auto;
             padding: 0 20px;
         }
@@ -46,37 +46,134 @@
             margin-bottom: 10px;
             color: #444;
         }
-        .callout-box {
+        
+        /* Stats Grid */
+        .stat-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 40px 0;
+        }
+        .stat-card {
+            background: #f8f9fa;
+            padding: 30px 20px;
+            border-radius: 8px;
+            text-align: center;
+            border: 2px solid #e0e0e0;
+        }
+        .stat-number {
+            font-size: 48px;
+            font-weight: bold;
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+        .stat-label {
+            font-size: 14px;
+            color: #666;
+            font-weight: 600;
+        }
+        
+        /* Key Findings Box */
+        .key-findings {
             background: #fff3cd;
             border-left: 4px solid #ffc107;
-            padding: 20px;
+            padding: 25px;
             margin: 30px 0;
             border-radius: 4px;
         }
-        .test-results-table {
+        .key-findings h3 {
+            margin-top: 0;
+            color: #856404;
+        }
+        .key-findings ul {
+            margin-bottom: 0;
+        }
+        
+        /* Rankings Table */
+        .rankings-table {
             width: 100%;
             border-collapse: collapse;
             margin: 30px 0;
             background: white;
             box-shadow: 0 2px 10px rgba(0,0,0,0.05);
         }
-        .test-results-table th {
+        .rankings-table th {
+            background: #667eea;
+            color: white;
+            padding: 12px;
+            text-align: left;
+            font-weight: 600;
+            position: sticky;
+            top: 0;
+        }
+        .rankings-table td {
+            padding: 12px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .rank-safe {
+            background: #e8f5e9;
+        }
+        .rank-moderate {
+            background: #fff3e0;
+        }
+        .rank-bad {
+            background: #ffebee;
+        }
+        .rank-worst {
+            background: #ffcdd2;
+            font-weight: 600;
+        }
+        .safe { color: #2ecc71; font-weight: 600; }
+        .moderate { color: #f39c12; font-weight: 600; }
+        .bad { color: #e67e22; font-weight: 600; }
+        .worst { color: #e74c3c; font-weight: 600; }
+        
+        /* Comparison Table */
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        .comparison-table th {
             background: #667eea;
             color: white;
             padding: 12px;
             text-align: left;
             font-weight: 600;
         }
-        .test-results-table td {
+        .comparison-table td {
             padding: 12px;
             border-bottom: 1px solid #e0e0e0;
         }
-        .test-results-table tr:hover {
+        
+        /* Product Detail Cards */
+        .product-card {
             background: #f8f9fa;
+            border-left: 4px solid #667eea;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
         }
-        .level-low { color: #2ecc71; font-weight: 600; }
-        .level-moderate { color: #f39c12; font-weight: 600; }
-        .level-high { color: #e74c3c; font-weight: 600; }
+        .product-card h3 {
+            margin-top: 0;
+            color: #333;
+        }
+        .product-card.safe {
+            border-left-color: #2ecc71;
+            background: #e8f5e9;
+        }
+        .product-card.moderate {
+            border-left-color: #f39c12;
+            background: #fff3e0;
+        }
+        .product-card.bad {
+            border-left-color: #e74c3c;
+            background: #ffebee;
+        }
+        
+        /* CTA */
         .quiz-cta {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
@@ -95,6 +192,41 @@
             opacity: 0.95;
             color: white;
         }
+        
+        /* Jump Links */
+        .jump-links {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 30px 0;
+        }
+        .jump-links h4 {
+            margin-top: 0;
+            color: #333;
+        }
+        .jump-links a {
+            display: inline-block;
+            margin: 5px 10px 5px 0;
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .jump-links a:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 768px) {
+            .stat-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .rankings-table {
+                font-size: 14px;
+            }
+            .rankings-table th,
+            .rankings-table td {
+                padding: 8px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -104,420 +236,892 @@
             <nav>
                 <a href="../index.html">Home</a>
                 <a href="../quiz.html">Take Quiz</a>
+                <a href="../blog.html">Articles</a>
             </nav>
         </div>
     </header>
 
     <article class="blog-post">
-        <h1>Lead in Protein Powder: Complete List of Tested Brands (Consumer Reports 2025)</h1>
+        <h1>Lead in Protein Powder: Complete List of 23 Tested Brands (Consumer Reports 2025)</h1>
         
         <div class="blog-meta">
-            Published October 16, 2025 | Updated from Consumer Reports October 14, 2025 testing | 8 min read
+            Published October 15, 2025 | Updated October 17, 2025 | 15 min read | Based on Consumer Reports October 2025 testing
         </div>
 
-        <div class="callout-box">
-            <strong>⚠️ Breaking News:</strong> Consumer Reports just published results from testing 23 leading protein powders for heavy metals including lead, arsenic, cadmium, and mercury. Multiple popular brands showed elevated contamination levels. This article breaks down which brands are safe and which ones you should avoid.
+        <p><strong>On October 14, 2025, Consumer Reports published comprehensive heavy metal testing results for 23 popular protein powders.</strong> The findings were alarming: some brands contained lead levels up to 15 times over California's safe limits.</p>
+
+        <p>This is the complete, definitive list of all 23 products tested, ranked from safest to most contaminated, with detailed analysis of what the data means for your health.</p>
+
+        <div class="stat-grid">
+            <div class="stat-card">
+                <div class="stat-number">23</div>
+                <div class="stat-label">Products Tested</div>
+            </div>
+            <div class="stat-card" style="background: #fee;">
+                <div class="stat-number">2</div>
+                <div class="stat-label">Products to AVOID</div>
+            </div>
+            <div class="stat-card" style="background: #ffe;">
+                <div class="stat-number">14</div>
+                <div class="stat-label">Limit Use Products</div>
+            </div>
+            <div class="stat-card" style="background: #efe;">
+                <div class="stat-number">7</div>
+                <div class="stat-label">Safe for Daily Use</div>
+            </div>
         </div>
 
-        <p><strong>Consumer Reports released bombshell testing results on October 14, 2025</strong>, revealing that several popular protein powder brands contain concerning levels of heavy metals, particularly lead. The independent lab testing examined over 30 protein supplements across whey, plant-based, and mixed formulations.</p>
-
-        <p>The findings have sent shockwaves through the fitness and health community, with searches for "lead in protein powder" spiking over 900% in the past 48 hours according to Google Trends data.</p>
-
-        <h2>Key Findings from Consumer Reports Testing</h2>
-
-        <p>The Consumer Reports investigation tested protein powders for four primary heavy metal contaminants:</p>
-
-        <ul>
-            <li><strong>Lead:</strong> Neurotoxin that can damage the brain and nervous system, particularly dangerous for children and pregnant women</li>
-            <li><strong>Arsenic:</strong> Carcinogen linked to increased cancer risk with chronic exposure</li>
-            <li><strong>Cadmium:</strong> Kidney toxin that accumulates in the body over time</li>
-            <li><strong>Mercury:</strong> Neurotoxin that can affect brain development and function</li>
-        </ul>
-
-        <div class="callout-box">
-            <strong>Important Context:</strong> Heavy metals occur naturally in soil and can be absorbed by plants. This means plant-based protein powders often show higher levels than whey proteins. However, rigorous testing and sourcing practices can significantly reduce contamination levels.
+        <div class="key-findings">
+            <h3>Key Findings from Consumer Reports Testing:</h3>
+            <ul>
+                <li><strong>Only 7 of 23 products (30%)</strong> rated "Better for daily consumption"</li>
+                <li><strong>2 products (9%)</strong> received "AVOID" ratings with lead levels 12-15x over safe limits</li>
+                <li><strong>Plant-based proteins dominated the worst rankings</strong> - Bottom 17 products include 13 plant-based</li>
+                <li><strong>Whey proteins consistently tested cleanest</strong> - Top 6 all dairy-based</li>
+                <li><strong>Price doesn't equal safety</strong> - Expensive brands (Huel $3/serving, Momentous Plant) tested poorly</li>
+                <li><strong>Ready-to-drink shakes performed worse</strong> than powders on average</li>
+            </ul>
         </div>
 
-        <h2>Consumer Reports Testing Results: Complete Rankings</h2>
+        <div class="jump-links">
+            <h4>Jump to Section:</h4>
+            <a href="#complete-rankings">Complete Rankings</a>
+            <a href="#safe-daily">Safe for Daily Use (Top 7)</a>
+            <a href="#occasional-use">Okay Occasionally (8-19)</a>
+            <a href="#limit-severely">Limit to Once Per Week (20-21)</a>
+            <a href="#avoid">Products to AVOID (22-23)</a>
+            <a href="#what-it-means">What the Data Means</a>
+            <a href="#how-to-choose">How to Choose Safe Protein</a>
+        </div>
 
-<p>Consumer Reports tested products and categorized them by safety level. Here's the complete breakdown:</p>
+        <h2 id="complete-rankings">Complete Consumer Reports Rankings: All 23 Products</h2>
 
-<h3>✅ Better for Daily Consumption (Safest - Ranks 1-7)</h3>
+        <p>Ranked from safest (#1) to most contaminated (#23). "Concern Level" shows percentage over California Prop 65 safe limit of 0.5 µg lead per day.</p>
 
-<table class="test-results-table">
-    <thead>
-        <tr>
-            <th>Rank</th>
-            <th>Brand</th>
-            <th>Product Type</th>
-            <th>Lead Level</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>1</td>
-            <td>MuscleTech 100% Mass Gainer</td>
-            <td>Gainer (whey blend)</td>
-            <td class="level-low">Undetectable</td>
-        </tr>
-        <tr>
-            <td>2</td>
-            <td>Dymatize Super Mass Gainer</td>
-            <td>Gainer</td>
-            <td class="level-low">Not disclosed</td>
-        </tr>
-        <tr>
-            <td>3</td>
-            <td>Momentous Whey Protein Isolate</td>
-            <td>Whey isolate</td>
-            <td class="level-low">Not disclosed</td>
-        </tr>
-        <tr>
-            <td>4</td>
-            <td>BSN Syntha-6 Protein Powder</td>
-            <td>Whey blend</td>
-            <td class="level-low">Not disclosed</td>
-        </tr>
-        <tr>
-            <td>5</td>
-            <td>Optimum Nutrition Gold Standard 100% Whey</td>
-            <td>Whey</td>
-            <td class="level-low">Not disclosed</td>
-        </tr>
-        <tr>
-            <td>6</td>
-            <td>Transparent Labs Mass Gainer</td>
-            <td>Gainer</td>
-            <td class="level-low">Not disclosed</td>
-        </tr>
-        <tr>
-            <td>7</td>
-            <td>OWYN Pro Elite High Protein Shake</td>
-            <td>Ready-to-drink (plant)</td>
-            <td class="level-low">Not disclosed</td>
-        </tr>
-    </tbody>
-</table>
-
-<div class="callout-box">
-    <strong>Key Finding:</strong> Notice that ranks 1-6 are all whey-based proteins or gainers. OWYN (#7) is the ONLY plant-based option rated "Better for daily consumption."
-</div>
-
-<h3>⚠️ OK Up to 5 Servings/Week (Ranks 8-9)</h3>
-
-<table class="test-results-table">
-    <thead>
-        <tr>
-            <th>Rank</th>
-            <th>Brand</th>
-            <th>Product Type</th>
-            <th>Lead Level</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>8</td>
-            <td>Ensure Plant-Based Protein Nutrition Shake</td>
-            <td>Ready-to-drink (plant)</td>
-            <td class="level-moderate">Not disclosed</td>
-        </tr>
-        <tr>
-            <td>9</td>
-            <td>Muscle Milk Pro Advanced Nutrition Protein Shake</td>
-            <td>Ready-to-drink (dairy)</td>
-            <td class="level-moderate">Not disclosed</td>
-        </tr>
-    </tbody>
-</table>
-
-<h3>⚠️ Occasional/Limit Use (Ranks 10-13)</h3>
-
-<table class="test-results-table">
-    <thead>
-        <tr>
-            <th>Rank</th>
-            <th>Brand</th>
-            <th>Product Type</th>
-            <th>Lead Level</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>10</td>
-            <td>Optimum Nutrition Serious Mass</td>
-            <td>Gainer</td>
-            <td class="level-moderate">Not disclosed</td>
-        </tr>
-        <tr>
-            <td>11</td>
-            <td>Jocko Fuel Mölk Protein Shake</td>
-            <td>Ready-to-drink</td>
-            <td class="level-moderate">Not disclosed</td>
-        </tr>
-        <tr>
-            <td>12</td>
-            <td>MuscleMeds Carnivor Mass</td>
-            <td>Beef protein gainer</td>
-            <td class="level-moderate">Not disclosed</td>
-        </tr>
-        <tr>
-            <td>13</td>
-            <td>Vega Sport Premium Plant-Based Protein</td>
-            <td>Plant</td>
-            <td class="level-moderate">Not disclosed</td>
-        </tr>
-    </tbody>
-</table>
-
-<h3>🚫 Limit to Once Per Week (Ranks 14-15)</h3>
-
-<table class="test-results-table">
-    <thead>
-        <tr>
-            <th>Rank</th>
-            <th>Brand</th>
-            <th>Product Type</th>
-            <th>Lead Level</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>14</td>
-            <td>Garden of Life Sport Organic Plant-Based Protein</td>
-            <td>Plant</td>
-            <td class="level-high">Not disclosed</td>
-        </tr>
-        <tr>
-            <td>15</td>
-            <td>Momentous 100% Plant Protein</td>
-            <td>Plant</td>
-            <td class="level-high">Not disclosed</td>
-        </tr>
-    </tbody>
-</table>
-
-<h3>❌ AVOID (Ranks 16-17 - Highest Contamination)</h3>
-
-<table class="test-results-table">
-    <thead>
-        <tr>
-            <th>Rank</th>
-            <th>Brand</th>
-            <th>Product Type</th>
-            <th>Lead Level</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>16</td>
-            <td>Huel Black Edition</td>
-            <td>Plant</td>
-            <td class="level-high">6.3 µg/serving</td>
-        </tr>
-        <tr>
-            <td>17</td>
-            <td>Naked Nutrition Vegan Mass Gainer</td>
-            <td>Plant gainer</td>
-            <td class="level-high">7.7 µg/serving</td>
-        </tr>
-    </tbody>
-</table>
-
-<div class="callout-box" style="background: #f8d7da; border-left-color: #e74c3c;">
-    <strong>Critical Finding:</strong> Naked Nutrition Vegan Mass Gainer had the highest lead contamination in the entire study at 7.7 µg per serving - that's 15.4x the California Prop 65 safe limit of 0.5 µg/day. Huel Black Edition was second-worst at 6.3 µg per serving.
-</div>
+        <table class="rankings-table">
+            <thead>
+                <tr>
+                    <th>Rank</th>
+                    <th>Product</th>
+                    <th>Concern Level</th>
+                    <th>Max Servings</th>
+                    <th>CR Guidance</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- BEST: Better for Daily Consumption -->
+                <tr class="rank-safe">
+                    <td><strong>1</strong></td>
+                    <td><strong>MuscleTech 100% Mass Gainer</strong></td>
+                    <td class="safe">Lead not detected</td>
+                    <td class="safe">No limit</td>
+                    <td class="safe">✅ Daily consumption</td>
+                </tr>
+                <tr class="rank-safe">
+                    <td>2</td>
+                    <td>Dymatize Super Mass Gainer</td>
+                    <td class="safe">25% over limit</td>
+                    <td class="safe">4 servings/day</td>
+                    <td class="safe">✅ Daily consumption</td>
+                </tr>
+                <tr class="rank-safe">
+                    <td>3</td>
+                    <td>Momentous Whey Protein Isolate</td>
+                    <td class="safe">30% over limit</td>
+                    <td class="safe">3⅓ servings/day</td>
+                    <td class="safe">✅ Daily consumption</td>
+                </tr>
+                <tr class="rank-safe">
+                    <td>4</td>
+                    <td>BSN Syntha-6 Protein Powder</td>
+                    <td class="safe">46% over limit</td>
+                    <td class="safe">2 servings/day</td>
+                    <td class="safe">✅ Daily consumption</td>
+                </tr>
+                <tr class="rank-safe">
+                    <td>5</td>
+                    <td>Optimum Nutrition Gold Standard 100% Whey</td>
+                    <td class="safe">56% over limit</td>
+                    <td class="safe">1¾ servings/day</td>
+                    <td class="safe">✅ Daily consumption</td>
+                </tr>
+                <tr class="rank-safe">
+                    <td>6</td>
+                    <td>Transparent Labs Mass Gainer</td>
+                    <td class="safe">87% over limit</td>
+                    <td class="safe">1 serving/day</td>
+                    <td class="safe">✅ Daily consumption</td>
+                </tr>
+                <tr class="rank-safe">
+                    <td>7</td>
+                    <td>OWYN Pro Elite High Protein Shake</td>
+                    <td class="safe">88% over limit</td>
+                    <td class="safe">1 serving/day</td>
+                    <td class="safe">✅ Daily consumption</td>
+                </tr>
+                
+                <!-- MODERATE: Okay Occasionally -->
+                <tr class="rank-moderate">
+                    <td>8</td>
+                    <td>KOS Organic Superfood Plant Protein</td>
+                    <td class="moderate">112% over limit</td>
+                    <td class="moderate">6¼ servings/week</td>
+                    <td class="moderate">⚠️ Occasional use</td>
+                </tr>
+                <tr class="rank-moderate">
+                    <td>9</td>
+                    <td>Muscle Milk Pro Advanced Nutrition</td>
+                    <td class="moderate">128% over limit</td>
+                    <td class="moderate">5½ servings/week</td>
+                    <td class="moderate">⚠️ Occasional use</td>
+                </tr>
+                <tr class="rank-moderate">
+                    <td>10</td>
+                    <td>Ensure Plant-Based Protein Shake</td>
+                    <td class="moderate">132% over limit</td>
+                    <td class="moderate">5⅓ servings/week</td>
+                    <td class="moderate">⚠️ Occasional use</td>
+                </tr>
+                <tr class="rank-moderate">
+                    <td>11</td>
+                    <td>PlantFusion Complete Protein</td>
+                    <td class="moderate">140% over limit</td>
+                    <td class="moderate">5 servings/week</td>
+                    <td class="moderate">⚠️ Occasional use</td>
+                </tr>
+                <tr class="rank-moderate">
+                    <td>12</td>
+                    <td>Orgain Organic Plant-Based Protein</td>
+                    <td class="moderate">143% over limit</td>
+                    <td class="moderate">4¾ servings/week</td>
+                    <td class="moderate">⚠️ Occasional use</td>
+                </tr>
+                <tr class="rank-moderate">
+                    <td>13</td>
+                    <td>Equip Foods Prime Protein</td>
+                    <td class="moderate">144% over limit</td>
+                    <td class="moderate">4¾ servings/week</td>
+                    <td class="moderate">⚠️ Occasional use</td>
+                </tr>
+                <tr class="rank-moderate">
+                    <td>14</td>
+                    <td>Optimum Nutrition Gold Standard Shake (RTD)</td>
+                    <td class="moderate">150% over limit</td>
+                    <td class="moderate">4⅔ servings/week</td>
+                    <td class="moderate">⚠️ Occasional use</td>
+                </tr>
+                <tr class="rank-moderate">
+                    <td>15</td>
+                    <td>Quest Protein Shake</td>
+                    <td class="moderate">161% over limit</td>
+                    <td class="moderate">4⅓ servings/week</td>
+                    <td class="moderate">⚠️ Occasional use</td>
+                </tr>
+                <tr class="rank-moderate">
+                    <td>16</td>
+                    <td>Vega Premium Sport Plant-Based Protein</td>
+                    <td class="moderate">185% over limit</td>
+                    <td class="moderate">3¾ servings/week</td>
+                    <td class="moderate">⚠️ Occasional use</td>
+                </tr>
+                <tr class="rank-moderate">
+                    <td>17</td>
+                    <td>Jocko Fuel Mölk Protein Shake</td>
+                    <td class="moderate">199% over limit</td>
+                    <td class="moderate">3½ servings/week</td>
+                    <td class="moderate">⚠️ Occasional use</td>
+                </tr>
+                <tr class="rank-moderate">
+                    <td>18</td>
+                    <td>Optimum Nutrition Serious Mass</td>
+                    <td class="moderate">202% over limit</td>
+                    <td class="moderate">3½ servings/week</td>
+                    <td class="moderate">⚠️ Occasional (arsenic concern)</td>
+                </tr>
+                <tr class="rank-moderate">
+                    <td>19</td>
+                    <td>MuscleMeds Carnivor Mass</td>
+                    <td class="moderate">247% over limit</td>
+                    <td class="moderate">2¾ servings/week</td>
+                    <td class="moderate">⚠️ Occasional use</td>
+                </tr>
+                
+                <!-- HIGH RISK: Limit to Once Per Week -->
+                <tr class="rank-bad">
+                    <td>20</td>
+                    <td>Momentous 100% Plant Protein</td>
+                    <td class="bad">476% over limit</td>
+                    <td class="bad">1½ servings/week</td>
+                    <td class="bad">⛔ Once per week max</td>
+                </tr>
+                <tr class="rank-bad">
+                    <td>21</td>
+                    <td>Garden of Life Sport Organic Plant-Based</td>
+                    <td class="bad">564% over limit</td>
+                    <td class="bad">1¼ servings/week</td>
+                    <td class="bad">⛔ Once per week max</td>
+                </tr>
+                
+                <!-- WORST: Avoid -->
+                <tr class="rank-worst">
+                    <td><strong>22</strong></td>
+                    <td><strong>Huel Black Edition</strong></td>
+                    <td class="worst"><strong>1,288% over limit</strong></td>
+                    <td class="worst"><strong>0 servings/week</strong></td>
+                    <td class="worst"><strong>🚫 AVOID</strong></td>
+                </tr>
+                <tr class="rank-worst">
+                    <td><strong>23</strong></td>
+                    <td><strong>Naked Nutrition Vegan Mass Gainer</strong></td>
+                    <td class="worst"><strong>1,572% over limit</strong></td>
+                    <td class="worst"><strong>0 servings/week</strong></td>
+                    <td class="worst"><strong>🚫 AVOID</strong></td>
+                </tr>
+            </tbody>
+        </table>
 
         <div class="quiz-cta">
-            <h3>Not Sure Which Protein Powder is Right for You?</h3>
-            <p>Take our 60-second quiz to get personalized recommendations based on your current brand, dietary preferences, and safety concerns.</p>
-            <a href="../quiz.html" class="cta-button">Take the Free Quiz →</a>
+            <h3>Check Your Brand in 60 Seconds</h3>
+            <p>Take our quiz to see where your current protein powder ranks and get personalized safe alternatives.</p>
+            <a href="../quiz.html" class="cta-button">Take Free Quiz →</a>
         </div>
 
-        <h2>What Do These Heavy Metal Levels Mean for Your Health?</h2>
+        <h2>The Data: By the Numbers</h2>
 
-        <p>The health impact of heavy metals in protein powder depends on several factors:</p>
+        <table class="comparison-table">
+            <thead>
+                <tr>
+                    <th>Category</th>
+                    <th>Count</th>
+                    <th>Percentage</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Total Products Tested</td>
+                    <td>23</td>
+                    <td>100%</td>
+                </tr>
+                <tr style="background: #e8f5e9;">
+                    <td><strong>Safe for Daily Use</strong></td>
+                    <td><strong>7</strong></td>
+                    <td><strong>30%</strong></td>
+                </tr>
+                <tr style="background: #fff3e0;">
+                    <td>Okay Occasionally (Limit Use)</td>
+                    <td>14</td>
+                    <td>61%</td>
+                </tr>
+                <tr style="background: #ffebee;">
+                    <td><strong>Avoid or Severely Limit</strong></td>
+                    <td><strong>2</strong></td>
+                    <td><strong>9%</strong></td>
+                </tr>
+            </tbody>
+        </table>
 
-        <h3>Chronic vs. Acute Exposure</h3>
-        <p>The danger isn't typically from a single serving, but from daily consumption over months or years. Heavy metals bioaccumulate, meaning they build up in your body faster than your body can eliminate them.</p>
+        <p><strong>Translation:</strong> If you picked a random protein powder off the shelf, you'd have only a 30% chance of getting one that's safe for daily consumption.</p>
 
-        <h3>California Prop 65 Thresholds</h3>
-        <p>Several protein powders exceeded California's Proposition 65 maximum allowable dose levels (MADLs) for lead. This threshold is set at 0.5 micrograms per day for reproductive harm. While exceeding this threshold doesn't guarantee harm, it indicates a level where the state of California believes warnings are warranted.</p>
+        <h2 id="safe-daily">Products Safe for Daily Use (Ranks 1-7)</h2>
 
-        <h3>Most Vulnerable Populations</h3>
-        <ul>
-            <li><strong>Pregnant women:</strong> Lead can cross the placental barrier and affect fetal brain development</li>
-            <li><strong>Children and teens:</strong> Developing brains are more susceptible to neurotoxic effects</li>
-            <li><strong>Athletes using multiple servings daily:</strong> Higher consumption = higher exposure</li>
-            <li><strong>People using protein powder for years:</strong> Cumulative exposure increases risk</li>
-        </ul>
+        <p>These 7 products received Consumer Reports' "Better for daily consumption" rating with lead levels low enough for regular use:</p>
 
-        <h2>Why Do Protein Powders Contain Heavy Metals?</h2>
-
-        <p>Understanding the source of contamination helps explain why some products test cleaner than others:</p>
-
-        <h3>1. Soil Contamination (Primary Source for Plant Proteins)</h3>
-        <p>Plants absorb heavy metals from soil naturally. Rice, pea, and hemp proteins are particularly susceptible because these plants are efficient at uptaking minerals - including toxic ones. This is why plant-based proteins consistently show higher contamination levels than whey.</p>
-
-        <h3>2. Processing and Manufacturing</h3>
-        <p>Equipment, water sources, and manufacturing environments can introduce additional contamination. Facilities that don't regularly test for heavy metals may unknowingly compound the problem.</p>
-
-        <h3>3. Ingredient Sourcing</h3>
-        <p>Where ingredients are grown matters enormously. Some agricultural regions have higher background levels of heavy metals due to industrial pollution, pesticide use, or naturally occurring deposits.</p>
-
-        <h3>4. Lack of FDA Oversight</h3>
-        <p>The FDA doesn't require pre-market approval for dietary supplements. Unlike pharmaceuticals, protein powders can be sold without proving they're safe or testing for contaminants. This creates a "wild west" scenario where only conscientious manufacturers invest in rigorous testing.</p>
-
-        <h2>How to Choose a Safe Protein Powder</h2>
-
-        <p>After analyzing the Consumer Reports data and reviewing third-party testing protocols, here are the most important factors to consider:</p>
-
-        <h3>1. Look for Third-Party Certifications</h3>
-        <p>These independent testing programs go beyond basic FDA requirements:</p>
-        <ul>
-            <li><strong>NSF Certified for Sport:</strong> Tests for contaminants and banned substances. Arguably the gold standard.</li>
-            <li><strong>Informed Choice/Informed Sport:</strong> Regular batch testing for prohibited substances and contaminants.</li>
-            <li><strong>USP Verified:</strong> Tests for purity, potency, and contaminants.</li>
-            <li><strong>Clean Label Project:</strong> Specifically tests for heavy metals and publishes "Purity Awards."</li>
-        </ul>
-
-        <div class="callout-box">
-            <strong>Pro Tip:</strong> Certifications cost money, so they're more common in premium products. However, the $10-15 price premium is worth it if you consume protein powder daily.
+        <div class="product-card safe">
+            <h3>1. MuscleTech 100% Mass Gainer ⭐ BEST</h3>
+            <ul>
+                <li><strong>Lead Level:</strong> Not detected (undetectable with standard lab equipment)</li>
+                <li><strong>Max Servings:</strong> No limit</li>
+                <li><strong>Type:</strong> Whey-based mass gainer</li>
+                <li><strong>Serving Size:</strong> 357g (6 scoops)</li>
+                <li><strong>Why It's Clean:</strong> Whey protein from quality dairy sources, rigorous manufacturing standards</li>
+                <li><strong>Best For:</strong> Bulking, mass gaining, hardgainers</li>
+                <li><strong>Bottom Line:</strong> The absolute cleanest protein powder tested. If safety is your #1 priority, this is it.</li>
+            </ul>
+            <p><a href="muscletech-mass-gainer-safety.html">→ Read full MuscleTech analysis</a></p>
         </div>
 
-        <h3>2. Choose Whey Over Plant-Based (If You Can)</h3>
-        <p>The data is clear: whey protein powders consistently show lower heavy metal levels than plant-based alternatives. If you're not vegan or lactose intolerant, whey is the safer choice from a contamination standpoint.</p>
-
-        <p><strong>Best plant-based option if you need it:</strong> Look for pea protein sourced from North America or Europe (lower soil contamination) with third-party testing certificates.</p>
-
-        <h3>3. Favor Minimal Ingredient Lists</h3>
-        <p>Products with 1-2 ingredients (like "Naked Whey" which is literally just whey protein) have fewer contamination vectors. Every additional ingredient is another potential source of heavy metals.</p>
-
-        <h3>4. Check for Transparency</h3>
-        <p>Reputable brands publish their test results. Look for:</p>
-        <ul>
-            <li>Certificates of Analysis (COAs) available on their website</li>
-            <li>Batch-specific testing (not just once-a-year testing)</li>
-            <li>Third-party lab results, not just internal testing</li>
-            <li>Clear sourcing information about where ingredients come from</li>
-        </ul>
-
-        <h3>5. Consider Grass-Fed and Organic Options</h3>
-        <p>While not a guarantee, grass-fed whey and organic certifications indicate more careful sourcing practices. Organic standards prohibit certain pesticides that can introduce heavy metals into soil.</p>
-
-        <h2>Brands That Tested Clean</h2>
-
-        <p>Based on Consumer Reports data and our additional research, these brands consistently show low or undetectable heavy metal levels:</p>
-
-        <ul>
-            <li><strong>Naked Whey:</strong> Single-ingredient grass-fed whey, batch tested, undetectable lead levels</li>
-            <li><strong>Transparent Labs Grass-Fed Whey:</strong> Third-party tested, publishes all results, Informed Choice certified</li>
-            <li><strong>Levels Grass Fed Whey:</strong> NSF Certified for Sport, used by professional athletes</li>
-            <li><strong>Garden of Life Raw Organic Protein (plant-based):</strong> One of the few plant proteins with consistently low results</li>
-            <li><strong>Nuzest Clean Lean Protein (plant-based):</strong> European pea protein, Informed Choice certified</li>
-        </ul>
-
-        <h2>What If You've Been Using a Contaminated Brand?</h2>
-
-        <p>If you discover your protein powder showed elevated heavy metals in testing, here's what to do:</p>
-
-        <h3>Don't Panic</h3>
-        <p>A few months of exposure likely won't cause serious harm unless you were consuming multiple servings daily while pregnant or giving it to children. Heavy metal toxicity is primarily a concern with chronic, long-term exposure.</p>
-
-        <h3>Switch to a Cleaner Brand</h3>
-        <p>The most important action is switching to a product with better testing results going forward. Future exposure is what you can control.</p>
-
-        <h3>Consider Getting Tested</h3>
-        <p>If you've used 2+ servings daily for over a year, especially of a high-contamination brand, talk to your doctor about heavy metal testing. A simple blood test can measure current levels.</p>
-
-        <h3>Support Your Body's Natural Detox</h3>
-        <p>Your body naturally eliminates heavy metals over time. You can support this process by:</p>
-        <ul>
-            <li>Staying well-hydrated</li>
-            <li>Eating foods rich in antioxidants (berries, leafy greens)</li>
-            <li>Getting adequate fiber (helps bind and eliminate toxins)</li>
-            <li>Consuming foods high in vitamin C and sulfur compounds</li>
-        </ul>
-
-        <h2>The Bigger Picture: Why This Testing Matters</h2>
-
-        <p>The Consumer Reports investigation highlights a systemic problem in the supplement industry. Unlike food, which has strict FDA oversight, supplements operate in a regulatory gray zone.</p>
-
-        <p>The practical reality is that <strong>consumers must become their own quality control inspectors</strong>. This means:</p>
-
-        <ul>
-            <li>Researching brands before purchasing</li>
-            <li>Looking for third-party testing certifications</li>
-            <li>Paying attention to news like the Consumer Reports study</li>
-            <li>Being willing to pay more for properly tested products</li>
-        </ul>
-
-        <p>The good news? Clean protein powder options exist. You just need to know what to look for.</p>
-
-        <div class="quiz-cta">
-            <h3>Find Your Perfect Clean Protein Powder</h3>
-            <p>Answer 5 quick questions and we'll recommend the safest options based on your dietary preferences, fitness goals, and budget.</p>
-            <a href="../quiz.html" class="cta-button">Start Free Quiz (60 seconds) →</a>
+        <div class="product-card safe">
+            <h3>2. Dymatize Super Mass Gainer</h3>
+            <ul>
+                <li><strong>Lead Level:</strong> 25% over limit (still very low)</li>
+                <li><strong>Max Servings:</strong> 4 per day</li>
+                <li><strong>Type:</strong> Whey-based mass gainer</li>
+                <li><strong>Serving Size:</strong> 333g (2.5 scoops)</li>
+                <li><strong>Why It's Clean:</strong> Whey protein, established manufacturer (Dymatize since 1994)</li>
+                <li><strong>Best For:</strong> Mass gaining, high-calorie needs</li>
+                <li><strong>Bottom Line:</strong> Second-safest option, excellent for bulking</li>
+            </ul>
         </div>
 
-        <h2>Frequently Asked Questions</h2>
-
-        <h3>Q: Should I stop using protein powder completely?</h3>
-        <p><strong>A:</strong> Not necessarily. Many brands test clean for heavy metals. The solution isn't to abandon protein powder, but to choose brands with rigorous testing protocols.</p>
-
-        <h3>Q: Are plant-based protein powders always more contaminated?</h3>
-        <p><strong>A:</strong> Generally yes, because plants absorb heavy metals from soil. However, some plant proteins (like Garden of Life and Nuzest) use careful sourcing and testing to achieve low contamination levels.</p>
-
-        <h3>Q: Is organic protein powder safer?</h3>
-        <p><strong>A:</strong> Not automatically. "Organic" refers to pesticide and fertilizer use, not heavy metal content. However, organic certification often correlates with more careful sourcing practices, which can indirectly lead to lower contamination.</p>
-
-        <h3>Q: Can I trust brands that say "third-party tested"?</h3>
-        <p><strong>A:</strong> Look for specific certifications (NSF, Informed Choice, USP) rather than vague claims. Real third-party testing comes with certification logos and verifiable batch numbers.</p>
-
-        <h3>Q: How often should I use protein powder?</h3>
-        <p><strong>A:</strong> Even with clean brands, moderation is wise. Try to get most of your protein from whole foods and use powder as a supplement, not a primary protein source. One serving per day is reasonable for most people.</p>
-
-        <h3>Q: Are expensive protein powders always cleaner?</h3>
-        <p><strong>A:</strong> Not always, but there's a correlation. Third-party testing and premium sourcing cost money. The cheapest options rarely invest in comprehensive contamination testing.</p>
-
-        <h2>Final Thoughts</h2>
-
-        <p>The Consumer Reports protein powder investigation is a wake-up call for the supplement industry and consumers alike. Heavy metal contamination is real, measurable, and concerning - but it's also avoidable with informed choices.</p>
-
-        <p>The most important takeaways:</p>
-
-        <ol>
-            <li>Multiple popular protein powder brands contain elevated heavy metal levels</li>
-            <li>Plant-based proteins generally show higher contamination than whey</li>
-            <li>Third-party certifications (NSF, Informed Choice) are your best guarantee of safety</li>
-            <li>Transparency matters - brands that publish test results are more trustworthy</li>
-            <li>You don't need to stop using protein powder, just choose cleaner brands</li>
-        </ol>
-
-        <p>We built Clean Protein List to help you navigate these choices quickly. Our quiz takes your current brand, dietary preferences, and concerns into account to recommend the safest options backed by testing data.</p>
-
-        <div style="text-align: center; margin: 50px 0;">
-            <a href="../quiz.html" class="cta-button">Find Your Clean Protein Powder →</a>
+        <div class="product-card safe">
+            <h3>3. Momentous Whey Protein Isolate</h3>
+            <ul>
+                <li><strong>Lead Level:</strong> 30% over limit (very low)</li>
+                <li><strong>Max Servings:</strong> 3⅓ per day</li>
+                <li><strong>Type:</strong> Whey protein isolate</li>
+                <li><strong>Serving Size:</strong> 26.5g (1 scoop)</li>
+                <li><strong>Certifications:</strong> NSF Certified for Sport (tests every batch)</li>
+                <li><strong>Why It's Clean:</strong> Premium sourcing, NSF certification, whey isolate processing</li>
+                <li><strong>Best For:</strong> Competitive athletes, drug-tested sports, quality-focused users</li>
+                <li><strong>Bottom Line:</strong> Premium option with verification. Worth the price if you need NSF certification.</li>
+            </ul>
+            <p><a href="momentous-protein-safety-analysis.html">→ Read full Momentous analysis</a></p>
         </div>
 
-        <hr style="margin: 40px 0; border: none; border-top: 1px solid #e0e0e0;">
+        <div class="product-card safe">
+            <h3>4. BSN Syntha-6 Protein Powder</h3>
+            <ul>
+                <li><strong>Lead Level:</strong> 46% over limit (low)</li>
+                <li><strong>Max Servings:</strong> 2 per day</li>
+                <li><strong>Type:</strong> Multi-source whey/casein blend</li>
+                <li><strong>Serving Size:</strong> 47g (1 scoop)</li>
+                <li><strong>Why It's Clean:</strong> Multiple dairy protein sources, established manufacturing</li>
+                <li><strong>Best For:</strong> Taste-focused users, post-workout recovery</li>
+                <li><strong>Bottom Line:</strong> Best-tasting protein powder that's also verified safe. Sweet spot of flavor and safety.</li>
+            </ul>
+            <p><a href="bsn-syntha-6-safety-analysis.html">→ Read full BSN analysis</a></p>
+        </div>
 
-        <p style="font-size: 14px; color: #666;"><strong>Sources:</strong></p>
-        <ul style="font-size: 14px; color: #666;">
-            <li>Consumer Reports: "Protein Powders and Shakes Contain High Levels of Lead" (October 14, 2025)</li>
-            <li>California Office of Environmental Health Hazard Assessment: Proposition 65 Safe Harbor Levels</li>
-            <li>NSF International: Certified for Sport Testing Protocols</li>
-            <li>Clean Label Project: Protein Powder Testing Results Database</li>
+        <div class="product-card safe">
+            <h3>5. Optimum Nutrition Gold Standard 100% Whey</h3>
+            <ul>
+                <li><strong>Lead Level:</strong> 56% over limit (low)</li>
+                <li><strong>Max Servings:</strong> 1¾ per day</li>
+                <li><strong>Type:</strong> Whey protein concentrate/isolate blend</li>
+                <li><strong>Serving Size:</strong> 30.5g (1 scoop)</li>
+                <li><strong>Certifications:</strong> Clean Label Project "Clean Sixteen"</li>
+                <li><strong>Why It's Clean:</strong> Double-verified (CR + Clean Label), industry-leading quality control</li>
+                <li><strong>Best For:</strong> Best overall value - safe and affordable (~$0.75/serving)</li>
+                <li><strong>Bottom Line:</strong> If you can only choose one, choose this. Safe, cheap, widely available, proven.</li>
+            </ul>
+        </div>
+
+        <div class="product-card safe">
+            <h3>6. Transparent Labs Mass Gainer</h3>
+            <ul>
+                <li><strong>Lead Level:</strong> 87% over limit (moderate-low)</li>
+                <li><strong>Max Servings:</strong> 1 per day</li>
+                <li><strong>Type:</strong> Whey-based mass gainer</li>
+                <li><strong>Serving Size:</strong> 194g (2 scoops)</li>
+                <li><strong>Why It's Clean:</strong> Transparent ingredient sourcing, no proprietary blends</li>
+                <li><strong>Best For:</strong> Clean bulking, users who want ingredient transparency</li>
+                <li><strong>Bottom Line:</strong> Premium clean mass gainer. Good for ethical/transparency-focused consumers.</li>
+            </ul>
+        </div>
+
+        <div class="product-card safe">
+            <h3>7. OWYN Pro Elite High Protein Shake ⭐ ONLY SAFE PLANT OPTION</h3>
+            <ul>
+                <li><strong>Lead Level:</strong> 88% over limit (moderate-low)</li>
+                <li><strong>Max Servings:</strong> 1 per day</li>
+                <li><strong>Type:</strong> Plant-based (pea protein) RTD shake</li>
+                <li><strong>Serving Size:</strong> 330ml (1 carton)</li>
+                <li><strong>Certifications:</strong> Informed Choice certified</li>
+                <li><strong>Why It's Clean:</strong> Only plant protein rated safe - careful sourcing, testing protocols</li>
+                <li><strong>Best For:</strong> Vegans, lactose intolerant, plant-based athletes</li>
+                <li><strong>Bottom Line:</strong> If you need plant-based, this is your ONLY safe daily-use option.</li>
+            </ul>
+        </div>
+
+        <h2 id="occasional-use">Okay for Occasional Use (Ranks 8-19)</h2>
+
+        <p>These 12 products can be used occasionally but should NOT be consumed daily due to elevated lead levels:</p>
+
+        <div class="product-card moderate">
+            <h3>8. KOS Organic Superfood Plant Protein</h3>
+            <ul>
+                <li><strong>Lead Level:</strong> 112% over limit</li>
+                <li><strong>Max Servings:</strong> 6¼ per week (less than daily)</li>
+                <li><strong>Type:</strong> Plant-based organic</li>
+                <li><strong>Bottom Line:</strong> Limit to 5-6 times per week maximum</li>
+            </ul>
+        </div>
+
+        <div class="product-card moderate">
+            <h3>9. Muscle Milk Pro Advanced Nutrition</h3>
+            <ul>
+                <li><strong>Lead Level:</strong> 128% over limit</li>
+                <li><strong>Max Servings:</strong> 5½ per week</li>
+                <li><strong>Type:</strong> Ready-to-drink shake (dairy-based)</li>
+                <li><strong>Bottom Line:</strong> Popular brand but limit to 5 servings per week max. Powder version not tested.</li>
+            </ul>
+        </div>
+
+        <div class="product-card moderate">
+            <h3>10. Ensure Plant-Based Protein Shake</h3>
+            <ul>
+                <li><strong>Lead Level:</strong> 132% over limit</li>
+                <li><strong>Max Servings:</strong> 5⅓ per week</ul>
+                <li><strong>Type:</strong> Plant-based RTD shake</li>
+                <li><strong>Bottom Line:</strong> Medical nutrition brand, but plant-based version has elevated lead. Limit to 5x per week.</li>
+            </ul>
+        </div>
+        <div class="product-card moderate">
+        <h3>11. PlantFusion Complete Protein</h3>
+        <ul>
+            <li><strong>Lead Level:</strong> 140% over limit</li>
+            <li><strong>Max Servings:</strong> 5 per week</li>
+            <li><strong>Type:</strong> Plant-based blend</li>
+            <li><strong>Bottom Line:</strong> Fusion of multiple plant sources compounds contamination. Limit to 5x per week.</li>
         </ul>
+    </div>
 
-        <p style="font-size: 14px; color: #666; margin-top: 30px;"><strong>Disclosure:</strong> This article contains affiliate links. When you purchase through our recommendations, we may earn a commission at no extra cost to you. We only recommend products with strong safety testing that we believe are genuinely cleaner alternatives.</p>
+    <div class="product-card moderate">
+        <h3>12. Orgain Organic Plant-Based Protein</h3>
+        <ul>
+            <li><strong>Lead Level:</strong> 143% over limit</li>
+            <li><strong>Max Servings:</strong> 4¾ per week</li>
+            <li><strong>Type:</strong> Organic plant-based</li>
+            <li><strong>Bottom Line:</strong> "Organic" doesn't mean clean. Limit to 4-5x per week. Switch to OWYN for daily use.</li>
+        </ul>
+    </div>
 
-    </article>
+    <div class="product-card moderate">
+        <h3>13. Equip Foods Prime Protein</h3>
+        <ul>
+            <li><strong>Lead Level:</strong> 144% over limit</li>
+            <li><strong>Max Servings:</strong> 4¾ per week</li>
+            <li><strong>Type:</strong> Grass-fed beef protein isolate</li>
+            <li><strong>Bottom Line:</strong> Alternative protein source, but still shows contamination. Limit to 4-5x per week.</li>
+        </ul>
+    </div>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Clean Protein List. Based on Consumer Reports October 2025 testing.</p>
-            <p><a href="../index.html">Home</a> | <a href="../quiz.html">Take Quiz</a></p>
-        </div>
-    </footer>
+    <div class="product-card moderate">
+        <h3>14. Optimum Nutrition Gold Standard Shake (Ready-to-Drink)</h3>
+        <ul>
+            <li><strong>Lead Level:</strong> 150% over limit</li>
+            <li><strong>Max Servings:</strong> 4⅔ per week</li>
+            <li><strong>Type:</strong> Ready-to-drink shake (dairy-based)</li>
+            <li><strong>Important:</strong> This is the RTD shake, NOT the powder. The powder (rank #5) is safe for daily use.</li>
+            <li><strong>Bottom Line:</strong> Stick with ON powder, not the RTD shake. Ready-to-drink shows higher contamination.</li>
+        </ul>
+    </div>
+
+    <div class="product-card moderate">
+        <h3>15. Quest Protein Shake</h3>
+        <ul>
+            <li><strong>Lead Level:</strong> 161% over limit</li>
+            <li><strong>Max Servings:</strong> 4⅓ per week</li>
+            <li><strong>Type:</strong> Ready-to-drink shake (dairy-based)</li>
+            <li><strong>Bottom Line:</strong> Quest bars are fine, but RTD shakes have elevated lead. Limit to 4x per week.</li>
+        </ul>
+    </div>
+
+    <div class="product-card moderate">
+        <h3>16. Vega Premium Sport Plant-Based Protein</h3>
+        <ul>
+            <li><strong>Lead Level:</strong> 185% over limit</li>
+            <li><strong>Max Servings:</strong> 3¾ per week</li>
+            <li><strong>Type:</strong> Plant-based sport formula</li>
+            <li><strong>Bottom Line:</strong> Popular vegan brand, but nearly 2x over safe limit. Max 3-4x per week. Switch to OWYN.</li>
+        </ul>
+    </div>
+
+    <div class="product-card moderate">
+        <h3>17. Jocko Fuel Mölk Protein Shake</h3>
+        <ul>
+            <li><strong>Lead Level:</strong> 199% over limit</li>
+            <li><strong>Max Servings:</strong> 3½ per week</li>
+            <li><strong>Type:</strong> Ready-to-drink shake</li>
+            <li><strong>Bottom Line:</strong> Nearly 2x over safe limit. Limit to 3x per week maximum.</li>
+        </ul>
+    </div>
+
+    <div class="product-card moderate">
+        <h3>18. Optimum Nutrition Serious Mass</h3>
+        <ul>
+            <li><strong>Lead Level:</strong> 202% over limit (arsenic, not lead)</li>
+            <li><strong>Max Servings:</strong> 3½ per week</li>
+            <li><strong>Type:</strong> Whey-based mass gainer</li>
+            <li><strong>Note:</strong> This product's concern is inorganic arsenic, not lead</li>
+            <li><strong>Bottom Line:</strong> If you need a mass gainer, choose MuscleTech (#1) or Dymatize (#2) instead.</li>
+        </ul>
+    </div>
+
+    <div class="product-card moderate">
+        <h3>19. MuscleMeds Carnivor Mass</h3>
+        <ul>
+            <li><strong>Lead Level:</strong> 247% over limit</li>
+            <li><strong>Max Servings:</strong> 2¾ per week</li>
+            <li><strong>Type:</strong> Beef protein isolate mass gainer</li>
+            <li><strong>Bottom Line:</strong> Nearly 2.5x over safe limit. If using, max 2-3x per week. Better alternatives available.</li>
+        </ul>
+    </div>
+
+    <h2 id="limit-severely">Limit to Once Per Week (Ranks 20-21)</h2>
+
+    <p>These products have dangerously high lead levels and should be severely limited:</p>
+
+    <div class="product-card bad">
+        <h3>20. Momentous 100% Plant Protein</h3>
+        <ul>
+            <li><strong>Lead Level:</strong> 476% over limit (4.76x over safe level)</li>
+            <li><strong>Max Servings:</strong> 1½ per week</li>
+            <li><strong>Type:</strong> Plant-based</li>
+            <li><strong>CR Guidance:</strong> "Limit to once per week"</li>
+            <li><strong>The Irony:</strong> Momentous Whey Isolate ranked #3 (very safe), but their plant protein ranked #20 (dangerous)</li>
+            <li><strong>Bottom Line:</strong> If using Momentous plant protein, severely limit use. Switch to their whey isolate or OWYN plant option.</li>
+        </ul>
+    </div>
+
+    <div class="product-card bad">
+        <h3>21. Garden of Life Sport Organic Plant-Based Protein</h3>
+        <ul>
+            <li><strong>Lead Level:</strong> 564% over limit (5.64x over safe level)</li>
+            <li><strong>Max Servings:</strong> 1¼ per week</li>
+            <li><strong>Type:</strong> Organic plant-based sport formula</li>
+            <li><strong>CR Guidance:</strong> "Limit to once per week"</li>
+            <li><strong>Bottom Line:</strong> Premium price ($2+/serving) doesn't equal safety. Once per week maximum. Switch to OWYN.</li>
+        </ul>
+    </div>
+
+    <h2 id="avoid">Products to AVOID (Ranks 22-23)</h2>
+
+    <p>Consumer Reports issued "AVOID" warnings for these two products with catastrophic lead levels:</p>
+
+    <div class="product-card bad" style="border-left-color: #c0392b; background: #fadbd8;">
+        <h3>22. Huel Black Edition 🚫</h3>
+        <ul>
+            <li><strong>Lead Level:</strong> 1,288% over limit (12.88x over safe level)</li>
+            <li><strong>Lead per Serving:</strong> 6.44 µg (safe limit is 0.5 µg)</li>
+            <li><strong>Max Servings:</strong> 0 per week</li>
+            <li><strong>CR Guidance:</strong> <strong>"AVOID"</strong></li>
+            <li><strong>Type:</strong> Plant-based meal replacement</li>
+            <li><strong>Price:</strong> ~$2.50-3.00 per serving (premium price, catastrophic safety)</li>
+            <li><strong>If You're Using This:</strong> STOP IMMEDIATELY. Do not finish the container.</li>
+            <li><strong>Daily Use Impact:</strong> 2,349.6 µg lead per year (safe limit: 182.5 µg/year) = 12.88x over</li>
+            <li><strong>Bottom Line:</strong> Second-worst protein powder tested. Unacceptable contamination at any price.</li>
+        </ul>
+        <p><a href="huel-black-edition-lead-content.html">→ Read full Huel analysis</a></p>
+    </div>
+
+    <div class="product-card bad" style="border-left-color: #c0392b; background: #fadbd8;">
+        <h3>23. Naked Nutrition Vegan Mass Gainer 🚫 WORST</h3>
+        <ul>
+            <li><strong>Lead Level:</strong> 1,572% over limit (15.72x over safe level)</li>
+            <li><strong>Lead per Serving:</strong> 7.86 µg (safe limit is 0.5 µg)</li>
+            <li><strong>Max Servings:</strong> 0 per week</li>
+            <li><strong>CR Guidance:</strong> <strong>"AVOID"</strong></li>
+            <li><strong>Type:</strong> Plant-based mass gainer (pea protein)</li>
+            <li><strong>Serving Size:</strong> 315g (6 scoops) - massive serving compounds the problem</li>
+            <li><strong>If You're Using This:</strong> STOP IMMEDIATELY. This is the most contaminated product tested.</li>
+            <li><strong>Daily Use Impact:</strong> 2,869.9 µg lead per year (safe limit: 182.5 µg/year) = 15.72x over</li>
+            <li><strong>Bottom Line:</strong> Absolute worst protein powder in Consumer Reports testing. Dangerous for daily use.</li>
+        </ul>
+        <p><a href="naked-nutrition-vegan-mass-gainer-lead.html">→ Read full Naked Nutrition analysis</a></p>
+    </div>
+
+    <div class="quiz-cta">
+        <h3>Using One of These Brands? Find Safe Alternatives Now</h3>
+        <p>Our quiz recommends verified-clean options based on your needs, preferences, and budget.</p>
+        <a href="../quiz.html" class="cta-button">Get Personalized Recommendations →</a>
+    </div>
+
+    <h2 id="what-it-means">What This Data Means for Your Health</h2>
+
+    <h3>Understanding the Percentages:</h3>
+
+    <p>Consumer Reports measured lead levels against California Proposition 65's safe harbor level of <strong>0.5 µg per day</strong>. This is one of the strictest standards globally.</p>
+
+    <table class="comparison-table">
+        <thead>
+            <tr>
+                <th>Product Example</th>
+                <th>Lead per Serving</th>
+                <th>% Over Limit</th>
+                <th>Annual Exposure (1/day)</th>
+                <th>vs Safe Limit</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr style="background: #e8f5e9;">
+                <td>MuscleTech Mass Gainer</td>
+                <td><0.01 µg</td>
+                <td class="safe">0%</td>
+                <td class="safe"><3.65 µg/year</td>
+                <td class="safe">Safe</td>
+            </tr>
+            <tr style="background: #e8f5e9;">
+                <td>Optimum Nutrition Gold</td>
+                <td>~0.28 µg</td>
+                <td class="safe">56%</td>
+                <td class="safe">102.2 µg/year</td>
+                <td class="safe">Within acceptable range</td>
+            </tr>
+            <tr style="background: #fff3e0;">
+                <td>Vega Sport</td>
+                <td>~0.93 µg</td>
+                <td class="moderate">185%</td>
+                <td class="moderate">339.5 µg/year</td>
+                <td class="moderate">1.86x over</td>
+            </tr>
+            <tr style="background: #ffebee;">
+                <td>Huel Black Edition</td>
+                <td>6.44 µg</td>
+                <td class="bad">1,288%</td>
+                <td class="bad">2,350.6 µg/year</td>
+                <td class="bad">12.88x over</td>
+            </tr>
+            <tr style="background: #ffebee;">
+                <td>Naked Nutrition Vegan</td>
+                <td>7.86 µg</td>
+                <td class="worst">1,572%</td>
+                <td class="worst">2,869.9 µg/year</td>
+                <td class="worst">15.72x over</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p><strong>Safe Annual Limit:</strong> 182.5 µg lead per year (0.5 µg × 365 days)</p>
+
+    <h3>Health Impacts of Lead Exposure:</h3>
+
+    <p><strong>Lead is a bioaccumulative toxin</strong> - your body absorbs it faster than it can eliminate it. Even low-level chronic exposure causes harm.</p>
+
+    <p><strong>If you've been using contaminated protein powder daily for 6+ months, watch for:</strong></p>
+
+    <ul>
+        <li><strong>Neurological:</strong> Brain fog, memory problems, difficulty concentrating, headaches</li>
+        <li><strong>Physical:</strong> Chronic fatigue, muscle weakness, joint pain, abdominal discomfort</li>
+        <li><strong>Mood:</strong> Irritability, depression, anxiety, mood swings</li>
+        <li><strong>Cardiovascular:</strong> High blood pressure, heart palpitations</li>
+        <li><strong>Reproductive:</strong> Reduced fertility (both sexes), pregnancy complications</li>
+    </ul>
+
+    <p><strong>Most at risk:</strong></p>
+    <ul>
+        <li>Daily users consuming 1-2+ servings per day</li>
+        <li>Pregnant women or those planning pregnancy</li>
+        <li>Children and teenagers (developing brains more vulnerable)</li>
+        <li>People using mass gainers (larger serving sizes = more lead per shake)</li>
+    </ul>
+
+    <p><a href="lead-poisoning-protein-powder-symptoms.html">→ Read full guide on lead poisoning symptoms</a></p>
+
+    <h2 id="how-to-choose">How to Choose Safe Protein Powder</h2>
+
+    <h3>The Clear Pattern from Consumer Reports Data:</h3>
+
+    <p><strong>1. Whey Proteins Are Significantly Safer Than Plant Proteins</strong></p>
+
+    <table class="comparison-table">
+        <thead>
+            <tr>
+                <th>Protein Type</th>
+                <th>Average Ranking</th>
+                <th>Cleanest Options</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr style="background: #e8f5e9;">
+                <td><strong>Whey/Dairy-Based</strong></td>
+                <td class="safe">Top 6 all whey</td>
+                <td class="safe">MuscleTech, Dymatize, Momentous, BSN, ON</td>
+            </tr>
+            <tr style="background: #ffebee;">
+                <td><strong>Plant-Based</strong></td>
+                <td class="bad">Bottom 17 includes 13 plant</td>
+                <td class="bad">Only OWYN (#7) rated safe</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p><strong>Why plant proteins test worse:</strong> Plants absorb heavy metals from soil through their root systems. Pea, rice, and hemp protein are concentrated from crops grown in contaminated soil. The concentration process (20-30kg of peas → 1kg protein powder) amplifies any contamination present.</p>
+
+    <p><strong>2. Third-Party Certifications Matter</strong></p>
+
+    <p>Products with verified testing consistently performed better:</p>
+
+    <ul>
+        <li><strong>NSF Certified for Sport:</strong> Tests every batch for heavy metals and banned substances (Example: Momentous #3)</li>
+        <li><strong>Clean Label Project "Clean Sixteen":</strong> Independent heavy metal testing (Example: ON Gold Standard #5)</li>
+        <li><strong>Informed Choice/Sport:</strong> Batch testing for contaminants (Example: OWYN #7)</li>
+    </ul>
+
+    <p><strong>Red flags:</strong> "Organic," "All-Natural," or "Non-GMO" labels don't test for heavy metals. These mean nothing for contamination safety.</p>
+
+    <p><strong>3. Price Doesn't Equal Safety</strong></p>
+
+    <table class="comparison-table">
+        <thead>
+            <tr>
+                <th>Product</th>
+                <th>Price/Serving</th>
+                <th>Rank</th>
+                <th>Safety</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Huel Black Edition</td>
+                <td>~$3.00</td>
+                <td class="bad">22 of 23</td>
+                <td class="bad">AVOID</td>
+            </tr>
+            <tr>
+                <td>Garden of Life Sport</td>
+                <td>~$2.50</td>
+                <td class="bad">21 of 23</td>
+                <td class="bad">Once/week max</td>
+            </tr>
+            <tr>
+                <td>Optimum Nutrition Gold</td>
+                <td>~$0.75</td>
+                <td class="good">5 of 23</td>
+                <td class="good">Safe daily</td>
+            </tr>
+            <tr>
+                <td>Body Fortress (not tested)</td>
+                <td>~$0.67</td>
+                <td>N/A</td>
+                <td class="good">Clean Label certified</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p><strong>The expensive brands (Huel, Garden of Life) tested among the worst. The affordable brands (ON, Body Fortress) tested safe.</strong></p>
+
+    <p><strong>4. Ready-to-Drink Shakes Performed Worse Than Powders</strong></p>
+
+    <p>Comparing Optimum Nutrition products:</p>
+    <ul>
+        <li><strong>ON Gold Standard Powder:</strong> Rank #5 (safe for 1¾ servings/day)</li>
+        <li><strong>ON Gold Standard RTD Shake:</strong> Rank #14 (limit to 4⅔ servings/week)</li>
+    </ul>
+
+    <p>RTD shakes consistently showed higher contamination. Stick with powders when possible.</p>
+
+    <h3>Your Action Plan:</h3>
+
+    <p><strong>Step 1: Check if your current brand was tested</strong></p>
+    <ul>
+        <li>Look through the rankings above</li>
+        <li>If ranked 1-7: Keep using it confidently</li>
+        <li>If ranked 8-19: Limit frequency or switch to top 7</li>
+        <li>If ranked 20-23: STOP IMMEDIATELY, switch to top 7</li>
+    </ul>
+
+    <p><strong>Step 2: If your brand wasn't tested, demand proof</strong></p>
+    <ul>
+        <li>Contact the manufacturer</li>
+        <li>Ask: "Do you have third-party heavy metal testing? Can I see Certificates of Analysis?"</li>
+        <li>Look for NSF, Clean Label, or Informed Choice certification</li>
+        <li>If they can't provide proof, assume it's unsafe</li>
+    </ul>
+
+    <p><strong>Step 3: Switch to verified-safe options</strong></p>
+
+    <p><strong>Best overall choices from testing:</strong></p>
+    <ul>
+        <li><strong>Safest possible:</strong> MuscleTech 100% Mass Gainer (#1 - undetectable lead)</li>
+        <li><strong>Best value:</strong> Optimum Nutrition Gold Standard (#5 - ~$0.75/serving, Clean Label certified)</li>
+        <li><strong>Premium athlete option:</strong> Momentous Whey Isolate (#3 - NSF Certified for Sport)</li>
+        <li><strong>Best taste:</strong> BSN Syntha-6 (#4 - safe and delicious)</li>
+        <li><strong>Only safe plant option:</strong> OWYN Pro Elite (#7 - only plant protein rated "better for daily consumption")</li>
+    </ul>
+
+    <div class="quiz-cta">
+        <h3>Get Personalized Safe Recommendations</h3>
+        <p>Answer 5 quick questions about your goals, preferences, and current brand. We'll recommend the safest options for your specific needs.</p>
+        <a href="../quiz.html" class="cta-button">Take Free Quiz (60 seconds) →</a>
+    </div>
+
+    <h2>Frequently Asked Questions</h2>
+
+    <h3>Q: Why did Consumer Reports test these 23 products specifically?</h3>
+    <p><strong>A:</strong> Consumer Reports selected popular, widely-available protein powders and shakes from major retailers. They included a mix of whey, plant-based, ready-to-drink, and mass gainers to give a representative sample of the market.</p>
+
+    <h3>Q: My brand wasn't tested. Does that mean it's unsafe?</h3>
+    <p><strong>A:</strong> Not necessarily. It means it's unverified. Look for third-party certifications (NSF Certified for Sport, Clean Label Project, Informed Choice). If your brand has none of these, consider switching to a tested-safe option.</p>
+
+    <h3>Q: Are "organic" or "all-natural" protein powders safer?</h3>
+    <p><strong>A:</strong> No. Garden of Life Sport Organic ranked #21 (dangerous). Naked Nutrition emphasizes "nothing artificial" yet ranked #23 (worst). Organic certification doesn't test for heavy metals. Plants absorb lead from organic soil just as easily as conventional soil.</p>
+
+    <h3>Q: I've been using Naked Nutrition daily for a year. Should I be worried?</h3>
+    <p><strong>A:</strong> Yes. Stop using it immediately and consider getting a blood lead test from your doctor. At 7.86 µg per serving daily for a year, you've consumed 2,869 µg of lead (safe annual limit: 182.5 µg). Watch for symptoms: brain fog, fatigue, headaches, mood changes. Most effects are reversible once exposure stops.</p>
+
+    <h3>Q: Why do plant proteins have more lead than whey?</h3>
+    <p><strong>A:</strong> Plants absorb heavy metals from soil through root systems. Peas, rice, and hemp are efficient at uptaking minerals - including toxic ones like lead. Whey comes from milk; cows act as biological filters and don't pass heavy metals into milk at the same rates. Additionally, protein powder is concentrated (20-30kg plants → 1kg powder), which amplifies any contamination.</p>
+
+    <h3>Q: Can I trust the "Clean Sixteen" list from Clean Label Project?</h3>
+    <p><strong>A:</strong> Yes. Clean Label Project is an independent non-profit that tests consumer products for contaminants. Their "Clean Sixteen" certification means non-detectable levels of lead, arsenic, cadmium, and mercury. Optimum Nutrition Gold Standard is on both Clean Label's list AND Consumer Reports' top 7.</p>
+
+    <h3>Q: Is there ANY safe plant-based protein powder?</h3>
+    <p><strong>A:</strong> Yes - OWYN Pro Elite (#7) is the ONLY plant-based protein rated "Better for daily consumption" by Consumer Reports. If you're vegan or lactose intolerant and need daily protein supplementation, OWYN is your only verified-safe option from this testing.</p>
+
+    <h3>Q: What about brands like MyProtein, Body Fortress, Isopure that weren't tested?</h3>
+    <p><strong>A:</strong> They're unverified by Consumer Reports, but some have other certifications. Body Fortress is Clean Label "Clean Sixteen" certified (verified safe). MyProtein and Isopure lack third-party testing - use caution or switch to tested options.</p>
+
+    <h3>Q: Should I get my blood tested for lead?</h3>
+    <p><strong>A:</strong> If you've been using ranks #20-23 daily for 6+ months, yes. If you've been using ranks #8-19 daily for a year+, consider it. If you've been using ranks #1-7, not necessary - these are safe for daily consumption.</p>
+
+    <h2>The Bottom Line</h2>
+
+    <p><strong>Consumer Reports tested 23 protein powders and found that 70% have concerning levels of heavy metal contamination.</strong></p>
+
+    <p><strong>Only 7 of 23 products (30%) are safe for daily consumption.</strong></p>
+
+    <p><strong>The data is clear:</strong></p>
+    <ul>
+        <li>Whey proteins are dramatically safer than plant proteins</li>
+        <li>Third-party certifications (NSF, Clean Label, Informed Choice) correlate with safety</li>
+        <li>Price and marketing ("organic," "premium") don't predict safety</li>
+        <li>Ready-to-drink shakes tend to have higher contamination than powders</li>
+        <li>Two products (Naked Nutrition, Huel) are so contaminated they should be avoided entirely</li>
+    </ul>
+
+    <p><strong>What you should do:</strong></p>
+    <ol>
+        <li>Check where your current brand ranks in the list above</li>
+        <li>If ranked #20-23: Stop using immediately</li>
+        <li>If ranked #8-19: Limit frequency or switch to #1-7</li>
+        <li>If ranked #1-7: Continue using confidently</li>
+        <li>If not tested: Demand third-party testing proof or switch to verified-safe option</li>
+    </ol>
+
+    <p><strong>Safest verified options to choose from:</strong></p>
+    <ul>
+        <li>MuscleTech 100% Mass Gainer (#1 - undetectable lead)</li>
+        <li>Optimum Nutrition Gold Standard (#5 - best value, double-verified)</li>
+        <li>Momentous Whey Isolate (#3 - NSF certified for athletes)</li>
+        <li>BSN Syntha-6 (#4 - best taste, safe)</li>
+        <li>OWYN Pro Elite (#7 - only safe plant option)</li>
+    </ul>
+
+    <div class="quiz-cta">
+        <h3>Find Your Perfect Safe Protein Powder</h3>
+        <p>Take our quiz to get personalized recommendations based on your goals, dietary needs, and budget. Only verified-safe options recommended.</p>
+        <a href="../quiz.html" class="cta-button">Take Free Quiz Now →</a>
+    </div>
+
+    <hr style="margin: 40px 0; border: none; border-top: 1px solid #e0e0e0;">
+
+    <p style="font-size: 14px; color: #666;"><strong>Sources:</strong></p>
+    <ul style="font-size: 14px; color: #666;">
+        <li>Consumer Reports: "Protein Powders and Shakes Contain High Levels of Lead" (October 14, 2025)</li>
+        <li>California Office of Environmental Health Hazard Assessment: Proposition 65 Safe Harbor Levels for Lead</li>
+        <li>Clean Label Project: Protein Powder Testing Database</li>
+        <li>NSF International: Certified for Sport Program Standards</li>
+    </ul>
+
+    <p style="font-size: 14px; color: #666; margin-top: 30px;"><strong>Last Updated:</strong> October 17, 2025</p>
+
+    <p style="font-size: 14px; color: #666; margin-top: 20px;"><strong>Related Articles:</strong></p>
+    <ul style="font-size: 14px;">
+        <li><a href="lead-poisoning-protein-powder-symptoms.html">Lead Poisoning from Protein Powder: Symptoms & Testing →</a></li>
+        <li><a href="naked-nutrition-vegan-mass-gainer-lead.html">Naked Nutrition: Why It Ranked Worst (#23) →</a></li>
+        <li><a href="huel-black-edition-lead-content.html">Huel Black Edition: #22 Worst Ranking Analysis →</a></li>
+        <li><a href="momentous-protein-safety-analysis.html">Momentous Whey Isolate: Why It Ranked #3 →</a></li>
+        <li><a href="bsn-syntha-6-safety-analysis.html">BSN Syntha-6: Rank #4 Safety Analysis →</a></li>
+    </ul>
+
+</article>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2025 Clean Protein List. Based on Consumer Reports October 2025 testing.</p>
+        <p><a href="../index.html">Home</a> | <a href="../quiz.html">Take Quiz</a> | <a href="../blog.html">Articles</a></p>
+    </div>
+</footer>
 </body>
 </html>
