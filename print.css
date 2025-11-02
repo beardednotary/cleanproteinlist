@@ -1,0 +1,90 @@
+/* print.css */
+/* Print / PDF-friendly version for blog database pages */
+
+@media print {
+
+  /* 1. Basic reset for printing */
+  body {
+    background: #ffffff !important;
+    color: #000 !important;
+    font-size: 12pt;
+    line-height: 1.5;
+  }
+
+  /* 2. Hide site chrome / non-content items */
+  header,
+  nav,
+  footer,
+  .site-header,
+  .site-footer,
+  .top-banner,
+  .cookie-banner,
+  .hero,
+  .share-buttons,
+  .sidebar,
+  .comments,
+  .ad,
+  .ads,
+  .amazon-button,
+  .cta-box,
+  .floating-cta {
+    display: none !important;
+  }
+
+  /* 3. Make main content full width */
+  main,
+  .content,
+  .article-body,
+  .post {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* 4. Links: show URLs in print (optional) */
+  a[href]:after {
+    content: " (" attr(href) ")";
+    font-size: 9pt;
+    color: #555;
+  }
+  /* But don’t do it for anchors / jump links */
+  a[href^="#"]:after,
+  a[href^="javascript:"]:after {
+    content: "";
+  }
+
+  /* 5. Tables: make them printable */
+  table {
+    width: 100% !important;
+    border-collapse: collapse;
+  }
+  th, td {
+    border: 1px solid #ddd;
+    padding: 6px 8px;
+  }
+
+  /* 6. Headings: keep hierarchy clear in PDF */
+  h1, h2, h3 {
+    page-break-after: avoid;
+    color: #000 !important;
+  }
+
+  /* 7. Page breaks for very long sections */
+  .page-break,
+  .section-break {
+    page-break-before: always;
+  }
+
+  /* 8. Images: shrink to page width */
+  img {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+
+  /* 9. Remove background colors that could print dark */
+  * {
+    background: transparent !important;
+    box-shadow: none !important;
+  }
+}
