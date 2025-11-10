@@ -157,14 +157,6 @@ nav a:hover {
     opacity: 0.95;
 }
 
-.alert-badge {
-    display: inline-block;
-    background: rgba(255,255,255,0.2);
-    padding: 10px 20px;
-    border-radius: 25px;
-    font-weight: 600;
-    margin-bottom: 20px;
-}
 
 .trust-line {
     margin-top: 30px;
@@ -1193,3 +1185,17 @@ section h2 {
   transition: all 0.25s ease;
 }
 
+/* Make the main hero CTA stand out */
+.hero .cta-button {
+    background: #ffffff;
+    color: #667eea;
+    border: 2px solid #ffffff;
+    font-weight: 700;
+}
+
+.hero .cta-button:hover {
+    background: transparent;
+    color: #ffffff;
+    border-color: #ffffff;
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.35);
+}
