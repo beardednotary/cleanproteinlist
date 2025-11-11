@@ -1270,39 +1270,3 @@ tbody tr:nth-child(odd) {
     text-decoration: underline;
 }
 
-/* ========================================
-   17. STICKY CTA/TRUST BAR (CLEAN, FINAL VERSION)
-   ======================================== */
-
-.sticky-action-bar {
-    position: fixed;            /* Stick to the viewport */
-    bottom: 0;                  /* Pin to the bottom edge */
-    left: 0;
-    width: 100%;
-    z-index: 9999;              /* Keep it above all content */
-    
-    /* Layout & Appearance */
-    background: #ffffff; 
-    box-shadow: 0 -4px 15px rgba(0,0,0,0.15);
-    padding: 10px 20px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    gap: 15px;
-}
-
-/* Button Styling */
-.sticky-action-bar .cta-button {
-    padding: 12px 15px; 
-    font-size: 14px; 
-    flex-grow: 1; 
-    white-space: nowrap; /* Prevents text wrap on small screens */
-}
-
-/* Responsive Rule: Hide the sticky bar on larger screens (Desktop) */
-@media (min-width: 900px) {
-    .sticky-action-bar { 
-        display: none; 
-    }
-}
-
