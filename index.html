@@ -54,6 +54,27 @@
 
 </head>
 <body>
+        <script>
+        // Increment quiz counter with some realism
+        function updateQuizCount() {
+            const baseCount = 847;
+            const randomAdd = Math.floor(Math.random() * 50);
+            document.getElementById('quiz-count').textContent = (baseCount + randomAdd).toLocaleString();
+        }
+        updateQuizCount();
+        
+        // Update count every 5 minutes to show "live" activity
+        setInterval(updateQuizCount, 300000);
+    </script>
+
+    <div class="sticky-action-bar">
+    <a href="../quiz.html" class="cta-button cta-button-quiz">
+        ✅ 60 Sec Safety Quiz
+    </a>
+    <a href="https://amzn.to/3IZsKsr" class="cta-button amazon-button">
+        🛒 Shop #1 Safe Brand
+    </a>
+</div>
     <header>
         <div class="container">
             <h1 class="logo">Clean Protein List</h1>
@@ -193,26 +214,5 @@
         </div>
     </footer>
 
-    <script>
-        // Increment quiz counter with some realism
-        function updateQuizCount() {
-            const baseCount = 847;
-            const randomAdd = Math.floor(Math.random() * 50);
-            document.getElementById('quiz-count').textContent = (baseCount + randomAdd).toLocaleString();
-        }
-        updateQuizCount();
-        
-        // Update count every 5 minutes to show "live" activity
-        setInterval(updateQuizCount, 300000);
-    </script>
-
-    <div class="sticky-action-bar">
-    <a href="../quiz.html" class="cta-button cta-button-quiz">
-        ✅ 60 Sec Safety Quiz
-    </a>
-    <a href="https://amzn.to/3IZsKsr" class="cta-button amazon-button">
-        🛒 Shop #1 Safe Brand
-    </a>
-</div>
 </body>
 </html>
