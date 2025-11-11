@@ -1199,3 +1199,75 @@ section h2 {
     border-color: #ffffff;
     box-shadow: 0 4px 15px rgba(255, 255, 255, 0.35);
 }
+
+/* ========================================
+   16. VISUAL OVERRIDES (Consumer Reports/Medium Focus)
+   ======================================== */
+
+/* --- 1. AUTHORITY & TEXT CONTRAST --- */
+body {
+    line-height: 1.7; /* Increased for better flow (Medium style) */
+    color: #212529; /* Darker, more authoritative text color */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #1c1d22; /* Even darker for strong headers */
+}
+
+/* --- 2. ARTICLE LAYOUT & WIDTH (CR/Medium style) --- */
+.article-container {
+    max-width: 780px; /* Reduced width for better reading line length */
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* --- 3. SECTION HEADER ACCENT (CR Style) --- */
+section h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 4px solid #e0e0e0; /* Thicker, light gray line */
+    position: relative;
+}
+section h2::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -4px; /* Position below the gray line */
+    height: 4px;
+    width: 80px; /* Short color accent line */
+    background: #667eea;
+    border-radius: 2px;
+}
+
+/* --- 4. TABLE READABILITY --- */
+/* Subtle Row Striping for non-highlighted rows */
+tbody tr:nth-child(odd) {
+    background-color: #fcfcfc;
+}
+/* Reduce strength of the colored rows and ensure they override the stripe */
+.safe-row {
+    background: #e6ffed !important; /* Light green */
+}
+.moderate-row {
+    background: #fff8e8 !important; /* Light yellow */
+}
+.danger-row {
+    background: #ffe6e8 !important; /* Light red */
+}
+.clean-label-row {
+    background: #e0eaff !important; /* Light blue */
+}
+
+/* Table of Contents enhancement */
+.table-of-contents {
+    background: #f0f5ff; /* Lighter, accent color */
+}
+.table-of-contents a {
+    color: #667eea; /* Make TOC links your primary color */
+}
+.table-of-contents a:hover {
+    text-decoration: underline;
+}
+
+
