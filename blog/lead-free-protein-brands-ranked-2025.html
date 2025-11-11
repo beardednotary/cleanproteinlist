@@ -559,84 +559,6 @@
             </div>
         </section>
 
-            <!-- Clean Protein Poll -->
-<div class="poll-container">
-  <h3>💬 What kind of protein do you use most?</h3>
-  <form name="proteinPoll" id="proteinPoll">
-    <label><input type="radio" name="protein" value="RTD"> Ready-to-drink (Premier-style)</label><br>
-    <label><input type="radio" name="protein" value="Powder"> Powder (scoop & mix)</label><br>
-    <label><input type="radio" name="protein" value="Switching"> I’m switching to something cleaner</label><br><br>
-    <button type="button" onclick="submitPoll()" class="poll-button">Submit</button>
-  </form>
-  <p id="pollResult" style="display:none; font-weight:600; margin-top:10px;"></p>
-</div>
-
-<style>
-.poll-container {
-  background: linear-gradient(135deg, 
-#f8f9fa 0%, 
-#eef1ff 100%);
-  border: 2px solid 
-#dfe3ff;
-  border-radius: 12px;
-  padding: 25px 30px;
-  margin: 40px 0;
-  max-width: 700px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
-}
-.poll-container h3 {
-  color: #333;
-  font-size: 22px;
-  margin-top: 0;
-  margin-bottom: 20px;
-}
-.poll-container label {
-  font-size: 16px;
-  color: #444;
-  line-height: 1.8;
-  cursor: pointer;
-}
-.poll-button {
-  background: linear-gradient(135deg, 
-#667eea 0%, 
-#764ba2 100%);
-  border: none;
-  color: #fff;
-  font-size: 16px;
-  padding: 10px 25px;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: opacity 0.2s ease;
-}
-.poll-button:hover {
-  opacity: 0.9;
-}
-#pollResult {
-  color: 
-#2e7d32;
-  font-size: 16px;
-}
-</style>
-
-<script>
-function submitPoll() {
-  const choice = document.querySelector('input[name="protein"]:checked');
-  const result = document.getElementById("pollResult");
-  if (choice) {
-    result.style.display = "block";
-    result.textContent = "✅ Thanks! You're part of our Clean Protein Poll. (" + choice.value + ")";
-    fetch("https://formspree.io/f/xeopynkp", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ choice: choice.value, page: window.location.pathname })
-    });
-    document.getElementById("proteinPoll").reset();
-  } else {
-    alert("Please select an option first!");
-  }
-}
-</script>
-
         <!-- Clean Label 16 -->
         <section id="clean-label-16">
             <h2>Clean Label Project "Clean 16" (Additional Verified Safe Brands)</h2>
@@ -4412,9 +4334,9 @@ function submitPoll() {
         </section>
 
         <!-- Related Articles -->
-<section class="related-articles">
-    <h3>Related Articles:</h3>
-    <div class="related-grid">
+        <section class="related-articles">
+            <h3>Related Articles:</h3>
+            <div class="related-grid">
                 <a href="lead-in-protein-powder-list.html" class="related-card">
                     <h4>Consumer Reports Rankings</h4>
                     <p>All 23 CR-tested products with detailed analysis</p>
@@ -4423,14 +4345,18 @@ function submitPoll() {
                     <h4>MuscleTech Brand Analysis</h4>
                     <p>Why MuscleTech consistently ranks safest</p>
                 </a>
-<a href="owyn-pro-elite-protein-powder-safety-only-safe-plant-protein-2025.html" class="related-card">
-            <h4>OWYN: Only Safe Plant Protein</h4>
-            <p>#7 ranked, lead below detection</p>
-        </a>
-        <a href="optimum-nutrition-gold-standard-whey-lead-testing-results-2025.html" class="related-card">
-            <h4>Optimum Nutrition: World's #1</h4>
-            <p>#5 ranked safe at $0.75/serving</p>
-        </a>
+                <a href="dymatize-iso-100-safety-analysis.html" class="related-card">
+                    <h4>Dymatize ISO-100 Review</h4>
+                    <p>Complete analysis of #2 ranked protein</p>
+                </a>
+                <a href="prop-65-warning-protein-powder.html" class="related-card">
+                    <h4>Prop 65 Warning Guide</h4>
+                    <p>What lead warnings mean on supplements</p>
+                </a>
+                <a href="lead-poisoning-protein-powder-symptoms.html" class="related-card">
+                    <h4>Lead Poisoning Symptoms</h4>
+                    <p>Medical guide for contaminated protein users</p>
+                </a>
                 <a href="naked-nutrition-vegan-mass-gainer-lead.html" class="related-card">
                     <h4>Naked Nutrition Analysis</h4>
                     <p>Why it ranked worst in testing</p>
@@ -4438,6 +4364,10 @@ function submitPoll() {
                 <a href="huel-black-edition-lead-content.html" class="related-card">
                     <h4>Huel Black Edition Review</h4>
                     <p>Analysis of #22 ranked product</p>
+                </a>
+                <a href="../blog.html" class="related-card">
+                    <h4>All Safety Articles</h4>
+                    <p>Browse complete protein safety library</p>
                 </a>
             </div>
         </section>
@@ -4858,9 +4788,14 @@ function submitPoll() {
 }
 </script>
 
+    <div class="sticky-action-bar">
+    <a href="../quiz.html" class="cta-button cta-button-quiz">
+        ✅ 60 Sec Safety Quiz
+    </a>
+    <a href="https://amzn.to/3IZsKsr" class="cta-button amazon-button">
+        🛒 Shop #1 Safe Brand
+    </a>
+
 </body>
 </html>
-
-
-
 
