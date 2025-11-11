@@ -1271,53 +1271,44 @@ tbody tr:nth-child(odd) {
 }
 
 /* ========================================
-   17. STICKY CTA/TRUST BAR (CRO Enhancement)
+   17. STICKY CTA/TRUST BAR (CRO Enhancement) - FIXED VERSION
    ======================================== */
 
 .sticky-action-bar {
-    position: fixed;
-    bottom: 0;
+    position: fixed !important; /* Force the fixed position */
+    bottom: 0 !important;       /* Lock it to the bottom edge */
     left: 0;
     width: 100%;
     /* Use a high-contrast background to pop against the page */
     background: #ffffff; 
     box-shadow: 0 -4px 15px rgba(0,0,0,0.15);
     padding: 10px 20px;
-    z-index: 9999; /* High Z-Index to ensure it's on top of everything */
+    z-index: 99999; /* Increased z-index dramatically to overpower any conflicting elements */
     display: flex;
     justify-content: space-around;
     align-items: center;
-    /* Use gap for spacing between the two buttons */
     gap: 15px; 
 }
 
 /* Style the Quiz Button (Primary Color) */
 .sticky-action-bar .cta-button-quiz {
-    /* Inherits your primary purple/blue gradient from .cta-button */
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
-    padding: 12px 15px; /* Compact padding */
-    font-size: 14px; /* Smaller font size for the bar */
-    flex-grow: 1; /* Allows the buttons to fill the space evenly */
+    /* ... existing styles ... */
+    padding: 12px 15px; 
+    font-size: 14px; 
+    flex-grow: 1; 
 }
 
 /* Style the Shop Button (Amazon/Orange Color) */
 .sticky-action-bar .amazon-button {
-    /* Inherits Amazon colors */
+    /* ... existing styles ... */
     padding: 12px 15px;
     font-size: 14px;
     flex-grow: 1; 
 }
 
 /* Responsive Rule: Hide the sticky bar on larger screens (Desktop) */
-/* This prevents it from blocking too much screen space when the footer is visible */
 @media (min-width: 900px) {
     .sticky-action-bar { 
         display: none; 
     }
 }
-
-
-
-
-
