@@ -1271,44 +1271,45 @@ tbody tr:nth-child(odd) {
 }
 
 /* ========================================
-   17. STICKY CTA/TRUST BAR (CRO Enhancement) - FIXED VERSION
+   17. STICKY CTA/TRUST BAR - FINAL FIX ATTEMPT
    ======================================== */
 
 .sticky-action-bar {
-    position: fixed !important; /* Force the fixed position */
-    bottom: 0 !important;       /* Lock it to the bottom edge */
-    left: 0;
+    /* Core Fixes */
+    position: fixed !important; 
+    bottom: 0 !important;      
+    left: 0 !important;        /* Lock to left edge */
+    right: 0 !important;       /* Lock to right edge, making width redundant */
     width: 100%;
-    /* Use a high-contrast background to pop against the page */
+    z-index: 999999;           /* Maximum priority */
+    
+    /* Layout & Appearance */
     background: #ffffff; 
-    box-shadow: 0 -4px 15px rgba(0,0,0,0.15);
+    box-shadow: 0 -4px 15px rgba(0,0,0,0.25); /* Darker shadow for visibility */
     padding: 10px 20px;
-    z-index: 99999; /* Increased z-index dramatically to overpower any conflicting elements */
     display: flex;
     justify-content: space-around;
     align-items: center;
-    gap: 15px; 
+    gap: 15px;
+    
+    /* Anti-Interference Overrides (New) */
+    transform: none !important; /* Forces the bar not to inherit parent transforms */
+    -webkit-transform: none !important; 
+    perspective: none !important;
+    backface-visibility: hidden !important;
 }
 
-/* Style the Quiz Button (Primary Color) */
-.sticky-action-bar .cta-button-quiz {
-    /* ... existing styles ... */
+.sticky-action-bar .cta-button-quiz,
+.sticky-action-bar .amazon-button {
+    /* Using your existing styles */
     padding: 12px 15px; 
     font-size: 14px; 
-    flex-grow: 1; 
-}
-
-/* Style the Shop Button (Amazon/Orange Color) */
-.sticky-action-bar .amazon-button {
-    /* ... existing styles ... */
-    padding: 12px 15px;
-    font-size: 14px;
     flex-grow: 1; 
 }
 
 /* Responsive Rule: Hide the sticky bar on larger screens (Desktop) */
 @media (min-width: 900px) {
     .sticky-action-bar { 
-        display: none; 
+        display: none !important; /* Ensure it hides on desktop */
     }
 }
