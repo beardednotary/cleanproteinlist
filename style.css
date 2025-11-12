@@ -1270,3 +1270,113 @@ tbody tr:nth-child(odd) {
     text-decoration: underline;
 }
 
+/* Override for standard blockquotes */
+blockquote {
+    margin: 40px 0;
+    padding: 30px;
+    font-size: 22px; /* Large, bold font */
+    font-style: italic;
+    line-height: 1.4;
+    color: #1c1d22;
+    background: #f8f9fa; /* Light background */
+    border-left: 5px solid #ff4757; /* Use the alert badge color for urgency */
+    border-radius: 4px;
+    position: relative;
+}
+blockquote p {
+    margin: 0;
+    color: #1c1d22;
+}
+/* Add a subtle visual symbol */
+blockquote::before {
+    content: "🚨"; /* A literal warning icon */
+    font-size: 30px;
+    position: absolute;
+    top: -15px;
+    right: 15px;
+    opacity: 0.8;
+}
+
+/* In-Text "Shop Now" Link (e.g., used in product summaries) */
+.buy-link, .text-link {
+    font-weight: 700;
+    color: #ff9900; /* Use Amazon's gold/orange for clear association */
+    border-bottom: 2px dotted #ff9900;
+    text-decoration: none;
+    transition: all 0.2s;
+}
+.buy-link:hover, .text-link:hover {
+    color: #ff7700;
+    border-bottom-style: solid;
+}
+
+/* Amazon Button Refinement */
+.amazon-button {
+    font-size: 18px; /* Slightly larger for emphasis */
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 15px rgba(255, 153, 0, 0.4); /* Stronger shadow */
+    animation: pulse 2s infinite; /* Subtle animation for attention */
+}
+/* Simple Pulse Animation (optional but highly effective for conversions) */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.01); }
+    100% { transform: scale(1); }
+}
+
+/* 9. BLOG CARDS & GRIDS: Make them feel interactive */
+.blog-card, .related-card, .faq-item-premier {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.blog-card:hover, .related-card:hover, .faq-item-premier:hover {
+    transform: translateY(-3px); /* Slightly lift the card */
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.15); /* Shadow matching your brand color */
+}
+
+/* ========================================
+   17. STICKY CTA/TRUST BAR (CRO Enhancement)
+   ======================================== */
+
+.sticky-action-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    /* Use a high-contrast background to pop against the page */
+    background: #ffffff; 
+    box-shadow: 0 -4px 15px rgba(0,0,0,0.15);
+    padding: 10px 20px;
+    z-index: 9999; /* High Z-Index to ensure it's on top of everything */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* Use gap for spacing between the two buttons */
+    gap: 15px; 
+}
+
+/* Style the Quiz Button (Primary Color) */
+.sticky-action-bar .cta-button-quiz {
+    /* Inherits your primary purple/blue gradient from .cta-button */
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 12px 15px; /* Compact padding */
+    font-size: 14px; /* Smaller font size for the bar */
+    flex-grow: 1; /* Allows the buttons to fill the space evenly */
+}
+
+/* Style the Shop Button (Amazon/Orange Color) */
+.sticky-action-bar .amazon-button {
+    /* Inherits Amazon colors */
+    padding: 12px 15px;
+    font-size: 14px;
+    flex-grow: 1; 
+}
+
+/* Responsive Rule: Hide the sticky bar on larger screens (Desktop) */
+/* This prevents it from blocking too much screen space when the footer is visible */
+@media (min-width: 900px) {
+    .sticky-action-bar { 
+        display: none; 
+    }
+}
