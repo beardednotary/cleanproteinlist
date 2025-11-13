@@ -483,6 +483,57 @@ tbody tr:hover {
 }
 
 /* ========================================
+   8.5 ENHANCED QUOTE BLOCKS (Dwell Time & Impact)
+   ======================================== */
+
+/* Override for standard blockquotes */
+blockquote {
+    margin: 40px 0;
+    /* Increased padding, especially on the left, to visually frame the content */
+    padding: 35px 30px 35px 40px; 
+    font-size: 20px; 
+    font-weight: 500; 
+    font-style: italic;
+    line-height: 1.4;
+    color: #1c1d22;
+    background: #f8f9fa; /* Light, neutral background */
+    border-left: 6px solid #ff4757; /* Thick, high-urgency red border (from your alert badge) */
+    border-radius: 6px;
+    position: relative;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05); /* Subtle lift */
+    transition: box-shadow 0.3s; /* Add a smooth transition */
+}
+
+/* Optional: Add a subtle hover effect to draw the eye */
+blockquote:hover {
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+/* Ensure paragraph text inside blockquote inherits clean styles */
+blockquote p {
+    margin: 0;
+    line-height: 1.4;
+    color: #1c1d22;
+}
+
+/* Add a subtle visual symbol to the blockquote */
+blockquote::before {
+    content: "⚠️"; /* A warning icon that conveys urgency */
+    font-size: 28px;
+    position: absolute;
+    top: -15px; /* Position above the box */
+    right: 15px;
+    opacity: 0.8;
+}
+
+/* Style for emphasizing the key statistic inside the quote */
+blockquote strong {
+    font-size: 28px; /* Significantly larger font for the shock statistic */
+    font-weight: 800; /* Extra bold */
+    color: #ff4757; /* The shocking statistic stands out in the alert red color */
+}
+
+/* ========================================
    9. BLOG CARDS & GRIDS
    ======================================== */
 
