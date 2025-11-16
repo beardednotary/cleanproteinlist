@@ -1412,15 +1412,6 @@ blockquote::before {
     gap: 15px; 
 }
 
-/* Style the Quiz Button (Primary Color) */
-.sticky-action-bar .cta-button-quiz {
-    /* Inherits your primary purple/blue gradient from .cta-button */
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
-    padding: 12px 15px; /* Compact padding */
-    font-size: 14px; /* Smaller font size for the bar */
-    flex-grow: 1; /* Allows the buttons to fill the space evenly */
-}
 
 /* Style the Shop Button (Amazon/Orange Color) */
 .sticky-action-bar .amazon-button {
