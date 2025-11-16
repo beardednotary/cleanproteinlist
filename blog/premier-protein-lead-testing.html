@@ -398,14 +398,15 @@
 
       <!-- Clean Protein Poll -->
 <div class="poll-container">
-  <h3>💬 What kind of protein do you use most?</h3>
-  <form name="proteinPoll" id="proteinPoll">
-    <label><input type="radio" name="protein" value="RTD"> Ready-to-drink (Premier-style)</label><br>
-    <label><input type="radio" name="protein" value="Powder"> Powder (scoop & mix)</label><br>
-    <label><input type="radio" name="protein" value="Switching"> I’m switching to something cleaner</label><br><br>
-    <button type="button" onclick="submitPoll()" class="poll-button">Submit</button>
-  </form>
-  <p id="pollResult" style="display:none; font-weight:600; margin-top:10px;"></p>
+    <h3>🚨 Quick Poll: Where is YOUR biggest contamination risk?</h3>
+    <p>We've found RTD shakes and Powders have different levels of contamination. Tell us your preference:</p>
+    <form name="proteinPoll" id="proteinPoll">
+        <label><input type="radio" name="protein" value="RTD"> Ready-to-drink (More lead found in RTD shakes)</label><br>
+        <label><input type="radio" name="protein" value="Powder"> Powder (General risk, depends on source)</label><br>
+        <label><input type="radio" name="protein" value="Switching"> I’m switching to something cleaner</label><br><br>
+        <button type="button" onclick="submitPoll()" class="poll-button">Submit</button>
+    </form>
+    <p id="pollResult" style="display:none; font-weight:600; margin-top:10px;"></p>
 </div>
 
 <style>
@@ -703,6 +704,7 @@ function submitPoll() {
     </footer>
 </body>
 </html>
+
 
 
 
