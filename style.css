@@ -1449,53 +1449,89 @@ blockquote::before {
     line-height: 1.6;
 }
 
-/* 1. QUIZ CTA BUTTON OVERRIDE (High Contrast) */
-.quiz-cta .cta-button {
-    /* New high-contrast gradient */
-    background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%); /* Gold/Orange */
-    color: #1c1d22; /* Dark, authoritative text color */
-    font-size: 18px; /* Slightly larger text */
-    padding: 18px 40px; /* Larger padding */
-    font-weight: 800; /* Extra bold */
-    box-shadow: 0 6px 15px rgba(255, 165, 0, 0.5); /* Shadow to lift it */
+/* --- 1. QUIZ CTA BOX CONTAINER (UNIFORM BRAND) --- */
+.cta-box-inline, .untested-conclusion .conclusion-box {
+    /* Use a light, soft background with your primary color border for definition */
+    background: #e7f3ff; 
+    border: 3px solid #667eea; 
+    padding: 30px;
+    border-radius: 12px;
+    margin: 40px 0;
+    text-align: center;
+}
+.cta-box-inline h3, .cta-box-inline p {
+    color: #333; /* Switch text to dark for readability on light background */
 }
 
-.quiz-cta .cta-button:hover {
-    transform: translateY(-3px); /* Slightly more aggressive lift */
-    box-shadow: 0 8px 20px rgba(255, 165, 0, 0.7);
-    color: #1c1d22; /* Keep text dark on hover */
+/* --- 2. THE HIGH-CONTRAST QUIZ BUTTON --- */
+/* The button needs to pop against the light or dark background */
+.cta-button-quiz, 
+.cta-button-large[href="../quiz.html"],
+.cta-button[href="../quiz.html"] {
+    /* Standardized High-Contrast Look */
+    background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%) !important; /* Gold/Orange */
+    color: #1c1d22 !important; /* Dark text */
+    font-weight: 800 !important;
+    padding: 18px 40px !important;
+    font-size: 20px !important; /* Always large */
+    box-shadow: 0 4px 15px rgba(255, 165, 0, 0.4); /* Strong shadow */
+    transition: all 0.3s ease;
 }
-/* 2. POLL CONTAINER OVERRIDE (Visual Enticement) */
+
+.cta-button-quiz:hover, 
+.cta-button-large[href="../quiz.html"]:hover,
+.cta-button[href="../quiz.html"]:hover {
+    transform: scale(1.03) translateY(-2px);
+    box-shadow: 0 8px 20px rgba(255, 165, 0, 0.6);
+}
+
+/* --- 3. POLL CONTAINER OVERRIDE (Urgency & Size) --- */
 .poll-container {
-    background: linear-gradient(135deg, #fefefe 0%, #fffafa 100%); /* Very light, clean background */
-    border: 3px solid #ff4757; /* Use the Alert Red color for the main border */
+    background: linear-gradient(135deg, #f8f9fa 0%, #fffafa 100%); 
+    border: 3px solid #ff4757; /* ALERT RED BORDER for stop-and-read effect */
     border-radius: 12px;
     padding: 30px 40px;
-    margin: 50px auto; /* More margin to separate it */
-    max-width: 750px; /* Match article container width */
-    box-shadow: 0 5px 20px rgba(255, 71, 87, 0.15); /* Red shadow to draw eye */
+    margin: 50px auto;
+    max-width: 750px; /* Wider than 700px for better article flow */
+    box-shadow: 0 5px 20px rgba(255, 71, 87, 0.15); 
     position: relative;
-    overflow: hidden; /* For the top tag effect */
+    transition: all 0.3s ease;
 }
-
-/* Make the title highly urgent */
+.poll-container:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(255, 71, 87, 0.25); /* Lift on hover */
+}
 .poll-container h3 {
-    color: #ff4757; /* Title color matches border */
+    color: #e74c3c; /* Alert Red Title */
     font-size: 24px;
-    font-weight: 700;
+    font-weight: 800;
 }
 
-/* Style the poll button to be clean against the light background */
+/* Make radio buttons easier to click on mobile */
+.poll-container label {
+    display: block; /* Make the entire line clickable */
+    padding: 10px 0;
+    margin-bottom: 5px;
+    border-radius: 4px;
+    transition: background 0.2s;
+    font-size: 18px; /* Larger font size for better UX */
+    color: #333;
+}
+.poll-container label:hover {
+    background: #f0f5ff; /* Subtle highlight on hover */
+}
+
+/* Ensure the submit button uses the alert color */
 .poll-button {
-    background: #ff4757; /* Solid red alert color */
+    background: #ff4757; 
+    border: none;
     color: #fff;
-    font-size: 16px;
+    font-size: 18px;
     padding: 12px 30px;
     border-radius: 8px;
-    transition: all 0.2s ease;
+    font-weight: 700;
 }
-
 .poll-button:hover {
-    background: #e74c3c;
-    transform: translateY(-1px);
+    background: #c0392b;
+    opacity: 1;
 }
