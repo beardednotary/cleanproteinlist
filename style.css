@@ -1437,3 +1437,23 @@ blockquote::before {
         display: none; 
     }
 }
+
+/* 18. CHECKMARK LIST STYLING (For E-E-A-T lists) */
+.blog-post ul:not(.blog-meta ul, .jump-links ul) {
+    list-style: none; /* Remove default bullets */
+    padding-left: 0;
+}
+.blog-post ul:not(.blog-meta ul, .jump-links ul) li {
+    padding-left: 30px; /* Space for the icon */
+    position: relative;
+    margin-bottom: 12px;
+    line-height: 1.6;
+}
+.blog-post ul:not(.blog-meta ul, .jump-links ul) li::before {
+    content: "✅"; /* The checkmark icon */
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 18px;
+    line-height: 1.6;
+}
