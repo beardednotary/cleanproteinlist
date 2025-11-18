@@ -1430,23 +1430,52 @@ blockquote::before {
 }
 
 /* 18. CHECKMARK LIST STYLING (For E-E-A-T lists) */
-.blog-post ul:not(.blog-meta ul, .jump-links ul) {
+/* Only apply to main article content, not nested lists in components */
+article.blog-post > ul,
+article.blog-post section > ul,
+article.blog-post section > div > ul {
     list-style: none; /* Remove default bullets */
     padding-left: 0;
 }
-.blog-post ul:not(.blog-meta ul, .jump-links ul) li {
+article.blog-post > ul li,
+article.blog-post section > ul li,
+article.blog-post section > div > ul li {
     padding-left: 30px; /* Space for the icon */
     position: relative;
     margin-bottom: 12px;
     line-height: 1.6;
 }
-.blog-post ul:not(.blog-meta ul, .jump-links ul) li::before {
+article.blog-post > ul li::before,
+article.blog-post section > ul li::before,
+article.blog-post section > div > ul li::before {
     content: "✅"; /* The checkmark icon */
     position: absolute;
     left: 0;
     top: 0;
     font-size: 18px;
     line-height: 1.6;
+}
+
+/* Exclude specific components that should keep normal bullets */
+.table-of-contents ul,
+.table-of-contents ul li,
+.sources ul,
+.sources ul li,
+.faq-grid ul,
+.faq-grid ul li,
+.product-specs ul,
+.product-specs ul li,
+.calculator-container ul,
+.calculator-container ul li {
+    list-style: disc !important;
+    padding-left: 20px !important;
+}
+.table-of-contents ul li::before,
+.sources ul li::before,
+.faq-grid ul li::before,
+.product-specs ul li::before,
+.calculator-container ul li::before {
+    content: none !important;
 }
 
 /* ========================================
