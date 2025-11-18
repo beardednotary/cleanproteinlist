@@ -1544,3 +1544,121 @@ blockquote::before {
 .poll-button:hover {
     background: #c0392b;
 }
+/* Premier Protein Article Enhancements */
+
+.rtd-comparison-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    margin: 40px 0;
+}
+
+.rtd-product-card {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    border-left: 5px solid;
+    position: relative;
+}
+
+.rtd-product-card.best {
+    border-left-color: #2ecc71;
+    background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%);
+}
+
+.rtd-product-card.value {
+    border-left-color: #3498db;
+    background: linear-gradient(135deg, #e7f3ff 0%, #d0e8ff 100%);
+}
+
+.rtd-product-card.budget {
+    border-left-color: #f39c12;
+    background: linear-gradient(135deg, #fff9e6 0%, #ffe6cc 100%);
+}
+
+.rank-badge {
+    display: inline-block;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.rank-badge.rtd-safe {
+    background: #2ecc71;
+    color: white;
+}
+
+.rank-badge.diy {
+    background: #3498db;
+    color: white;
+}
+
+.rank-badge.budget {
+    background: #f39c12;
+    color: white;
+}
+
+.product-specs {
+    background: rgba(255,255,255,0.8);
+    padding: 15px;
+    border-radius: 8px;
+    margin: 15px 0;
+}
+
+.product-specs p {
+    margin: 8px 0;
+    font-size: 15px;
+}
+
+.cta-buttons-diy {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.decision-framework-premier {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin: 30px 0;
+}
+
+.decision-card {
+    padding: 25px;
+    border-radius: 8px;
+    border-left: 5px solid;
+    background: #f8f9fa;
+}
+
+.decision-card.convenience {
+    border-left-color: #2ecc71;
+}
+
+.decision-card.value {
+    border-left-color: #3498db;
+}
+
+.decision-card.budget {
+    border-left-color: #f39c12;
+}
+
+.decision-card.occasional {
+    border-left-color: #95a5a6;
+}
+
+.decision-card h4 {
+    margin-top: 0;
+    color: #333;
+}
+
+@media (max-width: 768px) {
+    .rtd-comparison-grid,
+    .decision-framework-premier,
+    .cta-buttons-diy {
+        grid-template-columns: 1fr;
+    }
+}
