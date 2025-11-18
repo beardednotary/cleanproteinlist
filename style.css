@@ -1429,26 +1429,25 @@ blockquote::before {
     }
 }
 
-/* 18. CHECKMARK LIST STYLING (For E-E-A-T lists) */
-/* Only apply to main article content, not nested lists in components */
-article.blog-post > ul,
-article.blog-post section > ul,
-article.blog-post section > div > ul {
-    list-style: none; /* Remove default bullets */
+/* 18. CHECKMARK LIST STYLING - SIMPLIFIED */
+/* Only apply checkmarks to lists inside highlight boxes */
+.highlight-box ul,
+.answer-box ul,
+.callout-box ul {
+    list-style: none;
     padding-left: 0;
 }
-article.blog-post > ul li,
-article.blog-post section > ul li,
-article.blog-post section > div > ul li {
-    padding-left: 30px; /* Space for the icon */
+.highlight-box ul li,
+.answer-box ul li,
+.callout-box ul li {
+    padding-left: 30px;
     position: relative;
     margin-bottom: 12px;
-    line-height: 1.6;
 }
-article.blog-post > ul li::before,
-article.blog-post section > ul li::before,
-article.blog-post section > div > ul li::before {
-    content: "✅"; /* The checkmark icon */
+.highlight-box ul li::before,
+.answer-box ul li::before,
+.callout-box ul li::before {
+    content: "✅";
     position: absolute;
     left: 0;
     top: 0;
