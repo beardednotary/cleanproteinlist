@@ -1447,7 +1447,6 @@ blockquote::before {
 .highlight-box ul li::before,
 .answer-box ul li::before,
 .callout-box ul li::before {
-    content: "✅";
     position: absolute;
     left: 0;
     top: 0;
