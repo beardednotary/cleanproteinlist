@@ -143,6 +143,21 @@
         "dateModified": "2025-01-16"
     }
     </script>
+
+    <!-- Video Schema (Add your video ID when ready) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "VideoObject",
+        "name": "Optimum Nutrition Gold Standard Safety Testing",
+        "description": "Optimum Nutrition Gold Standard Whey ranked #5 safe in Consumer Reports testing with lead below detection. The world's most popular protein is verified safe.",
+        "thumbnailUrl": "https://img.youtube.com/vi/YOUR_ON_VIDEO_ID/maxresdefault.jpg",
+        "uploadDate": "2025-01-16T08:00:00Z",
+        "duration": "PT60S",
+        "contentUrl": "https://www.youtube.com/watch?v=YOUR_ON_VIDEO_ID",
+        "embedUrl": "https://www.youtube.com/embed/YOUR_ON_VIDEO_ID"
+    }
+    </script>
 </head>
 <body>
     <header>
@@ -169,7 +184,7 @@
                 <h1>Optimum Nutrition Gold Standard Whey Lead Testing: #5 Ranked Safe (2025 Consumer Reports)</h1>
                 
                 <div class="article-meta">
-                    <span>📅 Updated: November 2025</span>
+                    <span>📅 Updated: November 24, 2025</span>
                     <span>⏱️ 7 min read</span>
                     <span>✅ Based on Consumer Reports October 2025 Testing</span>
                 </div>
@@ -337,85 +352,10 @@
                         <p><strong>Only 4 proteins tested safer:</strong> MuscleTech, Dymatize, Momentous, and BSN. All cost significantly more except BSN.</p>
                         <p><strong>For the price ($0.75/serving), Optimum Nutrition offers the best safety-to-value ratio of any protein tested.</strong></p>
                     </div>
+
+                    <p><a href="https://cleanproteinlist.com/blog/lead-in-protein-powder-list.html">See the complete lead in protein powders list for 2025</a></p>     
+        
                 </section>
-
-                <!-- Clean Protein Poll -->
-<div class="poll-container">
-  <h3>💬 What kind of protein do you use most?</h3>
-  <form name="proteinPoll" id="proteinPoll">
-    <label><input type="radio" name="protein" value="RTD"> Ready-to-drink (Premier-style)</label><br>
-    <label><input type="radio" name="protein" value="Powder"> Powder (scoop & mix)</label><br>
-    <label><input type="radio" name="protein" value="Switching"> I’m switching to something cleaner</label><br><br>
-    <button type="button" onclick="submitPoll()" class="poll-button">Submit</button>
-  </form>
-  <p id="pollResult" style="display:none; font-weight:600; margin-top:10px;"></p>
-</div>
-
-<style>
-.poll-container {
-  background: linear-gradient(135deg, 
-#f8f9fa 0%, 
-#eef1ff 100%);
-  border: 2px solid 
-#dfe3ff;
-  border-radius: 12px;
-  padding: 25px 30px;
-  margin: 40px 0;
-  max-width: 700px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
-}
-.poll-container h3 {
-  color: #333;
-  font-size: 22px;
-  margin-top: 0;
-  margin-bottom: 20px;
-}
-.poll-container label {
-  font-size: 16px;
-  color: #444;
-  line-height: 1.8;
-  cursor: pointer;
-}
-.poll-button {
-  background: linear-gradient(135deg, 
-#667eea 0%, 
-#764ba2 100%);
-  border: none;
-  color: #fff;
-  font-size: 16px;
-  padding: 10px 25px;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: opacity 0.2s ease;
-}
-.poll-button:hover {
-  opacity: 0.9;
-}
-#pollResult {
-  color: 
-#2e7d32;
-  font-size: 16px;
-}
-</style>
-
-<script>
-function submitPoll() {
-  const choice = document.querySelector('input[name="protein"]:checked');
-  const result = document.getElementById("pollResult");
-  if (choice) {
-    result.style.display = "block";
-    result.textContent = "✅ Thanks! You're part of our Clean Protein Poll. (" + choice.value + ")";
-    fetch("https://formspree.io/f/xeopynkp", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ choice: choice.value, page: window.location.pathname })
-    });
-    document.getElementById("proteinPoll").reset();
-  } else {
-    alert("Please select an option first!");
-  }
-}
-</script>
 
                 <!-- Why Popular -->
                 <section id="why-popular">
@@ -1417,6 +1357,4 @@ margin: 30px 0;
     }
 </style>
 </body>
-
 </html>
-
