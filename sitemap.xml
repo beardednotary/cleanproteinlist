@@ -2,25 +2,25 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://cleanproteinlist.com/</loc>
-    <lastmod>2025-11-27</lastmod>
+    <lastmod>2025-11-28</lastmod>
     <priority>1.0</priority>
   </url>
 
   <url>
     <loc>https://cleanproteinlist.com/index.html</loc>
-    <lastmod>2025-11-27</lastmod>
+    <lastmod>2025-11-28</lastmod>
     <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://cleanproteinlist.com/blog.html</loc>
-    <lastmod>2025-11-27</lastmod>
+    <lastmod>2025-11-28</lastmod>
     <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://cleanproteinlist.com/quiz.html</loc>
-    <lastmod>2025-11-27</lastmod>
+    <lastmod>2025-11-28</lastmod>
     <priority>0.9</priority>
   </url>
 
@@ -49,7 +49,7 @@
     <priority>0.8</priority>
   </url>
 
-  <!-- NEW: Top 10 Page - High Priority -->
+  <!-- NEW: Money Pages - High Priority -->
   <url>
     <loc>https://cleanproteinlist.com/blog/best-protein-powder-2025.html</loc>
     <lastmod>2025-11-27</lastmod>
@@ -88,6 +88,13 @@
     <priority>0.9</priority>
   </url>
 
+  <!-- NEW: OWYN Comparison Article -->
+  <url>
+    <loc>https://cleanproteinlist.com/blog/owyn-vs-vega-orgain-garden-of-life-safe-plant-protein-2025.html</loc>
+    <lastmod>2025-11-28</lastmod>
+    <priority>0.9</priority>
+  </url>
+
   <url>
     <loc>https://cleanproteinlist.com/blog/huel-black-edition-lead-content.html</loc>
     <lastmod>2025-11-09</lastmod>
@@ -106,7 +113,6 @@
     <priority>0.9</priority>
   </url>
 
-  <!-- NEW: Optimum Nutrition Deep Dive -->
   <url>
     <loc>https://cleanproteinlist.com/blog/optimum-nutrition-gold-standard-whey-lead-testing-results-2025.html</loc>
     <lastmod>2025-11-27</lastmod>
