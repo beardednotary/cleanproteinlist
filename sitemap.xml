@@ -2,25 +2,25 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://cleanproteinlist.com/</loc>
-    <lastmod>2025-12-10</lastmod>
+    <lastmod>2025-12-14</lastmod>
     <priority>1.0</priority>
   </url>
 
   <url>
     <loc>https://cleanproteinlist.com/index.html</loc>
-    <lastmod>2025-12-10</lastmod>
+    <lastmod>2025-12-14</lastmod>
     <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://cleanproteinlist.com/blog.html</loc>
-    <lastmod>2025-12-10</lastmod>
+    <lastmod>2025-12-14</lastmod>
     <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://cleanproteinlist.com/quiz.html</loc>
-    <lastmod>2025-12-10</lastmod>
+    <lastmod>2025-12-14</lastmod>
     <priority>0.9</priority>
   </url>
 
@@ -75,7 +75,7 @@
     <priority>0.9</priority>
   </url>
 
-  <!-- NEW BATCH 1: RTD Shake Articles -->
+  <!-- BATCH 1: RTD Shake Articles -->
   <url>
     <loc>https://cleanproteinlist.com/blog/muscle-milk-lead-testing-safety-analysis-2025.html</loc>
     <lastmod>2025-12-10</lastmod>
@@ -91,6 +91,13 @@
   <url>
     <loc>https://cleanproteinlist.com/blog/premier-protein-vs-muscle-milk-comparison-2025.html</loc>
     <lastmod>2025-12-10</lastmod>
+    <priority>0.95</priority>
+  </url>
+
+  <!-- BREAKING NEWS: FDA Recall -->
+  <url>
+    <loc>https://cleanproteinlist.com/blog/genepro-whey-protein-fda-recall-allergen-mislabeling-2025.html</loc>
+    <lastmod>2025-12-14</lastmod>
     <priority>0.95</priority>
   </url>
 
