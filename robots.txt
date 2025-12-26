@@ -24,4 +24,8 @@ Disallow: /
 
 # Disallow admin areas if you add them later
 # Disallow: /admin/
+<<<<<<< HEAD
 # Disallow: /private/
+=======
+# Disallow: /private/
+>>>>>>> f8e69a56fe47643eea068cc10c5837b9e5cc8c89

@@ -1429,6 +1429,7 @@ blockquote::before {
     }
 }
 
+<<<<<<< HEAD
 /* 18. CHECKMARK LIST STYLING (For E-E-A-T lists) */
 .blog-post ul:not(.blog-meta ul, .jump-links ul) {
     list-style: none; /* Remove default bullets */
@@ -1442,6 +1443,26 @@ blockquote::before {
 }
 .blog-post ul:not(.blog-meta ul, .jump-links ul) li::before {
     content: "✅"; /* The checkmark icon */
+=======
+/* 18. CHECKMARK LIST STYLING - SIMPLIFIED */
+/* Only apply checkmarks to lists inside highlight boxes */
+.highlight-box ul,
+.answer-box ul,
+.callout-box ul {
+    list-style: none;
+    padding-left: 0;
+}
+.highlight-box ul li,
+.answer-box ul li,
+.callout-box ul li {
+    padding-left: 30px;
+    position: relative;
+    margin-bottom: 12px;
+}
+.highlight-box ul li::before,
+.answer-box ul li::before,
+.callout-box ul li::before {
+>>>>>>> f8e69a56fe47643eea068cc10c5837b9e5cc8c89
     position: absolute;
     left: 0;
     top: 0;
@@ -1449,6 +1470,31 @@ blockquote::before {
     line-height: 1.6;
 }
 
+<<<<<<< HEAD
+=======
+/* Exclude specific components that should keep normal bullets */
+.table-of-contents ul,
+.table-of-contents ul li,
+.sources ul,
+.sources ul li,
+.faq-grid ul,
+.faq-grid ul li,
+.product-specs ul,
+.product-specs ul li,
+.calculator-container ul,
+.calculator-container ul li {
+    list-style: disc !important;
+    padding-left: 20px !important;
+}
+.table-of-contents ul li::before,
+.sources ul li::before,
+.faq-grid ul li::before,
+.product-specs ul li::before,
+.calculator-container ul li::before {
+    content: none !important;
+}
+
+>>>>>>> f8e69a56fe47643eea068cc10c5837b9e5cc8c89
 /* ========================================
    17. QUIZ & POLL UNIFORMITY (CRO FIXES)
    ======================================== */
@@ -1661,4 +1707,8 @@ blockquote::before {
     .cta-buttons-diy {
         grid-template-columns: 1fr;
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> f8e69a56fe47643eea068cc10c5837b9e5cc8c89
