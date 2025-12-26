@@ -1,238 +1,276 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://cleanproteinlist.com/</loc>
-    <lastmod>2025-12-14</lastmod>
-    <priority>1.0</priority>
-  </url>
 
-  <url>
-    <loc>https://cleanproteinlist.com/index.html</loc>
-    <lastmod>2025-12-14</lastmod>
-    <priority>0.9</priority>
-  </url>
+<!-- HOMEPAGE -->
+<url>
+  <loc>https://cleanproteinlist.com/</loc>
+  <lastmod>2025-12-18</lastmod>
+  <priority>1.0</priority>
+</url>
 
-  <url>
-    <loc>https://cleanproteinlist.com/blog.html</loc>
-    <lastmod>2025-12-14</lastmod>
-    <priority>0.9</priority>
-  </url>
+<url>
+  <loc>https://cleanproteinlist.com/index.html</loc>
+  <lastmod>2025-12-18</lastmod>
+  <priority>1.0</priority>
+</url>
 
-  <url>
-    <loc>https://cleanproteinlist.com/quiz.html</loc>
-    <lastmod>2025-12-14</lastmod>
-    <priority>0.9</priority>
-  </url>
+<!-- MAIN PAGES -->
+<url>
+  <loc>https://cleanproteinlist.com/blog.html</loc>
+  <lastmod>2025-12-18</lastmod>
+  <priority>0.9</priority>
+</url>
 
-  <url>
-    <loc>https://cleanproteinlist.com/privacy.html</loc>
-    <lastmod>2025-11-09</lastmod>
-    <priority>0.9</priority>
-  </url>
+<url>
+  <loc>https://cleanproteinlist.com/quiz.html</loc>
+  <lastmod>2025-12-18</lastmod>
+  <priority>0.9</priority>
+</url>
 
-  <url>
-    <loc>https://cleanproteinlist.com/contact.html</loc>
-    <lastmod>2025-11-09</lastmod>
-    <priority>0.9</priority>
-  </url>
+<!-- MONEY PAGES - TOP PRIORITY ARTICLES -->
+<url>
+  <loc>https://cleanproteinlist.com/blog/best-protein-powder-2025.html</loc>
+  <lastmod>2025-12-18</lastmod>
+  <priority>0.95</priority>
+</url>
 
-  <!-- Core Articles -->
-  <url>
-    <loc>https://cleanproteinlist.com/blog/lead-in-protein-powder-list.html</loc>
-    <lastmod>2025-11-16</lastmod>
-    <priority>0.9</priority>
-  </url>
+<url>
+  <loc>https://cleanproteinlist.com/blog/lead-free-protein-brands-ranked-2025.html</loc>
+  <lastmod>2025-12-18</lastmod>
+  <priority>0.95</priority>
+</url>
 
-  <url>
-    <loc>https://cleanproteinlist.com/blog/lead-free-protein-brands-ranked-2025.html</loc>
-    <lastmod>2025-11-06</lastmod>
-    <priority>0.8</priority>
-  </url>
+<url>
+  <loc>https://cleanproteinlist.com/blog/lead-in-protein-powder-list.html</loc>
+  <lastmod>2025-12-18</lastmod>
+  <priority>0.95</priority>
+</url>
 
-  <!-- Money Pages - High Priority -->
-  <url>
-    <loc>https://cleanproteinlist.com/blog/best-protein-powder-2025.html</loc>
-    <lastmod>2025-11-27</lastmod>
-    <priority>0.95</priority>
-  </url>
+<!-- BREAKING NEWS / HIGH-VALUE CONTENT -->
+<url>
+  <loc>https://cleanproteinlist.com/blog/genepro-whey-protein-fda-recall-allergen-mislabeling-2025.html</loc>
+  <lastmod>2025-12-18</lastmod>
+  <priority>0.95</priority>
+</url>
 
-  <!-- High-Value Targeted Guides -->
-  <url>
-    <loc>https://cleanproteinlist.com/blog/best-protein-powder-weight-loss-2025.html</loc>
-    <lastmod>2025-11-27</lastmod>
-    <priority>0.9</priority>
-  </url>
+<url>
+  <loc>https://cleanproteinlist.com/blog/garden-of-life-lawsuit-lead-contamination-class-action-2025.html</loc>
+  <lastmod>2025-12-18</lastmod>
+  <priority>0.95</priority>
+</url>
 
-  <url>
-    <loc>https://cleanproteinlist.com/blog/safe-protein-powder-pregnancy-2025.html</loc>
-    <lastmod>2025-11-27</lastmod>
-    <priority>0.9</priority>
-  </url>
+<!-- RTD SHAKE HUB PAGE (High Priority) -->
+<url>
+  <loc>https://cleanproteinlist.com/blog/rtd-protein-shakes-safety-guide-2025.html</loc>
+  <lastmod>2025-12-18</lastmod>
+  <priority>0.95</priority>
+</url>
 
-  <url>
-    <loc>https://cleanproteinlist.com/blog/safe-protein-powder-teenagers-kids-2025.html</loc>
-    <lastmod>2025-11-27</lastmod>
-    <priority>0.9</priority>
-  </url>
+<!-- TARGETED BUYER GUIDES (High Intent) -->
+<url>
+  <loc>https://cleanproteinlist.com/blog/best-protein-powder-weight-loss-2025.html</loc>
+  <lastmod>2025-12-18</lastmod>
+  <priority>0.9</priority>
+</url>
 
-  <!-- BATCH 1: RTD Shake Articles -->
-  <url>
-    <loc>https://cleanproteinlist.com/blog/muscle-milk-lead-testing-safety-analysis-2025.html</loc>
-    <lastmod>2025-12-10</lastmod>
-    <priority>0.9</priority>
-  </url>
+<url>
+  <loc>https://cleanproteinlist.com/blog/safe-protein-powder-pregnancy-2025.html</loc>
+  <lastmod>2025-12-18</lastmod>
+  <priority>0.9</priority>
+</url>
 
-  <url>
-    <loc>https://cleanproteinlist.com/blog/fairlife-protein-shakes-safety-lead-testing-2025.html</loc>
-    <lastmod>2025-12-10</lastmod>
-    <priority>0.9</priority>
-  </url>
+<url>
+  <loc>https://cleanproteinlist.com/blog/safe-protein-powder-teenagers-kids-2025.html</loc>
+  <lastmod>2025-12-18</lastmod>
+  <priority>0.9</priority>
+</url>
 
-  <url>
-    <loc>https://cleanproteinlist.com/blog/premier-protein-vs-muscle-milk-comparison-2025.html</loc>
-    <lastmod>2025-12-10</lastmod>
-    <priority>0.95</priority>
-  </url>
+<url>
+  <loc>https://cleanproteinlist.com/blog/best-protein-powder-costco-2025.html</loc>
+  <lastmod>2025-12-18</lastmod>
+  <priority>0.9</priority>
+</url>
 
-  <!-- BREAKING NEWS: FDA Recall -->
-  <url>
-    <loc>https://cleanproteinlist.com/blog/genepro-whey-protein-fda-recall-allergen-mislabeling-2025.html</loc>
-    <lastmod>2025-12-14</lastmod>
-    <priority>0.95</priority>
-  </url>
+<url>
+  <loc>https://cleanproteinlist.com/blog/ebt-protein-powder-complete-guide-2025.html</loc>
+  <lastmod>2025-12-18</lastmod>
+  <priority>0.9</priority>
+</url>
 
-  <!-- Brand Analysis Articles -->
-  <url>
-    <loc>https://cleanproteinlist.com/blog/naked-nutrition-vegan-mass-gainer-lead.html</loc>
-    <lastmod>2025-11-09</lastmod>
-    <priority>0.8</priority>
-  </url>
+<!-- RTD SHAKE ARTICLES (High Traffic Performers) -->
+<url>
+  <loc>https://cleanproteinlist.com/blog/premier-protein-vs-muscle-milk-comparison-2025.html</loc>
+  <lastmod>2025-12-18</lastmod>
+  <priority>0.9</priority>
+</url>
 
-  <url>
-    <loc>https://cleanproteinlist.com/blog/owyn-pro-elite-protein-powder-safety-only-safe-plant-protein-2025.html</loc>
-    <lastmod>2025-11-10</lastmod>
-    <priority>0.9</priority>
-  </url>
+<url>
+  <loc>https://cleanproteinlist.com/blog/muscle-milk-lead-testing-safety-analysis-2025.html</loc>
+  <lastmod>2025-12-18</lastmod>
+  <priority>0.9</priority>
+</url>
 
-  <url>
-    <loc>https://cleanproteinlist.com/blog/owyn-vs-vega-orgain-garden-of-life-safe-plant-protein-2025.html</loc>
-    <lastmod>2025-11-28</lastmod>
-    <priority>0.9</priority>
-  </url>
+<url>
+  <loc>https://cleanproteinlist.com/blog/fairlife-protein-shakes-safety-lead-testing-2025.html</loc>
+  <lastmod>2025-12-18</lastmod>
+  <priority>0.9</priority>
+</url>
 
-  <url>
-    <loc>https://cleanproteinlist.com/blog/huel-black-edition-lead-content.html</loc>
-    <lastmod>2025-11-09</lastmod>
-    <priority>0.8</priority>
-  </url>
+<url>
+  <loc>https://cleanproteinlist.com/blog/ensure-protein-shakes-safety-lead-testing-2025.html</loc>
+  <lastmod>2025-12-18</lastmod>
+  <priority>0.9</priority>
+</url>
 
-  <url>
-    <loc>https://cleanproteinlist.com/blog/premier-protein-lead-testing.html</loc>
-    <lastmod>2025-11-17</lastmod>
-    <priority>0.9</priority>
-  </url>
+<url>
+  <loc>https://cleanproteinlist.com/blog/boost-protein-shakes-safety-lead-testing-2025.html</loc>
+  <lastmod>2025-12-18</lastmod>
+  <priority>0.9</priority>
+</url>
 
-  <url>
-    <loc>https://cleanproteinlist.com/blog/muscletech-mass-gainer-safety.html</loc>
-    <lastmod>2025-11-15</lastmod>
-    <priority>0.9</priority>
-  </url>
+<url>
+  <loc>https://cleanproteinlist.com/blog/premier-protein-lead-testing.html</loc>
+  <lastmod>2025-12-18</lastmod>
+  <priority>0.9</priority>
+</url>
 
-  <url>
-    <loc>https://cleanproteinlist.com/blog/optimum-nutrition-gold-standard-whey-lead-testing-results-2025.html</loc>
-    <lastmod>2025-11-27</lastmod>
-    <priority>0.9</priority>
-  </url>
+<!-- TOP BRAND ANALYSIS (High Authority) -->
+<url>
+  <loc>https://cleanproteinlist.com/blog/owyn-pro-elite-protein-powder-safety-only-safe-plant-protein-2025.html</loc>
+  <lastmod>2025-12-18</lastmod>
+  <priority>0.9</priority>
+</url>
 
-  <url>
-    <loc>https://cleanproteinlist.com/blog/momentous-protein-safety-analysis.html</loc>
-    <lastmod>2025-11-09</lastmod>
-    <priority>0.8</priority>
-  </url>
+<url>
+  <loc>https://cleanproteinlist.com/blog/optimum-nutrition-gold-standard-whey-lead-testing-results-2025.html</loc>
+  <lastmod>2025-12-18</lastmod>
+  <priority>0.9</priority>
+</url>
 
-  <url>
-    <loc>https://cleanproteinlist.com/blog/bsn-syntha-6-safety-analysis.html</loc>
-    <lastmod>2025-11-09</lastmod>
-    <priority>0.8</priority>
-  </url>
+<url>
+  <loc>https://cleanproteinlist.com/blog/muscletech-mass-gainer-safety.html</loc>
+  <lastmod>2025-12-18</lastmod>
+  <priority>0.9</priority>
+</url>
 
-  <url>
-    <loc>https://cleanproteinlist.com/blog/dymatize-iso-100-safety-analysis.html</loc>
-    <lastmod>2025-11-09</lastmod>
-    <priority>0.8</priority>
-  </url>
+<url>
+  <loc>https://cleanproteinlist.com/blog/body-fortress-protein-powder-lead-testing-budget-clean-2025.html</loc>
+  <lastmod>2025-12-18</lastmod>
+  <priority>0.9</priority>
+</url>
 
-  <url>
-    <loc>https://cleanproteinlist.com/blog/orgain-organic-protein-powder-lead-levels-consumer-reports-2025.html</loc>
-    <lastmod>2025-11-09</lastmod>
-    <priority>0.8</priority>
-  </url>
+<!-- PLANT PROTEIN CONTENT -->
+<url>
+  <loc>https://cleanproteinlist.com/blog/owyn-vs-vega-orgain-garden-of-life-safe-plant-protein-2025.html</loc>
+  <lastmod>2025-12-18</lastmod>
+  <priority>0.85</priority>
+</url>
 
-  <url>
-    <loc>https://cleanproteinlist.com/blog/muscletech-protein-powder-ranking-analysis.html</loc>
-    <lastmod>2025-11-09</lastmod>
-    <priority>0.8</priority>
-  </url>
+<url>
+  <loc>https://cleanproteinlist.com/blog/orgain-organic-protein-powder-lead-levels-consumer-reports-2025.html</loc>
+  <lastmod>2025-12-18</lastmod>
+  <priority>0.8</priority>
+</url>
 
-  <url>
-    <loc>https://cleanproteinlist.com/blog/body-fortress-protein-powder-lead-testing-budget-clean-2025.html</loc>
-    <lastmod>2025-11-15</lastmod>
-    <priority>0.8</priority>
-  </url>
+<!-- BRAND WARNINGS -->
+<url>
+  <loc>https://cleanproteinlist.com/blog/naked-nutrition-vegan-mass-gainer-lead.html</loc>
+  <lastmod>2025-12-18</lastmod>
+  <priority>0.8</priority>
+</url>
 
-  <!-- Comprehensive Guides -->
-  <url>
-    <loc>https://cleanproteinlist.com/blog/lead-poisoning-protein-powder-symptoms.html</loc>
-    <lastmod>2025-11-09</lastmod>
-    <priority>0.8</priority>
-  </url>
+<url>
+  <loc>https://cleanproteinlist.com/blog/huel-black-edition-lead-content.html</loc>
+  <lastmod>2025-12-18</lastmod>
+  <priority>0.8</priority>
+</url>
 
-  <url>
-    <loc>https://cleanproteinlist.com/blog/beyond-lead-arsenic-cadmium-mercury-protein-powder-2025.html</loc>
-    <lastmod>2025-11-09</lastmod>
-    <priority>0.8</priority>
-  </url>
+<!-- COMPREHENSIVE GUIDES -->
+<url>
+  <loc>https://cleanproteinlist.com/blog/heavy-metals-protein-shakes-brands-2025-report.html</loc>
+  <lastmod>2025-12-18</lastmod>
+  <priority>0.85</priority>
+</url>
 
-  <url>
-    <loc>https://cleanproteinlist.com/blog/heavy-metals-protein-shakes-brands-2025-report.html</loc>
-    <lastmod>2025-11-09</lastmod>
-    <priority>0.8</priority>
-  </url>
+<url>
+  <loc>https://cleanproteinlist.com/blog/beyond-lead-arsenic-cadmium-mercury-protein-powder-2025.html</loc>
+  <lastmod>2025-12-18</lastmod>
+  <priority>0.85</priority>
+</url>
 
-  <url>
-    <loc>https://cleanproteinlist.com/blog/chocolate-protein-powder-lead-contamination-2025.html</loc>
-    <lastmod>2025-11-09</lastmod>
-    <priority>0.8</priority>
-  </url>
+<url>
+  <loc>https://cleanproteinlist.com/blog/chocolate-protein-powder-lead-contamination-2025.html</loc>
+  <lastmod>2025-12-18</lastmod>
+  <priority>0.85</priority>
+</url>
 
-  <url>
-    <loc>https://cleanproteinlist.com/blog/prop-65-warning-protein-powder.html</loc>
-    <lastmod>2025-11-09</lastmod>
-    <priority>0.8</priority>
-  </url>
+<url>
+  <loc>https://cleanproteinlist.com/blog/prop-65-warning-protein-powder.html</loc>
+  <lastmod>2025-12-18</lastmod>
+  <priority>0.8</priority>
+</url>
 
-  <url>
-    <loc>https://cleanproteinlist.com/blog/ebt-protein-powder-complete-guide-2025.html</loc>
-    <lastmod>2025-11-11</lastmod>
-    <priority>0.8</priority>
-  </url>
+<url>
+  <loc>https://cleanproteinlist.com/blog/lead-poisoning-protein-powder-symptoms.html</loc>
+  <lastmod>2025-12-18</lastmod>
+  <priority>0.8</priority>
+</url>
 
-  <url>
-    <loc>https://cleanproteinlist.com/blog/best-protein-powder-costco-2025.html</loc>
-    <lastmod>2025-11-09</lastmod>
-    <priority>0.85</priority>
-  </url>
+<!-- BRAND DEEP-DIVES -->
+<url>
+  <loc>https://cleanproteinlist.com/blog/dymatize-iso-100-safety-analysis.html</loc>
+  <lastmod>2025-12-18</lastmod>
+  <priority>0.8</priority>
+</url>
 
-  <!-- Recipe & Review Content -->
-  <url>
-    <loc>https://cleanproteinlist.com/blog/muscletech-mass-gainer-vanilla-milkshake-review.html</loc>
-    <lastmod>2025-11-15</lastmod>
-    <priority>0.85</priority>
-  </url>
+<url>
+  <loc>https://cleanproteinlist.com/blog/momentous-protein-safety-analysis.html</loc>
+  <lastmod>2025-12-18</lastmod>
+  <priority>0.8</priority>
+</url>
 
-  <url>
-    <loc>https://cleanproteinlist.com/blog/protein-pancakes-lead-free-safe-protein-powder-2025.html</loc>
-    <lastmod>2025-11-08</lastmod>
-    <priority>0.85</priority>
-  </url>
+<url>
+  <loc>https://cleanproteinlist.com/blog/bsn-syntha-6-safety-analysis.html</loc>
+  <lastmod>2025-12-18</lastmod>
+  <priority>0.8</priority>
+</url>
+
+<url>
+  <loc>https://cleanproteinlist.com/blog/muscletech-protein-powder-ranking-analysis.html</loc>
+  <lastmod>2025-12-18</lastmod>
+  <priority>0.8</priority>
+</url>
+
+<!-- RECIPE / LIFESTYLE CONTENT -->
+<url>
+  <loc>https://cleanproteinlist.com/blog/protein-pancakes-lead-free-safe-protein-powder-2025.html</loc>
+  <lastmod>2025-12-18</lastmod>
+  <priority>0.75</priority>
+</url>
+
+<url>
+  <loc>https://cleanproteinlist.com/blog/muscletech-mass-gainer-vanilla-milkshake-review.html</loc>
+  <lastmod>2025-12-18</lastmod>
+  <priority>0.75</priority>
+</url>
+
+<!-- UTILITY PAGES -->
+<url>
+  <loc>https://cleanproteinlist.com/about.html</loc>
+  <lastmod>2025-12-18</lastmod>
+  <priority>0.7</priority>
+</url>
+
+<url>
+  <loc>https://cleanproteinlist.com/privacy.html</loc>
+  <lastmod>2025-12-18</lastmod>
+  <priority>0.5</priority>
+</url>
+
+<url>
+  <loc>https://cleanproteinlist.com/contact.html</loc>
+  <lastmod>2025-12-18</lastmod>
+  <priority>0.5</priority>
+</url>
+
 </urlset>
