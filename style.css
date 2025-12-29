@@ -1429,40 +1429,54 @@ blockquote::before {
     }
 }
 
-<<<<<<< HEAD
-/* 18. CHECKMARK LIST STYLING (For E-E-A-T lists) */
-.blog-post ul:not(.blog-meta ul, .jump-links ul) {
-    list-style: none; /* Remove default bullets */
-    padding-left: 0;
-}
-.blog-post ul:not(.blog-meta ul, .jump-links ul) li {
-    padding-left: 30px; /* Space for the icon */
-    position: relative;
-    margin-bottom: 12px;
-    line-height: 1.6;
-}
-.blog-post ul:not(.blog-meta ul, .jump-links ul) li::before {
-    content: "✅"; /* The checkmark icon */
-=======
-/* 18. CHECKMARK LIST STYLING - SIMPLIFIED */
-/* Only apply checkmarks to lists inside highlight boxes */
+/* ========================================
+   18. CHECKMARK LIST STYLING - SELECTIVE APPLICATION
+   ======================================== */
+
+/* ONLY apply checkmarks to lists inside specific containers */
 .highlight-box ul,
 .answer-box ul,
-.callout-box ul {
+.callout-box ul,
+.stat-box ul,
+.buying-summary-box ul,
+.safe-brands-summary ul,
+.action-card ul,
+.decision-option ul,
+.organic-factor ul,
+.whey-safety-explanation ul,
+.processing-explanation ul {
     list-style: none;
     padding-left: 0;
 }
+
 .highlight-box ul li,
 .answer-box ul li,
-.callout-box ul li {
+.callout-box ul li,
+.stat-box ul li,
+.buying-summary-box ul li,
+.safe-brands-summary ul li,
+.action-card ul li,
+.decision-option ul li,
+.organic-factor ul li,
+.whey-safety-explanation ul li,
+.processing-explanation ul li {
     padding-left: 30px;
     position: relative;
     margin-bottom: 12px;
 }
+
 .highlight-box ul li::before,
 .answer-box ul li::before,
-.callout-box ul li::before {
->>>>>>> f8e69a56fe47643eea068cc10c5837b9e5cc8c89
+.callout-box ul li::before,
+.stat-box ul li::before,
+.buying-summary-box ul li::before,
+.safe-brands-summary ul li::before,
+.action-card ul li::before,
+.decision-option ul li::before,
+.organic-factor ul li::before,
+.whey-safety-explanation ul li::before,
+.processing-explanation ul li::before {
+    content: "✅";
     position: absolute;
     left: 0;
     top: 0;
@@ -1470,31 +1484,44 @@ blockquote::before {
     line-height: 1.6;
 }
 
-<<<<<<< HEAD
-=======
-/* Exclude specific components that should keep normal bullets */
+/* EXCLUDE these components - they should keep normal bullets or content */
 .table-of-contents ul,
 .table-of-contents ul li,
 .sources ul,
 .sources ul li,
-.faq-grid ul,
-.faq-grid ul li,
+.faq-premier ul,
+.faq-premier ul li,
+.faq-item-premier ul,
+.faq-item-premier ul li,
 .product-specs ul,
 .product-specs ul li,
 .calculator-container ul,
-.calculator-container ul li {
+.calculator-container ul li,
+.related-grid ul,
+.related-grid ul li,
+.blog-meta ul,
+.blog-meta ul li {
     list-style: disc !important;
     padding-left: 20px !important;
 }
+
 .table-of-contents ul li::before,
 .sources ul li::before,
-.faq-grid ul li::before,
+.faq-premier ul li::before,
+.faq-item-premier ul li::before,
 .product-specs ul li::before,
-.calculator-container ul li::before {
+.calculator-container ul li::before,
+.related-grid ul li::before,
+.blog-meta ul li::before {
     content: none !important;
 }
 
->>>>>>> f8e69a56fe47643eea068cc10c5837b9e5cc8c89
+/* If list item already contains ✅ emoji in text, don't add another */
+.highlight-box ul li:has(> :first-child:contains("✅"))::before,
+.answer-box ul li:has(> :first-child:contains("✅"))::before,
+.callout-box ul li:has(> :first-child:contains("✅"))::before {
+    content: "" !important;
+}
 /* ========================================
    17. QUIZ & POLL UNIFORMITY (CRO FIXES)
    ======================================== */
