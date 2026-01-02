@@ -1,6 +1,5 @@
 # robots.txt for cleanproteinlist.com
 # Allow all search engines to crawl the site
-
 User-agent: *
 Allow: /
 
@@ -16,16 +15,10 @@ Allow: /
 
 # Block common spam bots (optional but recommended)
 User-agent: SemrushBot
-
 User-agent: AhrefsBot
-
 User-agent: MJ12bot
 Disallow: /
 
 # Disallow admin areas if you add them later
 # Disallow: /admin/
-<<<<<<< HEAD
 # Disallow: /private/
-=======
-# Disallow: /private/
->>>>>>> f8e69a56fe47643eea068cc10c5837b9e5cc8c89
