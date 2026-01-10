@@ -58,9 +58,25 @@
   <loc>https://cleanproteinlist.com/blog/new-year-fitness-guide-2026-safe-protein-home-gym.html</loc>
   <lastmod>2025-12-31</lastmod>
   <priority>0.95</priority>
+</url> 
+
+<!-- INTERACTIVE TOOLS -->
+<url>
+  <loc>https://cleanproteinlist.com/tools.html</loc>
+  <lastmod>2026-01-09</lastmod>
+  <priority>0.95</priority>
+  <changefreq>weekly</changefreq>
 </url>  
 
 <!-- BREAKING NEWS / HIGH-VALUE CONTENT -->
+
+<url>
+  <loc>https://cleanproteinlist.com/blog/consumer-reports-new-protein-powder-tests-january-2026.html</loc>
+  <lastmod>2026-01-09</lastmod>
+  <priority>1.00</priority>
+  <changefreq>daily</changefreq>
+</url>
+  
 <url>
   <loc>https://cleanproteinlist.com/blog/genepro-whey-protein-fda-recall-allergen-mislabeling-2025.html</loc>
   <lastmod>2025-12-18</lastmod>
