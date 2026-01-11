@@ -183,6 +183,170 @@
         </section>
     </main>
 
+    <section style="background: linear-gradient(to bottom, #f8f9fa 0%, #ffffff 100%); padding: 80px 20px; margin: 0;">
+    <div class="container" style="max-width: 1100px; margin: 0 auto;">
+        
+        <!-- Headline optimized for post-CR context -->
+        <div style="text-align: center; margin-bottom: 50px;">
+            <h2 style="font-size: 38px; margin-bottom: 15px; color: #333;">Is <em>Your</em> Protein Powder Safe?</h2>
+            <p style="font-size: 19px; color: #666; max-width: 650px; margin: 0 auto;">Check your brand, calculate your protein needs, and assess your lead exposure - free, instant results.</p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; margin-bottom: 40px;">
+            
+            <!-- TOOL CARD 1: BRAND CHECKER (Contextual version) -->
+            <div style="background: white; padding: 32px; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.08); border-left: 4px solid #667eea; transition: all 0.3s;" onmouseover="this.style.boxShadow='0 8px 24px rgba(0,0,0,0.12)'" onmouseout="this.style.boxShadow='0 2px 12px rgba(0,0,0,0.08)'">
+                <div style="font-size: 42px; margin-bottom: 12px;">🔍</div>
+                <h3 style="margin: 0 0 12px; font-size: 22px; color: #333;">Check Your Brand</h3>
+                <p style="color: #666; margin-bottom: 20px; line-height: 1.6; font-size: 15px;">See if your protein was tested by Consumer Reports and whether it's safe for daily use.</p>
+                
+                <!-- MINI VERSION -->
+                <select id="home-brand-quick" style="width: 100%; padding: 13px; border: 2px solid #ddd; border-radius: 8px; margin-bottom: 12px; font-size: 15px;">
+                    <option value="">Select your brand...</option>
+                    <optgroup label="✅ Verified Safe">
+                        <option value="safe-muscletech">MuscleTech Mass Gainer</option>
+                        <option value="safe-cse">Clean Simple Eats</option>
+                        <option value="safe-owyn">OWYN Pro Elite</option>
+                        <option value="safe-dymatize">Dymatize ISO-100</option>
+                        <option value="safe-on">Optimum Nutrition</option>
+                    </optgroup>
+                    <optgroup label="🚫 Unsafe - Avoid">
+                        <option value="unsafe-naked">Naked Nutrition</option>
+                        <option value="unsafe-garden">Garden of Life</option>
+                        <option value="unsafe-huel">Huel Black Edition</option>
+                    </optgroup>
+                    <option value="other">Not listed - check all 28 →</option>
+                </select>
+                
+                <div id="home-brand-result" style="display: none; margin-bottom: 12px;"></div>
+                
+                <a href="tools.html#brand-checker" style="display: block; text-align: center; background: #667eea; color: white; padding: 13px; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 15px; transition: background 0.3s;" onmouseover="this.style.background='#5568d3'" onmouseout="this.style.background='#667eea'">
+                    Check All 28 Tested Brands →
+                </a>
+            </div>
+
+            <!-- TOOL CARD 2: PROTEIN CALCULATOR -->
+            <div style="background: white; padding: 32px; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.08); border-left: 4px solid #4caf50; transition: all 0.3s;" onmouseover="this.style.boxShadow='0 8px 24px rgba(0,0,0,0.12)'" onmouseout="this.style.boxShadow='0 2px 12px rgba(0,0,0,0.08)'">
+                <div style="font-size: 42px; margin-bottom: 12px;">📊</div>
+                <h3 style="margin: 0 0 12px; font-size: 22px; color: #333;">Calculate Your Needs</h3>
+                <p style="color: #666; margin-bottom: 20px; line-height: 1.6; font-size: 15px;">How much protein should you consume daily based on your weight and fitness goals?</p>
+                
+                <!-- MINI VERSION -->
+                <input type="number" id="home-weight-quick" placeholder="Your weight (lbs)" style="width: 100%; padding: 13px; border: 2px solid #ddd; border-radius: 8px; margin-bottom: 10px; font-size: 15px;">
+                
+                <select id="home-goal-quick" style="width: 100%; padding: 13px; border: 2px solid #ddd; border-radius: 8px; margin-bottom: 12px; font-size: 15px;">
+                    <option value="">Your goal...</option>
+                    <option value="lose">Lose Weight</option>
+                    <option value="maintain">Maintain Weight</option>
+                    <option value="gain">Build Muscle</option>
+                </select>
+                
+                <div id="home-protein-result" style="display: none; margin-bottom: 12px;"></div>
+                
+                <a href="tools.html#protein-calculator" style="display: block; text-align: center; background: #4caf50; color: white; padding: 13px; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 15px; transition: background 0.3s;" onmouseover="this.style.background='#43a047'" onmouseout="this.style.background='#4caf50'">
+                    Get Detailed Recommendations →
+                </a>
+            </div>
+
+            <!-- TOOL CARD 3: LEAD EXPOSURE (Fear-based, perfect after CR section) -->
+            <div style="background: white; padding: 32px; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.08); border-left: 4px solid #f39c12; transition: all 0.3s;" onmouseover="this.style.boxShadow='0 8px 24px rgba(0,0,0,0.12)'" onmouseout="this.style.boxShadow='0 2px 12px rgba(0,0,0,0.08)'">
+                <div style="font-size: 42px; margin-bottom: 12px;">⚠️</div>
+                <h3 style="margin: 0 0 12px; font-size: 22px; color: #333;">Assess Your Exposure</h3>
+                <p style="color: #666; margin-bottom: 20px; line-height: 1.6; font-size: 15px;">If you've been using contaminated protein, calculate your cumulative lead exposure.</p>
+                
+                <div style="background: #fff3cd; padding: 18px; border-radius: 8px; margin-bottom: 12px; border: 2px solid #f39c12;">
+                    <p style="margin: 0; color: #856404; font-weight: 600; font-size: 14px; line-height: 1.5;">
+                        ⚠️ Used Naked Nutrition, Garden of Life, or Huel daily? Check your exposure immediately.
+                    </p>
+                </div>
+                
+                <a href="tools.html#lead-calculator" style="display: block; text-align: center; background: #f39c12; color: white; padding: 13px; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 15px; transition: background 0.3s;" onmouseover="this.style.background='#e67e22'" onmouseout="this.style.background='#f39c12'">
+                    Calculate My Lead Exposure →
+                </a>
+            </div>
+
+        </div>
+
+        <!-- Subtle link to full tools page (not competitive with main CTAs) -->
+        <div style="text-align: center; margin-top: 35px;">
+            <a href="tools.html" style="color: #667eea; text-decoration: none; font-weight: 600; font-size: 16px; border-bottom: 2px solid #667eea; padding-bottom: 2px;">
+                View all tools including Creatine Safety Checker →
+            </a>
+        </div>
+    </div>
+</section>
+
+<script>
+// Mini brand checker on homepage
+document.getElementById('home-brand-quick').addEventListener('change', function() {
+    const value = this.value;
+    const brandName = this.options[this.selectedIndex].text;
+    const result = document.getElementById('home-brand-result');
+    
+    if (!value) {
+        result.style.display = 'none';
+        return;
+    }
+    
+    if (value.startsWith('safe-')) {
+        result.innerHTML = `
+            <div style="background: #e8f5e9; padding: 15px; border-radius: 8px; border: 2px solid #4caf50;">
+                <p style="margin: 0; color: #2e7d32; font-weight: 600; font-size: 14px;">
+                    ✅ <strong>${brandName}</strong> is verified safe<br>
+                    <span style="font-weight: 400; font-size: 13px;">Lead below detection or minimal</span>
+                </p>
+            </div>
+        `;
+    } else if (value.startsWith('unsafe-')) {
+        result.innerHTML = `
+            <div style="background: #fff5f5; padding: 15px; border-radius: 8px; border: 2px solid #f44336;">
+                <p style="margin: 0; color: #d32f2f; font-weight: 600; font-size: 14px;">
+                    🚫 <strong>${brandName}</strong> is unsafe<br>
+                    <span style="font-weight: 400; font-size: 13px;">5-15x over safe lead limit</span>
+                </p>
+            </div>
+        `;
+    } else {
+        result.innerHTML = `
+            <div style="background: #f0f4ff; padding: 15px; border-radius: 8px; border: 2px solid #667eea;">
+                <p style="margin: 0; color: #667eea; font-weight: 600; font-size: 14px;">
+                    Check all 28 tested brands →
+                </p>
+            </div>
+        `;
+    }
+    
+    result.style.display = 'block';
+});
+
+// Mini protein calculator on homepage
+function updateProteinCalc() {
+    const weight = parseFloat(document.getElementById('home-weight-quick').value);
+    const goal = document.getElementById('home-goal-quick').value;
+    const result = document.getElementById('home-protein-result');
+    
+    if (!weight || !goal) {
+        result.style.display = 'none';
+        return;
+    }
+    
+    const weightKg = weight / 2.205;
+    let multiplier = goal === 'lose' ? 2.0 : goal === 'maintain' ? 1.6 : 2.2;
+    const protein = Math.round(weightKg * multiplier);
+    
+    result.innerHTML = `
+        <div style="background: #e8f5e9; padding: 15px; border-radius: 8px; border: 2px solid #4caf50; text-align: center;">
+            <p style="margin: 0; color: #2e7d32; font-weight: 700; font-size: 28px;">${protein}g</p>
+            <p style="margin: 5px 0 0; color: #2e7d32; font-size: 13px;">protein per day</p>
+        </div>
+    `;
+    result.style.display = 'block';
+}
+
+document.getElementById('home-weight-quick').addEventListener('input', updateProteinCalc);
+document.getElementById('home-goal-quick').addEventListener('change', updateProteinCalc);
+</script>
+
     <section class="blog-preview">
     <div class="container">
         <h2>Latest Articles on Protein Powder Safety</h2>
