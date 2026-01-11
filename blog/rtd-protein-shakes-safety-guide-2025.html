@@ -893,6 +893,77 @@ setTimeout(() => {
 
         <h2>RTD Shake Comparison: Tested vs Untested</h2>
 
+        <!-- ENHANCEMENT #3: INTERACTIVE TABLE FILTER -->
+<div style="background: #f8f9fa; padding: 25px; border-radius: 8px; margin: 30px 0 15px 0; border: 2px solid #667eea;">
+    <div style="display: flex; align-items: center; flex-wrap: wrap; gap: 15px;">
+        <label style="font-weight: 700; color: #333; font-size: 16px;">Filter Table:</label>
+        <select id="rtd-table-filter" onchange="filterRTDTable()" style="padding: 12px 20px; border: 2px solid #667eea; border-radius: 8px; font-size: 16px; font-weight: 600; cursor: pointer;">
+            <option value="all">Show All RTD Shakes</option>
+            <option value="tested">Only Tested by Consumer Reports</option>
+            <option value="safe">Only Safe Options (✅)</option>
+            <option value="unsafe">Only Unsafe/Caution (⚠️❌)</option>
+            <option value="unknown">Only Unknown/Not Tested (❓)</option>
+        </select>
+        <span id="filter-count" style="color: #667eea; font-weight: 600; margin-left: 10px;"></span>
+    </div>
+</div>
+
+<script>
+function filterRTDTable() {
+    const filter = document.getElementById('rtd-table-filter').value;
+    const table = document.querySelector('.comparison-table');
+    const rows = table.querySelectorAll('tbody tr');
+    let visibleCount = 0;
+    
+    rows.forEach(row => {
+        const cells = row.querySelectorAll('td');
+        if (cells.length === 0) return; // Skip if no cells
+        
+        const testingStatus = cells[1].textContent.trim();
+        const recommendation = cells[5].textContent.trim();
+        
+        let shouldShow = false;
+        
+        if (filter === 'all') {
+            shouldShow = true;
+        } else if (filter === 'tested') {
+            shouldShow = testingStatus.includes('✅ Tested');
+        } else if (filter === 'safe') {
+            shouldShow = recommendation.includes('✅ SAFE');
+        } else if (filter === 'unsafe') {
+            shouldShow = recommendation.includes('⚠️') || recommendation.includes('❌');
+        } else if (filter === 'unknown') {
+            shouldShow = testingStatus.includes('❓');
+        }
+        
+        if (shouldShow) {
+            row.style.display = '';
+            visibleCount++;
+        } else {
+            row.style.display = 'none';
+        }
+    });
+    
+    // Update count
+    const countElement = document.getElementById('filter-count');
+    if (filter === 'all') {
+        countElement.textContent = `Showing all ${visibleCount} RTD shakes`;
+    } else {
+        countElement.textContent = `Showing ${visibleCount} of ${rows.length} RTD shakes`;
+    }
+}
+
+// Initialize count on page load
+window.addEventListener('DOMContentLoaded', function() {
+    const table = document.querySelector('.comparison-table');
+    if (table) {
+        const rows = table.querySelectorAll('tbody tr');
+        document.getElementById('filter-count').textContent = `Showing all ${rows.length} RTD shakes`;
+    }
+});
+</script>
+
+
         <table class="comparison-table">
             <thead>
                 <tr>
@@ -1030,6 +1101,234 @@ setTimeout(() => {
         <p style="margin-top: 20px;"><strong>Recommendation:</strong></p>
         <p>Use OWYN Pro Elite for verified safety, or make DIY shakes with MuscleTech powder (#1 ranked). Don't sacrifice health for convenience when training for performance.</p>
     </div>
+
+        <!-- ENHANCEMENT #4: RTD BRAND CHECKER -->
+<div style="background: #f8f9fa; padding: 35px; border-radius: 12px; margin: 50px 0; border: 3px solid #667eea;">
+    <h3 style="margin-top: 0; color: #333; font-size: 26px;">🔍 Quick RTD Safety Check: Is Your Shake Safe?</h3>
+    <p style="color: #666; margin-bottom: 25px; font-size: 16px;">Select your RTD shake to see if it's been tested for heavy metals:</p>
+    
+    <select id="rtd-brand-check" onchange="checkRTDBrand()" style="width: 100%; padding: 15px; font-size: 16px; border: 2px solid #ddd; border-radius: 8px; margin-bottom: 15px;">
+        <option value="">-- Select your RTD shake brand --</option>
+        <optgroup label="✅ TESTED & SAFE">
+            <option value="safe-owyn">OWYN Pro Elite</option>
+        </optgroup>
+        <optgroup label="⚠️ TESTED BUT UNSAFE">
+            <option value="unsafe-musclemilk">Muscle Milk Pro Series</option>
+        </optgroup>
+        <optgroup label="❓ NOT TESTED - SAFETY UNKNOWN">
+            <option value="unknown-fairlife">Fairlife Core Power</option>
+            <option value="unknown-ensure">Ensure (any formula)</option>
+            <option value="unknown-boost">Boost (any formula)</option>
+            <option value="unknown-premier">Premier Protein Shake</option>
+            <option value="unknown-orgain">Orgain RTD Shake</option>
+            <option value="unknown-atkins">Atkins Protein Shake</option>
+            <option value="unknown-slimfast">SlimFast Protein Shake</option>
+            <option value="unknown-pure">Pure Protein RTD</option>
+            <option value="unknown-labrada">Labrada Lean Body</option>
+            <option value="unknown-evolve">Evolve Plant-Based Shake</option>
+        </optgroup>
+    </select>
+
+    <div id="rtd-check-result" style="display: none; margin-top: 20px;"></div>
+
+    <p style="color: #666; font-size: 14px; margin-top: 25px; margin-bottom: 0; text-align: center;">
+        Want to check protein powder brands too? 
+        <a href="../tools.html#brand-checker" style="color: #667eea; text-decoration: none; font-weight: 700; border-bottom: 2px solid #667eea;">
+            Try our complete safety checker with 28+ tested brands →
+        </a>
+    </p>
+</div>
+
+<script>
+function checkRTDBrand() {
+    const select = document.getElementById('rtd-brand-check');
+    const result = document.getElementById('rtd-check-result');
+    const value = select.value;
+    
+    if (!value) {
+        result.style.display = 'none';
+        return;
+    }
+    
+    let html = '';
+    
+    if (value === 'safe-owyn') {
+        html = `
+            <div style="background: white; border: 3px solid #4caf50; padding: 30px; border-radius: 12px; text-align: center;">
+                <div style="background: #4caf50; color: white; padding: 15px 35px; border-radius: 50px; display: inline-block; font-weight: 700; font-size: 22px; margin-bottom: 20px;">
+                    ✅ VERIFIED SAFE
+                </div>
+                <h4 style="margin: 15px 0; font-size: 24px; color: #333;">OWYN Pro Elite is the ONLY RTD shake verified safe</h4>
+                <p style="margin: 0; color: #555; font-size: 18px; line-height: 1.6;">
+                    Consumer Reports ranked OWYN Pro Elite #7 out of 23 products tested. Lead levels are <strong>below detection</strong> (undetectable). This is the only ready-to-drink protein shake with published independent verification of safety. Safe for daily use with no serving limits.
+                </p>
+                <div style="background: #f0fdf4; padding: 20px; border-radius: 8px; margin: 25px 0;">
+                    <p style="margin: 0; font-weight: 600; color: #2e7d32; font-size: 16px;">
+                        ✓ Lead: Below detection<br>
+                        ✓ 32g protein per bottle<br>
+                        ✓ 0g sugar, 9g carbs<br>
+                        ✓ NSF Certified for Sport<br>
+                        ✓ Consumer Reports #7 ranked<br>
+                        ✓ Safe for pregnancy, kids, daily use
+                    </p>
+                </div>
+                <a href="https://amzn.to/49kQ1Ok" target="_blank" rel="noopener" style="display: inline-block; background: #4caf50; color: white; padding: 15px 35px; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 18px; margin-top: 15px;">
+                    Buy OWYN Pro Elite on Amazon →
+                </a>
+                <p style="margin-top: 20px; font-size: 14px; color: #666;">
+                    <a href="owyn-pro-elite-protein-powder-safety-only-safe-plant-protein-2025.html" style="color: #667eea; font-weight: 600;">→ Read complete OWYN safety analysis</a>
+                </p>
+            </div>
+        `;
+    } else if (value === 'unsafe-musclemilk') {
+        html = `
+            <div style="background: white; border: 3px solid #f44336; padding: 30px; border-radius: 12px; text-align: center;">
+                <div style="background: #f44336; color: white; padding: 15px 35px; border-radius: 50px; display: inline-block; font-weight: 700; font-size: 22px; margin-bottom: 20px;">
+                    ⚠️ UNSAFE FOR DAILY USE
+                </div>
+                <h4 style="margin: 15px 0; font-size: 24px; color: #333;">Muscle Milk Pro Series: 2.5x Over Safe Limit</h4>
+                <p style="margin: 0; color: #555; font-size: 18px; line-height: 1.6;">
+                    Consumer Reports ranked Muscle Milk Pro Series <strong>#17 out of 23 products</strong> tested. Contains <strong>1.25 µg lead per serving</strong> - that's 250% over the safe daily limit (0.5 µg). NOT safe for daily consumption.
+                </p>
+                <div style="background: #fff5f5; padding: 20px; border-radius: 8px; margin: 25px 0;">
+                    <p style="margin: 0; font-weight: 600; color: #d32f2f; font-size: 16px;">
+                        ⚠️ Lead: 1.25 µg (250% over limit)<br>
+                        ⚠️ Safe only for occasional use (1x every 2-3 days max)<br>
+                        ⚠️ NOT safe for pregnancy, kids, or daily use<br>
+                        ⚠️ Most visible RTD shake (gas stations, 7-Eleven, gyms)<br>
+                        ⚠️ Cumulative exposure risk with daily consumption
+                    </p>
+                </div>
+                <div style="background: #e8f5e9; padding: 20px; border-radius: 8px; margin: 25px 0;">
+                    <h5 style="margin-top: 0; color: #2e7d32; font-size: 18px;">✅ Safe Alternative:</h5>
+                    <p style="margin: 10px 0; color: #555;">Switch to <strong>OWYN Pro Elite</strong> (lead below detection, #7 ranked) for verified-safe RTD convenience at same gas stations and stores.</p>
+                    <a href="https://amzn.to/49kQ1Ok" target="_blank" rel="noopener" style="display: inline-block; background: #4caf50; color: white; padding: 12px 25px; border-radius: 8px; text-decoration: none; font-weight: 700; margin-top: 10px;">
+                        Switch to OWYN (Verified Safe) →
+                    </a>
+                </div>
+                <p style="margin-top: 20px; font-size: 14px; color: #666;">
+                    <a href="muscle-milk-lead-testing-safety-analysis-2025.html" style="color: #667eea; font-weight: 600;">→ Read complete Muscle Milk safety analysis</a>
+                </p>
+            </div>
+        `;
+    } else if (value.startsWith('unknown-')) {
+        const brandName = select.options[select.selectedIndex].text;
+        const brandSpecificInfo = {
+            'unknown-fairlife': {
+                protein: '26-42g (depending on formula)',
+                reason: 'Dairy-based filtered milk product (not whey isolate), different product category from Consumer Reports testing scope',
+                article: 'fairlife-protein-shakes-safety-lead-testing-2025.html',
+                concern: 'Very popular (every grocery store, gas station, Costco) but zero heavy metal testing data available'
+            },
+            'unknown-ensure': {
+                protein: '9-30g (depending on formula)',
+                reason: 'Medical nutrition category (not sports nutrition), Consumer Reports focused on athletic protein products',
+                article: 'ensure-protein-shakes-safety-lead-testing-2025.html',
+                concern: 'Critical for medical users (cancer patients, elderly, post-surgery) consuming 2-3 bottles daily - cumulative exposure unknown'
+            },
+            'unknown-boost': {
+                protein: '10-30g (depending on formula)',
+                reason: 'Medical nutrition / diabetes management category, outside Consumer Reports testing scope',
+                article: 'boost-protein-shakes-safety-lead-testing-2025.html',
+                concern: 'Diabetics face compounded risk: lead worsens cardiovascular disease and kidney damage that diabetes already creates'
+            },
+            'unknown-premier': {
+                protein: '30g',
+                reason: 'Mass-market RTD shake category, not included in Consumer Reports October 2025 testing',
+                article: 'premier-protein-lead-testing.html',
+                concern: 'Has Clean Label Project Purity Award but specific lead levels not published. Likely safer than untested brands but not verified like OWYN'
+            },
+            'unknown-orgain': {
+                protein: '16g',
+                reason: 'RTD shake not tested (Orgain powder was tested and ranked #12 with unsafe lead levels)',
+                article: null,
+                concern: 'Plant-based = highest contamination risk category (93% of plant proteins failed testing). OWYN is ONLY safe plant RTD'
+            },
+            'unknown-atkins': {
+                protein: '15-30g (depending on formula)',
+                reason: 'Weight loss / keto category, outside Consumer Reports testing scope',
+                article: null,
+                concern: 'Whey protein base = moderate risk. No testing data available'
+            },
+            'unknown-slimfast': {
+                protein: '10-20g (depending on formula)',
+                reason: 'Weight loss meal replacement category, outside Consumer Reports testing scope',
+                article: null,
+                concern: 'Often consumed 2x daily for meal replacement = higher cumulative exposure if contaminated'
+            },
+            'unknown-pure': {
+                protein: '30-35g',
+                reason: 'Budget RTD shake, mass-market category not included in Consumer Reports testing',
+                article: null,
+                concern: 'Budget pricing may indicate lower quality control. No testing verification available'
+            },
+            'unknown-labrada': {
+                protein: '40g',
+                reason: 'Not included in Consumer Reports October 2025 testing scope',
+                article: null,
+                concern: 'High protein content but no safety verification. Heavy metal content unknown'
+            },
+            'unknown-evolve': {
+                protein: '20g',
+                reason: 'Plant-based RTD shake not included in Consumer Reports testing',
+                article: null,
+                concern: 'Plant-based = highest risk category (93% failure rate). OWYN is ONLY verified-safe plant RTD'
+            }
+        };
+        
+        const info = brandSpecificInfo[value];
+        const articleLink = info.article ? `
+            <p style="margin-top: 20px; font-size: 14px; color: #666;">
+                <a href="${info.article}" style="color: #667eea; font-weight: 600;">→ Read complete ${brandName} safety analysis</a>
+            </p>
+        ` : '';
+        
+        html = `
+            <div style="background: white; border: 3px solid #f39c12; padding: 30px; border-radius: 12px; text-align: center;">
+                <div style="background: #f39c12; color: white; padding: 15px 35px; border-radius: 50px; display: inline-block; font-weight: 700; font-size: 22px; margin-bottom: 20px;">
+                    ❓ NOT TESTED - SAFETY UNKNOWN
+                </div>
+                <h4 style="margin: 15px 0; font-size: 24px; color: #333;">${brandName} Was NOT Tested by Consumer Reports</h4>
+                <p style="margin: 0; color: #555; font-size: 18px; line-height: 1.6;">
+                    Heavy metal content (lead, cadmium, arsenic, mercury) is <strong>completely unknown</strong>. Consumer Reports did not test this product in their October 2025 investigation.
+                </p>
+                <div style="background: #fff3cd; padding: 20px; border-radius: 8px; margin: 25px 0; text-align: left;">
+                    <p style="margin: 0 0 15px 0; font-weight: 600; color: #856404; font-size: 16px;">Product Details:</p>
+                    <p style="margin: 5px 0; color: #856404;">
+                        <strong>Protein:</strong> ${info.protein}<br>
+                        <strong>Why not tested:</strong> ${info.reason}<br>
+                        <strong>Risk concern:</strong> ${info.concern}
+                    </p>
+                </div>
+                <div style="background: #e8f5e9; padding: 25px; border-radius: 8px; margin: 25px 0;">
+                    <h5 style="margin-top: 0; color: #2e7d32; font-size: 20px;">✅ Verified-Safe Alternative:</h5>
+                    <p style="margin: 10px 0 20px; color: #555; font-size: 16px;">Don't guess about safety. Switch to <strong>OWYN Pro Elite</strong> - the ONLY RTD shake with Consumer Reports verification (lead below detection, #7 ranked).</p>
+                    <div style="background: rgba(46, 125, 50, 0.1); padding: 15px; border-radius: 8px; margin: 15px 0;">
+                        <p style="margin: 0; font-weight: 600; color: #2e7d32;">
+                            ✓ Consumer Reports #7 ranked<br>
+                            ✓ Lead: Below detection (undetectable)<br>
+                            ✓ 32g protein, 0g sugar<br>
+                            ✓ Same convenience as ${brandName}
+                        </p>
+                    </div>
+                    <a href="https://amzn.to/49kQ1Ok" target="_blank" rel="noopener" style="display: inline-block; background: #4caf50; color: white; padding: 15px 30px; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 18px; margin-top: 10px;">
+                        Switch to OWYN (Verified Safe) →
+                    </a>
+                </div>
+                ${articleLink}
+            </div>
+        `;
+    }
+    
+    result.innerHTML = html;
+    result.style.display = 'block';
+    
+    // Smooth scroll to result
+    setTimeout(() => {
+        result.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }, 100);
+}
+</script>
 
     <h2>What You Should Demand from RTD Shake Brands</h2>
 
