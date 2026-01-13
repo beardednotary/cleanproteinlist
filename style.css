@@ -124,20 +124,22 @@ header .container {
     color: inherit;
 }
 
-nav {
-    display: flex;
-    gap: 30px;
-}
+@media (min-width: 769px) {
+    nav {
+        display: flex;
+        gap: 30px;
+    }
 
-nav a {
-    color: #333;
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.2s;
-}
+    nav a {
+        color: #333;
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.2s;
+    }
 
-nav a:hover {
-    color: #667eea;
+    nav a:hover {
+        color: #667eea;
+    }
 }
 
 /* ========================================
@@ -1811,14 +1813,9 @@ blockquote::before {
     }
 }
 /* ============================================
-   MOBILE HAMBURGER MENU
-   Add this to the bottom of style.css
+   MOBILE HAMBURGER MENU - FINAL FIX
    ============================================ */
-
-/* Mobile: Show hamburger, hide regular nav */
 @media (max-width: 768px) {
-    
-    /* Header container adjustments */
     header {
         position: fixed;
         top: 0;
@@ -1827,44 +1824,42 @@ blockquote::before {
         z-index: 1000;
         background: white;
         box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        height: 70px; /* Forces a slim header */
+        display: flex;
+        align-items: center;
     }
     
     header .container {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 12px 20px;
-        position: relative;
+        width: 100%;
+        padding: 0 20px;
     }
     
-    /* Logo */
-    header .logo {
-        font-size: 20px;
-        z-index: 1001;
+    header .logo { font-size: 20px; }
+
+    /* The Navigation Drawer */
+    header nav {
+        position: fixed;
+        top: 0;
+        right: -100%; /* Hidden off-screen */
+        width: 280px;
+        height: 100vh;
+        background: white;
+        box-shadow: -2px 0 10px rgba(0,0,0,0.1);
+        padding: 80px 0 20px 0;
+        transition: right 0.3s ease-in-out;
+        z-index: 999;
+        display: flex !important; /* Forces flex layout for links */
+        flex-direction: column !important;
     }
     
-header nav {
-    position: fixed; /* Pulls it out of the header so it doesn't affect height */
-    top: 0;
-    right: -100%; /* Keeps it hidden off-screen */
-    width: 280px;
-    height: 100vh;
-    background: white;
-    box-shadow: -2px 0 10px rgba(0,0,0,0.1);
-    padding: 80px 0 20px 0;
-    overflow-y: auto;
-    transition: right 0.3s ease-in-out;
-    z-index: 999;
-    display: flex; /* Keep flex here for the vertical stack inside the drawer */
-    flex-direction: column;
-}
-    
-header nav.menu-open {
+    /* Show menu class toggled by JS */
+    header nav.menu-open {
         right: 0 !important;
-        display: flex !important;
     }
     
-    /* Navigation links - vertical stack */
     header nav a {
         display: block;
         padding: 16px 25px;
@@ -1872,28 +1867,8 @@ header nav.menu-open {
         color: #333;
         font-size: 16px;
         text-align: left;
-        transition: background 0.2s;
     }
     
-    header nav a:hover {
-        background: #f0f4ff;
-        color: #667eea;
-    }
-    
-    header nav a.quiz-highlight {
-        background: #667eea;
-        color: white;
-        margin: 15px 25px;
-        border-radius: 8px;
-        text-align: center;
-        border-bottom: none;
-    }
-    
-    header nav a.quiz-highlight:hover {
-        background: #5568d3;
-    }
-    
-    /* Hamburger button */
     .hamburger {
         display: block;
         width: 30px;
@@ -1903,7 +1878,6 @@ header nav.menu-open {
         z-index: 1001;
         background: none;
         border: none;
-        padding: 0;
     }
     
     .hamburger span {
@@ -1913,40 +1887,17 @@ header nav.menu-open {
         width: 100%;
         background: #333;
         border-radius: 3px;
-        opacity: 1;
-        left: 0;
         transition: 0.25s ease-in-out;
     }
+    .hamburger span:nth-child(1) { top: 0; }
+    .hamburger span:nth-child(2) { top: 10px; }
+    .hamburger span:nth-child(3) { top: 20px; }
+
+    /* Open State (Turns into X) */
+    .hamburger.open span:nth-child(1) { top: 10px; transform: rotate(135deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; left: -60px; }
+    .hamburger.open span:nth-child(3) { top: 10px; transform: rotate(-135deg); }
     
-    .hamburger span:nth-child(1) {
-        top: 0;
-    }
-    
-    .hamburger span:nth-child(2) {
-        top: 10px;
-    }
-    
-    .hamburger span:nth-child(3) {
-        top: 20px;
-    }
-    
-    /* Hamburger animation when open (turns into X) */
-    .hamburger.open span:nth-child(1) {
-        top: 10px;
-        transform: rotate(135deg);
-    }
-    
-    .hamburger.open span:nth-child(2) {
-        opacity: 0;
-        left: -60px;
-    }
-    
-    .hamburger.open span:nth-child(3) {
-        top: 10px;
-        transform: rotate(-135deg);
-    }
-    
-    /* Overlay when menu is open */
     .menu-overlay {
         display: none;
         position: fixed;
@@ -1956,58 +1907,23 @@ header nav.menu-open {
         height: 100%;
         background: rgba(0, 0, 0, 0.5);
         z-index: 998;
-        opacity: 0;
-        transition: opacity 0.3s ease-in-out;
     }
+    .menu-overlay.active { display: block; opacity: 1; }
     
-    .menu-overlay.active {
-        display: block;
-        opacity: 1;
-    }
-    
-    /* Add top padding to body so content isn't hidden under fixed header */
-    body {
-        padding-top: 60px;
-    }
-    
-    /* Adjust main content areas */
-    .about-hero,
-    .blog-post,
-    main {
-        margin-top: 0;
-    }
+    body { padding-top: 70px; } /* Space for fixed header */
 }
 
-/* Desktop: Hide hamburger, show regular horizontal nav */
+/* Desktop Reset */
 @media (min-width: 769px) {
-    .hamburger {
-        display: none;
-    }
-    
-    .menu-overlay {
-        display: none !important;
-    }
-    
-    /* Ensure desktop nav displays normally */
+    .hamburger, .menu-overlay { display: none !important; }
     header nav {
         position: static;
         display: flex;
         flex-direction: row;
         width: auto;
         height: auto;
-        padding: 0;
-        box-shadow: none;
         background: transparent;
-    }
-    
-    header nav a {
-        display: inline-block;
-        padding: 8px 15px;
-        border-bottom: none;
-    }
-    
-    /* Reset body padding for desktop */
-    body {
-        padding-top: 0;
+        box-shadow: none;
+        padding: 0;
     }
 }
