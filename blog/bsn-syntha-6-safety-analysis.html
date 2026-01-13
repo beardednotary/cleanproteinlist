@@ -153,17 +153,26 @@
 <body>
     <header>
         <div class="container">
-            <a href="../index.html" class="logo">Clean Protein List</a>
-<nav>
-    <a href="../index.html">Home</a>
-    <a href="../blog.html#protein-articles">Protein</a>
-    <a href="../blog.html#creatine-articles">Creatine</a>
-    <a href="../tools.html">Tools</a>  <!-- NEW -->
-    <a href="../quiz.html" class="quiz-highlight">Take Quiz</a>
-    <a href="../about.html">About</a>
-</nav>
+            <a href="index.html" class="logo">Clean Protein List</a>
+            
+            <button class="hamburger" id="hamburger-btn" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+	<nav id="mobile-nav">
+    		<a href="../index.html">Home</a>
+    		<a href="../blog.html#protein-articles">Protein</a>
+    		<a href="../blog.html#creatine-articles">Creatine</a>
+    		<a href="../tools.html">Tools</a>  <!-- NEW -->
+    		<a href="../quiz.html" class="quiz-highlight">Take Quiz</a>
+    		<a href="../about.html">About</a>
+	</nav>
         </div>
     </header>
+    
+    <div class="menu-overlay" id="menu-overlay"></div>
 
     <article class="blog-post">
         <h1>BSN Syntha-6 Protein Powder: Why It Ranked #4 in Consumer Reports Safety Testing (2025)</h1>
@@ -661,5 +670,6 @@
         </p>
     </div>
 </footer>
+    <script src="../includes/mobile-menu.js"></script>
 </body>
 </html>    
