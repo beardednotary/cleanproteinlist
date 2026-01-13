@@ -138,22 +138,12 @@
 </head>
 <body>
 
-<!-- HEADER INCLUDE WITH ERROR HANDLING -->
-<script>
-    fetch('includes/header-root.html')
-        .then(response => response.text())
-        .then(data => {
-            document.body.insertAdjacentHTML('afterbegin', data);
-            
-            // Load mobile menu script AFTER header is loaded
-            const script = document.createElement('script');
-            script.src = 'includes/mobile-menu.js';
-            document.body.appendChild(script);
-        })
-        .catch(error => {
-            console.error('Header load failed:', error);
-        });
-</script>
+    <!-- HEADER INCLUDE -->
+    <script>
+        fetch('includes/header-root.html')
+            .then(r => r.text())
+            .then(html => document.body.insertAdjacentHTML('afterbegin', html));
+    </script>
 
     <div class="about-hero">
         <div class="container">
