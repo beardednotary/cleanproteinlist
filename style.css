@@ -1859,9 +1859,9 @@ header nav {
     flex-direction: column;
 }
     
-    /* Show nav when menu is open */
-    header nav.menu-open {
-        right: 0;
+header nav.menu-open {
+        right: 0 !important;
+        display: flex !important;
     }
     
     /* Navigation links - vertical stack */
