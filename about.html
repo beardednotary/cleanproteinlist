@@ -138,14 +138,30 @@
 </head>
 <body>
 
-        <!-- HEADER INCLUDE -->
-    <script>
-        fetch('includes/header-root.html')
-            .then(response => response.text())
-            .then(data => {
-                document.body.insertAdjacentHTML('afterbegin', data);
-            });
-    </script>
+<!-- HEADER INCLUDE WITH ERROR HANDLING -->
+<script>
+    fetch('includes/header-root.html')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Header file not found: ' + response.status);
+            }
+            return response.text();
+        })
+        .then(data => {
+            document.body.insertAdjacentHTML('afterbegin', data);
+            console.log('Header loaded successfully');
+        })
+        .catch(error => {
+            console.error('Error loading header:', error);
+            // Fallback: show basic header if include fails
+            document.body.insertAdjacentHTML('afterbegin', `
+                <header style="background: #f44336; color: white; padding: 20px; text-align: center;">
+                    <p>Header failed to load. Error: ${error.message}</p>
+                    <p>Check browser console (F12) for details</p>
+                </header>
+            `);
+        });
+</script>
 
     <div class="about-hero">
         <div class="container">
