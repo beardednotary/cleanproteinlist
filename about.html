@@ -137,19 +137,13 @@
     </script>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <a href="index.html" class="logo">Clean Protein List</a>
-<nav>
-    <a href="index.html">Home</a>
-    <a href="blog.html#protein-articles">Protein</a>
-    <a href="blog.html#creatine-articles">Creatine</a>
-    <a href="tools.html" style="background: #667eea; color: white; padding: 8px 16px; border-radius: 6px; font-weight: 700;">🔧 Tools</a>  <!-- HIGHLIGHTED -->
-    <a href="quiz.html" class="quiz-highlight">Take Quiz</a>
-    <a href="about.html">About</a>
-</nav>
-        </div>
-    </header>
+
+        <!-- HEADER INCLUDE -->
+    <script>
+        fetch('includes/header-root.html')
+            .then(r => r.text())
+            .then(html => document.body.insertAdjacentHTML('afterbegin', html));
+    </script>
 
     <div class="about-hero">
         <div class="container">
@@ -353,17 +347,22 @@
 
     </article>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Clean Protein List. Independent heavy metal testing database.</p>
-            <p>
-                <a href="index.html">Home</a> | 
-                <a href="quiz.html">Quiz</a> | 
-                <a href="blog.html">Articles</a> | 
-                <a href="about.html">About</a> | 
-                <a href="mailto:hello@cleanproteinlist.com">Contact</a>
-            </p>
-        </div>
-    </footer>
+<footer>
+    <div class="container">
+        <p>&copy; 2026 Clean Protein List. Independent supplement safety database.</p>
+        <p>
+            <a href="index.html">Home</a> | 
+            <a href="quiz.html">Take Quiz</a> | 
+            <a href="blog.html">Articles</a> |
+            <a href="tools.html">Tools</a> |
+            <a href="about.html">About</a> | 
+            <a href="mailto:hello@cleanproteinlist.com">Contact</a>
+        </p>
+    </div>
+</footer>
+
+<!-- MOBILE MENU SCRIPT -->
+    <script src="includes/mobile-menu.js"></script>
+    
 </body>
 </html>
