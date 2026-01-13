@@ -1057,11 +1057,12 @@ section h2 {
     left: 0;
 }
 
-/* ========================================
-   14. RESPONSIVE DESIGN
-   ======================================== */
+/* ============================================
+   RESPONSIVE DESIGN + MOBILE HAMBURGER MENU
+   ============================================ */
 
 @media (max-width: 768px) {
+    /* Typography adjustments */
     h1 {
         font-size: 32px;
     }
@@ -1078,17 +1079,14 @@ section h2 {
         font-size: 16px;
     }
 
-    nav {
-        flex-direction: column;
-        gap: 15px;
-    }
-
+    /* Grid layouts */
     .stat-grid,
     .blog-grid,
     .steps {
         grid-template-columns: 1fr;
     }
 
+    /* Tables */
     table {
         font-size: 14px;
     }
@@ -1097,16 +1095,19 @@ section h2 {
         padding: 10px;
     }
 
+    /* Buttons */
     .cta-button,
     .amazon-button {
         display: block;
         width: 100%;
     }
 
+    /* Article spacing */
     .article-container {
         padding: 20px 15px;
     }
 
+    /* CTA mega */
     .final-cta-mega h3 {
         font-size: 24px;
     }
@@ -1114,8 +1115,203 @@ section h2 {
     .final-cta-mega {
         padding: 30px 20px;
     }
+
+    /* ========================================
+       MOBILE HAMBURGER MENU
+       ======================================== */
+    
+    /* Fixed header */
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        background: white;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    
+    header .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px 20px;
+        position: relative;
+    }
+    
+    /* Logo */
+    header .logo {
+        font-size: 20px;
+        z-index: 1001;
+    }
+    
+    /* Hide nav by default, slide in from right */
+    header nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 280px;
+        height: 100vh;
+        background: white;
+        box-shadow: -2px 0 10px rgba(0,0,0,0.1);
+        padding: 80px 0 20px 0;
+        overflow-y: auto;
+        transition: right 0.3s ease-in-out;
+        z-index: 999;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    /* Show nav when menu is open */
+    header nav.menu-open {
+        right: 0;
+    }
+    
+    /* Navigation links - vertical stack */
+    header nav a {
+        display: block;
+        padding: 16px 25px;
+        border-bottom: 1px solid #f0f0f0;
+        color: #333;
+        font-size: 16px;
+        text-align: left;
+        transition: background 0.2s;
+    }
+    
+    header nav a:hover {
+        background: #f0f4ff;
+        color: #667eea;
+    }
+    
+    header nav a.quiz-highlight {
+        background: #667eea;
+        color: white;
+        margin: 15px 25px;
+        border-radius: 8px;
+        text-align: center;
+        border-bottom: none;
+    }
+    
+    header nav a.quiz-highlight:hover {
+        background: #5568d3;
+    }
+    
+    /* Hamburger button */
+    .hamburger {
+        display: block;
+        width: 30px;
+        height: 24px;
+        position: relative;
+        cursor: pointer;
+        z-index: 1001;
+        background: none;
+        border: none;
+        padding: 0;
+    }
+    
+    .hamburger span {
+        display: block;
+        position: absolute;
+        height: 3px;
+        width: 100%;
+        background: #333;
+        border-radius: 3px;
+        opacity: 1;
+        left: 0;
+        transition: 0.25s ease-in-out;
+    }
+    
+    .hamburger span:nth-child(1) {
+        top: 0;
+    }
+    
+    .hamburger span:nth-child(2) {
+        top: 10px;
+    }
+    
+    .hamburger span:nth-child(3) {
+        top: 20px;
+    }
+    
+    /* Hamburger animation when open */
+    .hamburger.open span:nth-child(1) {
+        top: 10px;
+        transform: rotate(135deg);
+    }
+    
+    .hamburger.open span:nth-child(2) {
+        opacity: 0;
+        left: -60px;
+    }
+    
+    .hamburger.open span:nth-child(3) {
+        top: 10px;
+        transform: rotate(-135deg);
+    }
+    
+    /* Overlay when menu is open */
+    .menu-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 998;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+    }
+    
+    .menu-overlay.active {
+        display: block;
+        opacity: 1;
+    }
+    
+    /* Add top padding to body */
+    body {
+        padding-top: 60px;
+    }
+    
+    /* Adjust main content areas */
+    .about-hero,
+    .blog-post,
+    main {
+        margin-top: 0;
+    }
 }
 
+/* Desktop: Hide hamburger, show normal nav */
+@media (min-width: 769px) {
+    .hamburger {
+        display: none;
+    }
+    
+    .menu-overlay {
+        display: none !important;
+    }
+    
+    header nav {
+        position: static;
+        display: flex;
+        flex-direction: row;
+        width: auto;
+        height: auto;
+        padding: 0;
+        box-shadow: none;
+        background: transparent;
+    }
+    
+    header nav a {
+        display: inline-block;
+        padding: 8px 15px;
+        border-bottom: none;
+    }
+    
+    body {
+        padding-top: 0;
+    }
+}
 /* ========================================
    15. UTILITY CLASSES
    ======================================== */
@@ -1813,207 +2009,5 @@ blockquote::before {
     .hero-parallax {
         height: 70vh !important;
         min-height: 650px !important;
-    }
-}
-/* ============================================
-   MOBILE HAMBURGER MENU
-   Add this to the bottom of style.css
-   ============================================ */
-
-/* Mobile: Show hamburger, hide regular nav */
-@media (max-width: 768px) {
-    
-    /* Header container adjustments */
-    header {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        z-index: 1000;
-        background: white;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
-    
-    header .container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 12px 20px;
-        position: relative;
-    }
-    
-    /* Logo */
-    header .logo {
-        font-size: 20px;
-        z-index: 1001;
-    }
-    
-    /* Hide desktop navigation, prepare slide-in menu */
-    header nav {
-        position: fixed;
-        top: 0;
-        right: -100%;
-        width: 280px;
-        height: 100vh;
-        background: white;
-        box-shadow: -2px 0 10px rgba(0,0,0,0.1);
-        padding: 80px 0 20px 0;
-        overflow-y: auto;
-        transition: right 0.3s ease-in-out;
-        z-index: 999;
-        display: flex;
-        flex-direction: column;
-    }
-    
-    /* Show nav when menu is open */
-    header nav.menu-open {
-        right: 0;
-    }
-    
-    /* Navigation links - vertical stack */
-    header nav a {
-        display: block;
-        padding: 16px 25px;
-        border-bottom: 1px solid #f0f0f0;
-        color: #333;
-        font-size: 16px;
-        text-align: left;
-        transition: background 0.2s;
-    }
-    
-    header nav a:hover {
-        background: #f0f4ff;
-        color: #667eea;
-    }
-    
-    header nav a.quiz-highlight {
-        background: #667eea;
-        color: white;
-        margin: 15px 25px;
-        border-radius: 8px;
-        text-align: center;
-        border-bottom: none;
-    }
-    
-    header nav a.quiz-highlight:hover {
-        background: #5568d3;
-    }
-    
-    /* Hamburger button */
-    .hamburger {
-        display: block;
-        width: 30px;
-        height: 24px;
-        position: relative;
-        cursor: pointer;
-        z-index: 1001;
-        background: none;
-        border: none;
-        padding: 0;
-    }
-    
-    .hamburger span {
-        display: block;
-        position: absolute;
-        height: 3px;
-        width: 100%;
-        background: #333;
-        border-radius: 3px;
-        opacity: 1;
-        left: 0;
-        transition: 0.25s ease-in-out;
-    }
-    
-    .hamburger span:nth-child(1) {
-        top: 0;
-    }
-    
-    .hamburger span:nth-child(2) {
-        top: 10px;
-    }
-    
-    .hamburger span:nth-child(3) {
-        top: 20px;
-    }
-    
-    /* Hamburger animation when open (turns into X) */
-    .hamburger.open span:nth-child(1) {
-        top: 10px;
-        transform: rotate(135deg);
-    }
-    
-    .hamburger.open span:nth-child(2) {
-        opacity: 0;
-        left: -60px;
-    }
-    
-    .hamburger.open span:nth-child(3) {
-        top: 10px;
-        transform: rotate(-135deg);
-    }
-    
-    /* Overlay when menu is open */
-    .menu-overlay {
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.5);
-        z-index: 998;
-        opacity: 0;
-        transition: opacity 0.3s ease-in-out;
-    }
-    
-    .menu-overlay.active {
-        display: block;
-        opacity: 1;
-    }
-    
-    /* Add top padding to body so content isn't hidden under fixed header */
-    body {
-        padding-top: 60px;
-    }
-    
-    /* Adjust main content areas */
-    .about-hero,
-    .blog-post,
-    main {
-        margin-top: 0;
-    }
-}
-
-/* Desktop: Hide hamburger, show regular horizontal nav */
-@media (min-width: 769px) {
-    .hamburger {
-        display: none;
-    }
-    
-    .menu-overlay {
-        display: none !important;
-    }
-    
-    /* Ensure desktop nav displays normally */
-    header nav {
-        position: static;
-        display: flex;
-        flex-direction: row;
-        width: auto;
-        height: auto;
-        padding: 0;
-        box-shadow: none;
-        background: transparent;
-    }
-    
-    header nav a {
-        display: inline-block;
-        padding: 8px 15px;
-        border-bottom: none;
-    }
-    
-    /* Reset body padding for desktop */
-    body {
-        padding-top: 0;
     }
 }
