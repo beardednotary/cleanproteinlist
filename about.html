@@ -141,25 +141,17 @@
 <!-- HEADER INCLUDE WITH ERROR HANDLING -->
 <script>
     fetch('includes/header-root.html')
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Header file not found: ' + response.status);
-            }
-            return response.text();
-        })
+        .then(response => response.text())
         .then(data => {
             document.body.insertAdjacentHTML('afterbegin', data);
-            console.log('Header loaded successfully');
+            
+            // Load mobile menu script AFTER header is loaded
+            const script = document.createElement('script');
+            script.src = 'includes/mobile-menu.js';
+            document.body.appendChild(script);
         })
         .catch(error => {
-            console.error('Error loading header:', error);
-            // Fallback: show basic header if include fails
-            document.body.insertAdjacentHTML('afterbegin', `
-                <header style="background: #f44336; color: white; padding: 20px; text-align: center;">
-                    <p>Header failed to load. Error: ${error.message}</p>
-                    <p>Check browser console (F12) for details</p>
-                </header>
-            `);
+            console.error('Header load failed:', error);
         });
 </script>
 
@@ -379,8 +371,6 @@
     </div>
 </footer>
 
-<!-- MOBILE MENU SCRIPT -->
-    <script src="includes/mobile-menu.js"></script>
     
 </body>
 </html>
