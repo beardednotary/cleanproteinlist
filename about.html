@@ -140,9 +140,11 @@
 
         <!-- HEADER INCLUDE -->
     <script>
-        fetch('../includes/header-root.html')
-            .then(r => r.text())
-            .then(html => document.body.insertAdjacentHTML('afterbegin', html));
+        fetch('includes/header-root.html')
+            .then(response => response.text())
+            .then(data => {
+                document.body.insertAdjacentHTML('afterbegin', data);
+            });
     </script>
 
     <div class="about-hero">
