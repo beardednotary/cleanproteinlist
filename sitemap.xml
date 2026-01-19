@@ -332,4 +332,44 @@
   <priority>0.5</priority>
 </url>
 
+<!-- TIER 2: EMERGING BRANDS -->
+<url>
+  <loc>https://cleanproteinlist.com/blog/ryse-protein-powder-lead-testing-2025.html</loc>
+  <lastmod>2026-01-19</lastmod>
+  <priority>0.85</priority>
+</url>
+
+<url>
+  <loc>https://cleanproteinlist.com/blog/ghost-protein-powder-lead-testing-2025.html</loc>
+  <lastmod>2026-01-19</lastmod>
+  <priority>0.85</priority>
+</url>
+
+<!-- TIER 3: UTILITY -->
+<url>
+  <loc>https://cleanproteinlist.com/blog/how-to-test-protein-powder-for-lead-2025.html</loc>
+  <lastmod>2026-01-19</lastmod>
+  <priority>0.90</priority>
+</url>
+
+<!-- TIER 4: COMPARISONS -->
+<url>
+  <loc>https://cleanproteinlist.com/blog/vega-vs-orgain-protein-powder-lead-testing-2025.html</loc>
+  <lastmod>2026-01-19</lastmod>
+  <priority>0.85</priority>
+</url>
+
+<url>
+  <loc>https://cleanproteinlist.com/blog/body-fortress-vs-optimum-nutrition-whey-protein-comparison-2025.html</loc>
+  <lastmod>2026-01-19</lastmod>
+  <priority>0.85</priority>
+</url>
+
+<!-- CREAPURE DATABASE (MISSING FROM SITEMAP) -->
+<url>
+  <loc>https://cleanproteinlist.com/blog/creapure-creatine-brands-complete-list.html</loc>
+  <lastmod>2026-01-06</lastmod>
+  <priority>0.95</priority>
+</url>  
+
 </urlset>
