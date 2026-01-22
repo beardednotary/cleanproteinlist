@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -147,6 +147,43 @@
             }
         }
     </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://cleanproteinlist.com/#organization",
+      "name": "Clean Protein List",
+      "url": "https://cleanproteinlist.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://cleanproteinlist.com/images/logo.png"
+      },
+      "description": "Independent supplement safety database analyzing protein powders for heavy metal contamination.",
+      "founder": {
+        "@type": "Person",
+        "name": "Ray"
+      },
+      "knowsAbout": [
+        "Protein Powder Safety",
+        "Heavy Metal Testing",
+        "Lead Contamination",
+        "Supplement Analysis"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://cleanproteinlist.com/#website",
+      "url": "https://cleanproteinlist.com",
+      "name": "Clean Protein List",
+      "publisher": {
+        "@id": "https://cleanproteinlist.com/#organization"
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
     
@@ -226,7 +263,7 @@
                 <input type="text" id="other-brand-name" placeholder="Enter your protein powder brand...">
             </div>
 
-            <button id="q2-next" class="next-btn" disabled>Next →</button>
+            <button id="q2-next" class="next-btn" disabled>Next â†’</button>
         </div>
 
         <!-- Question 3 -->
@@ -269,3 +306,4 @@
     <script src="quiz.js"></script>
 </body>
 </html>
+

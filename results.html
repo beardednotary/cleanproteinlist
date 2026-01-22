@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -355,6 +355,43 @@ text-decoration: underline;
         }
     }
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://cleanproteinlist.com/#organization",
+      "name": "Clean Protein List",
+      "url": "https://cleanproteinlist.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://cleanproteinlist.com/images/logo.png"
+      },
+      "description": "Independent supplement safety database analyzing protein powders for heavy metal contamination.",
+      "founder": {
+        "@type": "Person",
+        "name": "Ray"
+      },
+      "knowsAbout": [
+        "Protein Powder Safety",
+        "Heavy Metal Testing",
+        "Lead Contamination",
+        "Supplement Analysis"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://cleanproteinlist.com/#website",
+      "url": "https://cleanproteinlist.com",
+      "name": "Clean Protein List",
+      "publisher": {
+        "@id": "https://cleanproteinlist.com/#organization"
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
    <header>
@@ -392,7 +429,7 @@ text-decoration: underline;
 
     <!-- Recommendations Section -->
     <section class="recommendations-section">
-        <h2>✅ Verified Safe Alternatives</h2>
+        <h2>âœ… Verified Safe Alternatives</h2>
         <div class="recommendations-grid" id="recommendations">
             <!-- Populated by JavaScript -->
         </div>
@@ -408,9 +445,9 @@ text-decoration: underline;
 
     <!-- Full Report CTA -->
     <div class="cta-box">
-        <h2>📊 See Complete Rankings</h2>
+        <h2>ðŸ“Š See Complete Rankings</h2>
         <p>View all 23 products tested by Consumer Reports, ranked from safest to most contaminated.</p>
-        <a href="blog/lead-in-protein-powder-list.html" class="cta-button">View Full Report →</a>
+        <a href="blog/lead-in-protein-powder-list.html" class="cta-button">View Full Report â†’</a>
     </div>
 
     <!-- Retake Quiz -->
@@ -466,7 +503,7 @@ text-decoration: underline;
             brand: "Momentous",
             fullName: "Momentous Whey Protein Isolate",
             leadLevel: "Below detection limits",
-            maxServings: "3⅓ per day",
+            maxServings: "3â…“ per day",
             guidance: "Better for daily consumption",
             type: "Whey isolate (NSF Certified)",
             bestFor: "Athletes, drug-tested sports",
@@ -494,7 +531,7 @@ text-decoration: underline;
             brand: "Optimum Nutrition",
             fullName: "Optimum Nutrition Gold Standard 100% Whey",
             leadLevel: "Below detection limits",
-            maxServings: "1¾ per day",
+            maxServings: "1Â¾ per day",
             guidance: "Better for daily consumption",
             type: "Whey blend",
             bestFor: "Best value, most popular",
@@ -566,7 +603,7 @@ text-decoration: underline;
             brand: "Orgain",
             fullName: "Orgain Organic Plant-Based Protein",
             leadLevel: "143% over limit",
-            maxServings: "4¾ per week",
+            maxServings: "4Â¾ per week",
             guidance: "Okay occasionally",
             type: "Plant-based",
             bestFor: "Occasional use only",
@@ -580,7 +617,7 @@ text-decoration: underline;
             brand: "Vega",
             fullName: "Vega Premium Sport Plant-Based Protein",
             leadLevel: "185% over limit",
-            maxServings: "3¾ per week",
+            maxServings: "3Â¾ per week",
             guidance: "Okay occasionally",
             type: "Plant-based",
             bestFor: "Occasional use only",
@@ -594,7 +631,7 @@ text-decoration: underline;
             brand: "Muscle Milk",
             fullName: "Muscle Milk Pro Advanced Nutrition",
             leadLevel: "128% over limit",
-            maxServings: "5½ per week",
+            maxServings: "5Â½ per week",
             guidance: "Okay occasionally",
             type: "RTD shake",
             bestFor: "Occasional use only",
@@ -608,7 +645,7 @@ text-decoration: underline;
             brand: "Ensure",
             fullName: "Ensure Plant-Based Protein Shake",
             leadLevel: "132% over limit",
-            maxServings: "5⅓ per week",
+            maxServings: "5â…“ per week",
             guidance: "Okay occasionally",
             type: "Plant-based RTD",
             bestFor: "Occasional use only",
@@ -623,7 +660,7 @@ text-decoration: underline;
             brand: "Momentous Plant",
             fullName: "Momentous 100% Plant Protein",
             leadLevel: "476% over limit",
-            maxServings: "1½ per week",
+            maxServings: "1Â½ per week",
             guidance: "Limit to once per week",
             type: "Plant-based",
             bestFor: "Not recommended",
@@ -637,7 +674,7 @@ text-decoration: underline;
             brand: "Garden of Life",
             fullName: "Garden of Life Sport Organic Plant-Based",
             leadLevel: "564% over limit",
-            maxServings: "1¼ per week",
+            maxServings: "1Â¼ per week",
             guidance: "Limit to once per week",
             type: "Plant-based",
             bestFor: "Not recommended",
@@ -651,7 +688,7 @@ text-decoration: underline;
             rank: 22,
             brand: "Huel",
             fullName: "Huel Black Edition",
-            leadLevel: "1,288% over limit (6.44 µg)",
+            leadLevel: "1,288% over limit (6.44 Âµg)",
             maxServings: "0 per week",
             guidance: "AVOID",
             type: "Plant-based meal replacement",
@@ -665,7 +702,7 @@ text-decoration: underline;
             rank: 23,
             brand: "Naked Nutrition",
             fullName: "Naked Nutrition Vegan Mass Gainer",
-            leadLevel: "1,572% over limit (7.86 µg)",
+            leadLevel: "1,572% over limit (7.86 Âµg)",
             maxServings: "0 per week",
             guidance: "AVOID",
             type: "Plant-based mass gainer",
@@ -738,13 +775,13 @@ text-decoration: underline;
         
         // Set summary based on safety
         if (product.rank && product.rank <= 7) {
-            summary.innerHTML = `<span style="color: #2ecc71; font-weight: 600;">✅ Good news!</span> ${product.brand} is one of the safer options tested.`;
+            summary.innerHTML = `<span style="color: #2ecc71; font-weight: 600;">âœ… Good news!</span> ${product.brand} is one of the safer options tested.`;
         } else if (!product.rank && product.source === 'Clean Label Project') {
-            summary.innerHTML = `<span style="color: #2ecc71; font-weight: 600;">✅ Good news!</span> ${product.brand} is Clean Label Project certified as safe.`;
+            summary.innerHTML = `<span style="color: #2ecc71; font-weight: 600;">âœ… Good news!</span> ${product.brand} is Clean Label Project certified as safe.`;
         } else if (product.rank && product.rank <= 19) {
-            summary.innerHTML = `<span style="color: #f39c12; font-weight: 600;">⚠️ Use with caution.</span> ${product.brand} has elevated heavy metal levels.`;
+            summary.innerHTML = `<span style="color: #f39c12; font-weight: 600;">âš ï¸ Use with caution.</span> ${product.brand} has elevated heavy metal levels.`;
         } else {
-            summary.innerHTML = `<span style="color: #e74c3c; font-weight: 600;">🚫 Important warning.</span> ${product.brand} has dangerous contamination levels.`;
+            summary.innerHTML = `<span style="color: #e74c3c; font-weight: 600;">ðŸš« Important warning.</span> ${product.brand} has dangerous contamination levels.`;
         }
         
         // Build result card
@@ -783,7 +820,7 @@ text-decoration: underline;
             
             ${product.articleLink ? `
                 <a href="${product.articleLink}" class="article-link">
-                    Read Full ${product.brand} Analysis →
+                    Read Full ${product.brand} Analysis â†’
                 </a>
             ` : ''}
         `;
@@ -799,7 +836,7 @@ text-decoration: underline;
         const summary = document.getElementById('result-summary');
         const brandResult = document.getElementById('brand-result');
         
-        summary.innerHTML = `<span style="color: #f39c12; font-weight: 600;">⚠️ Brand not tested.</span> ${brandName} was not included in Consumer Reports or Clean Label Project testing.`;
+        summary.innerHTML = `<span style="color: #f39c12; font-weight: 600;">âš ï¸ Brand not tested.</span> ${brandName} was not included in Consumer Reports or Clean Label Project testing.`;
         
         brandResult.innerHTML = `
             <div class="brand-header">
@@ -808,7 +845,7 @@ text-decoration: underline;
             </div>
             
             <div class="warning-box">
-                <h3>⚠️ This Brand Has Not Been Independently Verified</h3>
+                <h3>âš ï¸ This Brand Has Not Been Independently Verified</h3>
                 <p><strong>Without third-party testing, we cannot verify the safety of this product.</strong> Many untested brands may have contamination similar to or worse than products that failed Consumer Reports testing.</p>
                 
                 <p style="margin-top: 20px;"><strong>What to look for if you want to keep using this brand:</strong></p>
@@ -896,7 +933,7 @@ text-decoration: underline;
                 
                 ${product.amazonLink ? `
                     <a href="${product.amazonLink}" target="_blank" rel="noopener" class="amazon-btn">
-                        View on Amazon →
+                        View on Amazon â†’
                     </a>
                 ` : ''}
                 
@@ -961,3 +998,4 @@ text-decoration: underline;
 </script>
 </body>
 </html>
+

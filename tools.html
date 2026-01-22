@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -251,6 +251,43 @@
             }
         }
     </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://cleanproteinlist.com/#organization",
+      "name": "Clean Protein List",
+      "url": "https://cleanproteinlist.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://cleanproteinlist.com/images/logo.png"
+      },
+      "description": "Independent supplement safety database analyzing protein powders for heavy metal contamination.",
+      "founder": {
+        "@type": "Person",
+        "name": "Ray"
+      },
+      "knowsAbout": [
+        "Protein Powder Safety",
+        "Heavy Metal Testing",
+        "Lead Contamination",
+        "Supplement Analysis"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://cleanproteinlist.com/#website",
+      "url": "https://cleanproteinlist.com",
+      "name": "Clean Protein List",
+      "publisher": {
+        "@id": "https://cleanproteinlist.com/#organization"
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
    <header>
@@ -278,7 +315,7 @@
 
     <div class="tools-hero">
         <div class="container">
-            <h1>🔬 Protein Powder Safety Tools</h1>
+            <h1>ðŸ”¬ Protein Powder Safety Tools</h1>
             <p>Instant safety checks, calculators, and personalized recommendations</p>
         </div>
     </div>
@@ -287,14 +324,14 @@
 
         <!-- TOOL 1: BRAND SAFETY CHECKER -->
         <div class="tool-card" id="brand-checker">
-            <h2>🔍 Is Your Protein Powder Safe?</h2>
+            <h2>ðŸ” Is Your Protein Powder Safe?</h2>
             <p class="subtitle">Instant safety check based on Consumer Reports testing (October 2025)</p>
 
             <label for="brand-select" style="display: block; font-weight: 600; margin-bottom: 10px; font-size: 16px;">Select your protein powder brand:</label>
             
             <select id="brand-select" class="brand-select" onchange="checkBrand()">
                 <option value="">-- Choose your brand --</option>
-                <optgroup label="✅ SAFE - Lead Below Detection or Minimal">
+                <optgroup label="âœ… SAFE - Lead Below Detection or Minimal">
                     <option value="muscletech-mass">MuscleTech 100% Mass Gainer (Rank #1)</option>
                     <option value="dymatize-iso">Dymatize ISO-100 (Rank #2)</option>
                     <option value="momentous">Momentous Whey Isolate (Rank #3)</option>
@@ -304,7 +341,7 @@
                     <option value="owyn">OWYN Pro Elite Plant Protein (Rank #7)</option>
                     <option value="body-fortress">Body Fortress Whey Protein (Rank #8)</option>
                 </optgroup>
-                <optgroup label="⚠️ CAUTION - Moderate Lead Levels">
+                <optgroup label="âš ï¸ CAUTION - Moderate Lead Levels">
                     <option value="pure-protein">Pure Protein Shake (Rank #9)</option>
                     <option value="atkins">Atkins Shake (Rank #10)</option>
                     <option value="labrada">Labrada Lean Body RTD (Rank #11)</option>
@@ -315,7 +352,7 @@
                     <option value="huel-black">Huel Black Edition (Rank #16)</option>
                     <option value="muscle-milk-rtd">Muscle Milk RTD Shake (Rank #17)</option>
                 </optgroup>
-                <optgroup label="🚫 AVOID - High Lead Contamination">
+                <optgroup label="ðŸš« AVOID - High Lead Contamination">
                     <option value="garden-chocolate">Garden of Life Chocolate (Rank #18)</option>
                     <option value="quest">Quest Protein Powder (Rank #19)</option>
                     <option value="nutrex">Nutrex Plant Protein (Rank #20)</option>
@@ -325,14 +362,14 @@
                 </optgroup>
             </select>
 
-            <p class="search-helper">💡 Don't see your brand? It wasn't tested by Consumer Reports. <a href="quiz.html" style="color: #667eea; font-weight: 600;">Take our quiz</a> for alternatives.</p>
+            <p class="search-helper">ðŸ’¡ Don't see your brand? It wasn't tested by Consumer Reports. <a href="quiz.html" style="color: #667eea; font-weight: 600;">Take our quiz</a> for alternatives.</p>
 
             <div id="result"></div>
         </div>
 
 <!-- TOOL 2: PROTEIN CALCULATOR (NOW ACTIVE) -->
         <div class="tool-card" id="protein-calculator">
-            <h2>📊 Daily Protein Calculator</h2>
+            <h2>ðŸ“Š Daily Protein Calculator</h2>
             <p class="subtitle">Calculate your exact protein needs + get personalized safe recommendations</p>
 
             <form id="protein-form" style="margin-top: 30px;">
@@ -411,7 +448,7 @@
                 </div>
 
                 <button type="submit" style="width: 100%; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 18px; border: none; border-radius: 8px; font-size: 18px; font-weight: 700; cursor: pointer; transition: transform 0.2s;">
-                    Calculate My Protein Needs →
+                    Calculate My Protein Needs â†’
                 </button>
             </form>
 
@@ -420,12 +457,12 @@
 
 <!-- TOOL 3: LEAD EXPOSURE CALCULATOR (NOW ACTIVE) -->
         <div class="tool-card" id="lead-calculator">
-            <h2>⚠️ Lead Exposure Calculator</h2>
+            <h2>âš ï¸ Lead Exposure Calculator</h2>
             <p class="subtitle">Calculate how much heavy metal you've consumed from your protein powder</p>
 
             <div style="background: #fff3cd; padding: 20px; border-radius: 8px; border-left: 5px solid #ffc107; margin-bottom: 30px;">
                 <p style="margin: 0; color: #856404; line-height: 1.6;">
-                    <strong>⚠️ Important:</strong> Lead accumulates in your body over time. Even "safe" daily limits add up to concerning totals over months and years. This calculator shows your total exposure.
+                    <strong>âš ï¸ Important:</strong> Lead accumulates in your body over time. Even "safe" daily limits add up to concerning totals over months and years. This calculator shows your total exposure.
                 </p>
             </div>
 
@@ -437,7 +474,7 @@
                         <label style="display: block; font-weight: 600; margin-bottom: 8px;">Your Current Protein Powder Brand</label>
                         <select id="exposure-brand" required style="width: 100%; padding: 12px; border: 2px solid #ddd; border-radius: 8px; font-size: 16px;">
                             <option value="">-- Select your brand --</option>
-                            <optgroup label="✅ SAFE - Lead Below Detection or Minimal">
+                            <optgroup label="âœ… SAFE - Lead Below Detection or Minimal">
                                 <option value="muscletech-mass">MuscleTech 100% Mass Gainer (Rank #1)</option>
                                 <option value="dymatize-iso">Dymatize ISO-100 (Rank #2)</option>
                                 <option value="momentous">Momentous Whey Isolate (Rank #3)</option>
@@ -447,7 +484,7 @@
                                 <option value="owyn">OWYN Pro Elite Plant Protein (Rank #7)</option>
                                 <option value="body-fortress">Body Fortress Whey Protein (Rank #8)</option>
                             </optgroup>
-                            <optgroup label="⚠️ CAUTION - Moderate Lead Levels">
+                            <optgroup label="âš ï¸ CAUTION - Moderate Lead Levels">
                                 <option value="pure-protein">Pure Protein Shake (Rank #9)</option>
                                 <option value="atkins">Atkins Shake (Rank #10)</option>
                                 <option value="labrada">Labrada Lean Body RTD (Rank #11)</option>
@@ -458,7 +495,7 @@
                                 <option value="huel-black">Huel Black Edition (Rank #16)</option>
                                 <option value="muscle-milk-rtd">Muscle Milk RTD Shake (Rank #17)</option>
                             </optgroup>
-                            <optgroup label="🚫 AVOID - High Lead Contamination">
+                            <optgroup label="ðŸš« AVOID - High Lead Contamination">
                                 <option value="garden-chocolate">Garden of Life Chocolate (Rank #18)</option>
                                 <option value="quest">Quest Protein Powder (Rank #19)</option>
                                 <option value="nutrex">Nutrex Plant Protein (Rank #20)</option>
@@ -474,7 +511,7 @@
                         <label style="display: block; font-weight: 600; margin-bottom: 8px;">Servings Per Day</label>
                         <select id="servings-day" required style="width: 100%; padding: 12px; border: 2px solid #ddd; border-radius: 8px; font-size: 16px;">
                             <option value="">Select...</option>
-                            <option value="0.5">½ scoop (occasionally)</option>
+                            <option value="0.5">Â½ scoop (occasionally)</option>
                             <option value="1">1 scoop/shake daily</option>
                             <option value="2">2 scoops/shakes daily</option>
                             <option value="3">3 scoops/shakes daily</option>
@@ -501,7 +538,7 @@
                 </div>
 
                 <button type="submit" style="width: 100%; background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%); color: white; padding: 18px; border: none; border-radius: 8px; font-size: 18px; font-weight: 700; cursor: pointer; transition: transform 0.2s;">
-                    Calculate My Lead Exposure →
+                    Calculate My Lead Exposure â†’
                 </button>
             </form>
 
@@ -527,7 +564,7 @@
                 safety: 'safe',
                 lead: 'Not Detected',
                 leadValue: 0,
-                safeLimit: '✅ No limit - Lead below detection',
+                safeLimit: 'âœ… No limit - Lead below detection',
                 description: 'The ONLY protein powder with completely undetectable lead contamination. Consumer Reports #1 ranking.',
                 article: 'blog/muscletech-mass-gainer-safety.html',
                 type: 'Mass Gainer',
@@ -539,7 +576,7 @@
                 safety: 'safe',
                 lead: 'Below Detection',
                 leadValue: 0,
-                safeLimit: '✅ No limit - Lead below detection',
+                safeLimit: 'âœ… No limit - Lead below detection',
                 description: 'Hydrolyzed whey isolate with lead levels below analytical detection. Ranked #2 safest.',
                 article: 'blog/dymatize-iso-100-safety-analysis.html',
                 type: 'Whey Isolate',
@@ -551,7 +588,7 @@
                 safety: 'safe',
                 lead: 'Below Detection',
                 leadValue: 0,
-                safeLimit: '✅ No limit - NSF Certified for Sport',
+                safeLimit: 'âœ… No limit - NSF Certified for Sport',
                 description: 'NSF Certified for Sport with lead below detection. Used by professional athletes.',
                 article: 'blog/momentous-protein-safety-analysis.html',
                 type: 'Whey Isolate',
@@ -563,7 +600,7 @@
                 safety: 'safe',
                 lead: 'Below Detection',
                 leadValue: 0,
-                safeLimit: '✅ No limit - Lead below detection',
+                safeLimit: 'âœ… No limit - Lead below detection',
                 description: 'Multi-source protein blend with excellent taste and below-detection lead levels.',
                 article: 'blog/bsn-syntha-6-safety-analysis.html',
                 type: 'Protein Blend',
@@ -575,7 +612,7 @@
                 safety: 'safe',
                 lead: 'Below Detection',
                 leadValue: 0,
-                safeLimit: '✅ No limit - Lead below detection',
+                safeLimit: 'âœ… No limit - Lead below detection',
                 description: 'World\'s most popular protein powder for 20+ years. Verified safe by Consumer Reports.',
                 article: 'blog/optimum-nutrition-gold-standard-whey-lead-testing-results-2025.html',
                 type: 'Whey Concentrate',
@@ -585,9 +622,9 @@
                 name: 'Premier Protein RTD Shake',
                 rank: 6,
                 safety: 'safe',
-                lead: '0.59 µg',
+                lead: '0.59 Âµg',
                 leadValue: 0.59,
-                safeLimit: '✅ Safe for 1 daily',
+                safeLimit: 'âœ… Safe for 1 daily',
                 description: 'Ready-to-drink convenience with low lead levels. Safe for daily consumption.',
                 article: 'blog/premier-protein-lead-testing.html',
                 type: 'RTD Shake',
@@ -597,9 +634,9 @@
                 name: 'OWYN Pro Elite Plant Protein',
                 rank: 7,
                 safety: 'safe',
-                lead: '0.60 µg',
+                lead: '0.60 Âµg',
                 leadValue: 0.60,
-                safeLimit: '✅ Safe for 1 daily - ONLY safe plant protein',
+                safeLimit: 'âœ… Safe for 1 daily - ONLY safe plant protein',
                 description: 'The ONLY plant-based protein verified safe by Consumer Reports. 14 out of 15 plant proteins failed.',
                 article: 'blog/owyn-pro-elite-protein-powder-safety-only-safe-plant-protein-2025.html',
                 type: 'Plant Protein',
@@ -611,7 +648,7 @@
                 safety: 'safe',
                 lead: 'Non-Detectable (Clean Label)',
                 leadValue: 0,
-                safeLimit: '✅ No limit - Clean Label Certified',
+                safeLimit: 'âœ… No limit - Clean Label Certified',
                 description: 'Budget champion with Clean Label certification. Best value for verified-safe protein.',
                 article: 'blog/body-fortress-protein-powder-lead-testing-budget-clean-2025.html',
                 type: 'Whey Concentrate',
@@ -623,9 +660,9 @@
                 name: 'Pure Protein Shake',
                 rank: 9,
                 safety: 'caution',
-                lead: '0.68 µg',
+                lead: '0.68 Âµg',
                 leadValue: 0.68,
-                safeLimit: '⚠️ Limit: 1 shake daily',
+                safeLimit: 'âš ï¸ Limit: 1 shake daily',
                 description: 'Moderate lead levels. Safe for occasional use but consider safer alternatives for daily consumption.',
                 article: 'blog/lead-in-protein-powder-list.html',
                 type: 'RTD Shake',
@@ -635,9 +672,9 @@
                 name: 'Atkins Protein Shake',
                 rank: 10,
                 safety: 'caution',
-                lead: '0.69 µg',
+                lead: '0.69 Âµg',
                 leadValue: 0.69,
-                safeLimit: '⚠️ Limit: 1 shake daily',
+                safeLimit: 'âš ï¸ Limit: 1 shake daily',
                 description: 'Low-carb formula with moderate lead. Consider safer keto alternatives.',
                 article: 'blog/lead-in-protein-powder-list.html',
                 type: 'RTD Shake',
@@ -647,9 +684,9 @@
                 name: 'Labrada Lean Body RTD',
                 rank: 11,
                 safety: 'caution',
-                lead: '0.70 µg',
+                lead: '0.70 Âµg',
                 leadValue: 0.70,
-                safeLimit: '⚠️ Limit: 1 shake daily',
+                safeLimit: 'âš ï¸ Limit: 1 shake daily',
                 description: 'High-protein meal replacement with moderate contamination.',
                 article: 'blog/lead-in-protein-powder-list.html',
                 type: 'RTD Shake',
@@ -659,9 +696,9 @@
                 name: 'Orgain Organic Protein Powder',
                 rank: 12,
                 safety: 'caution',
-                lead: '0.72 µg',
+                lead: '0.72 Âµg',
                 leadValue: 0.72,
-                safeLimit: '⚠️ Limit: 1 scoop daily (143% over limit)',
+                safeLimit: 'âš ï¸ Limit: 1 scoop daily (143% over limit)',
                 description: 'USDA Organic doesn\'t test for heavy metals. Lead 143% over safe limit.',
                 article: 'blog/orgain-organic-protein-powder-lead-levels-consumer-reports-2025.html',
                 type: 'Plant Protein',
@@ -671,9 +708,9 @@
                 name: 'Vega Sport Premium Protein',
                 rank: 13,
                 safety: 'caution',
-                lead: '0.79 µg',
+                lead: '0.79 Âµg',
                 leadValue: 0.79,
-                safeLimit: '⚠️ Limit: 1 scoop daily',
+                safeLimit: 'âš ï¸ Limit: 1 scoop daily',
                 description: 'Plant-based sport formula with elevated lead. Switch to OWYN for safer plant protein.',
                 article: 'blog/lead-in-protein-powder-list.html',
                 type: 'Plant Protein',
@@ -683,9 +720,9 @@
                 name: 'Garden of Life Vanilla',
                 rank: 14,
                 safety: 'caution',
-                lead: '0.83 µg',
+                lead: '0.83 Âµg',
                 leadValue: 0.83,
-                safeLimit: '⚠️ Limit: 1 scoop every 2 days',
+                safeLimit: 'âš ï¸ Limit: 1 scoop every 2 days',
                 description: 'Organic plant protein with moderate contamination. Vanilla flavor safer than chocolate.',
                 article: 'blog/lead-in-protein-powder-list.html',
                 type: 'Plant Protein',
@@ -695,9 +732,9 @@
                 name: 'Muscle Milk Protein Powder',
                 rank: 15,
                 safety: 'caution',
-                lead: '1.19 µg',
+                lead: '1.19 Âµg',
                 leadValue: 1.19,
-                safeLimit: '⚠️ Limit: 1 scoop every 2 days',
+                safeLimit: 'âš ï¸ Limit: 1 scoop every 2 days',
                 description: 'Popular protein with elevated lead. RTD version even worse (see rank #17).',
                 article: 'blog/muscle-milk-lead-testing-safety-analysis-2025.html',
                 type: 'Protein Blend',
@@ -707,9 +744,9 @@
                 name: 'Huel Black Edition',
                 rank: 16,
                 safety: 'caution',
-                lead: '1.21 µg',
+                lead: '1.21 Âµg',
                 leadValue: 1.21,
-                safeLimit: '⚠️ Limit: 1 scoop every 2 days',
+                safeLimit: 'âš ï¸ Limit: 1 scoop every 2 days',
                 description: 'Premium meal replacement with concerning lead levels. Not safe for daily use.',
                 article: 'blog/huel-black-edition-lead-content.html',
                 type: 'Meal Replacement',
@@ -719,9 +756,9 @@
                 name: 'Muscle Milk RTD Shake',
                 rank: 17,
                 safety: 'caution',
-                lead: '1.25 µg',
+                lead: '1.25 Âµg',
                 leadValue: 1.25,
-                safeLimit: '⚠️ Limit: 1 shake every 2-3 days',
+                safeLimit: 'âš ï¸ Limit: 1 shake every 2-3 days',
                 description: 'Gas station protein with 2.5x the safe daily limit. Safe for occasional use only.',
                 article: 'blog/muscle-milk-lead-testing-safety-analysis-2025.html',
                 type: 'RTD Shake',
@@ -733,9 +770,9 @@
                 name: 'Garden of Life Chocolate',
                 rank: 18,
                 safety: 'danger',
-                lead: '2.76 µg',
+                lead: '2.76 Âµg',
                 leadValue: 2.76,
-                safeLimit: '🚫 AVOID - 5.5x over safe limit',
+                safeLimit: 'ðŸš« AVOID - 5.5x over safe limit',
                 description: 'Chocolate flavor 3.3x worse than vanilla. Subject of class action lawsuit for false advertising.',
                 article: 'blog/garden-of-life-lawsuit-lead-contamination-class-action-2025.html',
                 type: 'Plant Protein',
@@ -745,9 +782,9 @@
                 name: 'Quest Protein Powder',
                 rank: 19,
                 safety: 'danger',
-                lead: '2.87 µg',
+                lead: '2.87 Âµg',
                 leadValue: 2.87,
-                safeLimit: '🚫 AVOID - 5.7x over safe limit',
+                safeLimit: 'ðŸš« AVOID - 5.7x over safe limit',
                 description: 'Popular keto protein with dangerous contamination. Do not use daily.',
                 article: 'blog/lead-in-protein-powder-list.html',
                 type: 'Protein Blend',
@@ -757,9 +794,9 @@
                 name: 'Nutrex Plant Protein',
                 rank: 20,
                 safety: 'danger',
-                lead: '3.47 µg',
+                lead: '3.47 Âµg',
                 leadValue: 3.47,
-                safeLimit: '🚫 AVOID - 6.9x over safe limit',
+                safeLimit: 'ðŸš« AVOID - 6.9x over safe limit',
                 description: 'Plant protein with severe contamination. Switch to OWYN immediately.',
                 article: 'blog/lead-in-protein-powder-list.html',
                 type: 'Plant Protein',
@@ -769,9 +806,9 @@
                 name: 'Evolve Plant-Based Protein Shake',
                 rank: 21,
                 safety: 'danger',
-                lead: '4.23 µg',
+                lead: '4.23 Âµg',
                 leadValue: 4.23,
-                safeLimit: '🚫 AVOID - 8.5x over safe limit',
+                safeLimit: 'ðŸš« AVOID - 8.5x over safe limit',
                 description: 'RTD plant shake with extreme contamination. Do not consume.',
                 article: 'blog/lead-in-protein-powder-list.html',
                 type: 'RTD Shake',
@@ -781,9 +818,9 @@
                 name: 'Vega Protein & Greens Vanilla',
                 rank: 22,
                 safety: 'danger',
-                lead: '5.94 µg',
+                lead: '5.94 Âµg',
                 leadValue: 5.94,
-                safeLimit: '🚫 AVOID - 11.9x over safe limit',
+                safeLimit: 'ðŸš« AVOID - 11.9x over safe limit',
                 description: 'Second-worst protein tested. Extremely dangerous for daily use.',
                 article: 'blog/lead-in-protein-powder-list.html',
                 type: 'Plant Protein',
@@ -793,9 +830,9 @@
                 name: 'Naked Nutrition Vegan Mass Gainer',
                 rank: 23,
                 safety: 'danger',
-                lead: '7.86 µg',
+                lead: '7.86 Âµg',
                 leadValue: 7.86,
-                safeLimit: '🚫 AVOID - WORST TESTED (15.7x over limit)',
+                safeLimit: 'ðŸš« AVOID - WORST TESTED (15.7x over limit)',
                 description: 'The WORST protein powder tested by Consumer Reports. 1,572% over safe limit. Stop using immediately.',
                 article: 'blog/naked-nutrition-vegan-mass-gainer-lead.html',
                 type: 'Plant Mass Gainer',
@@ -844,9 +881,9 @@
             const safetyClass = brand.safety;
 
             let safetyBadgeText = '';
-            if (safetyClass === 'safe') safetyBadgeText = '✅ SAFE';
-            else if (safetyClass === 'caution') safetyBadgeText = '⚠️ CAUTION';
-            else safetyBadgeText = '🚫 AVOID';
+            if (safetyClass === 'safe') safetyBadgeText = 'âœ… SAFE';
+            else if (safetyClass === 'caution') safetyBadgeText = 'âš ï¸ CAUTION';
+            else safetyBadgeText = 'ðŸš« AVOID';
 
             // Get safe alternatives
             const alternatives = safeAlternatives[brand.type] || [];
@@ -874,28 +911,28 @@
                     <p style="margin-top: 20px; font-size: 16px; line-height: 1.6;">${brand.description}</p>
 
                     <a href="${brand.article}" style="display: inline-block; margin-top: 20px; color: #667eea; font-weight: 600; text-decoration: underline;">
-                        Read Full ${brand.name} Analysis →
+                        Read Full ${brand.name} Analysis â†’
                     </a>
 </div>
 ${safetyClass !== 'safe' ? `
                 <div class="recommendation-section">
-                    <h3>✅ Safer Alternatives in Same Category (${brand.type})</h3>
+                    <h3>âœ… Safer Alternatives in Same Category (${brand.type})</h3>
                     ${alternatives.map(alt => `
                         <div class="product-card">
                             <div class="product-info">
                                 <h4>${alt.name}</h4>
                                 <p><strong>Rank:</strong> #${alt.rank} (Consumer Reports verified safe)</p>
                                 <p><strong>Price:</strong> ${alt.price}/serving</p>
-                                <p style="color: #4caf50; font-weight: 600;">✅ Lead below detection or minimal - Safe for daily use</p>
+                                <p style="color: #4caf50; font-weight: 600;">âœ… Lead below detection or minimal - Safe for daily use</p>
                             </div>
-                            <a href="${alt.link}" target="_blank" rel="noopener" class="product-cta">Buy on Amazon →</a>
+                            <a href="${alt.link}" target="_blank" rel="noopener" class="product-cta">Buy on Amazon â†’</a>
                         </div>
                     `).join('')}
 
                     ${safetyClass === 'danger' ? `
                         <div style="background: #fff3cd; padding: 20px; border-radius: 8px; margin-top: 20px; border-left: 4px solid #ffc107;">
                             <p style="margin: 0; font-weight: 600; color: #856404;">
-                                ⚠️ <strong>Action Required:</strong> If you're using ${brand.name} daily, we recommend switching immediately. 
+                                âš ï¸ <strong>Action Required:</strong> If you're using ${brand.name} daily, we recommend switching immediately. 
                                 Lead exposure accumulates over time and poses long-term health risks.
                             </p>
                         </div>
@@ -903,12 +940,12 @@ ${safetyClass !== 'safe' ? `
                 </div>
             ` : `
                 <div class="recommendation-section">
-                    <h3>🎉 Great Choice!</h3>
+                    <h3>ðŸŽ‰ Great Choice!</h3>
                     <p style="font-size: 16px; color: #666;">
                         ${brand.name} is verified safe by Consumer Reports. You can continue using this protein with confidence.
                     </p>
                     <p style="margin-top: 15px;">
-                        Want to explore other safe options? <a href="blog/best-protein-powder-2025.html" style="color: #667eea; font-weight: 600;">See our complete top 10 list →</a>
+                        Want to explore other safe options? <a href="blog/best-protein-powder-2025.html" style="color: #667eea; font-weight: 600;">See our complete top 10 list â†’</a>
                     </p>
                 </div>
             `}
@@ -1037,7 +1074,7 @@ ${safetyClass !== 'safe' ? `
             
             resultsDiv.innerHTML = `
                 <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 40px; border-radius: 12px; margin-bottom: 30px;">
-                    <h3 style="font-size: 32px; margin: 0 0 20px 0; color: white;">📊 Your Daily Protein Target</h3>
+                    <h3 style="font-size: 32px; margin: 0 0 20px 0; color: white;">ðŸ“Š Your Daily Protein Target</h3>
                     
                     <div style="background: rgba(255,255,255,0.15); padding: 25px; border-radius: 8px; margin-bottom: 25px;">
                         <div style="font-size: 56px; font-weight: 900; margin-bottom: 10px;">${dailyProtein}g</div>
@@ -1057,10 +1094,10 @@ ${safetyClass !== 'safe' ? `
                 </div>
 
                 <div style="background: #f8f9fa; padding: 30px; border-radius: 12px; margin-bottom: 30px;">
-                    <h3 style="font-size: 24px; margin-top: 0;">💡 How to Hit Your Target</h3>
+                    <h3 style="font-size: 24px; margin-top: 0;">ðŸ’¡ How to Hit Your Target</h3>
                     
                     <div style="background: white; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
-                        <h4 style="margin-top: 0; color: #667eea;">🍳 Whole Food Sources (~100g protein)</h4>
+                        <h4 style="margin-top: 0; color: #667eea;">ðŸ³ Whole Food Sources (~100g protein)</h4>
                         <ul style="margin: 0; padding-left: 20px; line-height: 1.8;">
                             <li>Chicken breast: 16oz (450g)</li>
                             <li>Greek yogurt: 3 cups</li>
@@ -1070,7 +1107,7 @@ ${safetyClass !== 'safe' ? `
                     </div>
 
                     <div style="background: white; padding: 20px; border-radius: 8px;">
-                        <h4 style="margin-top: 0; color: #667eea;">🥤 With Protein Powder (${dailyProtein}g total)</h4>
+                        <h4 style="margin-top: 0; color: #667eea;">ðŸ¥¤ With Protein Powder (${dailyProtein}g total)</h4>
                         <ul style="margin: 0; padding-left: 20px; line-height: 1.8;">
                             <li><strong>${Math.min(scoopsNeeded, 2)} scoops protein powder:</strong> ${Math.min(scoopsNeeded, 2) * 30}g</li>
                             <li><strong>Whole foods:</strong> ${dailyProtein - (Math.min(scoopsNeeded, 2) * 30)}g (from meals)</li>
@@ -1079,7 +1116,7 @@ ${safetyClass !== 'safe' ? `
                 </div>
 
                 <div style="background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%); color: white; padding: 35px; border-radius: 12px;">
-                    <h3 style="font-size: 28px; margin-top: 0; color: white;">✅ Recommended Safe Protein for Your Goal</h3>
+                    <h3 style="font-size: 28px; margin-top: 0; color: white;">âœ… Recommended Safe Protein for Your Goal</h3>
                     
                     <div style="background: rgba(255,255,255,0.15); padding: 25px; border-radius: 8px; margin-bottom: 20px;">
                         <div style="font-size: 24px; font-weight: 700; margin-bottom: 15px;">${recommendedProtein.name}</div>
@@ -1105,7 +1142,7 @@ ${safetyClass !== 'safe' ? `
 
                         <div style="background: rgba(255,255,255,0.1); padding: 15px; border-radius: 8px; margin-bottom: 15px;">
                             <div style="font-size: 14px; opacity: 0.9; margin-bottom: 8px;">Nutrition per serving:</div>
-                            <div style="font-size: 16px;"><strong>${recommendedProtein.protein}</strong> • ${recommendedProtein.calories}</div>
+                            <div style="font-size: 16px;"><strong>${recommendedProtein.protein}</strong> â€¢ ${recommendedProtein.calories}</div>
                         </div>
 
                         <div style="font-size: 15px; line-height: 1.6; opacity: 0.95; margin-bottom: 20px;">
@@ -1115,11 +1152,11 @@ ${safetyClass !== 'safe' ? `
                         <div style="display: flex; gap: 15px; flex-wrap: wrap;">
                             <a href="${recommendedProtein.link}" target="_blank" rel="noopener" 
                                style="flex: 1; min-width: 200px; background: white; color: #2ecc71; padding: 15px 30px; border-radius: 8px; text-decoration: none; font-weight: 700; text-align: center; transition: transform 0.2s;">
-                                Buy on Amazon →
+                                Buy on Amazon â†’
                             </a>
                             <a href="${recommendedProtein.article}" 
                                style="flex: 1; min-width: 200px; background: rgba(255,255,255,0.2); color: white; padding: 15px 30px; border-radius: 8px; text-decoration: none; font-weight: 700; text-align: center; transition: transform 0.2s;">
-                                Read Full Analysis →
+                                Read Full Analysis â†’
                             </a>
                         </div>
                     </div>
@@ -1127,13 +1164,13 @@ ${safetyClass !== 'safe' ? `
                     <div style="background: rgba(255,255,255,0.1); padding: 20px; border-radius: 8px;">
                         <div style="font-size: 14px; opacity: 0.9; margin-bottom: 10px;">Want to see other safe options?</div>
                         <a href="blog/best-protein-powder-2025.html" style="color: white; text-decoration: underline; font-weight: 600;">
-                            View Top 10 Safe Protein Powders (2025) →
+                            View Top 10 Safe Protein Powders (2025) â†’
                         </a>
                     </div>
                 </div>
 
                 <div style="background: #e3f2fd; padding: 25px; border-radius: 8px; margin-top: 30px; border-left: 5px solid #2196f3;">
-                    <h4 style="margin-top: 0; color: #1976d2;">💪 Pro Tips for Hitting Your Protein Target</h4>
+                    <h4 style="margin-top: 0; color: #1976d2;">ðŸ’ª Pro Tips for Hitting Your Protein Target</h4>
                     <ul style="margin: 0; padding-left: 20px; line-height: 1.8; color: #333;">
                         ${goal === 'lose' ? `
                             <li><strong>Prioritize protein at every meal</strong> to preserve muscle during fat loss</li>
@@ -1201,7 +1238,7 @@ ${safetyClass !== 'safe' ? `
             const totalServings = servingsPerDay * totalDays;
             const totalLeadUg = brand.leadValue * totalServings;
             
-            // Safe daily limit (0.5 µg/day per FDA)
+            // Safe daily limit (0.5 Âµg/day per FDA)
             const safeDailyLimit = 0.5;
             const totalSafeLimit = safeDailyLimit * totalDays;
             const percentOverLimit = ((totalLeadUg / totalSafeLimit) * 100).toFixed(0);
@@ -1212,17 +1249,17 @@ ${safetyClass !== 'safe' ? `
             if (brand.safety === 'safe') {
                 riskLevel = 'LOW';
                 riskColor = '#4caf50';
-                riskBadge = '✅ LOW RISK';
+                riskBadge = 'âœ… LOW RISK';
                 riskDescription = 'Your protein powder has minimal or non-detectable lead levels. You can continue using it with confidence.';
             } else if (brand.safety === 'caution') {
                 riskLevel = 'MODERATE';
                 riskColor = '#ff9800';
-                riskBadge = '⚠️ MODERATE RISK';
+                riskBadge = 'âš ï¸ MODERATE RISK';
                 riskDescription = 'You\'ve consumed moderate levels of lead. While not immediately dangerous, long-term daily use is not recommended. Consider switching to a verified-safe alternative.';
             } else {
                 riskLevel = 'HIGH';
                 riskColor = '#f44336';
-                riskBadge = '🚫 HIGH RISK';
+                riskBadge = 'ðŸš« HIGH RISK';
                 riskDescription = 'You\'ve consumed concerning levels of lead. We strongly recommend switching to a verified-safe protein immediately and consulting a healthcare provider about chelation therapy.';
             }
 
@@ -1231,9 +1268,9 @@ ${safetyClass !== 'safe' ? `
             if (totalLeadUg > 1000) {
                 healthImpact = `
                     <div style="background: #ffebee; padding: 20px; border-radius: 8px; border-left: 5px solid #f44336; margin: 20px 0;">
-                        <h4 style="margin-top: 0; color: #c62828;">⚠️ Concerning Exposure Level</h4>
+                        <h4 style="margin-top: 0; color: #c62828;">âš ï¸ Concerning Exposure Level</h4>
                         <p style="margin: 0; color: #333; line-height: 1.6;">
-                            Over 1,000 µg (1 milligram) of cumulative lead exposure can cause:
+                            Over 1,000 Âµg (1 milligram) of cumulative lead exposure can cause:
                         </p>
                         <ul style="margin: 10px 0 0 20px; color: #333; line-height: 1.8;">
                             <li>Cardiovascular damage (hypertension, heart disease)</li>
@@ -1243,16 +1280,16 @@ ${safetyClass !== 'safe' ? `
                             <li>Increased cancer risk (long-term exposure)</li>
                         </ul>
                         <p style="margin: 15px 0 0; color: #333; font-weight: 600;">
-                            💡 Consider requesting a blood lead level test from your doctor (normal: <5 µg/dL)
+                            ðŸ’¡ Consider requesting a blood lead level test from your doctor (normal: <5 Âµg/dL)
                         </p>
                     </div>
                 `;
             } else if (totalLeadUg > 100) {
                 healthImpact = `
                     <div style="background: #fff3e0; padding: 20px; border-radius: 8px; border-left: 5px solid #ff9800; margin: 20px 0;">
-                        <h4 style="margin-top: 0; color: #e65100;">⚠️ Moderate Exposure Level</h4>
+                        <h4 style="margin-top: 0; color: #e65100;">âš ï¸ Moderate Exposure Level</h4>
                         <p style="margin: 0; color: #333; line-height: 1.6;">
-                            100-1,000 µg of cumulative lead exposure can contribute to:
+                            100-1,000 Âµg of cumulative lead exposure can contribute to:
                         </p>
                         <ul style="margin: 10px 0 0 20px; color: #333; line-height: 1.8;">
                             <li>Subtle blood pressure increases</li>
@@ -1261,7 +1298,7 @@ ${safetyClass !== 'safe' ? `
                             <li>Potential developmental issues (if pregnant)</li>
                         </ul>
                         <p style="margin: 15px 0 0; color: #333; font-weight: 600;">
-                            💡 Switching to verified-safe protein now prevents further accumulation
+                            ðŸ’¡ Switching to verified-safe protein now prevents further accumulation
                         </p>
                     </div>
                 `;
@@ -1285,7 +1322,7 @@ ${safetyClass !== 'safe' ? `
                     <div style="background: white; padding: 30px; border-radius: 12px; margin-bottom: 25px;">
                         <div style="text-align: center; margin-bottom: 25px;">
                             <div style="font-size: 64px; font-weight: 900; color: ${riskColor}; margin-bottom: 10px;">
-                                ${totalLeadUg.toFixed(1)} µg
+                                ${totalLeadUg.toFixed(1)} Âµg
                             </div>
                             <div style="font-size: 18px; color: #666;">
                                 Total lead consumed from <strong>${brand.name}</strong>
@@ -1314,20 +1351,20 @@ ${safetyClass !== 'safe' ? `
 
                     ${brand.leadValue > 0 ? `
                         <div style="background: white; padding: 25px; border-radius: 12px; margin-bottom: 25px;">
-                            <h4 style="margin-top: 0; font-size: 20px; color: #333;">📊 Comparison to Safe Limits</h4>
+                            <h4 style="margin-top: 0; font-size: 20px; color: #333;">ðŸ“Š Comparison to Safe Limits</h4>
                             
                             <div style="margin-bottom: 20px;">
                                 <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
                                     <span style="font-weight: 600;">Safe limit (${totalDays} days):</span>
-                                    <span>${totalSafeLimit.toFixed(1)} µg</span>
+                                    <span>${totalSafeLimit.toFixed(1)} Âµg</span>
                                 </div>
                                 <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
                                     <span style="font-weight: 600;">Your actual exposure:</span>
-                                    <span style="color: ${riskColor}; font-weight: 700;">${totalLeadUg.toFixed(1)} µg</span>
+                                    <span style="color: ${riskColor}; font-weight: 700;">${totalLeadUg.toFixed(1)} Âµg</span>
                                 </div>
                                 <div style="display: flex; justify-content: space-between; padding-top: 10px; border-top: 2px solid #ddd;">
                                     <span style="font-weight: 700;">Excess lead consumed:</span>
-                                    <span style="color: ${riskColor}; font-weight: 900; font-size: 18px;">${excessLead > 0 ? '+' + excessLead : '0'} µg</span>
+                                    <span style="color: ${riskColor}; font-weight: 900; font-size: 18px;">${excessLead > 0 ? '+' + excessLead : '0'} Âµg</span>
                                 </div>
                             </div>
 
@@ -1345,7 +1382,7 @@ ${safetyClass !== 'safe' ? `
                     ` : ''}
 
                     <div style="background: white; padding: 25px; border-radius: 12px;">
-                        <h4 style="margin-top: 0; font-size: 20px; color: #333;">🏥 Health Impact Assessment</h4>
+                        <h4 style="margin-top: 0; font-size: 20px; color: #333;">ðŸ¥ Health Impact Assessment</h4>
                         <p style="margin: 0; line-height: 1.7; color: #333; font-size: 16px;">
                             ${riskDescription}
                         </p>
@@ -1356,7 +1393,7 @@ ${safetyClass !== 'safe' ? `
 
                 ${brand.safety !== 'safe' ? `
                     <div style="background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%); color: white; padding: 35px; border-radius: 12px; margin-top: 30px;">
-                        <h3 style="font-size: 28px; margin-top: 0; color: white;">✅ Switch to Verified-Safe Alternatives</h3>
+                        <h3 style="font-size: 28px; margin-top: 0; color: white;">âœ… Switch to Verified-Safe Alternatives</h3>
                         <p style="font-size: 16px; opacity: 0.95; margin-bottom: 25px;">
                             Stop accumulating lead. These ${brand.type} options have lead below detection or minimal levels:
                         </p>
@@ -1378,7 +1415,7 @@ ${safetyClass !== 'safe' ? `
                                     </div>
                                     <a href="${alt.link}" target="_blank" rel="noopener" 
                                        style="background: white; color: #2ecc71; padding: 15px 30px; border-radius: 8px; text-decoration: none; font-weight: 700; white-space: nowrap; transition: transform 0.2s;">
-                                        Buy on Amazon →
+                                        Buy on Amazon â†’
                                     </a>
                                 </div>
                             </div>
@@ -1386,20 +1423,20 @@ ${safetyClass !== 'safe' ? `
 
                         <div style="background: rgba(255,255,255,0.1); padding: 20px; border-radius: 8px; margin-top: 20px;">
                             <p style="margin: 0; font-size: 15px; opacity: 0.95;">
-                                💡 <strong>Want more options?</strong> See our <a href="blog/best-protein-powder-2025.html" style="color: white; text-decoration: underline; font-weight: 600;">complete top 10 safe protein powders guide</a>
+                                ðŸ’¡ <strong>Want more options?</strong> See our <a href="blog/best-protein-powder-2025.html" style="color: white; text-decoration: underline; font-weight: 600;">complete top 10 safe protein powders guide</a>
                             </p>
                         </div>
                     </div>
 
                     ${totalLeadUg > 500 ? `
                         <div style="background: #e3f2fd; padding: 25px; border-radius: 8px; margin-top: 30px; border-left: 5px solid #2196f3;">
-                            <h4 style="margin-top: 0; color: #1565c0;">🩺 Medical Recommendations</h4>
+                            <h4 style="margin-top: 0; color: #1565c0;">ðŸ©º Medical Recommendations</h4>
                             <p style="margin: 0 0 15px; line-height: 1.7; color: #333;">
-                                Given your cumulative exposure (${totalLeadUg.toFixed(1)} µg), consider:
+                                Given your cumulative exposure (${totalLeadUg.toFixed(1)} Âµg), consider:
                             </p>
                             <ul style="margin: 0; padding-left: 20px; color: #333; line-height: 1.8;">
                                 <li><strong>Blood lead level test:</strong> Request from your doctor (simple blood test)</li>
-                                <li><strong>Chelation consultation:</strong> If blood levels are elevated (>5 µg/dL)</li>
+                                <li><strong>Chelation consultation:</strong> If blood levels are elevated (>5 Âµg/dL)</li>
                                 <li><strong>Increase detox support:</strong> Vitamin C, calcium, iron-rich foods help reduce absorption</li>
                                 <li><strong>Switch protein immediately:</strong> Stop further accumulation today</li>
                             </ul>
@@ -1407,13 +1444,13 @@ ${safetyClass !== 'safe' ? `
                     ` : ''}
                 ` : `
                     <div style="background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%); color: white; padding: 35px; border-radius: 12px; margin-top: 30px; text-align: center;">
-                        <div style="font-size: 48px; margin-bottom: 15px;">🎉</div>
+                        <div style="font-size: 48px; margin-bottom: 15px;">ðŸŽ‰</div>
                         <h3 style="font-size: 28px; margin: 0 0 15px 0; color: white;">Excellent Choice!</h3>
                         <p style="font-size: 18px; opacity: 0.95; margin: 0;">
                             ${brand.name} is verified safe by Consumer Reports. Your lead exposure is minimal or non-detectable. You can continue using this protein with confidence.
                         </p>
                         <p style="margin: 20px 0 0; font-size: 15px; opacity: 0.9;">
-                            Want to explore other safe options? <a href="blog/best-protein-powder-2025.html" style="color: white; text-decoration: underline; font-weight: 600;">See our complete top 10 list →</a>
+                            Want to explore other safe options? <a href="blog/best-protein-powder-2025.html" style="color: white; text-decoration: underline; font-weight: 600;">See our complete top 10 list â†’</a>
                         </p>
                     </div>
                 `}
@@ -1451,3 +1488,4 @@ ${safetyClass !== 'safe' ? `
     <script src="includes/mobile-menu.js"></script>
 </body>
 </html>
+
