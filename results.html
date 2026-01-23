@@ -431,7 +431,7 @@ text-decoration: underline;
 
     <!-- Recommendations Section -->
     <section class="recommendations-section">
-        <h2>âœ… Verified Safe Alternatives</h2>
+        <h2>✅ Verified Safe Alternatives</h2>
         <div class="recommendations-grid" id="recommendations">
             <!-- Populated by JavaScript -->
         </div>
@@ -447,9 +447,9 @@ text-decoration: underline;
 
     <!-- Full Report CTA -->
     <div class="cta-box">
-        <h2>ðŸ“Š See Complete Rankings</h2>
+        <h2>📊 See Complete Rankings</h2>
         <p>View all 23 products tested by Consumer Reports, ranked from safest to most contaminated.</p>
-        <a href="blog/lead-in-protein-powder-list.html" class="cta-button">View Full Report â†’</a>
+        <a href="blog/lead-in-protein-powder-list.html" class="cta-button">View Full Report →</a>
     </div>
 
     <!-- Retake Quiz -->
@@ -690,7 +690,7 @@ text-decoration: underline;
             rank: 22,
             brand: "Huel",
             fullName: "Huel Black Edition",
-            leadLevel: "1,288% over limit (6.44 Âµg)",
+            leadLevel: "1,288% over limit (6.44 µg)",
             maxServings: "0 per week",
             guidance: "AVOID",
             type: "Plant-based meal replacement",
@@ -704,7 +704,7 @@ text-decoration: underline;
             rank: 23,
             brand: "Naked Nutrition",
             fullName: "Naked Nutrition Vegan Mass Gainer",
-            leadLevel: "1,572% over limit (7.86 Âµg)",
+            leadLevel: "1,572% over limit (7.86 µg)",
             maxServings: "0 per week",
             guidance: "AVOID",
             type: "Plant-based mass gainer",
@@ -777,13 +777,13 @@ text-decoration: underline;
         
         // Set summary based on safety
         if (product.rank && product.rank <= 7) {
-            summary.innerHTML = `<span style="color: #2ecc71; font-weight: 600;">âœ… Good news!</span> ${product.brand} is one of the safer options tested.`;
+            summary.innerHTML = `<span style="color: #2ecc71; font-weight: 600;">✅ Good news!</span> ${product.brand} is one of the safer options tested.`;
         } else if (!product.rank && product.source === 'Clean Label Project') {
-            summary.innerHTML = `<span style="color: #2ecc71; font-weight: 600;">âœ… Good news!</span> ${product.brand} is Clean Label Project certified as safe.`;
+            summary.innerHTML = `<span style="color: #2ecc71; font-weight: 600;">✅ Good news!</span> ${product.brand} is Clean Label Project certified as safe.`;
         } else if (product.rank && product.rank <= 19) {
-            summary.innerHTML = `<span style="color: #f39c12; font-weight: 600;">âš ï¸ Use with caution.</span> ${product.brand} has elevated heavy metal levels.`;
+            summary.innerHTML = `<span style="color: #f39c12; font-weight: 600;">⚠️ Use with caution.</span> ${product.brand} has elevated heavy metal levels.`;
         } else {
-            summary.innerHTML = `<span style="color: #e74c3c; font-weight: 600;">ðŸš« Important warning.</span> ${product.brand} has dangerous contamination levels.`;
+            summary.innerHTML = `<span style="color: #e74c3c; font-weight: 600;">🚫 Important warning.</span> ${product.brand} has dangerous contamination levels.`;
         }
         
         // Build result card
@@ -822,7 +822,7 @@ text-decoration: underline;
             
             ${product.articleLink ? `
                 <a href="${product.articleLink}" class="article-link">
-                    Read Full ${product.brand} Analysis â†’
+                    Read Full ${product.brand} Analysis →
                 </a>
             ` : ''}
         `;
@@ -838,7 +838,7 @@ text-decoration: underline;
         const summary = document.getElementById('result-summary');
         const brandResult = document.getElementById('brand-result');
         
-        summary.innerHTML = `<span style="color: #f39c12; font-weight: 600;">âš ï¸ Brand not tested.</span> ${brandName} was not included in Consumer Reports or Clean Label Project testing.`;
+        summary.innerHTML = `<span style="color: #f39c12; font-weight: 600;">⚠️ Brand not tested.</span> ${brandName} was not included in Consumer Reports or Clean Label Project testing.`;
         
         brandResult.innerHTML = `
             <div class="brand-header">
@@ -847,7 +847,7 @@ text-decoration: underline;
             </div>
             
             <div class="warning-box">
-                <h3>âš ï¸ This Brand Has Not Been Independently Verified</h3>
+                <h3>⚠️ This Brand Has Not Been Independently Verified</h3>
                 <p><strong>Without third-party testing, we cannot verify the safety of this product.</strong> Many untested brands may have contamination similar to or worse than products that failed Consumer Reports testing.</p>
                 
                 <p style="margin-top: 20px;"><strong>What to look for if you want to keep using this brand:</strong></p>
@@ -935,7 +935,7 @@ text-decoration: underline;
                 
                 ${product.amazonLink ? `
                     <a href="${product.amazonLink}" target="_blank" rel="noopener" class="amazon-btn">
-                        View on Amazon â†’
+                        View on Amazon →
                     </a>
                 ` : ''}
                 
