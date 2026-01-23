@@ -375,6 +375,283 @@
                     </div>
                 </section>
 
+                                <!-- Clean Protein Poll -->
+<!-- Quick Brand Check Poll with Smart Redirects -->
+<div class="poll-container">
+    <h3>⚡ Quick Check: Is YOUR Protein Safe?</h3>
+    <p>Tell us what you're using - we'll show you the safety data in 5 seconds:</p>
+    <form name="proteinPoll" id="proteinPoll">
+        <label for="brandInput" style="font-weight:600; display:block; margin-bottom:8px;">What protein do you currently use?</label>
+        <input 
+            type="text" 
+            id="brandInput" 
+            name="brand" 
+            placeholder="e.g., Premier Protein, Orgain, Vega, ON Gold Standard..." 
+            style="width:100%; padding:12px; border:2px solid #dfe3ff; border-radius:8px; font-size:16px; margin-bottom:15px;"
+        />
+        
+        <label style="font-weight:600; display:block; margin-bottom:8px;">Type:</label>
+        <label style="display:block; margin-bottom:8px;"><input type="radio" name="type" value="RTD" style="margin-right:8px;"> Ready-to-drink (RTD shake)</label>
+        <label style="display:block; margin-bottom:8px;"><input type="radio" name="type" value="Powder" style="margin-right:8px;"> Powder (scoop & mix)</label>
+        <label style="display:block; margin-bottom:20px;"><input type="radio" name="type" value="Switching" style="margin-right:8px;"> I'm switching to something safer</label>
+        
+        <button type="button" onclick="submitPollAndRedirect()" class="poll-button">Check Safety Status →</button>
+    </form>
+    <div id="pollResult" style="display:none; margin-top:15px;"></div>
+</div>
+
+<style>
+.poll-container {
+  background: linear-gradient(135deg, #f8f9fa 0%, #eef1ff 100%);
+  border: 2px solid #dfe3ff;
+  border-radius: 12px;
+  padding: 30px;
+  margin: 40px 0;
+  max-width: 700px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.poll-container h3 {
+  color: #333;
+  font-size: 24px;
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+.poll-container p {
+  color: #555;
+  font-size: 16px;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.poll-container label {
+  font-size: 16px;
+  color: #444;
+  line-height: 1.8;
+  cursor: pointer;
+}
+
+.poll-button {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 14px 30px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  width: 100%;
+}
+
+.poll-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+}
+
+.poll-button:active {
+  transform: translateY(0);
+}
+
+#pollResult {
+  background: #e8f5e9;
+  border: 2px solid #2e7d32;
+  border-radius: 8px;
+  padding: 15px;
+}
+
+#pollResult p {
+  color: #1b5e20;
+  font-weight: 600;
+  margin: 0 0 10px 0;
+  font-size: 16px;
+}
+
+#pollResult .redirect-message {
+  color: #2e7d32;
+  font-size: 15px;
+  margin: 5px 0;
+}
+
+/* Loading spinner */
+.spinner {
+  border: 3px solid #f3f3f3;
+  border-top: 3px solid #667eea;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  animation: spin 1s linear infinite;
+  display: inline-block;
+  margin-left: 10px;
+  vertical-align: middle;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+</style>
+
+<script>
+function submitPollAndRedirect() {
+  const brandInput = document.getElementById("brandInput").value.trim();
+  const typeRadio = document.querySelector('input[name="type"]:checked');
+  const result = document.getElementById("pollResult");
+  
+  // Validation
+  if (!brandInput) {
+    alert("⚠️ Please enter your current protein brand");
+    document.getElementById("brandInput").focus();
+    return;
+  }
+  
+  if (!typeRadio) {
+    alert("⚠️ Please select RTD or Powder");
+    return;
+  }
+  
+  const brand = brandInput.toLowerCase();
+  const type = typeRadio.value;
+  
+  // Send to Formspree (async, don't wait for response)
+  fetch("https://formspree.io/f/xeopynkp", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ 
+      brand: brandInput, // Send original capitalization
+      type: type, 
+      page: window.location.pathname,
+      timestamp: new Date().toISOString()
+    })
+  }).catch(err => console.log('Form submission error:', err));
+  
+  // Determine redirect URL based on brand
+  let redirectUrl = "";
+  let brandName = "";
+  
+  // ========================================
+  // RTD BRANDS
+  // ========================================
+  if (type === "RTD") {
+    if (brand.includes("premier")) {
+      redirectUrl = "/blog/premier-protein-lead-testing.html";
+      brandName = "Premier Protein";
+    } else if (brand.includes("muscle milk")) {
+      redirectUrl = "/blog/muscle-milk-lead-testing-safety-analysis-2025.html";
+      brandName = "Muscle Milk";
+    } else if (brand.includes("fairlife")) {
+      redirectUrl = "/blog/fairlife-protein-shakes-safety-lead-testing-2025.html";
+      brandName = "Fairlife";
+    } else if (brand.includes("ensure")) {
+      redirectUrl = "/blog/ensure-protein-shakes-safety-lead-testing-2025.html";
+      brandName = "Ensure";
+    } else if (brand.includes("boost")) {
+      redirectUrl = "/blog/boost-protein-shakes-safety-lead-testing-2025.html";
+      brandName = "Boost";
+    } else if (brand.includes("owyn")) {
+      redirectUrl = "/blog/owyn-pro-elite-protein-powder-safety-only-safe-plant-protein-2025.html";
+      brandName = "OWYN Pro Elite";
+    } else {
+      // Generic RTD fallback
+      redirectUrl = "/blog/rtd-protein-shakes-safety-guide-2025.html";
+      brandName = "your RTD shake";
+    }
+  }
+  
+  // ========================================
+  // POWDER BRANDS
+  // ========================================
+  else if (type === "Powder") {
+    // Plant proteins
+    if (brand.includes("orgain")) {
+      redirectUrl = "/blog/orgain-organic-protein-powder-lead-levels-consumer-reports-2025.html";
+      brandName = "Orgain";
+    } else if (brand.includes("vega")) {
+      redirectUrl = "/blog/vega-vs-orgain-protein-powder-lead-testing-2025.html";
+      brandName = "Vega";
+    } else if (brand.includes("garden of life")) {
+      redirectUrl = "/blog/garden-of-life-lawsuit-lead-contamination-class-action-2025.html";
+      brandName = "Garden of Life";
+    } else if (brand.includes("naked")) {
+      redirectUrl = "/blog/naked-nutrition-vegan-mass-gainer-lead.html";
+      brandName = "Naked Nutrition";
+    } else if (brand.includes("huel")) {
+      redirectUrl = "/blog/huel-black-edition-lead-content.html";
+      brandName = "Huel";
+    } else if (brand.includes("owyn")) {
+      redirectUrl = "/blog/owyn-pro-elite-protein-powder-safety-only-safe-plant-protein-2025.html";
+      brandName = "OWYN";
+    }
+    
+    // Mainstream whey brands
+    else if (brand.includes("optimum") || brand.includes("gold standard") || brand.includes("on ")) {
+      redirectUrl = "/blog/optimum-nutrition-gold-standard-whey-lead-testing-results-2025.html";
+      brandName = "Optimum Nutrition Gold Standard";
+    } else if (brand.includes("body fortress")) {
+      redirectUrl = "/blog/body-fortress-protein-powder-lead-testing-budget-clean-2025.html";
+      brandName = "Body Fortress";
+    } else if (brand.includes("muscletech") || brand.includes("muscle tech")) {
+      redirectUrl = "/blog/muscletech-mass-gainer-safety.html";
+      brandName = "MuscleTech";
+    } else if (brand.includes("dymatize") || brand.includes("iso 100") || brand.includes("iso100")) {
+      redirectUrl = "/blog/dymatize-iso-100-safety-analysis.html";
+      brandName = "Dymatize ISO 100";
+    } else if (brand.includes("bsn") || brand.includes("syntha")) {
+      redirectUrl = "/blog/bsn-syntha-6-safety-analysis.html";
+      brandName = "BSN Syntha-6";
+    } else if (brand.includes("momentous")) {
+      redirectUrl = "/blog/momentous-protein-safety-analysis.html";
+      brandName = "Momentous";
+    }
+    
+    // Emerging/viral brands
+    else if (brand.includes("isopure")) {
+      redirectUrl = "/blog/isopure-protein-powder-lead-testing-safety-2025.html";
+      brandName = "Isopure";
+    } else if (brand.includes("ryse")) {
+      redirectUrl = "/blog/ryse-protein-powder-lead-testing-2025.html";
+      brandName = "RYSE";
+    } else if (brand.includes("ghost")) {
+      redirectUrl = "/blog/ghost-protein-powder-lead-testing-2025.html";
+      brandName = "Ghost";
+    } else if (brand.includes("ascent")) {
+      redirectUrl = "/blog/ascent-protein-powder-lead-testing-safety-2025.html";
+      brandName = "Ascent";
+    } else if (brand.includes("six star")) {
+      redirectUrl = "/blog/six-star-protein-powder-lead-testing-safety-2025.html";
+      brandName = "Six Star";
+    }
+    
+    // Generic powder fallback
+    else {
+      redirectUrl = "/blog/lead-free-protein-brands-ranked-2025.html";
+      brandName = "your protein powder";
+    }
+  }
+  
+  // ========================================
+  // SWITCHING
+  // ========================================
+  else if (type === "Switching") {
+    redirectUrl = "/blog/best-protein-powder-2025.html";
+    brandName = "";
+  }
+  
+  // Show loading state
+  result.style.display = "block";
+  result.innerHTML = `
+    <p>✅ Got it! Checking safety data for ${brandName || brandInput}...<span class="spinner"></span></p>
+    <p class="redirect-message">Redirecting you to the full analysis...</p>
+  `;
+  
+  // Redirect after 1.5 seconds
+  setTimeout(() => {
+    window.location.href = redirectUrl;
+  }, 1500);
+}
+</script>
+
                 <!-- Organic Myth -->
                 <section id="organic-myth">
                     <h2>Why "Organic" Doesn't Mean Lead-Free: The Certification Gap</h2>
