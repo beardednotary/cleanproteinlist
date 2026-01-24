@@ -50,20 +50,23 @@ function showQuestion(questionNum) {
 }
 
 function goToResults() {
-    const params = new URLSearchParams({
-        frequency: quizData.frequency || '',
-        brand: quizData.currentBrand || '',
-        other: quizData.otherBrand || '',
-        concern: quizData.concern || '',
-        source: quizData.proteinSource || '',
-        use: quizData.useCase || ''
-    });
+    // 1. Prepare the data for sessionStorage (what results.html expects)
+    const storageData = {
+        currentBrandName: quizData.currentBrand === 'other' ? quizData.otherBrand : quizData.currentBrand,
+        proteinSource: quizData.proteinSource,
+        primaryUse: quizData.useCase,
+        budget: quizData.budgetWilling,
+        concern: quizData.concern
+    };
+
+    // 2. Save it so results.html doesn't kick you back
+    sessionStorage.setItem('quizAnswers', JSON.stringify(storageData));
+
+    // 3. Prepare the URL params for tracking/backups
+    const params = new URLSearchParams(quizData);
     
-    const finalUrl = `./results.html?${params.toString()}`;
-    console.log("Navigating to:", finalUrl);
-    
-    // Using replace prevents the "back button loop"
-    window.location.replace(finalUrl);
+    // 4. Redirect
+    window.location.replace(`./results.html?${params.toString()}`);
 }
 
 document.addEventListener('DOMContentLoaded', function() {
