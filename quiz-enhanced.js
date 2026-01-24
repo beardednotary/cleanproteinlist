@@ -1,3 +1,10 @@
+console.log('Quiz Enhanced JS Loaded');
+
+window.addEventListener('error', function(e) {
+    alert('JavaScript Error: ' + e.message);
+    console.error(e);
+});
+
 // Quiz State
 const quizData = {
     frequency: '',
