@@ -647,7 +647,7 @@ text-decoration: underline;
             brand: "Ensure",
             fullName: "Ensure Plant-Based Protein Shake",
             leadLevel: "132% over limit",
-            maxServings: "5â…“ per week",
+            maxServings: "5 per week",
             guidance: "Okay occasionally",
             type: "Plant-based RTD",
             bestFor: "Occasional use only",
@@ -662,7 +662,7 @@ text-decoration: underline;
             brand: "Momentous Plant",
             fullName: "Momentous 100% Plant Protein",
             leadLevel: "476% over limit",
-            maxServings: "1Â½ per week",
+            maxServings: "1½ per week",
             guidance: "Limit to once per week",
             type: "Plant-based",
             bestFor: "Not recommended",
@@ -676,7 +676,7 @@ text-decoration: underline;
             brand: "Garden of Life",
             fullName: "Garden of Life Sport Organic Plant-Based",
             leadLevel: "564% over limit",
-            maxServings: "1Â¼ per week",
+            maxServings: "1¼ per week",
             guidance: "Limit to once per week",
             type: "Plant-based",
             bestFor: "Not recommended",
@@ -728,48 +728,60 @@ text-decoration: underline;
     }
 
     function generateResults() {
-        const brandName = quizData.currentBrandName.toLowerCase().trim();
-        
-        // Try to find their brand in database
-        let matchedProduct = null;
-        
-        // First try exact or partial brand match
-        for (let product of proteinProducts) {
-            const productBrand = product.brand.toLowerCase();
-            const productFull = product.fullName.toLowerCase();
-            
-            if (brandName.includes(productBrand) || 
-                productBrand.includes(brandName) ||
-                brandName.includes(productFull) ||
-                productFull.includes(brandName)) {
-                matchedProduct = product;
-                break;
-            }
-        }
-        
-        // Special case handling for common variations
-        if (!matchedProduct) {
-            if (brandName.includes('naked')) {
-                matchedProduct = proteinProducts.find(p => p.rank === 23);
-            } else if (brandName.includes('huel')) {
-                matchedProduct = proteinProducts.find(p => p.rank === 22);
-            } else if (brandName.includes('momentous') && brandName.includes('plant')) {
-                matchedProduct = proteinProducts.find(p => p.rank === 20);
-            } else if (brandName.includes('garden')) {
-                matchedProduct = proteinProducts.find(p => p.rank === 21);
-            } else if (brandName.includes('body fortress')) {
-                matchedProduct = proteinProducts.find(p => p.brand === 'Body Fortress');
-            } else if (brandName.includes('isopure')) {
-                matchedProduct = proteinProducts.find(p => p.brand === 'Isopure');
-            }
-        }
-        
-        if (matchedProduct) {
-            displayKnownBrand(matchedProduct);
-        } else {
-            displayUnknownBrand(quizData.currentBrandName);
+    // 1. Clean the input: lowercase, remove special characters/extra spaces
+    const userInput = quizData.currentBrandName.toLowerCase().trim().replace(/[^a-z0-9\s]/g, '');
+    
+    let matchedProduct = null;
+
+    // 2. Define "Fuzzy" shorthand mappings
+    const shorthand = {
+        'on': 'optimum nutrition',
+        'gold standard': 'optimum nutrition',
+        'garden': 'garden of life',
+        'gol': 'garden of life',
+        'naked': 'naked nutrition',
+        'transparent': 'transparent labs',
+        'muscletech': 'muscletech',
+        'dymatize': 'dymatize',
+        'isopure': 'isopure'
+    };
+
+    // 3. Check for shorthand matches first
+    let searchName = userInput;
+    for (const [short, full] of Object.entries(shorthand)) {
+        if (userInput === short || userInput.includes(short)) {
+            searchName = full;
+            break;
         }
     }
+
+    // 4. Perform the Search
+    // We look for the "best" match by checking Brand Name and Full Name
+    matchedProduct = proteinProducts.find(product => {
+        const brand = product.brand.toLowerCase();
+        const fullName = product.fullName.toLowerCase();
+        
+        return searchName.includes(brand) || 
+               brand.includes(searchName) || 
+               searchName.includes(fullName);
+    });
+
+    // 5. Special Case: Plant vs Whey logic
+    // If they typed "Momentous", ensure we pick the right one based on their quiz answer
+    if (searchName.includes('momentous')) {
+        const isPlant = quizData.proteinSource === 'plant' || userInput.includes('plant');
+        matchedProduct = proteinProducts.find(p => 
+            p.brand === (isPlant ? 'Momentous Plant' : 'Momentous')
+        );
+    }
+
+    // 6. Display the result
+    if (matchedProduct) {
+        displayKnownBrand(matchedProduct);
+    } else {
+        displayUnknownBrand(quizData.currentBrandName);
+    }
+}
 
     function displayKnownBrand(product) {
         const summary = document.getElementById('result-summary');
