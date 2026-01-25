@@ -4,117 +4,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="canonical" href="https://cleanproteinlist.com/blog.html" />
-    <title>Protein Powder Safety Articles - Clean Protein List</title>
-    <meta name="description" content="Expert analysis of protein powder heavy metal testing, brand safety reviews, and recommendations for clean alternatives.">
+    <title>Supplement Safety Database - Clean Protein List</title>
+    <meta name="description" content="Expert analysis of protein powder heavy metal testing, creatine purity, and safe supplement alternatives based on lab data.">
     <link rel="stylesheet" href="style.css">
     
     <style>
-        /* LAYOUT: Sidebar + Main Content */
+        /* CORE LAYOUT */
         .blog-wrapper {
             display: grid;
-            grid-template-columns: 1fr 320px; /* Content | Sidebar */
+            grid-template-columns: 1fr 320px;
             gap: 50px;
             max-width: 1200px;
             margin: 0 auto;
             padding: 40px 20px;
         }
 
-        /* SIDEBAR STYLING */
-        .blog-sidebar {
-            position: sticky;
-            top: 20px;
-            height: fit-content;
-        }
-
+        /* SIDEBAR STICKY */
+        .blog-sidebar { position: sticky; top: 20px; height: fit-content; }
         .sidebar-widget {
-            background: white;
-            padding: 25px;
-            border-radius: 12px;
-            border: 1px solid #e0e0e0;
-            margin-bottom: 30px;
+            background: white; padding: 25px; border-radius: 12px;
+            border: 1px solid #e0e0e0; margin-bottom: 30px;
             box-shadow: 0 4px 12px rgba(0,0,0,0.05);
         }
+        .sidebar-widget h3 { font-size: 18px; margin: 0 0 15px 0; color: #1a2a6c; border-bottom: 2px solid #667eea; padding-bottom: 8px; }
 
-        .sidebar-widget h3 {
-            font-size: 18px;
-            margin: 0 0 15px 0;
-            color: #1a2a6c;
-            border-bottom: 2px solid #667eea;
-            padding-bottom: 8px;
-        }
-
-        /* BRAND FINDER STYLES */
-        #brandSearch {
-            width: 100%;
-            padding: 12px;
-            border: 2px solid #667eea;
-            border-radius: 8px;
-            font-size: 14px;
-        }
-
+        /* BRAND FINDER */
+        #brandSearch { width: 100%; padding: 12px; border: 2px solid #667eea; border-radius: 8px; }
         .brand-result {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px;
-            background: #f8f9ff;
-            border-radius: 6px;
-            margin-top: 10px;
-            text-decoration: none;
-            color: #333;
-            font-size: 14px;
-            border: 1px solid #dce2ff;
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 10px; background: #f8f9ff; border-radius: 6px; margin-top: 10px;
+            text-decoration: none; color: #333; font-size: 14px; border: 1px solid #dce2ff;
         }
+        .brand-type { font-size: 10px; padding: 2px 6px; border-radius: 10px; background: #667eea; color: white; text-transform: uppercase; }
 
-        .brand-type {
-            font-size: 10px;
-            padding: 2px 6px;
-            border-radius: 10px;
-            background: #667eea;
-            color: white;
-        }
-
-        /* CATEGORY NAV PILLS */
-        .category-nav {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-bottom: 40px;
-        }
-
+        /* NAV PILLS */
+        .category-nav { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 40px; }
         .category-nav a {
-            background: #f0f2ff;
-            padding: 10px 20px;
-            color: #1a2a6c;
-            text-decoration: none;
-            border-radius: 25px;
-            font-weight: 600;
-            font-size: 14px;
-            transition: all 0.2s;
+            background: #f0f2ff; padding: 10px 20px; color: #1a2a6c;
+            text-decoration: none; border-radius: 25px; font-weight: 600; font-size: 14px;
         }
+        .category-nav a:hover { background: #667eea; color: white; }
 
-        .category-nav a:hover {
-            background: #667eea;
-            color: white;
-            transform: translateY(-2px);
-        }
-
-        /* BLOG GRID FIXES */
-        .blog-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 25px;
-        }
-
+        /* CONTENT GRID */
+        .section-header { margin: 60px 0 25px; border-bottom: 3px solid #eee; padding-bottom: 10px; }
+        .section-header h2 { font-size: 28px; color: #333; margin: 0; }
+        .blog-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 25px; }
         .blog-card {
-            background: white;
-            padding: 25px;
-            border-radius: 8px;
-            border-left: 4px solid #667eea;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            background: white; padding: 25px; border-radius: 8px;
+            border-left: 4px solid #667eea; box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            display: flex; flex-direction: column;
         }
+        .blog-card h3 { font-size: 20px; margin: 0 0 12px 0; line-height: 1.3; }
+        .blog-card h3 a { color: #333; text-decoration: none; }
+        .blog-card h3 a:hover { color: #667eea; }
+        .blog-card p { font-size: 15px; color: #666; flex-grow: 1; margin-bottom: 15px; }
+        .read-more { font-weight: 700; color: #667eea; text-decoration: none; font-size: 14px; }
 
-        /* RESPONSIVE */
+        /* SPECIAL CARD COLORS */
+        .card-alert { border-left-color: #e74c3c; background: #fff5f5; }
+        .card-safe { border-left-color: #2ecc71; background: #f5fff8; }
+
         @media (max-width: 1024px) {
             .blog-wrapper { grid-template-columns: 1fr; }
             .blog-sidebar { position: static; }
@@ -130,8 +79,7 @@
           "@id": "https://cleanproteinlist.com/#organization",
           "name": "Clean Protein List",
           "url": "https://cleanproteinlist.com",
-          "logo": { "@type": "ImageObject", "url": "https://cleanproteinlist.com/images/logo.png" },
-          "founder": { "@type": "Person", "name": "Ray Rothwell" }
+          "logo": { "@type": "ImageObject", "url": "https://cleanproteinlist.com/images/logo.png" }
         },
         {
           "@type": "WebSite",
@@ -139,13 +87,6 @@
           "url": "https://cleanproteinlist.com",
           "name": "Clean Protein List",
           "publisher": { "@id": "https://cleanproteinlist.com/#organization" }
-        },
-        {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://cleanproteinlist.com/" },
-            { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://cleanproteinlist.com/blog.html" }
-          ]
         }
       ]
     }
@@ -171,14 +112,15 @@
 
     <main class="blog-wrapper">
         <div class="blog-main-content">
-            <h1 style="font-size: 42px; margin-bottom: 10px;">Supplement Safety Articles</h1>
-            <p style="font-size: 18px; color: #666; margin-bottom: 30px;">Evidence-based analysis of heavy metal testing and safe alternatives.</p>
+            <h1>Supplement Safety Articles</h1>
+            <p>Evidence-based analysis of heavy metal testing and safe alternatives.</p>
 
             <div class="category-nav">
-                <a href="#featured">⚡ Breaking</a>
+                <a href="#featured">🔥 Breaking</a>
                 <a href="#protein-articles">🥛 Protein</a>
                 <a href="#creatine-articles">💪 Creatine</a>
-                <a href="#comparisons">⚖️ Brand Showdowns</a>
+                <a href="#comparisons">⚖️ Showdowns</a>
+                <a href="#guides">📘 Guides</a>
             </div>
 
             <section id="featured">
@@ -186,42 +128,127 @@
                 <div class="blog-grid">
                     <div class="blog-card" style="grid-column: 1 / -1; background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%); color: white; border: none;">
                         <span style="background: white; color: #2ecc71; padding: 4px 10px; border-radius: 4px; font-size: 12px; font-weight: 800;">JAN 2026 UPDATE</span>
-                        <h2 style="margin-top:15px;"><a href="blog/consumer-reports-new-protein-powder-tests-january-2026.html" style="color: white;">Clean Simple Eats & Ritual: New Lab Results</a></h2>
-                        <p style="color: rgba(255,255,255,0.9);">Clean Simple Eats is the new #1 safest chocolate whey. Equate ($0.60/serving) takes the budget crown.</p>
-                        <a href="blog/consumer-reports-new-protein-powder-tests-january-2026.html" style="color: white; font-weight: 700; text-decoration: underline;">Read Updated Rankings →</a>
+                        <h2 style="margin-top:15px;"><a href="blog/consumer-reports-new-protein-powder-tests-january-2026.html" style="color: white;">5 New Protein Lab Results: CSE & Ritual</a></h2>
+                        <p style="color: rgba(255,255,255,0.95); margin-bottom:15px;">Clean Simple Eats is now the #1 safest chocolate whey. Ritual and Truvani also pass new 2026 heavy metal screenings.</p>
+                        <a href="blog/consumer-reports-new-protein-powder-tests-january-2026.html" style="color: white; font-weight: 700; text-decoration: underline;">Read Full Update →</a>
                     </div>
                 </div>
             </section>
 
-            <section id="protein-articles" style="margin-top: 50px;">
+            <section id="protein-articles">
                 <div class="section-header"><h2>🥛 Protein Powder Safety</h2></div>
                 <div class="blog-grid">
-                    <div class="blog-card">
-                        <h3><a href="blog/lead-in-protein-powder-list.html">Lead in Protein: 28 Brands Ranked (2026)</a></h3>
-                        <p>The complete master list of every brand tested by Consumer Reports and Clean Label Project.</p>
+                    <div class="blog-card card-safe">
+                        <h3><a href="blog/lead-in-protein-powder-list.html">Lead in Protein: 28 Brands Ranked</a></h3>
+                        <p>Our most viewed resource. Every brand tested by CR, ranked from safest to most contaminated.</p>
+                        <a href="blog/lead-in-protein-powder-list.html" class="read-more">View Rankings →</a>
+                    </div>
+                    <div class="blog-card card-safe">
+                        <h3><a href="blog/lead-free-protein-brands-ranked-2025.html">Lead-Free Protein Database</a></h3>
+                        <p>Complete data on 134+ brands. Which are verified safe and which are still untested?</p>
+                        <a href="blog/lead-free-protein-brands-ranked-2025.html" class="read-more">View Database →</a>
                     </div>
                     <div class="blog-card">
-                        <h3><a href="blog/optimum-nutrition-gold-standard-whey-lead-testing-results-2025.html">ON Gold Standard: #5 Ranked Safe</a></h3>
-                        <p>Why the world's most popular protein is a safe bet for daily use.</p>
+                        <h3><a href="blog/optimum-nutrition-gold-standard-whey-lead-testing-results-2025.html">ON Gold Standard Analysis</a></h3>
+                        <p>Why the world's most popular protein powder earned a #5 safety ranking.</p>
+                        <a href="blog/optimum-nutrition-gold-standard-whey-lead-testing-results-2025.html" class="read-more">Read Analysis →</a>
                     </div>
+                    <div class="blog-card">
+                        <h3><a href="blog/premier-protein-lead-testing.html">Premier Protein Analysis</a></h3>
+                        <p>Does the viral Costco shake contain lead? We break down the powder vs. liquid results.</p>
+                        <a href="blog/premier-protein-lead-testing.html" class="read-more">Read Analysis →</a>
                     </div>
+                    <div class="blog-card">
+                        <h3><a href="blog/fairlife-protein-shakes-safety-lead-testing-2025.html">Fairlife Safety Verdict</a></h3>
+                        <p>Is Core Power safe? Analysis of Fairlife's heavy metal risks and 2026 data.</p>
+                        <a href="blog/fairlife-protein-shakes-safety-lead-testing-2025.html" class="read-more">Read Analysis →</a>
+                    </div>
+                    <div class="blog-card card-alert">
+                        <h3><a href="blog/naked-nutrition-vegan-mass-gainer-lead.html">Naked Nutrition Warning</a></h3>
+                        <p>Why this brand ranked #23 (Worst) with 1,572% over safe lead limits.</p>
+                        <a href="blog/naked-nutrition-vegan-mass-gainer-lead.html" class="read-more">Read Warning →</a>
+                    </div>
+                </div>
+            </section>
+
+            <section id="creatine-articles">
+                <div class="section-header"><h2>💪 Creatine Purity</h2></div>
+                <div class="blog-grid">
+                    <div class="blog-card card-safe">
+                        <h3><a href="blog/best-clean-creatine-2026-nsf-tested-brands.html">Best Clean Creatine 2026</a></h3>
+                        <p>Complete guide to 15+ NSF verified brands. Avoid DCD and DHT contaminants.</p>
+                        <a href="blog/best-clean-creatine-2026-nsf-tested-brands.html" class="read-more">Read Guide →</a>
+                    </div>
+                    <div class="blog-card">
+                        <h3><a href="blog/creapure-creatine-brands-complete-list.html">Full Creapure® Brand List</a></h3>
+                        <p>Every brand using the gold-standard German creatine monohydrate.</p>
+                        <a href="blog/creapure-creatine-brands-complete-list.html" class="read-more">View List →</a>
+                    </div>
+                    <div class="blog-card card-alert">
+                        <h3><a href="blog/dcd-dicyandiamide-creatine-contamination.html">The DCD Cyanide Risk</a></h3>
+                        <p>How cheap creatine synthesis can lead to toxic byproduct contamination.</p>
+                        <a href="blog/dcd-dicyandiamide-creatine-contamination.html" class="read-more">Read Alert →</a>
+                    </div>
+                </div>
+            </section>
+
+            <section id="#comparisons">
+                <div class="section-header"><h2>⚖️ Brand Showdowns</h2></div>
+                <div class="blog-grid">
+                    <div class="blog-card">
+                        <h3><a href="blog/premier-protein-vs-muscle-milk-comparison-2025.html">Premier vs. Muscle Milk</a></h3>
+                        <p>Safety, macros, and value. Which RTD shake is actually the better choice?</p>
+                        <a href="blog/premier-protein-vs-muscle-milk-comparison-2025.html" class="read-more">See Comparison →</a>
+                    </div>
+                    <div class="blog-card">
+                        <h3><a href="blog/body-fortress-vs-optimum-nutrition-whey-protein-comparison-2025.html">Body Fortress vs. ON</a></h3>
+                        <p>Walmart's budget king vs. the world's #1. Is the extra $0.10 worth it?</p>
+                        <a href="blog/body-fortress-vs-optimum-nutrition-whey-protein-comparison-2025.html" class="read-more">See Comparison →</a>
+                    </div>
+                    <div class="blog-card">
+                        <h3><a href="blog/vega-vs-orgain-protein-powder-lead-testing-2025.html">Vega vs. Orgain</a></h3>
+                        <p>The two plant-protein giants face off in heavy metal testing results.</p>
+                        <a href="blog/vega-vs-orgain-protein-powder-lead-testing-2025.html" class="read-more">See Comparison →</a>
+                    </div>
+                </div>
+            </section>
+
+            <section id="guides">
+                <div class="section-header"><h2>📘 Life-Stage Safety Guides</h2></div>
+                <div class="blog-grid">
+                    <div class="blog-card">
+                        <h3><a href="blog/safe-protein-powder-pregnancy-2025.html">Pregnancy Safety Guide</a></h3>
+                        <p>Lead crosses the placenta. Here are the only 3 proteins verified safe for expectant moms.</p>
+                        <a href="blog/safe-protein-powder-pregnancy-2025.html" class="read-more">Read Guide →</a>
+                    </div>
+                    <div class="blog-card">
+                        <h3><a href="blog/safe-protein-powder-teenagers-kids-2025.html">Teen Athlete Guide</a></h3>
+                        <p>Growing brains absorb lead faster. How to choose safe protein for student athletes.</p>
+                        <a href="blog/safe-protein-powder-teenagers-kids-2025.html" class="read-more">Read Guide →</a>
+                    </div>
+                    <div class="blog-card">
+                        <h3><a href="blog/best-protein-powder-weight-loss-2025.html">Best for Weight Loss</a></h3>
+                        <p>Verified-safe options with high protein-to-calorie ratios for fat loss.</p>
+                        <a href="blog/best-protein-powder-weight-loss-2025.html" class="read-more">Read Guide →</a>
+                    </div>
+                </div>
             </section>
         </div>
 
         <aside class="blog-sidebar">
             <div class="sidebar-widget">
                 <h3>🔎 Brand Safety Finder</h3>
-                <p style="font-size: 14px; color: #666;">Quickly check if your brand was tested:</p>
-                <input type="text" id="brandSearch" placeholder="Search brand (e.g. Ritual, Orgain)..." autocomplete="off">
+                <p style="font-size: 14px; color: #666;">Check 2026 lab data for your brand:</p>
+                <input type="text" id="brandSearch" placeholder="Search brand (e.g. Ritual, CSE)..." autocomplete="off">
                 <div id="brandResults"></div>
             </div>
 
             <div class="sidebar-widget">
-                <h3>📈 2026 Rankings</h3>
+                <h3>📈 Trending Reports</h3>
                 <ul style="list-style: none; padding: 0; font-size: 14px;">
-                    <li style="margin-bottom:10px;">🥇 <a href="blog/muscletech-mass-gainer-safety.html">MuscleTech (Safest)</a></li>
-                    <li style="margin-bottom:10px;">💰 <a href="blog/body-fortress-protein-powder-lead-testing-budget-clean-2025.html">Body Fortress (Value)</a></li>
-                    <li style="margin-bottom:10px;">🌱 <a href="blog/owyn-pro-elite-protein-powder-safety-only-safe-plant-protein-2025.html">OWYN (Best Plant)</a></li>
+                    <li style="margin-bottom:12px;">🥇 <a href="blog/muscletech-mass-gainer-safety.html" style="text-decoration:none; color:#333;">MuscleTech (Safest Tested)</a></li>
+                    <li style="margin-bottom:12px;">💰 <a href="blog/body-fortress-protein-powder-lead-testing-budget-clean-2025.html" style="text-decoration:none; color:#333;">Body Fortress (Best Value)</a></li>
+                    <li style="margin-bottom:12px;">🍼 <a href="blog/safe-protein-powder-pregnancy-2025.html" style="text-decoration:none; color:#333;">Pregnancy Safe Picks</a></li>
                 </ul>
             </div>
         </aside>
@@ -229,67 +256,49 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2026 Clean Protein List | Verified Heavy Metal Testing Database</p>
+            <p>&copy; 2026 Clean Protein List | Independent Lab Data Analysis</p>
             <p><a href="index.html">Home</a> | <a href="quiz.html">Take Quiz</a> | <a href="about.html">About</a></p>
         </div>
     </footer>
 
     <script>
-    const brands = [
-        // 2026 NEWEST UPDATES
-        { name: "Clean Simple Eats", url: "/blog/consumer-reports-new-protein-powder-tests-january-2026.html", type: "Whey", keywords: ["cse", "clean simple", "simple eats"] },
-        { name: "Ritual (Essential Protein)", url: "/blog/consumer-reports-new-protein-powder-tests-january-2026.html", type: "Plant", keywords: ["ritual", "daily shake"] },
-        { name: "Truvani (Chocolate)", url: "/blog/consumer-reports-new-protein-powder-tests-january-2026.html", type: "Plant", keywords: ["truvani", "vani"] },
-        { name: "Equate (Walmart)", url: "/blog/consumer-reports-new-protein-powder-tests-january-2026.html", type: "Whey", keywords: ["equate", "walmart"] },
+        const brands = [
+            { name: "Clean Simple Eats", url: "/blog/consumer-reports-new-protein-powder-tests-january-2026.html", type: "Whey", keywords: ["cse"] },
+            { name: "Ritual", url: "/blog/consumer-reports-new-protein-powder-tests-january-2026.html", type: "Plant", keywords: ["essential"] },
+            { name: "Truvani", url: "/blog/consumer-reports-new-protein-powder-tests-january-2026.html", type: "Plant", keywords: ["tru"] },
+            { name: "Equate", url: "/blog/consumer-reports-new-protein-powder-tests-january-2026.html", type: "Whey", keywords: ["walmart"] },
+            { name: "Premier Protein", url: "/blog/premier-protein-lead-testing.html", type: "RTD", keywords: ["costco"] },
+            { name: "Fairlife", url: "/blog/fairlife-protein-shakes-safety-lead-testing-2025.html", type: "RTD", keywords: ["core power"] },
+            { name: "ON Gold Standard", url: "/blog/optimum-nutrition-gold-standard-whey-lead-testing-results-2025.html", type: "Whey", keywords: ["optimum"] },
+            { name: "Body Fortress", url: "/blog/body-fortress-protein-powder-lead-testing-budget-clean-2025.html", type: "Whey", keywords: ["budget"] },
+            { name: "MuscleTech", url: "/blog/muscletech-mass-gainer-safety.html", type: "Whey", keywords: ["safest"] },
+            { name: "OWYN Pro Elite", url: "/blog/owyn-pro-elite-protein-powder-safety-only-safe-plant-protein-2025.html", type: "Plant", keywords: ["vegan"] }
+        ];
 
-        // RTD / LIQUID SHAKES
-        { name: "Premier Protein RTD", url: "/blog/premier-protein-lead-testing.html", type: "RTD", keywords: ["premier", "costco shake"] },
-        { name: "Fairlife Core Power", url: "/blog/fairlife-protein-shakes-safety-lead-testing-2025.html", type: "RTD", keywords: ["fairlife", "core power", "coke"] },
-        { name: "Muscle Milk RTD", url: "/blog/muscle-milk-lead-testing-safety-analysis-2025.html", type: "RTD", keywords: ["muscle milk", "musclemilk"] },
-        { name: "Ensure", url: "/blog/ensure-protein-shakes-safety-lead-testing-2025.html", type: "RTD", keywords: ["ensure", "medical"] },
-        { name: "Boost", url: "/blog/boost-protein-shakes-safety-lead-testing-2025.html", type: "RTD", keywords: ["boost", "nestle"] },
+        const searchInput = document.getElementById('brandSearch');
+        const resultsDiv = document.getElementById('brandResults');
 
-        // TOP-RANKED WHEY
-        { name: "MuscleTech (Safest)", url: "/blog/muscletech-mass-gainer-safety.html", type: "Whey", keywords: ["muscletech", "muscle tech", "mass gainer"] },
-        { name: "Optimum Nutrition (ON)", url: "/blog/optimum-nutrition-gold-standard-whey-lead-testing-results-2025.html", type: "Whey", keywords: ["on", "gold standard", "optimum"] },
-        { name: "Dymatize ISO 100", url: "/blog/dymatize-iso-100-safety-analysis.html", type: "Whey", keywords: ["dymatize", "iso100", "isolate"] },
-        { name: "Body Fortress", url: "/blog/body-fortress-protein-powder-lead-testing-budget-clean-2025.html", type: "Whey", keywords: ["body fortress", "budget"] },
-        { name: "BSN Syntha-6", url: "/blog/bsn-syntha-6-safety-analysis.html", type: "Whey", keywords: ["bsn", "syntha", "taste"] },
-
-        // PLANT-BASED
-        { name: "OWYN Pro Elite", url: "/blog/owyn-pro-elite-protein-powder-safety-only-safe-plant-protein-2025.html", type: "Plant", keywords: ["owyn", "vegan"] },
-        { name: "Orgain Organic", url: "/blog/orgain-organic-protein-powder-lead-levels-consumer-reports-2025.html", type: "Plant", keywords: ["orgain"] },
-        { name: "Vega Sport", url: "/blog/vega-vs-orgain-protein-powder-lead-testing-2025.html", type: "Plant", keywords: ["vega"] },
-        { name: "Garden of Life", url: "/blog/garden-of-life-lawsuit-lead-contamination-class-action-2025.html", type: "Plant", keywords: ["garden", "life"] },
-        { name: "Naked Nutrition", url: "/blog/naked-nutrition-vegan-mass-gainer-lead.html", type: "Plant", keywords: ["naked"] }
-    ];
-
-    const searchInput = document.getElementById('brandSearch');
-    const resultsDiv = document.getElementById('brandResults');
-
-    searchInput.addEventListener('input', function() {
-        const query = this.value.trim().toLowerCase();
-        if (query.length < 2) { resultsDiv.innerHTML = ''; return; }
-        
-        const matches = brands.filter(brand => 
-            brand.name.toLowerCase().includes(query) ||
-            brand.keywords.some(k => k.includes(query))
-        );
-        
-        if (matches.length === 0) {
-            resultsDiv.innerHTML = `<div class="no-results" style="padding:10px; background:#fff3cd; border-radius:6px; font-size:13px; margin-top:10px;">
-                ❌ Brand not in database yet. <a href="quiz.html" style="color:#667eea; font-weight:700;">Find a safe alternative →</a>
-            </div>`;
-        } else {
-            resultsDiv.innerHTML = matches.map(brand => `
-                <a href="${brand.url}" class="brand-result">
-                    <strong>${brand.name}</strong>
-                    <span class="brand-type ${brand.type.toLowerCase()}">${brand.type}</span>
-                </a>
-            `).join('');
-        }
-    });
-</script>
+        searchInput.addEventListener('input', function() {
+            const query = this.value.trim().toLowerCase();
+            if (query.length < 2) { resultsDiv.innerHTML = ''; return; }
+            
+            const matches = brands.filter(brand => 
+                brand.name.toLowerCase().includes(query) || 
+                brand.keywords.some(k => k.includes(query))
+            );
+            
+            if (matches.length === 0) {
+                resultsDiv.innerHTML = '<p style="font-size:12px; color:#999; margin-top:10px;">Brand not in database yet. <a href="quiz.html">Check alternatives.</a></p>';
+            } else {
+                resultsDiv.innerHTML = matches.map(brand => `
+                    <a href="${brand.url}" class="brand-result">
+                        <strong>${brand.name}</strong>
+                        <span class="brand-type">${brand.type}</span>
+                    </a>
+                `).join('');
+            }
+        });
+    </script>
     <script src="includes/mobile-menu.js"></script>
 </body>
 </html>
