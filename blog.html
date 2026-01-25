@@ -262,18 +262,41 @@
     </footer>
 
     <script>
-        const brands = [
-            { name: "Clean Simple Eats", url: "/blog/consumer-reports-new-protein-powder-tests-january-2026.html", type: "Whey", keywords: ["cse"] },
-            { name: "Ritual", url: "/blog/consumer-reports-new-protein-powder-tests-january-2026.html", type: "Plant", keywords: ["essential"] },
-            { name: "Truvani", url: "/blog/consumer-reports-new-protein-powder-tests-january-2026.html", type: "Plant", keywords: ["tru"] },
-            { name: "Equate", url: "/blog/consumer-reports-new-protein-powder-tests-january-2026.html", type: "Whey", keywords: ["walmart"] },
-            { name: "Premier Protein", url: "/blog/premier-protein-lead-testing.html", type: "RTD", keywords: ["costco"] },
-            { name: "Fairlife", url: "/blog/fairlife-protein-shakes-safety-lead-testing-2025.html", type: "RTD", keywords: ["core power"] },
-            { name: "ON Gold Standard", url: "/blog/optimum-nutrition-gold-standard-whey-lead-testing-results-2025.html", type: "Whey", keywords: ["optimum"] },
-            { name: "Body Fortress", url: "/blog/body-fortress-protein-powder-lead-testing-budget-clean-2025.html", type: "Whey", keywords: ["budget"] },
-            { name: "MuscleTech", url: "/blog/muscletech-mass-gainer-safety.html", type: "Whey", keywords: ["safest"] },
-            { name: "OWYN Pro Elite", url: "/blog/owyn-pro-elite-protein-powder-safety-only-safe-plant-protein-2025.html", type: "Plant", keywords: ["vegan"] }
-        ];
+const brands = [
+    // 2026 NEWEST UPDATES
+    { name: "Clean Simple Eats", url: "/blog/consumer-reports-new-protein-powder-tests-january-2026.html", type: "Whey", keywords: ["cse", "clean simple", "simple eats"] },
+    { name: "Ritual (Essential Protein)", url: "/blog/consumer-reports-new-protein-powder-tests-january-2026.html", type: "Plant", keywords: ["ritual", "daily shake"] },
+    { name: "Truvani (Chocolate)", url: "/blog/consumer-reports-new-protein-powder-tests-january-2026.html", type: "Plant", keywords: ["truvani", "vani"] },
+    { name: "Equate (Walmart)", url: "/blog/consumer-reports-new-protein-powder-tests-january-2026.html", type: "Whey", keywords: ["equate", "walmart"] },
+
+    // EMERGING & LIFESTYLE BRANDS (UNTESTED)
+    { name: "Ghost Protein", url: "/blog/ghost-protein-powder-lead-testing-2025.html", type: "Whey", keywords: ["ghost", "lifestyle", "chips ahoy", "oreo"] },
+    { name: "RYSE Loaded Protein", url: "/blog/ryse-protein-powder-lead-testing-2025.html", type: "Whey", keywords: ["ryse", "skippy", "jet puffed"] },
+    { name: "Isopure Zero Carb", url: "/blog/isopure-protein-powder-lead-testing-safety-2025.html", type: "Whey", keywords: ["isopure", "zero carb", "isolate"] },
+    { name: "Ascent Native Fuel", url: "/blog/ascent-protein-powder-lead-testing-safety-2025.html", type: "Whey", keywords: ["ascent", "native fuel"] },
+
+    // RTD / LIQUID SHAKES
+    { name: "Premier Protein RTD", url: "/blog/premier-protein-lead-testing.html", type: "RTD", keywords: ["premier", "costco shake"] },
+    { name: "Fairlife Core Power", url: "/blog/fairlife-protein-shakes-safety-lead-testing-2025.html", type: "RTD", keywords: ["fairlife", "core power", "elite"] },
+    { name: "Muscle Milk RTD", url: "/blog/muscle-milk-lead-testing-safety-analysis-2025.html", type: "RTD", keywords: ["muscle milk", "musclemilk"] },
+    { name: "Ensure", url: "/blog/ensure-protein-shakes-safety-lead-testing-2025.html", type: "RTD", keywords: ["ensure", "medical"] },
+    { name: "Boost", url: "/blog/boost-protein-shakes-safety-lead-testing-2025.html", type: "RTD", keywords: ["boost", "nestle"] },
+
+    // TOP-RANKED WHEY
+    { name: "MuscleTech (Safest)", url: "/blog/muscletech-mass-gainer-safety.html", type: "Whey", keywords: ["muscletech", "muscle tech", "mass gainer"] },
+    { name: "Optimum Nutrition (ON)", url: "/blog/optimum-nutrition-gold-standard-whey-lead-testing-results-2025.html", type: "Whey", keywords: ["on", "gold standard", "optimum"] },
+    { name: "Dymatize ISO 100", url: "/blog/dymatize-iso-100-safety-analysis.html", type: "Whey", keywords: ["dymatize", "iso100", "isolate"] },
+    { name: "Body Fortress", url: "/blog/body-fortress-protein-powder-lead-testing-budget-clean-2025.html", type: "Whey", keywords: ["body fortress", "budget", "walmart"] },
+    { name: "BSN Syntha-6", url: "/blog/bsn-syntha-6-safety-analysis.html", type: "Whey", keywords: ["bsn", "syntha", "taste"] },
+
+    // PLANT-BASED
+    { name: "OWYN Pro Elite", url: "/blog/owyn-pro-elite-protein-powder-safety-only-safe-plant-protein-2025.html", type: "Plant", keywords: ["owyn", "vegan"] },
+    { name: "Orgain Organic", url: "/blog/orgain-organic-protein-powder-lead-levels-consumer-reports-2025.html", type: "Plant", keywords: ["orgain"] },
+    { name: "Vega Sport", url: "/blog/vega-vs-orgain-protein-powder-lead-testing-2025.html", type: "Plant", keywords: ["vega"] },
+    { name: "Garden of Life", url: "/blog/garden-of-life-lawsuit-lead-contamination-class-action-2025.html", type: "Plant", keywords: ["garden", "life", "gol"] },
+    { name: "Naked Nutrition", url: "/blog/naked-nutrition-vegan-mass-gainer-lead.html", type: "Plant", keywords: ["naked", "pea protein"] },
+    { name: "Huel Black Edition", url: "/blog/huel-black-edition-lead-content.html", type: "Plant", keywords: ["huel", "meal replacement"] }
+];
 
         const searchInput = document.getElementById('brandSearch');
         const resultsDiv = document.getElementById('brandResults');
