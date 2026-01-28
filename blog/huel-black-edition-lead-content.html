@@ -509,25 +509,28 @@ function toggleMethodology() {
             </tbody>
         </table>
 
-        <div class="tool-embed" style="background:#fff5f5; padding:30px; border-radius:12px; border:2px solid #e74c3c; margin: 30px 0;">
+<div class="tool-embed" style="background:#fff5f5; padding:30px; border-radius:12px; border:2px solid #e74c3c; margin: 35px 0;">
     <h3 style="color: #c0392b; margin-top: 0;">⚠️ Huel Lead Exposure Calculator</h3>
-    <p style="font-size: 14px; color: #666; margin-bottom: 20px;">See how much cumulative lead you've consumed based on Huel's 6.3 µg lab result.</p>
+    <p style="font-size: 14px; color: #666; margin-bottom: 25px;">Huel Black Edition contains 6.3 µg of lead per serving. Calculate your total intake below:</p>
     
-    <input type="hidden" id="exposure-brand" value="huel-black"> 
+    <form id="exposure-form">
+        <input type="hidden" id="exposure-brand" value="huel-black"> 
 
-    <div style="margin-bottom: 15px;">
-        <label style="display:block; font-weight:bold; margin-bottom:5px;">Servings (Shakes) per day:</label>
-        <input type="number" id="servings-day" value="1" step="0.5" style="width:100%; padding:12px; border:1px solid #ddd; border-radius:8px;">
-    </div>
+        <div style="margin-bottom: 15px;">
+            <label style="display:block; font-weight:bold; margin-bottom:8px; color:#333;">Servings (Shakes) per day:</label>
+            <input type="number" id="servings-day" value="1" step="0.5" style="width:100%; padding:12px; border:1px solid #ddd; border-radius:8px; font-size: 16px;">
+        </div>
 
-    <div style="margin-bottom: 20px;">
-        <label style="display:block; font-weight:bold; margin-bottom:5px;">Months of consistent use:</label>
-        <input type="number" id="duration-value" value="6" style="width:100%; padding:12px; border:1px solid #ddd; border-radius:8px;">
-    </div>
+        <div style="margin-bottom: 25px;">
+            <label style="display:block; font-weight:bold; margin-bottom:8px; color:#333;">Months of consistent use:</label>
+            <input type="number" id="duration-value" value="6" style="width:100%; padding:12px; border:1px solid #ddd; border-radius:8px; font-size: 16px;">
+            <input type="hidden" id="duration-unit" value="months">
+        </div>
 
-    <button type="button" onclick="calculateExposure()" style="width:100%; padding:18px; background:#e74c3c; color:white; border:none; border-radius:8px; font-size: 18px; font-weight:700; cursor:pointer; transition: background 0.3s;">
-        Calculate My Total Intake →
-    </button>
+        <button type="submit" style="width:100%; padding:18px; background:#e74c3c; color:white; border:none; border-radius:8px; font-size: 18px; font-weight:700; cursor:pointer; transition: background 0.3s;" onmouseover="this.style.background='#c0392b'" onmouseout="this.style.background='#e74c3c'">
+            Calculate My Total Intake →
+        </button>
+    </form>
 
     <div id="exposure-results" style="display:none; margin-top:25px;"></div>
 </div>
@@ -888,8 +891,3 @@ function toggleMethodology() {
     <script src="../includes/mobile-menu.js"></script>
 </body>
 </html>
-
-
-
-
-
