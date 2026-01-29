@@ -247,7 +247,7 @@
       "headline": "Does Premier Protein Contain Lead? 2026 Testing Results & Safest Alternatives",
       "description": "Independent analysis of Premier Protein safety. Learn why the powder is verified clean while the RTD shakes remain untested for heavy metals.",
       "datePublished": "2025-10-15T08:00:00+00:00",
-      "dateModified": "2026-01-27T08:00:00+00:00",
+      "dateModified": "2026-01-29T08:00:00+00:00",
       "author": {
         "@type": "Person",
         "name": "Ray Rothwell",
@@ -313,7 +313,7 @@
         <h1>Does Premier Protein Contain Lead? 2026 Testing Results & Safest Alternatives</h1>
         
         <div class="blog-meta">
-            Updated January 27, 2026 | 7 min read | Based on Consumer Reports & Clean Label Project testing
+            Updated January 29, 2026 | 7 min read | Based on Consumer Reports & Clean Label Project testing
         </div>
 
         <div class="safety-protocol-box">
@@ -678,7 +678,7 @@ function runCostComparison() {
             <p style="margin: 15px 0 0 0; font-size: 14px; color: #666;">Searches spiked after Consumer Reports published protein powder contamination study on October 14, 2025. Most searchers are RTD shake consumers looking for answers.</p>
         </div>
 
-      <!-- Clean Protein Poll -->
+<!-- Clean Protein Poll -->
 <!-- Quick Brand Check Poll with Smart Redirects -->
 <div class="poll-container">
     <h3>⚡ Quick Check: Is YOUR Protein Safe?</h3>
@@ -802,156 +802,58 @@ function submitPollAndRedirect() {
   const typeRadio = document.querySelector('input[name="type"]:checked');
   const result = document.getElementById("pollResult");
   
-  // Validation
-  if (!brandInput) {
-    alert("⚠️ Please enter your current protein brand");
-    document.getElementById("brandInput").focus();
-    return;
-  }
-  
-  if (!typeRadio) {
-    alert("⚠️ Please select RTD or Powder");
+  if (!brandInput || !typeRadio) {
+    alert("⚠️ Please enter your brand and select a type");
     return;
   }
   
   const brand = brandInput.toLowerCase();
   const type = typeRadio.value;
   
-  // Send to Formspree (async, don't wait for response)
+  // 1. Log to Formspree for your data collection
   fetch("https://formspree.io/f/xeopynkp", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ 
-      brand: brandInput, // Send original capitalization
-      type: type, 
-      page: window.location.pathname,
-      timestamp: new Date().toISOString()
-    })
-  }).catch(err => console.log('Form submission error:', err));
+    body: JSON.stringify({ brand: brandInput, type: type, page: window.location.pathname })
+  }).catch(err => console.log('Error:', err));
   
-  // Determine redirect URL based on brand
+// 2. DEFINE THE "SAFE PIVOT" REDIRECTS
   let redirectUrl = "";
-  let brandName = "";
-  
-  // ========================================
-  // RTD BRANDS
-  // ========================================
+  let brandMsg = "";
+
   if (type === "RTD") {
-    if (brand.includes("premier")) {
-      redirectUrl = "/blog/premier-protein-lead-testing.html";
-      brandName = "Premier Protein";
-    } else if (brand.includes("muscle milk")) {
-      redirectUrl = "/blog/muscle-milk-lead-testing-safety-analysis-2025.html";
-      brandName = "Muscle Milk";
-    } else if (brand.includes("fairlife")) {
-      redirectUrl = "/blog/fairlife-protein-shakes-safety-lead-testing-2025.html";
-      brandName = "Fairlife";
-    } else if (brand.includes("ensure")) {
-      redirectUrl = "/blog/ensure-protein-shakes-safety-lead-testing-2025.html";
-      brandName = "Ensure";
-    } else if (brand.includes("boost")) {
-      redirectUrl = "/blog/boost-protein-shakes-safety-lead-testing-2025.html";
-      brandName = "Boost";
-    } else if (brand.includes("owyn")) {
-      redirectUrl = "/blog/owyn-pro-elite-protein-powder-safety-only-safe-plant-protein-2025.html";
-      brandName = "OWYN Pro Elite";
-    } else {
-      // Generic RTD fallback
-      redirectUrl = "/blog/rtd-protein-shakes-safety-guide-2025.html";
-      brandName = "your RTD shake";
-    }
+    // Funnel RTD users to your only verified safe RTD alternative
+    redirectUrl = "/blog/owyn-pro-elite-protein-powder-safety-only-safe-plant-protein-2025.html";
+    brandMsg = "OWYN Pro Elite (The #1 Verified Safe RTD)";
+  } 
+  else if (brand.includes("naked") || brand.includes("huel") || brand.includes("vega") || brand.includes("orgain")) {
+    // Pivot high-risk plant brands to Truvani (The 2026 Premium Winner)
+    redirectUrl = "/blog/truvani-protein-lead-testing-results-2026.html";
+    brandMsg = "Truvani (Verified Safe & Clean Label)";
   }
-  
-  // ========================================
-  // POWDER BRANDS
-  // ========================================
-  else if (type === "Powder") {
-    // Plant proteins
-    if (brand.includes("orgain")) {
-      redirectUrl = "/blog/orgain-organic-protein-powder-lead-levels-consumer-reports-2025.html";
-      brandName = "Orgain";
-    } else if (brand.includes("vega")) {
-      redirectUrl = "/blog/vega-vs-orgain-protein-powder-lead-testing-2025.html";
-      brandName = "Vega";
-    } else if (brand.includes("garden of life")) {
-      redirectUrl = "/blog/garden-of-life-lawsuit-lead-contamination-class-action-2025.html";
-      brandName = "Garden of Life";
-    } else if (brand.includes("naked")) {
-      redirectUrl = "/blog/naked-nutrition-vegan-mass-gainer-lead.html";
-      brandName = "Naked Nutrition";
-    } else if (brand.includes("huel")) {
-      redirectUrl = "/blog/huel-black-edition-lead-content.html";
-      brandName = "Huel";
-    } else if (brand.includes("owyn")) {
-      redirectUrl = "/blog/owyn-pro-elite-protein-powder-safety-only-safe-plant-protein-2025.html";
-      brandName = "OWYN";
-    }
-    
-    // Mainstream whey brands
-    else if (brand.includes("optimum") || brand.includes("gold standard") || brand.includes("on ")) {
-      redirectUrl = "/blog/optimum-nutrition-gold-standard-whey-lead-testing-results-2025.html";
-      brandName = "Optimum Nutrition Gold Standard";
-    } else if (brand.includes("body fortress")) {
-      redirectUrl = "/blog/body-fortress-protein-powder-lead-testing-budget-clean-2025.html";
-      brandName = "Body Fortress";
-    } else if (brand.includes("muscletech") || brand.includes("muscle tech")) {
-      redirectUrl = "/blog/muscletech-mass-gainer-safety.html";
-      brandName = "MuscleTech";
-    } else if (brand.includes("dymatize") || brand.includes("iso 100") || brand.includes("iso100")) {
-      redirectUrl = "/blog/dymatize-iso-100-safety-analysis.html";
-      brandName = "Dymatize ISO 100";
-    } else if (brand.includes("bsn") || brand.includes("syntha")) {
-      redirectUrl = "/blog/bsn-syntha-6-safety-analysis.html";
-      brandName = "BSN Syntha-6";
-    } else if (brand.includes("momentous")) {
-      redirectUrl = "/blog/momentous-protein-safety-analysis.html";
-      brandName = "Momentous";
-    }
-    
-    // Emerging/viral brands
-    else if (brand.includes("isopure")) {
-      redirectUrl = "/blog/isopure-protein-powder-lead-testing-safety-2025.html";
-      brandName = "Isopure";
-    } else if (brand.includes("ryse")) {
-      redirectUrl = "/blog/ryse-protein-powder-lead-testing-2025.html";
-      brandName = "RYSE";
-    } else if (brand.includes("ghost")) {
-      redirectUrl = "/blog/ghost-protein-powder-lead-testing-2025.html";
-      brandName = "Ghost";
-    } else if (brand.includes("ascent")) {
-      redirectUrl = "/blog/ascent-protein-powder-lead-testing-safety-2025.html";
-      brandName = "Ascent";
-    } else if (brand.includes("six star")) {
-      redirectUrl = "/blog/six-star-protein-powder-lead-testing-safety-2025.html";
-      brandName = "Six Star";
-    }
-    
-    // Generic powder fallback
-    else {
-      redirectUrl = "/blog/lead-free-protein-brands-ranked-2025.html";
-      brandName = "your protein powder";
-    }
-  }
-  
-  // ========================================
-  // SWITCHING
-  // ========================================
   else if (type === "Switching") {
+    // Direct path for those already looking for the best options
     redirectUrl = "/blog/best-protein-powder-2025.html";
-    brandName = "";
+    brandMsg = "the Top 10 Safest Proteins of 2026";
+  }
+  else {
+    // Generic Pivot: Send to the complete ranked database
+    redirectUrl = "/blog/lead-free-protein-brands-ranked-2025.html";
+    brandMsg = "our 134+ Brand Safety Database";
   }
   
-  // Show loading state
+  // Show high-conversion loading state
   result.style.display = "block";
   result.innerHTML = `
-    <p>✅ Got it! Checking safety data for ${brandName || brandInput}...<span class="spinner"></span></p>
-    <p class="redirect-message">Redirecting you to the full analysis...</p>
+    <p>✅ Analyzing ${brandInput}...<span class="spinner"></span></p>
+    <p class="redirect-message" style="color: #2e7d32; font-weight: bold;">
+        Redirecting you to ${brandMsg} now...
+    </p>
   `;
   
-  // Redirect after 1.5 seconds
   setTimeout(() => {
     window.location.href = redirectUrl;
-  }, 1500);
+  }, 1800);
 }
 </script>
 
