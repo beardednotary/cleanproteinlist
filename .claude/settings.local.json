@@ -9,7 +9,12 @@
       "Bash(done)",
       "Bash(python3:*)",
       "Bash(pip install:*)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(while read class)",
+      "Bash(do echo \"$class\")",
+      "Bash(grep:*)",
+      "Bash(echo:*)",
+      "Bash(find:*)"
     ]
   }
 }

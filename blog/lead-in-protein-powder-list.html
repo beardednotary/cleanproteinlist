@@ -24,46 +24,6 @@
         gtag('config', 'G-6RL8K3H3ZC');
     </script>
     <style>
-        .blog-post {
-            max-width: 1000px;
-            margin: 40px auto;
-            padding: 0 20px;
-        }
-        .blog-post h1 {
-            font-size: 38px;
-            margin-bottom: 15px;
-            color: #333;
-            line-height: 1.2;
-        }
-        .blog-meta {
-            color: #666;
-            margin-bottom: 30px;
-            font-size: 14px;
-        }
-        .blog-post h2 {
-            font-size: 28px;
-            margin: 40px 0 20px;
-            color: #333;
-        }
-        .blog-post h3 {
-            font-size: 22px;
-            margin: 30px 0 15px;
-            color: #444;
-        }
-        .blog-post p {
-            margin-bottom: 20px;
-            line-height: 1.8;
-            color: #444;
-        }
-        .blog-post ul, .blog-post ol {
-            margin: 20px 0 20px 30px;
-            line-height: 1.8;
-        }
-        .blog-post li {
-            margin-bottom: 10px;
-            color: #444;
-        }
-        
         /* Stats Grid */
         .stat-grid {
             display: grid;
@@ -78,17 +38,7 @@
             text-align: center;
             border: 2px solid #e0e0e0;
         }
-        .stat-number {
-            font-size: 48px;
-            font-weight: bold;
-            color: #667eea;
-            margin-bottom: 10px;
-        }
-        .stat-label {
-            font-size: 14px;
-            color: #666;
-            font-weight: 600;
-        }
+
         
         /* Key Findings Box */
         .key-findings {
@@ -146,24 +96,7 @@
         .worst { color: #e74c3c; font-weight: 600; }
         
         /* Comparison Table */
-        .comparison-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 30px 0;
-            background: white;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-        }
-        .comparison-table th {
-            background: #667eea;
-            color: white;
-            padding: 12px;
-            text-align: left;
-            font-weight: 600;
-        }
-        .comparison-table td {
-            padding: 12px;
-            border-bottom: 1px solid #e0e0e0;
-        }
+
         
         /* Product Detail Cards */
         .product-card {
@@ -337,8 +270,7 @@
         position: static; /* Don't stick on mobile */
     }
 }
-        
-    </style>
+        </style>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -455,106 +387,8 @@
 </div>
 
 <style>
-/* Master Trust Box Styles */
-.safety-protocol-box {
-    background: linear-gradient(135deg, #f8f9ff 0%, #ffffff 100%);
-    border: 2px solid #667eea;
-    border-left: 6px solid #667eea;
-    border-radius: 12px;
-    padding: 25px;
-    margin: 35px 0;
-    box-shadow: 0 4px 20px rgba(102, 126, 234, 0.12);
-}
-
-.protocol-header {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    margin-bottom: 20px;
-}
-
-.shield-icon { font-size: 36px; }
-.protocol-header h3 { margin: 0; color: #1a2a6c; font-size: 24px; font-weight: 800; letter-spacing: -0.5px; }
-
-.data-source {
-    background: #fffcf0;
-    padding: 14px;
-    border-radius: 8px;
-    border: 1px dashed #f39c12;
-    margin-bottom: 20px;
-    font-size: 15px;
-    color: #444;
-}
-
-.protocol-steps {
-    background: #fcfcfc;
-    padding: 18px;
-    border-radius: 8px;
-    border: 1px solid #eee;
-    margin-bottom: 20px;
-}
-
-.protocol-steps h4 { margin: 0 0 12px 0; color: #667eea; font-size: 17px; text-transform: uppercase; letter-spacing: 0.5px; }
-.protocol-steps ol { margin: 0; padding-left: 22px; }
-.protocol-steps li { margin-bottom: 12px; line-height: 1.5; color: #333; font-size: 15px; }
-
-.independence-statement {
-    background: #f0fff4;
-    border-left: 4px solid #2ecc71;
-    padding: 15px;
-    border-radius: 6px;
-    margin-top: 10px;
-}
-.independence-statement p { margin: 0; color: #2d5a27; font-size: 14px; font-weight: 500; }
-
-.toggle-methodology {
-    background: #f0f2ff;
-    color: #667eea;
-    border: 1px solid #d0d7ff;
-    padding: 12px;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 14px;
-    font-weight: 700;
-    width: 100%;
-    margin-top: 15px;
-    transition: all 0.2s ease;
-}
-.toggle-methodology:hover { background: #667eea; color: white; }
-
-.methodology-details {
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    margin-top: 15px;
-    border: 1px solid #e0e0e0;
-    font-size: 14px;
-}
-
-.standard-list { padding-left: 20px; }
-.standard-list li { margin-bottom: 10px; }
-
-.badge-list { list-style: none !important; padding: 0 !important; margin-top: 15px !important; }
-.badge-list li { margin-bottom: 10px !important; }
-
-.v-badge {
-    display: inline-block;
-    padding: 4px 10px;
-    border-radius: 4px;
-    font-weight: 800;
-    font-size: 12px;
-    margin-right: 8px;
-}
-.v-badge.safe { background: #e8f5e9; color: #2e7d32; border: 1px solid #2e7d32; }
-.v-badge.limit { background: #fff3e0; color: #ef6c00; border: 1px solid #ef6c00; }
-.v-badge.avoid { background: #ffebee; color: #c62828; border: 1px solid #c62828; }
-
-@media (max-width: 768px) {
-    .safety-protocol-box { padding: 18px; margin: 20px 0; }
-    .protocol-header h3 { font-size: 19px; }
-    .shield-icon { font-size: 28px; }
-}
-</style>
+        /* Master Trust Box Styles */
+        </style>
 
 <script>
 function toggleMethodology() {
