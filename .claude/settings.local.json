@@ -3,7 +3,13 @@
     "allow": [
       "Bash(powershell.exe -File:*)",
       "Bash(powershell -ExecutionPolicy Bypass -File:*)",
-      "Bash(python:*)"
+      "Bash(python:*)",
+      "Bash(for f in \"/c/Users/rayro/OneDrive/Desktop/cleanproteinlist/blog/best-protein-powder-2025.html\" \"/c/Users/rayro/OneDrive/Desktop/cleanproteinlist/blog/bsn-syntha-6-safety-analysis.html\" \"/c/Users/rayro/OneDrive/Desktop/cleanproteinlist/blog/heavy-metals-protein-shakes-brands-2025-report.html\" \"/c/Users/rayro/OneDrive/Desktop/cleanproteinlist/blog/momentous-protein-safety-analysis.html\" \"/c/Users/rayro/OneDrive/Desktop/cleanproteinlist/blog/owyn-vs-vega-orgain-garden-of-life-safe-plant-protein-2025.html\")",
+      "Bash(do)",
+      "Bash(done)",
+      "Bash(python3:*)",
+      "Bash(pip install:*)",
+      "Bash(git add:*)"
     ]
   }
 }
