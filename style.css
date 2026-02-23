@@ -280,6 +280,7 @@ nav a:hover { color: #fff; }
   color: #fff;
   padding: 36px;
   border-radius: 3px;
+  border-top: 4px solid var(--green);
   margin: 40px 0;
 }
 
