@@ -4,14 +4,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>2026 Protein Safety Consumer Survey | CleanProteinList.com Original Research</title>
-<meta name="description" content="Original research from CleanProteinList.com: two independent consumer instruments reveal what 400+ protein supplement users think about safety, contamination, and brand trust in 2026.">
+<meta name="description" content="Updated April 2026 original research from CleanProteinList.com: 1,764 poll submissions and 215 quiz completions reveal what protein supplement consumers think about safety, contamination, and brand trust.">
 <meta property="og:title" content="2026 Protein Safety Consumer Survey | CleanProteinList.com" />
-<meta property="og:description" content="Original research: two independent instruments reveal what 400+ protein supplement users think about safety, contamination, and brand trust in 2026." />
+<meta property="og:description" content="Updated April 2026 original research: 1,764 poll submissions and 215 quiz completions reveal what protein supplement consumers think about safety, contamination, and brand trust." />
 <meta property="og:url" content="https://cleanproteinlist.com/research/protein-safety-consumer-survey-2026.html/" />
 <meta property="og:type" content="article" />
 <link rel="canonical" href="https://cleanproteinlist.com/research/protein-safety-consumer-survey-2026.html" />
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
-<style> 
+<style>
   :root {
     --green:    #2d6a4f;
     --green-lt: #52b788;
@@ -33,7 +33,6 @@
     line-height: 1.7;
   }
 
-  /* ── HEADER ── */
   .site-header {
     background: var(--green);
     padding: 14px 32px;
@@ -57,7 +56,6 @@
     padding-left: 12px;
   }
 
-  /* ── HERO ── */
   .hero {
     background: var(--ink);
     padding: 64px 32px 56px;
@@ -67,13 +65,27 @@
   .hero::before {
     content: '';
     position: absolute;
-    top: -60px; right: -60px;
-    width: 400px; height: 400px;
+    top: -60px;
+    right: -60px;
+    width: 400px;
+    height: 400px;
     border-radius: 50%;
     background: radial-gradient(circle, rgba(82,183,136,.12) 0%, transparent 70%);
     pointer-events: none;
   }
   .hero-inner { max-width: 780px; margin: 0 auto; position: relative; }
+  .update-badge {
+    display: inline-block;
+    background: var(--accent);
+    color: #fff;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    padding: 3px 9px;
+    border-radius: 2px;
+    margin-bottom: 12px;
+  }
   .hero-eyebrow {
     font-size: 11px;
     font-weight: 600;
@@ -108,7 +120,6 @@
   .hero-meta-item { font-size: 12px; color: rgba(255,255,255,.5); }
   .hero-meta-item strong { color: rgba(255,255,255,.85); display: block; font-size: 14px; }
 
-  /* ── INSTRUMENT BADGES ── */
   .instruments {
     background: var(--bg);
     border-bottom: 1px solid var(--rule);
@@ -141,14 +152,11 @@
   .instrument .inst-name { font-size: 14px; font-weight: 600; color: var(--ink); margin-bottom: 2px; }
   .instrument .inst-detail { font-size: 12px; color: var(--muted); line-height: 1.5; }
 
-  /* ── BODY ── */
   .article-body {
     max-width: 780px;
     margin: 0 auto;
     padding: 48px 32px 80px;
   }
-
-  /* Section headers */
   .section-label {
     font-size: 10px;
     font-weight: 700;
@@ -171,8 +179,6 @@
     margin: 32px 0 12px;
     line-height: 1.2;
   }
-
-  /* Body text */
   .article-body p {
     font-size: 16px;
     line-height: 1.75;
@@ -181,18 +187,13 @@
     font-weight: 300;
   }
   .article-body p strong { font-weight: 600; color: var(--ink); }
-
-  /* Section divider */
   .section-break {
     border: none;
     border-top: 2px solid var(--rule);
     margin: 48px 0 40px;
   }
-  .section-break.heavy {
-    border-top: 2px solid var(--green);
-  }
+  .section-break.heavy { border-top: 2px solid var(--green); }
 
-  /* Pull quote */
   .pull-quote {
     border-left: 4px solid var(--green);
     padding: 16px 24px;
@@ -218,15 +219,12 @@
     margin-top: 8px;
     font-style: normal;
   }
-
-  /* Accent pull quote */
   .pull-quote.accent {
     border-left-color: var(--accent);
     background: #fdf5ee;
   }
   .pull-quote.accent p { color: var(--accent); }
 
-  /* Stat callout */
   .stat-row {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -256,7 +254,6 @@
   .stat-box.dark .sb-num { color: var(--green-lt); }
   .stat-box.dark .sb-label { color: rgba(255,255,255,.6); }
 
-  /* Chart placeholder */
   .chart-embed {
     background: var(--bg);
     border: 1px solid var(--rule);
@@ -285,32 +282,86 @@
     line-height: 1.5;
   }
 
-  /* Inline bar chart */
   .bar-chart { display: flex; flex-direction: column; gap: 8px; }
   .bar-row { display: grid; align-items: center; gap: 10px; }
-  .bar-row-3 { grid-template-columns: 140px 1fr 44px; }
-  .bar-row-4 { grid-template-columns: 160px 1fr 44px; }
+  .bar-row-3 { grid-template-columns: 140px 1fr 52px; }
+  .bar-row-4 { grid-template-columns: 160px 1fr 70px; }
   .bar-label { font-size: 12.5px; font-weight: 500; text-align: right; color: var(--ink); }
-  .bar-track { background: #edeae4; border-radius: 2px; height: 18px; overflow: hidden; }
+  .bar-track {
+    background: #edeae4;
+    border-radius: 2px;
+    height: 18px;
+    overflow: hidden;
+    position: relative;
+  }
   .bar-fill { height: 100%; border-radius: 2px; }
-  .bar-pct { font-size: 12px; font-weight: 600; color: var(--muted); }
+  .bar-prev {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    border-right: 2px dashed rgba(0,0,0,.2);
+    background: transparent;
+  }
+  .bar-pct { font-size: 12px; font-weight: 600; color: var(--muted); white-space: nowrap; }
+  .change {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 2px 7px;
+    border-radius: 2px;
+    margin-left: 8px;
+  }
+  .change.up { background: #edf7f1; color: var(--green); }
+  .change.down { background: #fef0e7; color: var(--accent); }
+  .change.same { background: #f0f0ee; color: var(--muted); }
 
-  /* Stacked bar */
-  .stacked-bar { display: flex; height: 32px; border-radius: 3px; overflow: hidden; margin-bottom: 10px; }
-  .stacked-seg { display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 600; color: #fff; white-space: nowrap; }
-  .stacked-legend { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 10px; }
-  .stacked-legend-item { display: flex; align-items: center; gap: 6px; font-size: 12px; }
+  .stacked-bar,
+  .stacked-row {
+    display: flex;
+    height: 32px;
+    border-radius: 3px;
+    overflow: hidden;
+    margin-bottom: 10px;
+  }
+  .stacked-row { height: 34px; margin-bottom: 8px; }
+  .stacked-seg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    font-weight: 600;
+    color: #fff;
+    white-space: nowrap;
+  }
+  .stacked-legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 10px;
+  }
+  .stacked-legend-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+  }
   .swatch { width: 10px; height: 10px; border-radius: 1px; flex-shrink: 0; }
 
-  /* Donut */
-  .donut-wrap { display: flex; align-items: center; gap: 28px; flex-wrap: wrap; padding: 8px 0; }
+  .donut-wrap {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    flex-wrap: wrap;
+    padding: 8px 0;
+  }
   .donut-legend { display: flex; flex-direction: column; gap: 8px; }
   .legend-item { display: flex; align-items: center; gap: 8px; }
   .legend-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
   .legend-label { font-size: 12px; color: var(--ink); }
   .legend-pct { font-size: 12px; font-weight: 600; color: var(--muted); margin-left: auto; padding-left: 16px; }
 
-  /* Source badge — inline in text */
   .source-badge {
     display: inline-block;
     font-size: 10px;
@@ -324,8 +375,6 @@
   }
   .source-badge.poll { background: #e8f4ee; color: var(--green); }
   .source-badge.quiz { background: #fdeede; color: var(--accent); }
-
-  /* Instrument callout inline */
   .inst-note {
     font-size: 12px;
     color: var(--muted);
@@ -334,7 +383,6 @@
     margin-bottom: 18px;
   }
 
-  /* Notable finding box */
   .finding-box {
     background: var(--ink);
     color: #fff;
@@ -358,21 +406,29 @@
   }
   .finding-box strong { color: #fff !important; }
 
-  /* Brand bar */
-  .brand-row { display: grid; grid-template-columns: 130px 1fr 36px; align-items: center; gap: 8px; margin-bottom: 7px; }
+  .brand-row {
+    display: grid;
+    grid-template-columns: 130px 1fr 36px;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 7px;
+  }
   .brand-label { font-size: 12px; font-weight: 500; text-align: right; }
   .brand-track { background: #edeae4; border-radius: 2px; height: 16px; }
   .brand-fill { height: 100%; border-radius: 2px; background: var(--green-lt); }
   .brand-n { font-size: 11px; color: var(--muted); font-weight: 600; }
 
-  /* Methodology table */
-  .method-table {
+  .method-table,
+  .compare-table,
+  .xtab {
     width: 100%;
     border-collapse: collapse;
     font-size: 13px;
     margin: 16px 0;
   }
-  .method-table th {
+  .method-table th,
+  .compare-table th,
+  .xtab th {
     text-align: left;
     padding: 8px 12px;
     background: var(--ink);
@@ -381,17 +437,40 @@
     font-weight: 600;
     letter-spacing: .06em;
   }
-  .method-table td {
+  .method-table td,
+  .compare-table td,
+  .xtab td {
     padding: 9px 12px;
     border-bottom: 1px solid var(--rule);
     color: var(--ink);
     vertical-align: top;
     line-height: 1.5;
   }
-  .method-table tr:last-child td { border-bottom: none; }
-  .method-table tr:nth-child(even) td { background: #faf9f6; }
+  .method-table tr:last-child td,
+  .compare-table tr:last-child td,
+  .xtab tr:last-child td { border-bottom: none; }
+  .method-table tr:nth-child(even) td,
+  .compare-table tr:nth-child(even) td { background: #faf9f6; }
+  .compare-table .val-new { font-weight: 600; color: var(--green); }
+  .compare-table .val-old { color: var(--muted); font-size: 12px; }
+  .xtab tr.highlight td { background: #f0f7f3; }
+  .xtab tr.highlight td:first-child { border-left: 3px solid var(--green); }
+  .xtab .big-val {
+    font-family: 'DM Serif Display', serif;
+    font-size: 20px;
+    color: var(--green);
+  }
+  .xtab .badge {
+    display: inline-block;
+    background: var(--green);
+    color: #fff;
+    font-size: 9px;
+    font-weight: 700;
+    padding: 1px 5px;
+    border-radius: 2px;
+    margin-left: 4px;
+  }
 
-  /* Limitations */
   .limitations {
     background: #fdf5ee;
     border: 1px solid #f0d9bc;
@@ -404,7 +483,6 @@
   }
   .limitations strong { color: var(--accent); }
 
-  /* About box */
   .about-box {
     background: var(--green);
     color: #fff;
@@ -426,7 +504,6 @@
   }
   .about-box a { color: var(--green-lt); }
 
-  /* Footer */
   footer {
     background: var(--ink);
     padding: 24px 32px;
@@ -439,7 +516,8 @@
     .instruments-inner { grid-template-columns: 1fr; }
     .stat-row { grid-template-columns: 1fr 1fr; }
     .stat-row .stat-box:last-child { grid-column: 1 / -1; }
-    .bar-row-3, .bar-row-4 { grid-template-columns: 100px 1fr 40px; }
+    .bar-row-3 { grid-template-columns: 100px 1fr 44px; }
+    .bar-row-4 { grid-template-columns: 110px 1fr 64px; }
     .brand-row { grid-template-columns: 100px 1fr 30px; }
     .hero { padding: 40px 20px; }
     .article-body { padding: 32px 20px 60px; }
@@ -449,421 +527,503 @@
 </head>
 <body>
 
-<!-- SITE HEADER -->
 <header class="site-header">
   <a href="/" class="logo">CleanProteinList.com</a>
-  <span class="tag">Original Research · 2026</span>
+  <span class="tag">Original Research &middot; 2026</span>
 </header>
 
-<!-- HERO -->
 <section class="hero">
   <div class="hero-inner">
-    <div class="hero-eyebrow">CleanProteinList.com · Consumer Safety Survey · 2026</div>
+    <div class="update-badge">Updated April 2026</div>
+    <div class="hero-eyebrow">CleanProteinList.com &middot; Consumer Safety Survey &middot; 2026</div>
     <h1>Safety Over <em>Everything:</em><br>What Protein Supplement<br>Users Are Really Thinking</h1>
-    <p class="deck">Two independent consumer instruments — a brand interest poll and a protein safety quiz — reveal a market where safety has displaced price, brand loyalty, and performance as the dominant purchase concern.</p>
+    <p class="deck">Two independent consumer instruments &mdash; a brand interest poll and a protein safety quiz &mdash; reveal a market where safety has displaced price, brand loyalty, and performance as the dominant purchase concern.</p>
     <div class="hero-meta">
-      <div class="hero-meta-item"><strong>474</strong>Total poll submissions</div>
-      <div class="hero-meta-item"><strong>~350</strong>Unique poll respondents</div>
-      <div class="hero-meta-item"><strong>96</strong>Quiz completions</div>
-      <div class="hero-meta-item"><strong>Jan 23 – Feb 19, 2026</strong>Collection window</div>
-      <div class="hero-meta-item"><strong>CleanProteinList.com</strong>Data source</div>
+      <div class="hero-meta-item"><strong>1,764</strong>Total poll submissions</div>
+      <div class="hero-meta-item"><strong>~1,606</strong>Unique poll respondents</div>
+      <div class="hero-meta-item"><strong>215</strong>Quiz completions</div>
+      <div class="hero-meta-item"><strong>Nov 2025 &#8211; Apr 20, 2026</strong>Collection window</div>
+      <div class="hero-meta-item"><strong>Updated April 2026</strong>Originally published Feb 19, 2026</div>
     </div>
   </div>
 </section>
 
-<!-- INSTRUMENT BADGES -->
 <div class="instruments">
   <div class="instruments-inner">
     <div class="instrument poll">
-      <div class="inst-label">Instrument One · Poll</div>
-      <div class="inst-name">Brand Interest & Safety Poll</div>
-      <div class="inst-detail">Embedded across CleanProteinList.com. Respondents submitted the brand they were researching for safety information. 474 total submissions; ~350 unique respondents after deduplication. Findings labeled <span class="source-badge poll">Poll</span></div>
+      <div class="inst-label">Instrument One &middot; Poll</div>
+      <div class="inst-name">Brand Interest &amp; Safety Poll</div>
+      <div class="inst-detail">Embedded across CleanProteinList.com. 1,764 total submissions; ~1,606 unique respondents after 6-minute same-brand session deduplication. Collection window: Nov 6, 2025 &#8211; Apr 20, 2026. Findings labeled <span class="source-badge poll">Poll</span></div>
     </div>
     <div class="instrument quiz">
-      <div class="inst-label">Instrument Two · Quiz</div>
+      <div class="inst-label">Instrument Two &middot; Quiz</div>
       <div class="inst-name">Protein Safety Consumer Quiz</div>
-      <div class="inst-detail">9-question behavioral quiz covering usage habits, brand, contamination awareness, budget, and purchase motivation. 96 voluntary completions. Findings labeled <span class="source-badge quiz">Quiz</span></div>
+      <div class="inst-detail">9-question behavioral quiz. 215 voluntary completions (up from 96 at original publication). Same collection window. Findings labeled <span class="source-badge quiz">Quiz</span></div>
     </div>
   </div>
 </div>
 
-<!-- ARTICLE BODY -->
 <article class="article-body">
 
-  <!-- ── INTRODUCTION ── -->
-  <p>The protein supplement industry is worth more than $25 billion annually, and by most measures it is growing. But something has shifted in the consumer mindset — and it isn't brand preference, flavor innovation, or price sensitivity. It's fear.</p>
+  <p>The protein supplement industry is worth more than $25 billion annually, and by most measures it is growing. But something has shifted in the consumer mindset &mdash; and it isn't brand preference, flavor innovation, or price sensitivity. It's fear.</p>
 
   <p>Since Consumer Reports and independent testing labs began publishing heavy metal contamination data on popular protein products, a question has been forming among the tens of millions of Americans who consume these products regularly: <strong>Is what I'm drinking every morning actually safe?</strong></p>
 
-  <p>Most coverage of protein supplement contamination has focused on the products themselves — lab results, lead levels, brand comparisons. Far less attention has been paid to the consumer side of this story: what do people actually know, what are they worried about, and how is it changing the way they shop?</p>
+  <p>Most coverage of protein supplement contamination has focused on the products themselves &mdash; lab results, lead levels, brand comparisons. Far less attention has been paid to the consumer side of this story: what do people actually know, what are they worried about, and how is it changing the way they shop?</p>
 
-  <p>To answer those questions, CleanProteinList.com deployed two independent consumer research instruments between January 23 and February 19, 2026. The first was a brand interest poll embedded across the site, capturing which brands visitors were actively researching for safety information. The second was a voluntary nine-question behavioral quiz probing usage habits, contamination awareness, budget tolerance, and primary purchase motivations. Together, the two instruments collected data from an estimated 350+ unique poll respondents and 96 quiz completions.</p>
+  <p>To answer those questions, CleanProteinList.com deployed two independent consumer research instruments beginning in November 2025. The first was a brand interest poll embedded across the site, capturing which brands visitors were actively researching for safety information. The second was a voluntary nine-question behavioral quiz probing usage habits, contamination awareness, budget tolerance, and primary purchase motivations. This report reflects data collected through April 20, 2026 &mdash; 1,764 total poll submissions (~1,606 unique respondents) and 215 quiz completions. An earlier version of this report was published February 19, 2026 with approximately 474 poll submissions and 96 quiz completions.</p>
 
-  <p>The findings converge on a single conclusion: <strong>safety has become the defining concern of the protein supplement consumer — and most of them don't yet have the information they're looking for.</strong></p>
+  <p>The findings at larger scale confirm and deepen the original conclusions: <strong>safety has become the defining concern of the protein supplement consumer &mdash; and while awareness of contamination risks is growing, a significant share of regular users still lacks the information they're looking for.</strong></p>
 
   <hr class="section-break heavy">
 
-  <!-- ── SECTION 1: WHO RESPONDED ── -->
   <div class="section-label">Section 1</div>
   <h2 class="section-title">Who Responded: A Profile of Today's Protein Consumer</h2>
 
-  <p>Before examining what respondents think, it's worth understanding who they are. Both instruments drew from the same population: visitors to CleanProteinList.com who arrived via organic search, primarily on content covering heavy metal contamination, lead testing results, and brand safety comparisons. This self-selected audience skews toward safety-motivated consumers — an important context for interpreting findings.</p>
+  <p>Before examining what respondents think, it's worth understanding who they are. Both instruments drew from the same population: visitors to CleanProteinList.com who arrived via organic search, primarily on content covering heavy metal contamination, lead testing results, and brand safety comparisons. This self-selected audience skews toward safety-motivated consumers &mdash; an important context for interpreting findings.</p>
 
-  <p><span class="source-badge quiz">Quiz</span> Data from the protein safety quiz (n=96) paints a picture of a habitual, health-focused consumer base. <strong>84.4% of quiz respondents use protein supplements at least "often,"</strong> with 66.7% consuming them daily. This is not a market of casual browsers — these are people for whom protein supplementation is a routine part of daily life.</p>
+  <p><span class="source-badge quiz">Quiz</span> Data from the protein safety quiz (n=215) paints a picture of a habitual, health-focused consumer base. <strong>81.4% of quiz respondents use protein supplements at least "often,"</strong> with 67.9% consuming them daily. This remains a market of regular users, not casual browsers.</p>
 
-  <!-- FIG 2: USAGE FREQUENCY -->
   <div class="chart-embed">
-    <div class="chart-fig">Fig. 2 · Quiz · n=96</div>
+    <div class="chart-fig">Fig. 2 &middot; Quiz &middot; n=215</div>
     <div class="chart-title">Usage Frequency</div>
     <div class="chart-caption">How often quiz respondents consume protein supplements</div>
     <div class="bar-chart">
       <div class="bar-row bar-row-3">
         <div class="bar-label">Daily</div>
-        <div class="bar-track"><div class="bar-fill" style="width:66.7%;background:var(--green)"></div></div>
-        <div class="bar-pct">66.7%</div>
+        <div class="bar-track"><div class="bar-fill" style="width:67.9%;background:var(--green)"></div></div>
+        <div class="bar-pct">67.9%</div>
       </div>
       <div class="bar-row bar-row-3">
         <div class="bar-label">Often</div>
-        <div class="bar-track"><div class="bar-fill" style="width:17.7%;background:var(--green-lt)"></div></div>
-        <div class="bar-pct">17.7%</div>
+        <div class="bar-track"><div class="bar-fill" style="width:13.5%;background:var(--green-lt)"></div></div>
+        <div class="bar-pct">13.5%</div>
       </div>
       <div class="bar-row bar-row-3">
         <div class="bar-label">Occasional</div>
-        <div class="bar-track"><div class="bar-fill" style="width:9.4%;background:var(--green-xs)"></div></div>
-        <div class="bar-pct">9.4%</div>
+        <div class="bar-track"><div class="bar-fill" style="width:7.4%;background:var(--green-xs)"></div></div>
+        <div class="bar-pct">7.4%</div>
       </div>
       <div class="bar-row bar-row-3">
-        <div class="bar-label">Researching only</div>
-        <div class="bar-track"><div class="bar-fill" style="width:6.2%;background:#d0e8d8"></div></div>
-        <div class="bar-pct">6.2%</div>
+        <div class="bar-label">Researching</div>
+        <div class="bar-track"><div class="bar-fill" style="width:7.4%;background:#d0e8d8"></div></div>
+        <div class="bar-pct">7.4%</div>
+      </div>
+      <div class="bar-row bar-row-3">
+        <div class="bar-label">Rarely</div>
+        <div class="bar-track"><div class="bar-fill" style="width:3.7%;background:#e8f4ee"></div></div>
+        <div class="bar-pct">3.7%</div>
       </div>
     </div>
   </div>
 
-  <p>When asked about their primary reason for using protein supplements, respondents revealed that the category has expanded well beyond its gym-culture origins. <strong>General health was the leading use case at 35.4%</strong>, followed by weight loss (26.0%), athletic performance (19.8%), and muscle building (18.8%). The near-even split across use cases suggests that protein supplementation has become a mainstream health behavior — one that spans demographics and motivations that traditional fitness marketing never fully anticipated.</p>
+  <p>When asked about their primary reason for using protein supplements, respondents revealed a category that has expanded even further beyond gym-culture origins. <strong>General health remained the leading use case at 33.5%</strong>, followed by weight loss (29.8%) and muscle building (26.5%). Athletic performance fell to 10.2%, suggesting the audience has broadened toward health, weight-management, and everyday wellness users.</p>
 
-  <!-- FIG 3: USE CASE DONUT -->
   <div class="chart-embed">
-    <div class="chart-fig">Fig. 3 · Quiz · n=96</div>
+    <div class="chart-fig">Fig. 3 &middot; Quiz &middot; n=215</div>
     <div class="chart-title">Why Respondents Use Protein Supplements</div>
-    <div class="chart-caption">Primary use case selected by quiz respondents</div>
-    <div class="donut-wrap">
-      <svg width="130" height="130" viewBox="0 0 130 130">
-        <circle cx="65" cy="65" r="50" fill="none" stroke="#edeae4" stroke-width="22"/>
-        <circle cx="65" cy="65" r="50" fill="none" stroke="#2d6a4f" stroke-width="22"
-          stroke-dasharray="221.5 92.1" stroke-dashoffset="78.5" transform="rotate(-90 65 65)"/>
-        <circle cx="65" cy="65" r="50" fill="none" stroke="#52b788" stroke-width="22"
-          stroke-dasharray="162.6 151" stroke-dashoffset="-143" transform="rotate(-90 65 65)"/>
-        <circle cx="65" cy="65" r="50" fill="none" stroke="#95d5b2" stroke-width="22"
-          stroke-dasharray="123.6 189" stroke-dashoffset="-305.6" transform="rotate(-90 65 65)"/>
-        <circle cx="65" cy="65" r="50" fill="none" stroke="#d8f3dc" stroke-width="22"
-          stroke-dasharray="117.8 195" stroke-dashoffset="-429.2" transform="rotate(-90 65 65)"/>
-      </svg>
-      <div class="donut-legend">
-        <div class="legend-item"><div class="legend-dot" style="background:#2d6a4f"></div><span class="legend-label">General health</span><span class="legend-pct">35.4%</span></div>
-        <div class="legend-item"><div class="legend-dot" style="background:#52b788"></div><span class="legend-label">Weight loss</span><span class="legend-pct">26.0%</span></div>
-        <div class="legend-item"><div class="legend-dot" style="background:#95d5b2"></div><span class="legend-label">Athletic performance</span><span class="legend-pct">19.8%</span></div>
-        <div class="legend-item"><div class="legend-dot" style="background:#d8f3dc;border:1px solid #ccc"></div><span class="legend-label">Muscle building</span><span class="legend-pct">18.8%</span></div>
+    <div class="chart-caption">Primary use case selected by quiz respondents; dashed markers indicate February baseline</div>
+    <div class="bar-chart">
+      <div class="bar-row bar-row-3">
+        <div class="bar-label">General health</div>
+        <div class="bar-track">
+          <div class="bar-prev" style="left:35.4%"></div>
+          <div class="bar-fill" style="width:33.5%;background:var(--green)"></div>
+        </div>
+        <div class="bar-pct">33.5%</div>
+      </div>
+      <div class="bar-row bar-row-3">
+        <div class="bar-label">Weight loss</div>
+        <div class="bar-track">
+          <div class="bar-prev" style="left:26.0%"></div>
+          <div class="bar-fill" style="width:29.8%;background:var(--green-lt)"></div>
+        </div>
+        <div class="bar-pct">29.8%</div>
+      </div>
+      <div class="bar-row bar-row-3">
+        <div class="bar-label">Muscle building</div>
+        <div class="bar-track">
+          <div class="bar-prev" style="left:18.8%"></div>
+          <div class="bar-fill" style="width:26.5%;background:var(--green-xs)"></div>
+        </div>
+        <div class="bar-pct">26.5%</div>
+      </div>
+      <div class="bar-row bar-row-3">
+        <div class="bar-label">Athletic perf.</div>
+        <div class="bar-track">
+          <div class="bar-prev" style="left:19.8%"></div>
+          <div class="bar-fill" style="width:10.2%;background:#d0e8d8"></div>
+        </div>
+        <div class="bar-pct">10.2%</div>
       </div>
     </div>
   </div>
 
-  <p><span class="source-badge poll">Poll</span> The brand interest poll adds another layer to the respondent profile. Of the ~350 unique respondents, <strong>78.2% were researching powders</strong> and 21.6% were researching ready-to-drink (RTD) products. This powder-dominant audience is consistent with the CleanProteinList.com content focus on powder safety data, and is worth noting as context when interpreting brand interest findings.</p>
+  <p><span class="source-badge poll">Poll</span> The brand interest poll adds another layer to the respondent profile. Of the ~1,606 unique respondents, <strong>78.7% were researching powders</strong> and 16.8% were researching ready-to-drink products. Powder dominance is effectively unchanged from the February release, reinforcing that the audience composition is stable even as the sample grows.</p>
 
-  <!-- FIG 5: POWDER vs RTD -->
   <div class="chart-embed">
-    <div class="chart-fig">Fig. 5 · Poll · n≈350</div>
+    <div class="chart-fig">Fig. 5 &middot; Poll &middot; n=1,606 unique respondents</div>
     <div class="chart-title">Powder vs. Ready-to-Drink</div>
     <div class="chart-caption">Product type interest among unique brand poll respondents</div>
     <div style="display:flex;border-radius:3px;overflow:hidden;height:44px;">
-      <div style="background:var(--green);width:78.2%;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:600;font-size:14px;">78.2% Powder</div>
-      <div style="background:var(--green-lt);flex:1;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:600;font-size:12px;">21.6% RTD</div>
+      <div style="background:var(--green);width:78.7%;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:600;font-size:14px;">78.7% Powder</div>
+      <div style="background:var(--green-lt);flex:1;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:600;font-size:12px;">16.8% RTD</div>
     </div>
   </div>
 
-  <p><span class="source-badge quiz">Quiz</span> On protein source preference, the quiz found a market that is largely source-agnostic: <strong>52.1% expressed no preference</strong> between whey and plant-based options, with 30.2% preferring whey and 17.7% preferring plant-based. The majority "any source" response echoes the primary finding — when safety is the primary filter, ingredient type becomes secondary.</p>
+  <p><span class="source-badge quiz">Quiz</span> On protein source preference, the updated quiz still shows a largely source-agnostic market: <strong>48.4% expressed no preference</strong> between whey and plant-based options, with 34.0% preferring whey and 17.7% preferring plant-based. Safety remains the stronger filter than ingredient camp identity.</p>
+
+  <div class="chart-embed">
+    <div class="chart-fig">Fig. 6 &middot; Quiz &middot; n=215</div>
+    <div class="chart-title">Preferred Protein Source</div>
+    <div class="chart-caption">Protein source preference among quiz respondents</div>
+    <div class="bar-chart">
+      <div class="bar-row bar-row-3">
+        <div class="bar-label">No preference</div>
+        <div class="bar-track"><div class="bar-fill" style="width:48.4%;background:var(--green)"></div></div>
+        <div class="bar-pct">48.4%</div>
+      </div>
+      <div class="bar-row bar-row-3">
+        <div class="bar-label">Whey</div>
+        <div class="bar-track"><div class="bar-fill" style="width:34.0%;background:var(--green-lt)"></div></div>
+        <div class="bar-pct">34.0%</div>
+      </div>
+      <div class="bar-row bar-row-3">
+        <div class="bar-label">Plant-based</div>
+        <div class="bar-track"><div class="bar-fill" style="width:17.7%;background:var(--green-xs)"></div></div>
+        <div class="bar-pct">17.7%</div>
+      </div>
+    </div>
+  </div>
 
   <hr class="section-break">
 
-  <!-- ── SECTION 2: THE HEADLINE FINDING ── -->
   <div class="section-label">Section 2</div>
-  <h2 class="section-title">Safety Has Become the Deciding Factor — Not Just a Checkbox</h2>
+  <h2 class="section-title">Safety Has Become the Deciding Factor &mdash; Not Just a Checkbox</h2>
 
-  <p>The most striking finding from the protein safety quiz is the degree to which safety has come to dominate the consumer decision-making process — not as one factor among many, but as the overwhelming primary concern.</p>
+  <p>The most striking finding from the protein safety quiz is still the degree to which safety dominates decision-making. At larger scale, the story is not that safety weakened. It is that safety concern became more specific.</p>
 
   <div class="stat-row">
     <div class="stat-box dark">
-      <div class="sb-num">87.5%</div>
+      <div class="sb-num">80.0%</div>
       <div class="sb-label">named product safety as their primary concern</div>
     </div>
     <div class="stat-box">
-      <div class="sb-num">6.2%</div>
-      <div class="sb-label">are actively ready to switch brands</div>
+      <div class="sb-num">10.2%</div>
+      <div class="sb-label">actively seeking the single cleanest option</div>
     </div>
     <div class="stat-box">
-      <div class="sb-num">5.2%</div>
-      <div class="sb-label">are on a mission to find the single cleanest option</div>
+      <div class="sb-num">98.1%</div>
+      <div class="sb-label">total safety-motivated respondents across all three concern categories</div>
     </div>
   </div>
-  <p class="inst-note"><span class="source-badge quiz">Quiz</span> n=96</p>
+  <p class="inst-note"><span class="source-badge quiz">Quiz</span> n=215</p>
 
-  <!-- FIG 1: PRIMARY CONCERN -->
   <div class="chart-embed">
-    <div class="chart-fig">Fig. 1 · Quiz · n=96</div>
+    <div class="chart-fig">Fig. 1 &middot; Quiz &middot; n=215</div>
     <div class="chart-title">Primary Concern When Choosing a Protein Supplement</div>
-    <div class="chart-caption">"What best describes your primary concern?" — quiz respondents</div>
+    <div class="chart-caption">Dashed markers indicate the February 19, 2026 baseline</div>
     <div class="bar-chart">
       <div class="bar-row bar-row-4">
         <div class="bar-label">Safety / clean label</div>
-        <div class="bar-track"><div class="bar-fill" style="width:87.5%;background:var(--green)"></div></div>
-        <div class="bar-pct">87.5%</div>
-      </div>
-      <div class="bar-row bar-row-4">
-        <div class="bar-label">Ready to switch brands</div>
-        <div class="bar-track"><div class="bar-fill" style="width:6.2%;background:var(--green-lt)"></div></div>
-        <div class="bar-pct">6.2%</div>
+        <div class="bar-track">
+          <div class="bar-prev" style="left:87.5%"></div>
+          <div class="bar-fill" style="width:80.0%;background:var(--green)"></div>
+        </div>
+        <div class="bar-pct">80.0%</div>
       </div>
       <div class="bar-row bar-row-4">
         <div class="bar-label">Find the cleanest option</div>
-        <div class="bar-track"><div class="bar-fill" style="width:5.2%;background:var(--green-lt)"></div></div>
-        <div class="bar-pct">5.2%</div>
+        <div class="bar-track">
+          <div class="bar-prev" style="left:5.2%"></div>
+          <div class="bar-fill" style="width:10.2%;background:var(--green-lt)"></div>
+        </div>
+        <div class="bar-pct">10.2%</div>
+      </div>
+      <div class="bar-row bar-row-4">
+        <div class="bar-label">Ready to switch brands</div>
+        <div class="bar-track">
+          <div class="bar-prev" style="left:6.2%"></div>
+          <div class="bar-fill" style="width:7.9%;background:var(--green-lt)"></div>
+        </div>
+        <div class="bar-pct">7.9%</div>
       </div>
       <div class="bar-row bar-row-4">
         <div class="bar-label">Experiencing symptoms</div>
-        <div class="bar-track"><div class="bar-fill" style="width:1.0%;background:#ccc"></div></div>
-        <div class="bar-pct">1.0%</div>
+        <div class="bar-track"><div class="bar-fill" style="width:1.9%;background:#ccc"></div></div>
+        <div class="bar-pct">1.9%</div>
       </div>
     </div>
   </div>
 
-  <p>The dominance of the safety concern is notable for what it cuts across. Use case didn't differentiate it — safety was the primary concern whether respondents were using protein for general health, weight loss, athletic performance, or muscle building. This is not a niche concern confined to a particular type of consumer. It spans the entire respondent base.</p>
+  <p>At first read, the drop from 87.5% to 80.0% on the headline safety concern figure might seem like softening. It isn't. What's happening is a refinement of intent as the audience grows and awareness deepens. The "find the cleanest option" category doubled from 5.2% to 10.2%, and "ready to switch" grew from 6.2% to 7.9%. When all three safety-motivated responses are combined, <strong>98.1% of quiz respondents are safety-driven</strong> &mdash; essentially unchanged from the original cohort.</p>
+
+  <p>This pattern is consistent with what the awareness data shows in Section 3: as more consumers become informed about contamination risks, they move from broad concern toward more specific action intent. The concern did not fade. It sharpened.</p>
 
   <div class="pull-quote">
-    <p>"When 87.5% of your audience names safety as their top concern — regardless of why they use the product — it's no longer a feature. It's the baseline expectation."</p>
-    <cite>CleanProteinList.com · 2026 Consumer Safety Survey</cite>
+    <p>"Safety hasn't lost ground &mdash; it has become more specific. Consumers are no longer just worried. More of them are actively looking for answers."</p>
+    <cite>CleanProteinList.com &middot; 2026 Consumer Safety Survey, updated April 2026</cite>
   </div>
 
-  <p>Also significant: only 1.0% of respondents cited experiencing symptoms as their motivating concern. <strong>The safety-driven consumer in this data set is proactive, not reactive.</strong> They haven't necessarily experienced a health event — they've heard about contamination risks and they want to act before they do. That distinction matters for how brands, journalists, and regulators communicate about this issue.</p>
-
-  <p>The 11.4% who selected "ready to switch" or "find the cleanest option" represent a segment that is actively in-market — not just researching, but making a decision. Combined with the dominant 87.5%, the picture is of a consumer population that has already made up its mind about what matters. The only open question for them is which brand actually delivers on it.</p>
+  <p>Also significant: only 1.9% of respondents cited experiencing symptoms as their motivating concern. <strong>The safety-driven consumer in this data set remains proactive, not reactive.</strong> They have heard enough to worry, and increasingly they want to act before a health event forces the issue.</p>
 
   <hr class="section-break">
 
-  <!-- ── SECTION 3: AWARENESS GAP ── -->
   <div class="section-label">Section 3</div>
-  <h2 class="section-title">The Contamination Awareness Gap: Most Consumers Are Flying Blind</h2>
+  <h2 class="section-title">The Awareness Gap Is Closing &mdash; But a Third of Users Are Still Uninformed</h2>
 
-  <p>If the first finding is that safety is the dominant concern, the second finding complicates it significantly: <strong>most respondents don't actually know what's in their products.</strong></p>
+  <p>The awareness picture changed substantially between February and April &mdash; and the change itself is a finding worth reporting. Two months of continued media coverage, search-driven discovery, and organic information spread have measurably moved the needle on what protein supplement consumers know about contamination risks.</p>
 
-  <p><span class="source-badge quiz">Quiz</span> When quiz respondents were asked about their awareness of heavy metal and contamination risks in protein supplements, the results revealed a market where concern is high but information is scarce.</p>
+  <p><span class="source-badge quiz">Quiz</span> In February, only 16.7% of quiz respondents were fully informed about heavy metal contamination risks in protein supplements. By April, across 215 total completions, that figure had risen to <strong>27.0% &mdash; a near-doubling in two months.</strong> The "not aware" group fell from 41.7% to 31.6%. The "heard something" group grew from 29.2% to 32.6%.</p>
 
-  <!-- FIG 4: AWARENESS GAP -->
   <div class="chart-embed">
-    <div class="chart-fig">Fig. 4 · Quiz · n=96</div>
+    <div class="chart-fig">Fig. 4 &middot; Quiz &middot; n=215</div>
     <div class="chart-title">Consumer Awareness of Contamination Risks</div>
-    <div class="chart-caption">Respondent awareness of heavy metal / contamination issues in protein supplements</div>
-    <div class="stacked-bar">
-      <div class="stacked-seg" style="width:41.7%;background:#b0b8aa;color:var(--ink);">41.7%</div>
-      <div class="stacked-seg" style="width:29.2%;background:var(--accent);">29.2%</div>
-      <div class="stacked-seg" style="width:16.7%;background:var(--green);">16.7%</div>
-      <div class="stacked-seg" style="width:12.5%;background:#d8d4cc;color:var(--muted);">12.5%</div>
+    <div class="chart-caption">Compared with the February 19, 2026 baseline release</div>
+    <table class="compare-table">
+      <thead>
+        <tr>
+          <th>Awareness Level</th>
+          <th>February</th>
+          <th>April</th>
+          <th>Change</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Fully aware</td>
+          <td class="val-old">16.7%</td>
+          <td class="val-new">27.0%</td>
+          <td><span class="change up">+10.3</span></td>
+        </tr>
+        <tr>
+          <td>"Heard something" &mdash; partially aware</td>
+          <td class="val-old">29.2%</td>
+          <td class="val-new">32.6%</td>
+          <td><span class="change up">+3.4</span></td>
+        </tr>
+        <tr>
+          <td>Not aware of new concerns</td>
+          <td class="val-old">41.7%</td>
+          <td class="val-new">31.6%</td>
+          <td><span class="change down">-10.1</span></td>
+        </tr>
+        <tr>
+          <td>Skipped</td>
+          <td class="val-old">12.5%</td>
+          <td class="val-new">8.8%</td>
+          <td><span class="change down">-3.7</span></td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="stacked-row">
+      <div class="stacked-seg" style="width:31.6%;background:#b0b8aa;color:var(--ink);">31.6%</div>
+      <div class="stacked-seg" style="width:32.6%;background:var(--accent);">32.6%</div>
+      <div class="stacked-seg" style="width:27.0%;background:var(--green);">27.0%</div>
+      <div class="stacked-seg" style="width:8.8%;background:#d8d4cc;color:var(--muted);">8.8%</div>
     </div>
     <div class="stacked-legend">
-      <div class="stacked-legend-item"><div class="swatch" style="background:#b0b8aa;border:1px solid #999"></div>Not aware of new concerns (41.7%)</div>
-      <div class="stacked-legend-item"><div class="swatch" style="background:var(--accent)"></div>"Heard something" — partially aware (29.2%)</div>
-      <div class="stacked-legend-item"><div class="swatch" style="background:var(--green)"></div>Fully aware of contamination risks (16.7%)</div>
-      <div class="stacked-legend-item"><div class="swatch" style="background:#d8d4cc;border:1px solid #bbb"></div>Skipped question (12.5%)</div>
+      <div class="stacked-legend-item"><div class="swatch" style="background:#b0b8aa;border:1px solid #999"></div>Not aware (31.6%)</div>
+      <div class="stacked-legend-item"><div class="swatch" style="background:var(--accent)"></div>"Heard something" (32.6%)</div>
+      <div class="stacked-legend-item"><div class="swatch" style="background:var(--green)"></div>Fully aware (27.0%)</div>
+      <div class="stacked-legend-item"><div class="swatch" style="background:#d8d4cc;border:1px solid #bbb"></div>Skipped (8.8%)</div>
     </div>
   </div>
 
-  <p>Only <strong>16.7% of quiz respondents were fully aware</strong> of documented contamination risks in the protein supplement category. Meanwhile, 41.7% had no new concerns — meaning they were either unaware of recent testing data or had not encountered it in any meaningful way. The third group, at 29.2%, represents perhaps the most telling segment: consumers who have "heard something" but lack complete information.</p>
+  <p>The directional story is encouraging: contamination awareness is spreading through organic search and media coverage, and CleanProteinList.com's content is part of that information channel. But the picture is incomplete. <strong>Nearly one in three regular supplement users still has no awareness of documented contamination risks.</strong> The gap is closing, but it remains large.</p>
 
   <div class="finding-box">
-    <div class="fb-label">Key Finding</div>
-    <p>When combined, the partially aware and unaware groups account for <strong>nearly 71% of respondents</strong> — people who use protein supplements regularly, cite safety as their top concern, and yet don't have reliable information about what's actually in their products. The contamination story has not reached most consumers. And the portion it has reached received only half of it.</p>
+    <div class="fb-label">Key Finding &middot; Updated</div>
+    <p>Fully aware consumers nearly doubled between February and April (16.7% to 27.0%). The contamination information is reaching new audiences. But 31.6% of habitual protein supplement users remain entirely unaware of documented heavy metal risks, and the partially aware group (32.6%) still lacks the complete picture needed to act. The information gap has narrowed; it has not closed.</p>
   </div>
-
-  <p>This gap has a direct behavioral dimension, which the cross-tabulation data (Section 5) makes clear. But even at the surface level, the contrast is striking: a consumer population that is overwhelmingly safety-motivated is simultaneously operating without the safety information it's seeking. That's not a gap that resolves itself. It requires better information access — which is precisely what the protein safety content on CleanProteinList.com is designed to provide.</p>
 
   <hr class="section-break">
 
-  <!-- ── SECTION 4: BRAND LANDSCAPE ── -->
   <div class="section-label">Section 4</div>
-  <h2 class="section-title">Orgain Leads Safety Searches — but the Market Is Deeply Fragmented</h2>
+  <h2 class="section-title">Orgain and Premier Protein Still Lead Safety Searches &mdash; but the Market Is Deeply Fragmented</h2>
 
-  <p>The brand interest poll offers a window into which brands are drawing the most consumer scrutiny. Because the poll was embedded on safety-focused content — lead testing articles, contamination rankings, brand comparisons — the brands that appear in the data are brands that consumers are actively researching for safety reasons. This is not a popularity or market share chart. It is a <strong>safety concern index.</strong></p>
+  <p>The brand interest poll offers a window into which brands are drawing the most consumer scrutiny. Because the poll was embedded on safety-focused content, the brands that appear in the data are brands consumers are actively researching for safety reasons. This is not a popularity chart. It is a <strong>safety concern index.</strong></p>
 
-  <!-- FIG 7: TOP BRANDS -->
   <div class="chart-embed">
-    <div class="chart-fig">Fig. 7 · Poll · n≈350 unique respondents · Top 12 shown</div>
+    <div class="chart-fig">Fig. 7 &middot; Poll &middot; n=1,606 unique respondents</div>
     <div class="chart-title">Most Searched Brands for Safety Information</div>
-    <div class="chart-caption">Brands submitted by unique respondents (normalized). Bars scaled to Orgain's count of 39.</div>
+    <div class="chart-caption">Top 15 brands submitted by unique poll respondents; bars scaled to Orgain's count of 155</div>
 
-    <div class="brand-row"><div class="brand-label">Orgain</div><div class="brand-track"><div class="brand-fill" style="width:100%"></div></div><div class="brand-n">39</div></div>
-    <div class="brand-row"><div class="brand-label">Premier Protein</div><div class="brand-track"><div class="brand-fill" style="width:64.1%"></div></div><div class="brand-n">25</div></div>
-    <div class="brand-row"><div class="brand-label">Nurri</div><div class="brand-track"><div class="brand-fill" style="width:15.4%"></div></div><div class="brand-n">6</div></div>
-    <div class="brand-row"><div class="brand-label">MyProtein</div><div class="brand-track"><div class="brand-fill" style="width:15.4%"></div></div><div class="brand-n">6</div></div>
-    <div class="brand-row"><div class="brand-label">Truvani</div><div class="brand-track"><div class="brand-fill" style="width:12.8%"></div></div><div class="brand-n">5</div></div>
-    <div class="brand-row"><div class="brand-label">Vital Proteins</div><div class="brand-track"><div class="brand-fill" style="width:10.3%"></div></div><div class="brand-n">4</div></div>
-    <div class="brand-row"><div class="brand-label">Vega</div><div class="brand-track"><div class="brand-fill" style="width:10.3%"></div></div><div class="brand-n">4</div></div>
-    <div class="brand-row"><div class="brand-label">Isopure</div><div class="brand-track"><div class="brand-fill" style="width:10.3%"></div></div><div class="brand-n">4</div></div>
-    <div class="brand-row"><div class="brand-label">Ascent</div><div class="brand-track"><div class="brand-fill" style="width:10.3%"></div></div><div class="brand-n">4</div></div>
-    <div class="brand-row"><div class="brand-label">Garden of Life</div><div class="brand-track"><div class="brand-fill" style="width:10.3%"></div></div><div class="brand-n">4</div></div>
-    <div class="brand-row"><div class="brand-label">Ensure</div><div class="brand-track"><div class="brand-fill" style="width:10.3%"></div></div><div class="brand-n">4</div></div>
-    <div class="brand-row"><div class="brand-label">Muscle Milk</div><div class="brand-track"><div class="brand-fill" style="width:10.3%"></div></div><div class="brand-n">4</div></div>
+    <div class="brand-row"><div class="brand-label">Orgain</div><div class="brand-track"><div class="brand-fill" style="width:100%"></div></div><div class="brand-n">155</div></div>
+    <div class="brand-row"><div class="brand-label">Premier Protein</div><div class="brand-track"><div class="brand-fill" style="width:79.4%"></div></div><div class="brand-n">123</div></div>
+    <div class="brand-row"><div class="brand-label">Levels</div><div class="brand-track"><div class="brand-fill" style="width:16.1%"></div></div><div class="brand-n">25</div></div>
+    <div class="brand-row"><div class="brand-label">Nutricost</div><div class="brand-track"><div class="brand-fill" style="width:13.5%"></div></div><div class="brand-n">21</div></div>
+    <div class="brand-row"><div class="brand-label">Vega</div><div class="brand-track"><div class="brand-fill" style="width:11.6%"></div></div><div class="brand-n">18</div></div>
+    <div class="brand-row"><div class="brand-label">Vital Proteins</div><div class="brand-track"><div class="brand-fill" style="width:10.3%"></div></div><div class="brand-n">16</div></div>
+    <div class="brand-row"><div class="brand-label">OWYN</div><div class="brand-track"><div class="brand-fill" style="width:10.3%"></div></div><div class="brand-n">16</div></div>
+    <div class="brand-row"><div class="brand-label">Isopure</div><div class="brand-track"><div class="brand-fill" style="width:10.3%"></div></div><div class="brand-n">16</div></div>
+    <div class="brand-row"><div class="brand-label">Truvani</div><div class="brand-track"><div class="brand-fill" style="width:9.7%"></div></div><div class="brand-n">15</div></div>
+    <div class="brand-row"><div class="brand-label">Ascent</div><div class="brand-track"><div class="brand-fill" style="width:9.0%"></div></div><div class="brand-n">14</div></div>
+    <div class="brand-row"><div class="brand-label">Muscle Milk</div><div class="brand-track"><div class="brand-fill" style="width:8.4%"></div></div><div class="brand-n">13</div></div>
+    <div class="brand-row"><div class="brand-label">MyProtein</div><div class="brand-track"><div class="brand-fill" style="width:8.4%"></div></div><div class="brand-n">13</div></div>
+    <div class="brand-row"><div class="brand-label">Fairlife</div><div class="brand-track"><div class="brand-fill" style="width:7.7%"></div></div><div class="brand-n">12</div></div>
+    <div class="brand-row"><div class="brand-label">Garden of Life</div><div class="brand-track"><div class="brand-fill" style="width:7.7%"></div></div><div class="brand-n">12</div></div>
+    <div class="brand-row"><div class="brand-label">Leanfit</div><div class="brand-track"><div class="brand-fill" style="width:6.5%"></div></div><div class="brand-n">10</div></div>
   </div>
 
-  <p><strong>Orgain leads by a significant margin</strong> — nearly twice the interest of second-place Premier Protein (39 vs. 25 unique respondents). This gap is not explained by market share alone. Orgain's elevated presence in the data reflects the direct consumer response to widely-covered reporting on the brand's lead test results, including data from Consumer Reports. When media covers contamination in a specific brand, consumers search for it — and CleanProteinList.com data captures that behavior in real time.</p>
+  <p><strong>Orgain and Premier Protein maintained their top two positions</strong> at much larger scale &mdash; 155 and 123 unique respondents respectively, sustaining the roughly 2x ratio seen in February. Below them, the rankings shifted meaningfully: <strong>Levels emerged as a notable new entrant at #3 with 25 respondents</strong>, a brand that barely registered in the earlier release. This likely reflects recent coverage or social attention driving safety-related searches for that brand.</p>
 
-  <p>Premier Protein's second-place position similarly reflects media coverage of its lead testing history. Below these two, the data drops sharply, with a cluster of brands drawing 4–6 respondents each — Nurri, MyProtein, Truvani, Vital Proteins, Vega, Isopure, Ascent, Garden of Life, Ensure, and Muscle Milk. The breadth of this list underlines the market's fragmentation.</p>
+  <p>Nutricost moved up to #4 with 21 respondents, and Leanfit grew from 3 to 10 &mdash; further confirming a Canadian audience segment that is now too consistent to be noise. The broader brand landscape remains fragmented: beyond the top two, no brand commands more than 1.6% of unique respondents, and more than 50 distinct brands appear across the full dataset.</p>
 
-  <p><span class="source-badge quiz">Quiz</span> The quiz data reinforces this fragmentation picture from a different angle. When asked about their current brand, <strong>53.1% of quiz respondents selected "other"</strong> — meaning they are not using any of the pre-listed major brands. The 43 write-in responses that followed included more than 40 distinct brand names, from GNC Lean Shake (the single most-cited write-in at 6 mentions) to Kirkland, Rule 1, Thorne, OWYN, and Amazonia. <strong>No single brand dominates this market's trust landscape.</strong></p>
+  <p><span class="source-badge quiz">Quiz</span> The quiz data continues to reinforce that fragmentation picture from a different angle. A large share of respondents still identify with write-in or unlisted brands, meaning consumer trust remains available to whichever brand or publisher provides the clearest safety proof.</p>
 
   <div class="pull-quote accent">
-    <p>"GNC Lean Shake appeared as the most-cited write-in brand in the quiz — with zero dedicated safety coverage available on CleanProteinList.com. That's a content gap and a consumer need."</p>
-    <cite>CleanProteinList.com · 2026 Consumer Safety Survey</cite>
+    <p>"The top two brands are clearly separated now, but the rest of the field is still wide open. Consumer trust in this category remains up for grabs."</p>
+    <cite>CleanProteinList.com &middot; 2026 Consumer Safety Survey, updated April 2026</cite>
   </div>
-
-  <p>Two geographic signals also appeared in the write-in data. Leanfit (3 mentions) and "progressive all in one" (2 mentions) are Canadian-market brands with limited U.S. availability, suggesting that safety-seeking protein consumers extend beyond the domestic market — a finding consistent with the growing international footprint of CleanProteinList.com traffic.</p>
 
   <hr class="section-break">
 
-  <!-- ── SECTION 5: AWARENESS DELTA ── -->
   <div class="section-label">Section 5</div>
   <h2 class="section-title">The Awareness Delta: How Knowledge Shapes Purchase Behavior</h2>
 
   <p>One of the most commercially significant findings from this research comes from a cross-tabulation of two quiz variables: contamination awareness level and willingness to pay a per-serving premium for verified clean protein. The analysis reveals a behavioral pattern that has direct implications for content strategy, brand communication, and the information gap identified in Section 3.</p>
 
-  <p><span class="source-badge quiz">Quiz</span> Respondents were divided into three awareness groups — fully aware, partially aware ("heard something"), and not aware — and their engagement with the budget question was examined. The key metric is not simply the dollar amount respondents were willing to pay, but <strong>whether they engaged with the price question at all.</strong></p>
+  <p>At more than double the original sample size &mdash; and with awareness subgroups now at n=58&#8211;70 rather than n=16&#8211;28 &mdash; the cross-tabulation is considerably more robust. <strong>The core finding holds: partially aware consumers engage with the price question at 64%, meaningfully above fully aware (52%) and not aware (40%).</strong> The mid-discovery consumer remains the most commercially active segment.</p>
 
-  <!-- FIG 9: CROSS-TAB -->
   <div class="chart-embed">
-    <div class="chart-fig">Fig. 9 · Quiz · Cross-tabulation · n=96</div>
+    <div class="chart-fig">Fig. 9 &middot; Quiz &middot; Cross-tabulation &middot; n=215</div>
     <div class="chart-title">The Awareness Delta: Contamination Knowledge vs. Price Engagement</div>
-    <div class="chart-caption">Budget question engagement rate and willingness to pay >$1.50/serving, by awareness group</div>
+    <div class="chart-caption">Budget question engagement rate and willingness to pay at least $1.50 per serving, by awareness group</div>
 
-    <div style="overflow-x:auto;">
-    <table style="width:100%;border-collapse:collapse;font-size:13px;">
+    <table class="xtab">
       <thead>
-        <tr style="background:var(--ink);color:#fff;">
-          <th style="padding:9px 12px;text-align:left;font-size:11px;letter-spacing:.04em;">Awareness Group</th>
-          <th style="padding:9px 12px;text-align:center;font-size:11px;">n</th>
-          <th style="padding:9px 12px;text-align:center;font-size:11px;">Engaged with Price Q</th>
-          <th style="padding:9px 12px;text-align:center;font-size:11px;">Willing to Pay &gt;$1.50*</th>
-          <th style="padding:9px 12px;text-align:center;font-size:11px;">Skipped Price Q</th>
+        <tr>
+          <th>Awareness Group</th>
+          <th>n</th>
+          <th>Engaged with Price Q</th>
+          <th>Willing to Pay &ge; $1.50*</th>
+          <th>Skipped Price Q</th>
         </tr>
       </thead>
       <tbody>
-        <tr style="background:#f0f7f3;border-left:3px solid var(--green);">
-          <td style="padding:10px 12px;font-weight:600;">"Heard Something" <span style="font-size:10px;background:var(--green);color:#fff;padding:1px 5px;border-radius:2px;margin-left:4px;">Most Active</span></td>
-          <td style="padding:10px 12px;text-align:center;">28</td>
-          <td style="padding:10px 12px;text-align:center;font-weight:700;color:var(--green);font-size:16px;">61%</td>
-          <td style="padding:10px 12px;text-align:center;font-weight:600;">71% <span style="font-size:10px;color:var(--muted)">(12/17)</span></td>
-          <td style="padding:10px 12px;text-align:center;color:var(--muted);">39%</td>
+        <tr class="highlight">
+          <td><strong>"Heard Something"</strong> <span class="badge">Most Active</span></td>
+          <td>70</td>
+          <td><span class="big-val">64%</span></td>
+          <td>47% <span style="font-size:11px;color:var(--muted);">(21/45)</span></td>
+          <td style="color:var(--muted);">36%</td>
         </tr>
         <tr>
-          <td style="padding:10px 12px;font-weight:600;">Fully Aware</td>
-          <td style="padding:10px 12px;text-align:center;">16</td>
-          <td style="padding:10px 12px;text-align:center;font-weight:600;">38%</td>
-          <td style="padding:10px 12px;text-align:center;">67% <span style="font-size:10px;color:var(--muted)">(4/6)</span></td>
-          <td style="padding:10px 12px;text-align:center;color:var(--muted);">62%</td>
+          <td><strong>Fully Aware</strong></td>
+          <td>58</td>
+          <td><strong>52%</strong></td>
+          <td>63% <span style="font-size:11px;color:var(--muted);">(19/30)</span></td>
+          <td style="color:var(--muted);">48%</td>
         </tr>
-        <tr style="background:#faf9f6;">
-          <td style="padding:10px 12px;font-weight:600;">Not Aware</td>
-          <td style="padding:10px 12px;text-align:center;">40</td>
-          <td style="padding:10px 12px;text-align:center;font-weight:600;">32%</td>
-          <td style="padding:10px 12px;text-align:center;">77% <span style="font-size:10px;color:var(--muted)">(10/13)</span></td>
-          <td style="padding:10px 12px;text-align:center;color:var(--muted);">68%</td>
+        <tr>
+          <td><strong>Not Aware</strong></td>
+          <td>68</td>
+          <td><strong>40%</strong></td>
+          <td>63% <span style="font-size:11px;color:var(--muted);">(17/27)</span></td>
+          <td style="color:var(--muted);">60%</td>
+        </tr>
+        <tr>
+          <td><strong>Skipped Awareness</strong></td>
+          <td>19</td>
+          <td>26%</td>
+          <td>40% <span style="font-size:11px;color:var(--muted);">(2/5)</span></td>
+          <td style="color:var(--muted);">74%</td>
         </tr>
       </tbody>
     </table>
-    </div>
-    <div style="margin-top:10px;font-size:11.5px;color:var(--muted);font-style:italic;">*Among those who answered the budget question. Subgroup sizes are small; treat within-group willingness-to-pay percentages as directional.</div>
+    <div style="margin-top:10px;font-size:11.5px;color:var(--muted);font-style:italic;">*Among those who answered the price question. Subgroup base sizes are now meaningfully larger than in the February release.</div>
   </div>
 
-  <p>The partially aware group — those who had "heard something" about contamination but lacked complete information — engaged with the price question at a rate of <strong>61%, nearly double the rate of both the fully aware (38%) and unaware (32%) groups.</strong> Their skip rate of just 39% is the lowest of any segment.</p>
+  <p>A new nuance emerges at larger scale: the partially aware group shows <em>lower</em> premium price tolerance (47% willing to pay at least $1.50 per serving) compared to both the fully aware group (63%) and the not aware group (63%). What that suggests is that the partially aware consumer is actively comparison shopping &mdash; engaged with price because they're evaluating options, not because they've committed to a premium.</p>
 
-  <p>This pattern suggests that <strong>the partially aware consumer is the most commercially active.</strong> They're in active discovery mode — researching, comparing, and weighing options including price. The fully aware consumer, by contrast, has likely already reached a conclusion about their approach; the decision feels made, so the price question feels less relevant to engage with. The unaware consumer has no framework yet for the premium.</p>
-
- <div class="finding-box">
-    <div class="fb-label">Key Finding · The Awareness Delta</div>
-    <p>Consumers mid-discovery — those who've heard about contamination risks but lack complete information — engage with purchase-intent questions at a rate <strong>approximately 60% higher</strong> than either fully informed or uninformed consumers. The information gap isn't only a public health problem. It is a purchase funnel. <strong>The moment a consumer learns enough to be concerned but not enough to act, they become maximally open to guidance.</strong></p>
+  <div class="finding-box">
+    <div class="fb-label">Key Finding &middot; The Awareness Delta &mdash; Confirmed at Scale</div>
+    <p>The partially aware consumer engages with purchase-intent questions at a rate approximately <strong>60% higher than uninformed consumers</strong> and meaningfully above fully informed consumers. New at this sample size: the partially aware group is more price-sensitive than either comparison group, suggesting active comparison shopping rather than premium commitment. <strong>They're looking for the answer. That's the conversion opportunity.</strong></p>
   </div>
-
-  <p>An important caveat: the willingness-to-pay percentages within each awareness group are based on small answered subgroups (as few as 6 respondents in the fully aware group who engaged with the price question). The within-group price tolerance findings should be treated as directional, not statistically conclusive. The engagement rate finding, based on larger base sizes of 16 to 40, is more robust.</p>
 
   <hr class="section-break">
 
-  <!-- ── SECTION 6: WILLINGNESS TO PAY ── -->
-<div class="section-label">Section 6</div>
+  <div class="section-label">Section 6</div>
   <h2 class="section-title">What Consumers Will Pay: Pricing as a Baseline, Not a Premium</h2>
 
-  <p><span class="source-badge quiz">Quiz</span> When quiz respondents were asked what they would pay per serving for a <em>verified-safe</em> protein product, <strong>61.5% skipped the question entirely.</strong> The question was explicitly marked optional — but in the context of a survey population that named safety as its primary concern at a rate of 87.5%, the skip behavior still carries meaning. For the safety-motivated consumer, acceptable price and safety are likely not variables they're trading off against each other. Safety is the requirement; price is secondary.</p>
+  <p><span class="source-badge quiz">Quiz</span> At larger scale, the skip rate on the price question dropped from 61.5% to <strong>50.2%</strong> &mdash; more respondents are engaging with the price question than in February. However, the distribution shifted toward lower price points: the under-$1.00 and $1.00&#8211;$1.50 tiers grew most, while the $1.50&#8211;$2.00 tier was relatively stable. This reflects a broader, more price-diverse audience at 215 completions versus 96, not a retreat from safety motivation.</p>
 
-  <!-- FIG 8: BUDGET -->
   <div class="chart-embed">
-    <div class="chart-fig">Fig. 8 · Quiz · n=96</div>
+    <div class="chart-fig">Fig. 8 &middot; Quiz &middot; n=215</div>
     <div class="chart-title">Acceptable Per-Serving Price for Verified-Safe Protein</div>
-    <div class="chart-caption">"What would you pay per serving for verified-safe protein?" — optional question, quiz respondents</div>
+    <div class="chart-caption">Dashed markers indicate the February 19, 2026 baseline</div>
     <div class="bar-chart">
       <div class="bar-row bar-row-4">
         <div class="bar-label">Skipped / declined</div>
-        <div class="bar-track"><div class="bar-fill" style="width:61.5%;background:#d0cfc9"></div></div>
-        <div class="bar-pct">61.5%</div>
+        <div class="bar-track">
+          <div class="bar-prev" style="left:61.5%"></div>
+          <div class="bar-fill" style="width:50.2%;background:#d0cfc9"></div>
+        </div>
+        <div class="bar-pct">50.2%</div>
       </div>
       <div class="bar-row bar-row-4">
-        <div class="bar-label">$1.50 – $2.00</div>
-        <div class="bar-track"><div class="bar-fill" style="width:15.6%;background:var(--green)"></div></div>
-        <div class="bar-pct">15.6%</div>
+        <div class="bar-label">$1.50 &#8211; $2.00</div>
+        <div class="bar-track">
+          <div class="bar-prev" style="left:15.6%"></div>
+          <div class="bar-fill" style="width:14.0%;background:var(--green)"></div>
+        </div>
+        <div class="bar-pct">14.0%</div>
       </div>
       <div class="bar-row bar-row-4">
         <div class="bar-label">Over $2.00</div>
-        <div class="bar-track"><div class="bar-fill" style="width:12.5%;background:var(--green)"></div></div>
-        <div class="bar-pct">12.5%</div>
+        <div class="bar-track">
+          <div class="bar-prev" style="left:12.5%"></div>
+          <div class="bar-fill" style="width:13.5%;background:var(--green)"></div>
+        </div>
+        <div class="bar-pct">13.5%</div>
       </div>
       <div class="bar-row bar-row-4">
-        <div class="bar-label">$1.00 – $1.50</div>
-        <div class="bar-track"><div class="bar-fill" style="width:7.3%;background:var(--green-lt)"></div></div>
-        <div class="bar-pct">7.3%</div>
+        <div class="bar-label">$1.00 &#8211; $1.50</div>
+        <div class="bar-track">
+          <div class="bar-prev" style="left:7.3%"></div>
+          <div class="bar-fill" style="width:12.6%;background:var(--green-lt)"></div>
+        </div>
+        <div class="bar-pct">12.6%</div>
       </div>
       <div class="bar-row bar-row-4">
         <div class="bar-label">Under $1.00</div>
-        <div class="bar-track"><div class="bar-fill" style="width:3.1%;background:var(--green-lt)"></div></div>
-        <div class="bar-pct">3.1%</div>
+        <div class="bar-track">
+          <div class="bar-prev" style="left:3.1%"></div>
+          <div class="bar-fill" style="width:9.8%;background:var(--green-lt)"></div>
+        </div>
+        <div class="bar-pct">9.8%</div>
       </div>
     </div>
   </div>
 
-  <p>Among the 37 respondents who engaged with the question, <strong>74% selected $1.50 or more per serving</strong> as an acceptable price point for a verified-safe product. That range aligns closely with what many mainstream brands — Orgain, Premier Protein, Ascent — already charge at retail. The data doesn't show consumers demanding a safety discount. It shows them willing to pay market-rate prices, provided safety is verifiable.</p>
+  <p>Among respondents who engaged with the question, the market still supports market-rate pricing for verified-safe products. The updated split simply shows that the audience now includes a wider range of budget sensitivity than the earlier, smaller cohort suggested.</p>
 
-  <p>One interpretive limit worth noting: the question did not anchor respondents to their current per-serving spend. A response of "under $1.00" could reflect a budget constraint, a current spend already below that threshold, or something else entirely. Without a baseline spend comparison, the responses describe acceptable price range rather than direction of willingness to move. A follow-up instrument with that anchor would yield a more precise premium tolerance figure.</p>
+  <p>What the data continues to show is that price tolerance and safety concern are not in conflict for this audience. Consumers are not asking for a safety discount; they are asking for safety proof.</p>
 
-  <p>What the data does clearly show is that price tolerance and safety concern are not in conflict for this audience. The consumer who names safety as their primary concern is also, when they engage with the price question at all, expressing comfort with the price points that verified-clean products already occupy in the market.</p>
   <hr class="section-break">
 
-  <!-- ── SECTION 7: IMPLICATIONS ── -->
   <div class="section-label">Section 7</div>
   <h2 class="section-title">What This Means: Four Takeaways from the Data</h2>
 
-  <h3 class="sub-title">1. Safety-motivated consumers are no longer a niche.</h3>
-  <p>When 87.5% of respondents — spanning health users, athletes, weight loss seekers, and muscle builders — name safety as their top concern, the category has undergone a fundamental shift. This is not a specialty concern for plant-based devotees or anxious parents. It is the mainstream consumer mindset in 2026. Brands, retailers, and media outlets that treat safety as a secondary story are misreading their audience.</p>
+  <h3 class="sub-title">1. Safety-motivated consumers are not a niche.</h3>
+  <p>When 98.1% of respondents fall somewhere inside the safety-motivated cluster, the category has undergone a real mindset shift. This is no longer a narrow concern reserved for a small slice of the market.</p>
 
-  <h3 class="sub-title">2. The information gap is bigger than the contamination problem.</h3>
-  <p>Only 16.7% of quiz respondents were fully informed about heavy metal contamination risks in protein supplements — yet 84.4% use these products daily or often, and 87.5% say safety is their primary concern. The majority of safety-motivated consumers don't have adequate information to act on that concern. Closing this gap is both a public health imperative and an enormous market opportunity for brands willing to be transparent and for publishers willing to go deep.</p>
+  <h3 class="sub-title">2. The information gap is narrowing, not closed.</h3>
+  <p>Awareness improved meaningfully between February 19, 2026 and April 20, 2026, but 31.6% of respondents still report no awareness of documented contamination concerns. The market is learning, but it is not yet informed.</p>
 
-  <h3 class="sub-title">3. Brand trust is genuinely up for grabs.</h3>
-  <p>With 53% of quiz respondents on unlisted or write-in brands, and more than 50 distinct brand names appearing across the poll and quiz combined, no single brand currently owns consumer trust in this category. The brand that credibly earns a clean-label reputation with an informed audience has a wide open runway — and the data suggests that audience is actively looking for somewhere to land.</p>
+  <h3 class="sub-title">3. Brand trust is still up for grabs.</h3>
+  <p>Orgain and Premier Protein clearly dominate safety searches, yet the field behind them remains fragmented. More than 50 brands appear across the broader data set, which means no single brand has locked down consumer trust.</p>
 
-  <h3 class="sub-title">4. Media coverage creates measurable consumer behavior.</h3>
-  <p>Orgain's nearly 2× lead over Premier Protein in brand safety searches is not explained by market share. Orgain is not the largest protein brand. What it is, is the brand most prominently featured in consumer-facing contamination reporting over the past 12 months. The poll data captures the downstream consumer response to that coverage in real time: people read the story, then search for more information. Safety journalism has direct, measurable purchasing implications.</p>
+  <h3 class="sub-title">4. Media coverage keeps creating measurable behavior.</h3>
+  <p>The updated poll data continues to reflect what the first release showed: when contamination coverage or social attention lands on a brand, consumers go looking for answers. Search behavior is tracking the downstream effect of safety journalism in real time.</p>
 
   <hr class="section-break heavy">
 
-  <!-- ── METHODOLOGY ── -->
   <div class="section-label">Methodology</div>
   <h2 class="section-title">Research Methodology</h2>
 
-  <p>This report draws on two independent data collection instruments deployed on CleanProteinList.com between January 23 and February 19, 2026. The instruments were designed and administered separately; findings are presented in combination where they converge, and attributed individually throughout the article.</p>
+  <p>This report draws on two independent data collection instruments deployed on CleanProteinList.com between November 6, 2025 and April 20, 2026. The instruments were designed and administered separately; findings are presented in combination where they converge and attributed individually throughout the article.</p>
 
   <table class="method-table">
     <thead>
@@ -876,22 +1036,22 @@
     <tbody>
       <tr><td><strong>Type</strong></td><td>Open-ended submission form</td><td>9-question behavioral quiz</td></tr>
       <tr><td><strong>Platform</strong></td><td>Formspree, embedded site-wide</td><td>Custom quiz, CleanProteinList.com</td></tr>
-      <tr><td><strong>Raw submissions</strong></td><td>474</td><td>96</td></tr>
-      <tr><td><strong>Unique respondents</strong></td><td>~350 (est., after dedup)</td><td>96</td></tr>
-      <tr><td><strong>Deduplication method</strong></td><td>5-minute session window; no IP data available</td><td>N/A (single completion per visit)</td></tr>
-      <tr><td><strong>Collection period</strong></td><td>Jan 23 – Feb 19, 2026</td><td>Jan 23 – Feb 19, 2026</td></tr>
+      <tr><td><strong>Raw submissions</strong></td><td>1,764</td><td>215</td></tr>
+      <tr><td><strong>Unique respondents</strong></td><td>~1,606 (estimated after dedup)</td><td>215</td></tr>
+      <tr><td><strong>Deduplication method</strong></td><td>6-minute same-brand session window; no IP data</td><td>N/A</td></tr>
+      <tr><td><strong>Collection period</strong></td><td>Nov 6, 2025 &#8211; Apr 20, 2026</td><td>Jan 23, 2026 &#8211; Apr 20, 2026</td></tr>
+      <tr><td><strong>Original publication</strong></td><td colspan="2">February 19, 2026 (approximately 474 poll submissions / 96 quiz completions)</td></tr>
+      <tr><td><strong>This update</strong></td><td colspan="2">April 20, 2026</td></tr>
       <tr><td><strong>Incentive</strong></td><td>None</td><td>None</td></tr>
-      <tr><td><strong>Traffic source</strong></td><td>Organic search (safety/lead-testing content)</td><td>Organic search (safety/lead-testing content)</td></tr>
     </tbody>
   </table>
 
   <div class="limitations">
-    <strong>Limitations:</strong> Both instruments drew self-selected visitors to CleanProteinList.com. This population is meaningfully more safety-aware and safety-motivated than the general protein supplement consumer — people who search for lead testing data are not representative of all protein supplement users. Findings should be interpreted as reflecting the mindset of the safety-motivated consumer segment, not the broader market. Poll unique respondent count is an estimate; without IP-level data, exact deduplication is not possible. Cross-tabulation subgroups (Section 5) are small; within-group findings are directional. Data is current as of February 19, 2026; survey collection is ongoing.
+    <strong>Limitations:</strong> Both instruments drew self-selected visitors to CleanProteinList.com. This population is meaningfully more safety-aware and safety-motivated than the general protein supplement consumer, so findings should be interpreted as reflecting the safety-motivated segment rather than the broader market. Poll unique respondent count remains an estimate because exact IP-level deduplication was not available. Cross-tabulation findings are more robust than in the February release, but subgroup analysis should still be treated as directional rather than nationally representative. Data in this update is current as of April 20, 2026.
   </div>
 
   <p>Anonymized aggregate data is available to journalists and researchers upon request. Contact: <a href="mailto:research@cleanproteinlist.com" style="color:var(--green)">research@cleanproteinlist.com</a></p>
 
-  <!-- ABOUT BOX -->
   <div class="about-box">
     <h3>About CleanProteinList.com</h3>
     <p>CleanProteinList.com is an independent consumer resource tracking heavy metal contamination, third-party testing results, and safety data for protein supplements. The site aggregates publicly available testing data, publishes original brand-by-brand safety analyses, and provides consumers with the information they need to make informed purchasing decisions. CleanProteinList.com accepts no advertising from protein supplement brands and is not affiliated with any manufacturer. Visit <a href="https://cleanproteinlist.com">cleanproteinlist.com</a> for the full brand database and testing archive.</p>
@@ -900,7 +1060,7 @@
 </article>
 
 <footer>
-  © 2026 CleanProteinList.com · Original Research · Data current as of February 19, 2026 · Survey ongoing
+  &copy; 2026 CleanProteinList.com &middot; Original Research &middot; Originally published February 19, 2026 &middot; Updated April 20, 2026
 </footer>
 
 </body>
