@@ -46,23 +46,45 @@
       "dateModified": "2026-04-21T08:00:00+00:00",
       "publisher": { "@id": "https://cleanproteinlist.com/#organization" }
     },
-    {
-      "@type": "Product",
-      "name": "Optimum Nutrition Gold Standard 100% Whey Protein",
-      "brand": { "@type": "Brand", "name": "Optimum Nutrition" },
-      "description": "The world's #1 bestselling protein powder — verified safe by Consumer Reports with lead below detection limits.",
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "5.0",
-        "reviewCount": "125"
+{
+  "@type": "Product",
+  "name": "Optimum Nutrition Gold Standard 100% Whey Protein",
+  "brand": { "@type": "Brand", "name": "Optimum Nutrition" },
+  "description": "The world's #1 bestselling protein powder — verified safe by Consumer Reports with lead below detection limits.",
+  "image": "https://cleanproteinlist.com/images/optimum-nutrition-gold-standard.jpg",
+  "category": "Health & Beauty > Health Care > Fitness & Nutrition > Vitamins & Supplements",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5.0",
+    "reviewCount": "125"
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "0.75",
+    "priceCurrency": "USD",
+    "availability": "https://schema.org/InStock",
+    "shippingDetails": {
+      "@type": "OfferShippingDetails",
+      "shippingRate": {
+        "@type": "MonetaryAmount",
+        "value": "0",
+        "currency": "USD"
       },
-      "offers": {
-        "@type": "Offer",
-        "price": "0.75",
-        "priceCurrency": "USD",
-        "availability": "https://schema.org/InStock"
+      "shippingDestination": {
+        "@type": "DefinedRegion",
+        "addressCountry": "US"
       }
     },
+    "hasMerchantReturnPolicy": {
+      "@type": "MerchantReturnPolicy",
+      "applicableCountry": "US",
+      "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+      "merchantReturnDays": 30,
+      "returnMethod": "https://schema.org/ReturnByMail",
+      "returnFees": "https://schema.org/FreeReturn"
+    }
+  }
+}
     {
       "@type": "FAQPage",
       "mainEntity": [
