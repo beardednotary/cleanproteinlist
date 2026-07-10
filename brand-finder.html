@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Brand Finder | Clean Protein List</title>
+    <meta name="description" content="Type any protein brand to instantly see its heavy-metal safety rating. If a brand isn't tested yet, we point you to a certified alternative — no dead ends.">
     <link rel="stylesheet" href="style.css">
-    
+
     <style>
         .brand-finder-widget {
             background: #f8f5ef;
@@ -14,293 +15,184 @@
             border-radius: 12px;
             padding: 30px;
             margin: 40px auto;
-            max-width: 700px;
+            max-width: 720px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.08);
         }
-
-        .brand-finder-widget h3 {
-            color: #333;
-            font-size: 26px;
-            margin-top: 0;
-            margin-bottom: 12px;
-        }
-
-        .brand-finder-widget p {
-            color: #555;
-            font-size: 16px;
-            margin-bottom: 25px;
-            line-height: 1.5;
-        }
+        .brand-finder-widget h3 { color: #333; font-size: 26px; margin: 0 0 12px; }
+        .brand-finder-widget p.sub { color: #555; font-size: 16px; margin-bottom: 22px; line-height: 1.5; }
 
         #brandSearch {
-            width: 100%;
-            padding: 16px;
-            font-size: 18px;
-            border: 2px solid #2d6a4f;
-            border-radius: 8px;
-            margin-bottom: 10px;
-            box-sizing: border-box;
+            width: 100%; padding: 16px; font-size: 18px; border: 2px solid #2d6a4f;
+            border-radius: 8px; margin-bottom: 6px; box-sizing: border-box;
         }
+        #brandSearch:focus { outline: none; border-color: #235a41; box-shadow: 0 0 0 3px rgba(45,106,79,0.12); }
 
-        #brandSearch:focus {
-            outline: none;
-            border-color: #235a41;
-            box-shadow: 0 0 0 3px rgba(45, 106, 79, 0.1);
-        }
-
-        #brandResults {
-            margin-top: 15px;
-        }
-
+        #brandResults { margin-top: 15px; }
         .brand-result {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px;
-            background: white;
-            border: 2px solid #e0e0e0;
-            border-radius: 8px;
-            margin-bottom: 10px;
-            text-decoration: none;
-            color: #333;
-            transition: all 0.2s ease;
+            display: flex; justify-content: space-between; align-items: center; gap: 12px;
+            padding: 14px 16px; background: white; border: 2px solid #e0e0e0; border-radius: 8px;
+            margin-bottom: 10px; text-decoration: none; color: #333; transition: all 0.2s ease;
         }
-
-        .brand-result:hover {
-            border-color: #2d6a4f;
-            background: #f5f7ff;
-            transform: translateX(5px);
-            box-shadow: 0 2px 8px rgba(45, 106, 79, 0.2);
-        }
-
-        .brand-result strong {
-            font-size: 17px;
-            color: #333;
-        }
-
-        .brand-type {
-            background: #2d6a4f;
-            color: white;
-            padding: 5px 14px;
-            border-radius: 12px;
-            font-size: 13px;
-            font-weight: 600;
-        }
-
-        .brand-type.rtd {
-            background: #e74c3c;
-        }
-
-        .brand-type.powder {
-            background: #2d6a4f;
-        }
-
-        .brand-type.plant {
-            background: #2ecc71;
-        }
+        .brand-result:hover { border-color: #2d6a4f; background: #f5faf7; transform: translateX(4px); box-shadow: 0 2px 8px rgba(45,106,79,0.15); }
+        .br-left { display: flex; align-items: center; gap: 12px; min-width: 0; }
+        .br-sym { font-size: 20px; }
+        .br-name { font-size: 17px; font-weight: 700; color: #333; }
+        .br-cert { display:block; font-size: 12px; color:#999; font-weight:400; }
+        .br-right { display:flex; align-items:center; gap:10px; white-space:nowrap; }
+        .brand-type { color: white; padding: 5px 12px; border-radius: 12px; font-size: 12px; font-weight: 600; }
+        .brand-type.whey, .brand-type.powder { background: #3b5bdb; }
+        .brand-type.plant { background: #2ecc71; }
+        .brand-type.rtd { background: #e07a2f; }
+        .brand-type.collagen, .brand-type.meal { background: #7b4fce; }
+        .br-go { font-size: 13px; font-weight:700; color:#2d6a4f; }
 
         .no-results {
-            padding: 20px;
-            background: #fff3cd;
-            border-radius: 8px;
-            border: 2px solid #ffc107;
-            text-align: center;
+            padding: 22px; background: #fff8f0; border-radius: 10px; border: 2px solid #e07a2f; text-align: left;
         }
+        .no-results h4 { margin: 0 0 8px; color: #c46a10; }
+        .no-results p { margin: 6px 0; color: #6b4a1a; }
+        .no-results .nr-cta {
+            display:inline-block; margin-top:12px; background:#2d6a4f; color:#fff; padding:11px 18px;
+            border-radius:8px; text-decoration:none; font-weight:700;
+        }
+        .no-results .nr-cta:hover { background:#235a41; }
+        .no-results a.inline { color:#2d6a4f; font-weight:600; }
 
-        .no-results p {
-            margin: 8px 0;
-            color: #856404;
-        }
-
-        .no-results a {
-            color: #2d6a4f;
-            font-weight: 600;
-            text-decoration: underline;
-        }
-
-        .loading-message {
-            background: #e8f5e9;
-            border: 2px solid #2e7d32;
-            border-radius: 8px;
-            padding: 15px;
-            text-align: center;
-        }
-
-        .loading-message p {
-            color: #1b5e20;
-            font-weight: 600;
-            margin: 5px 0;
-        }
-
-        .spinner {
-            border: 3px solid #f3f3f3;
-            border-top: 3px solid #2d6a4f;
-            border-radius: 50%;
-            width: 24px;
-            height: 24px;
-            animation: spin 1s linear infinite;
-            display: inline-block;
-            margin-left: 10px;
-            vertical-align: middle;
-        }
-
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
+        .finder-legend { font-size: 13px; color:#888; margin-top:14px; text-align:center; }
+        .browse-all { text-align:center; margin-top:18px; }
+        .browse-all a { color:#2d6a4f; font-weight:700; text-decoration:none; border-bottom:2px solid #2d6a4f; padding-bottom:1px; }
 
         @media (max-width: 768px) {
-            .brand-finder-widget {
-                padding: 20px;
-                margin: 20px;
-            }
-
-            .brand-finder-widget h3 {
-                font-size: 22px;
-            }
-
-            #brandSearch {
-                font-size: 16px;
-                padding: 14px;
-            }
+            .brand-finder-widget { padding: 20px; margin: 20px; }
+            .brand-finder-widget h3 { font-size: 22px; }
+            #brandSearch { font-size: 16px; padding: 14px; }
+            .br-right { flex-direction: column; align-items: flex-end; gap: 4px; }
         }
     </style>
-<script type="application/ld+json"> { "@context": "https://schema.org", "@graph": [ { "@type": "Organization", "@id": "https://cleanproteinlist.com/#organization", "name": "Clean Protein List", "url": "https://cleanproteinlist.com" , "logo": { "@type": "ImageObject", "url": "https://cleanproteinlist.com/images/logo.png" }, "description": "Independent supplement safety database analyzing protein powders for heavy metal contamination.", "founder": { "@type": "Person", "name": "Ray Rothwell" }, "knowsAbout": ["Protein Powder Safety", "Heavy Metal Testing", "Lead Contamination", "Supplement Analysis"] }, { "@type": "WebSite", "@id": "https://cleanproteinlist.com/#website", "url": "https://cleanproteinlist.com", "name": "Clean Protein List", "publisher": { "@id": "https://cleanproteinlist.com/#organization" } } ] } </script>
-<script type="application/ld+json"> { "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [ { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://cleanproteinlist.com/" }, { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://cleanproteinlist.com/blog/" } ] } </script>
+
+    <script type="application/ld+json"> { "@context": "https://schema.org", "@graph": [ { "@type": "Organization", "@id": "https://cleanproteinlist.com/#organization", "name": "Clean Protein List", "url": "https://cleanproteinlist.com", "logo": { "@type": "ImageObject", "url": "https://cleanproteinlist.com/images/logo.png" }, "description": "Independent supplement safety database analyzing protein powders for heavy metal contamination.", "founder": { "@type": "Person", "name": "Ray Rothwell" }, "knowsAbout": ["Protein Powder Safety", "Heavy Metal Testing", "Lead Contamination", "Supplement Analysis"] }, { "@type": "WebSite", "@id": "https://cleanproteinlist.com/#website", "url": "https://cleanproteinlist.com", "name": "Clean Protein List", "publisher": { "@id": "https://cleanproteinlist.com/#organization" } } ] } </script>
+    <script type="application/ld+json"> { "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [ { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://cleanproteinlist.com/" }, { "@type": "ListItem", "position": 2, "name": "Brand Finder", "item": "https://cleanproteinlist.com/brand-finder.html" } ] } </script>
 </head>
 <body>
     <header>
         <div class="container">
             <a href="index.html" class="logo">Clean Protein List</a>
-            <nav>
+            <button class="hamburger" id="hamburger-btn" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+            <nav id="mobile-nav">
                 <a href="index.html">Home</a>
                 <a href="blog.html">Articles</a>
+                <a href="brand-database.html">Brand Database</a>
                 <a href="tools.html">Tools</a>
-                <a href="quiz.html">Quiz</a>
+                <a href="quiz.html" class="quiz-highlight">Take Quiz</a>
                 <a href="about.html">About</a>
             </nav>
         </div>
     </header>
+    <div class="menu-overlay" id="menu-overlay"></div>
 
     <main>
         <div class="brand-finder-widget">
             <h3>Is YOUR Protein Safe?</h3>
-            <p>Enter your brand below - we'll show you the safety data in 5 seconds:</p>
-            
-            <input 
-                type="text" 
-                id="brandSearch" 
-                placeholder="Start typing your brand (e.g., Premier Protein, Orgain, Vega...)"
-                autocomplete="off"
-            />
-            
+            <p class="sub">Start typing your brand — we'll show its safety rating instantly. Don't see it? We'll point you to a certified alternative.</p>
+
+            <input type="text" id="brandSearch"
+                   placeholder="Start typing (e.g. Designer Whey, Tera's, Orgain, Nutricost…)"
+                   autocomplete="off" aria-label="Search a protein brand" />
+
             <div id="brandResults"></div>
+
+            <p class="finder-legend">✅ Safe &nbsp; ⚠️ Caution &nbsp; ❌ Avoid &nbsp; ❓ Not yet tested</p>
+            <p class="browse-all"><a href="brand-database.html">Browse the full brand database →</a></p>
         </div>
     </main>
 
     <footer>
         <div class="container">
             <p>&copy; 2026 Clean Protein List. Independent supplement safety database.</p>
+            <p><a href="index.html">Home</a> | <a href="blog.html">Articles</a> | <a href="brand-database.html">Brand Database</a> | <a href="about.html">About</a></p>
         </div>
     </footer>
 
+    <!-- Single source of truth: same dataset as brand-database.html -->
+    <script src="includes/brands-data.js"></script>
     <script>
-        // BRAND DATABASE - Update this as you add more articles
-        const brands = [
-            // RTD Brands
-            { name: "Premier Protein", url: "/blog/premier-protein-lead-testing.html", type: "RTD", keywords: ["premier"] },
-            { name: "Muscle Milk", url: "/blog/muscle-milk-lead-testing-safety-analysis-2025.html", type: "RTD", keywords: ["muscle milk", "musclemilk"] },
-            { name: "Fairlife Core Power", url: "/blog/fairlife-protein-shakes-safety-lead-testing-2025.html", type: "RTD", keywords: ["fairlife", "core power"] },
-            { name: "Ensure", url: "/blog/ensure-protein-shakes-safety-lead-testing-2025.html", type: "RTD", keywords: ["ensure"] },
-            { name: "Boost", url: "/blog/boost-protein-shakes-safety-lead-testing-2025.html", type: "RTD", keywords: ["boost"] },
-            
-            // Plant Proteins
-            { name: "Orgain Organic", url: "/blog/orgain-organic-protein-powder-lead-levels-consumer-reports-2025.html", type: "Plant", keywords: ["orgain"] },
-            { name: "Vega Sport", url: "/blog/vega-vs-orgain-protein-powder-lead-testing-2025.html", type: "Plant", keywords: ["vega"] },
-            { name: "Garden of Life", url: "/blog/garden-of-life-lawsuit-lead-contamination-class-action-2025.html", type: "Plant", keywords: ["garden of life", "garden"] },
-            { name: "Naked Nutrition", url: "/blog/naked-nutrition-vegan-mass-gainer-lead.html", type: "Plant", keywords: ["naked"] },
-            { name: "Huel Black Edition", url: "/blog/huel-black-edition-lead-content.html", type: "Plant", keywords: ["huel"] },
-            { name: "OWYN Pro Elite", url: "/blog/owyn-pro-elite-protein-powder-safety-only-safe-plant-protein-2025.html", type: "Plant", keywords: ["owyn"] },
-            
-            // Whey Proteins
-            { name: "ON Gold Standard", url: "/blog/optimum-nutrition-gold-standard-whey-lead-testing-results-2025.html", type: "Powder", keywords: ["optimum nutrition", "gold standard", "on", "optimum"] },
-            { name: "Body Fortress", url: "/blog/body-fortress-protein-powder-lead-testing-budget-clean-2025.html", type: "Powder", keywords: ["body fortress"] },
-            { name: "MuscleTech Mass Gainer", url: "/blog/muscletech-mass-gainer-safety.html", type: "Powder", keywords: ["muscletech", "muscle tech"] },
-            { name: "Dymatize ISO 100", url: "/blog/dymatize-iso-100-safety-analysis.html", type: "Powder", keywords: ["dymatize", "iso 100", "iso100"] },
-            { name: "BSN Syntha-6", url: "/blog/bsn-syntha-6-safety-analysis.html", type: "Powder", keywords: ["bsn", "syntha"] },
-            { name: "Momentous Whey", url: "/blog/momentous-protein-safety-analysis.html", type: "Powder", keywords: ["momentous"] },
-            { name: "RYSE Loaded Protein", url: "/blog/ryse-protein-powder-lead-testing-2025.html", type: "Powder", keywords: ["ryse"] },
-            { name: "Ghost Protein", url: "/blog/ghost-protein-powder-lead-testing-2025.html", type: "Powder", keywords: ["ghost"] },
-            { name: "Isopure Zero Carb", url: "/blog/isopure-protein-powder-lead-testing-safety-2025.html", type: "Powder", keywords: ["isopure"] },
-            { name: "Ascent Native Fuel", url: "/blog/ascent-protein-powder-lead-testing-safety-2025.html", type: "Powder", keywords: ["ascent"] },
-            { name: "Six Star Pro Nutrition", url: "/blog/six-star-protein-powder-lead-testing-safety-2025.html", type: "Powder", keywords: ["six star"] },
-            { name: "Transparent Labs", url: "/blog/lead-in-protein-powder-list.html", type: "Powder", keywords: ["transparent labs", "transparent"] }
-        ];
-
+        const brands = window.CPL_BRANDS;
+        const META   = window.CPL_BRANDS_META;
         const searchInput = document.getElementById('brandSearch');
-        const resultsDiv = document.getElementById('brandResults');
+        const resultsDiv  = document.getElementById('brandResults');
 
-        // Google Sheets tracking function
+        // --- Google Sheets tracking (kept from your original finder) ---
         function trackBrandSearch(brandName, found) {
-            // Replace with your Google Apps Script Web App URL
             const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwmlt138JCdtK2FpxuNHb0OlOOrayLF3WfEv0StA8btfZV02Xz6uDip73uBdqeBfXsq/exec';
-            
             fetch(GOOGLE_SCRIPT_URL, {
-                method: 'POST',
-                mode: 'no-cors',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
+                method: 'POST', mode: 'no-cors',
+                headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
                     timestamp: new Date().toISOString(),
-                    brand: brandName,
-                    found: found,
-                    page: window.location.pathname,
-                    type: 'brand_finder'
+                    brand: brandName, found: found,
+                    page: window.location.pathname, type: 'brand_finder'
                 })
             }).catch(err => console.log('Tracking error:', err));
         }
+        function trackClick(brandName) { trackBrandSearch(brandName, true); }
 
-        // Search functionality
-        searchInput.addEventListener('input', function() {
-            const query = this.value.trim().toLowerCase();
-            
-            if (query.length < 2) {
-                resultsDiv.innerHTML = '';
-                return;
-            }
-            
-            // Find matches
-            const matches = brands.filter(brand => 
-                brand.name.toLowerCase().includes(query) ||
-                brand.keywords.some(keyword => keyword.includes(query))
+        function resultHref(b) {
+            // Has a page → go straight to the analysis. Untested → land on the
+            // full database row (with its alternative) via deep-link.
+            return b.url ? b.url : ('brand-database.html?q=' + encodeURIComponent(b.name));
+        }
+        function resultCert(b) {
+            if (b.cert) return b.cert;
+            if (!b.url && b.alt) return 'Not yet tested — try ' + b.alt.name;
+            return '';
+        }
+
+        searchInput.addEventListener('input', function () {
+            const raw = this.value.trim();
+            const query = raw.toLowerCase();
+            if (query.length < 2) { resultsDiv.innerHTML = ''; return; }
+
+            const matches = brands.filter(b =>
+                b.name.toLowerCase().includes(query) ||
+                b.type.toLowerCase().includes(query) ||
+                (b.kw && b.kw.toLowerCase().includes(query))
             );
-            
+
             if (matches.length === 0) {
-                // Track unsuccessful search
-                trackBrandSearch(this.value, false);
-                
+                trackBrandSearch(raw, false);
                 resultsDiv.innerHTML = `
                     <div class="no-results">
-                        <p><strong>❌ We haven't analyzed "${this.value}" yet.</strong></p>
-                        <p>Take our <a href="/quiz.html">quick quiz</a> to find verified-safe alternatives, or see our <a href="/blog/lead-free-protein-brands-ranked-2025.html">complete database</a>.</p>
-                    </div>
-                `;
+                        <h4>We don't have data on "${raw}" yet</h4>
+                        <p>That doesn't mean it's unsafe — just that it hasn't been independently lead-tested in the rounds we track. The safe move: choose a third-party <strong>certified</strong> option in the same category.</p>
+                        <p>
+                          <a class="inline" href="${META.altWhey.url}">Safe whey → ${META.altWhey.name}</a> &nbsp;·&nbsp;
+                          <a class="inline" href="${META.altPlant.url}">Safe plant → ${META.altPlant.name}</a>
+                        </p>
+                        <a class="nr-cta" href="brand-database.html?q=${encodeURIComponent(raw)}">See this in the full database →</a>
+                    </div>`;
             } else {
-                resultsDiv.innerHTML = matches.map(brand => `
-                    <a href="${brand.url}" class="brand-result" onclick="trackClick('${brand.name}')">
-                        <strong>${brand.name}</strong>
-                        <span class="brand-type ${brand.type.toLowerCase()}">${brand.type}</span>
-                    </a>
-                `).join('');
+                resultsDiv.innerHTML = matches.map(b => {
+                    const rm = META.ratings[b.rating];
+                    const cert = resultCert(b);
+                    return `<a href="${resultHref(b)}" class="brand-result" onclick="trackClick('${b.name.replace(/'/g,"\\'")}')">
+                        <span class="br-left">
+                            <span class="br-sym" title="${rm.label}">${rm.sym}</span>
+                            <span>
+                                <span class="br-name">${b.name}</span>
+                                ${cert ? `<span class="br-cert">${cert}</span>` : ''}
+                            </span>
+                        </span>
+                        <span class="br-right">
+                            <span class="brand-type ${b.type.toLowerCase()}">${b.type}</span>
+                            <span class="br-go">View →</span>
+                        </span>
+                    </a>`;
+                }).join('');
             }
         });
-
-        // Track clicks
-        function trackClick(brandName) {
-            trackBrandSearch(brandName, true);
-        }
     </script>
+    <script src="includes/mobile-menu.js"></script>
 </body>
 </html>
-

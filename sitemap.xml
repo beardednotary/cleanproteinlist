@@ -2,10 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url><loc>https://cleanproteinlist.com/</loc><lastmod>2026-07-09</lastmod><priority>1.0</priority></url>
     <url><loc>https://cleanproteinlist.com/index.html</loc><lastmod>2026-07-09</lastmod><priority>1.0</priority></url>
-    <url><loc>https://cleanproteinlist.com/blog.html</loc><lastmod>2026-07-09</lastmod><priority>0.95</priority></url>
+    <url><loc>https://cleanproteinlist.com/blog.html</loc><lastmod>2026-07-10</lastmod><priority>0.95</priority></url>
     <url><loc>https://cleanproteinlist.com/tools.html</loc><lastmod>2026-02-04</lastmod><priority>0.95</priority></url>
     <url><loc>https://cleanproteinlist.com/quiz.html</loc><lastmod>2026-02-04</lastmod><priority>0.95</priority></url>
-    <url><loc>https://cleanproteinlist.com/brand-finder.html</loc><lastmod>2026-02-04</lastmod><priority>0.95</priority></url>
+    <url><loc>https://cleanproteinlist.com/brand-finder.html</loc><lastmod>2026-07-10</lastmod><priority>0.95</priority></url>
+    <url><loc>https://cleanproteinlist.com/brand-database.html</loc><lastmod>2026-07-10</lastmod><priority>0.95</priority></url>
     <url><loc>https://cleanproteinlist.com/stats.html</loc><lastmod>2026-02-04</lastmod><priority>0.90</priority></url>
 
     <url><loc>https://cleanproteinlist.com/research/protein-safety-consumer-survey-2026.html</loc><lastmod>2026-04-21</lastmod><priority>0.95</priority></url>
@@ -66,6 +67,7 @@
     <url><loc>https://cleanproteinlist.com/blog/jocko-protein-lawsuit-lead-contamination-2026.html</loc><lastmod>2026-02-13</lastmod><priority>0.75</priority></url>
     <url><loc>https://cleanproteinlist.com/blog/protein-powder-recalls-2025.html</loc><lastmod>2026-07-09</lastmod><priority>0.75</priority></url>
     <url><loc>https://cleanproteinlist.com/blog/costco-orgain-protein-powder-lawsuit-heavy-metals-2026.html</loc><lastmod>2026-07-08</lastmod><priority>0.80</priority></url>
+    <url><loc>https://cleanproteinlist.com/blog/quest-protein-shake-lawsuit-lead-prop65-2026.html</loc><lastmod>2026-07-10</lastmod><priority>0.90</priority></url>
 
     <url><loc>https://cleanproteinlist.com/blog/thorne-creatine-vs-bulksupplements-comparison.html</loc><lastmod>2026-02-16</lastmod><priority>0.85</priority></url>
     <url><loc>https://cleanproteinlist.com/blog/creapure-vs-regular-creatine-comparison.html</loc><lastmod>2026-07-08</lastmod><priority>0.85</priority></url>

@@ -282,6 +282,12 @@
                         <a href="blog/costco-orgain-protein-powder-lawsuit-heavy-metals-2026.html" class="read-more">Read Analysis →</a>
                     </div>
 
+                    <div class="blog-card card-alert">
+    <h3><a href="blog/quest-protein-shake-lawsuit-lead-prop65-2026.html">Quest Shake Lawsuit (2026)</a></h3>
+    <p>California Prop 65 class action alleges Quest's RTD shakes exceed the lead warning limit — vanilla milkshake at ~580% — with no warning label. RTD products only; powder &amp; bars not named.</p>
+    <a href="blog/quest-protein-shake-lawsuit-lead-prop65-2026.html" class="read-more">Read Analysis →</a>
+</div>
+
                     <!-- Jocko Fuel -->
                     <div class="blog-card card-alert">
                         <h3><a href="blog/jocko-protein-lawsuit-lead-contamination-2026.html">Jocko Fuel Lawsuit (2026)</a></h3>
@@ -349,66 +355,33 @@
         </div>
     </footer>
 
+    <script src="includes/brands-data.js"></script>
     <script>
-const brands = [
-    // 2026 NEWEST UPDATES
-    { name: "Clean Simple Eats", url: "/blog/consumer-reports-new-protein-powder-tests-january-2026.html", type: "Whey", keywords: ["cse", "clean simple", "simple eats"] },
-    { name: "Ritual (Essential Protein)", url: "/blog/consumer-reports-new-protein-powder-tests-january-2026.html", type: "Plant", keywords: ["ritual", "daily shake"] },
-    { name: "Truvani (Chocolate)", url: "/blog/consumer-reports-new-protein-powder-tests-january-2026.html", type: "Plant", keywords: ["truvani", "vani"] },
-    { name: "Equate (Walmart)", url: "/blog/consumer-reports-new-protein-powder-tests-january-2026.html", type: "Whey", keywords: ["equate", "walmart"] },
-
-    // EMERGING & LIFESTYLE BRANDS (UNTESTED)
-    { name: "Ghost Protein", url: "/blog/ghost-protein-powder-lead-testing-2025.html", type: "Whey", keywords: ["ghost", "lifestyle", "chips ahoy", "oreo"] },
-    { name: "RYSE Loaded Protein", url: "/blog/ryse-protein-powder-lead-testing-2025.html", type: "Whey", keywords: ["ryse", "skippy", "jet puffed"] },
-    { name: "Isopure Zero Carb", url: "/blog/isopure-protein-powder-lead-testing-safety-2025.html", type: "Whey", keywords: ["isopure", "zero carb", "isolate"] },
-    { name: "Ascent Native Fuel", url: "/blog/ascent-protein-powder-lead-testing-safety-2025.html", type: "Whey", keywords: ["ascent", "native fuel"] },
-
-    // RTD / LIQUID SHAKES
-    { name: "Premier Protein RTD", url: "/blog/premier-protein-lead-testing.html", type: "RTD", keywords: ["premier", "costco shake"] },
-    { name: "Fairlife Core Power", url: "/blog/fairlife-protein-shakes-safety-lead-testing-2025.html", type: "RTD", keywords: ["fairlife", "core power", "elite"] },
-    { name: "Muscle Milk RTD", url: "/blog/muscle-milk-lead-testing-safety-analysis-2025.html", type: "RTD", keywords: ["muscle milk", "musclemilk"] },
-    { name: "Ensure", url: "/blog/ensure-protein-shakes-safety-lead-testing-2025.html", type: "RTD", keywords: ["ensure", "medical"] },
-    { name: "Boost", url: "/blog/boost-protein-shakes-safety-lead-testing-2025.html", type: "RTD", keywords: ["boost", "nestle"] },
-    { name: "Nurri Ultra-Filtered Shake", url: "/blog/nurri-protein-shake-lead-testing-safety-2026.html", type: "RTD", keywords: ["nurri", "viral", "milkshake"] },
-
-    // TOP-RANKED WHEY
-    { name: "MuscleTech (Safest)", url: "/blog/muscletech-mass-gainer-safety.html", type: "Whey", keywords: ["muscletech", "muscle tech", "mass gainer"] },
-    { name: "Optimum Nutrition (ON)", url: "/blog/optimum-nutrition-gold-standard-whey-lead-testing-results-2025.html", type: "Whey", keywords: ["on", "gold standard", "optimum"] },
-    { name: "Dymatize ISO 100", url: "/blog/dymatize-iso-100-safety-analysis.html", type: "Whey", keywords: ["dymatize", "iso100", "isolate"] },
-    { name: "Body Fortress", url: "/blog/body-fortress-protein-powder-lead-testing-budget-clean-2025.html", type: "Whey", keywords: ["body fortress", "budget", "walmart"] },
-    { name: "BSN Syntha-6", url: "/blog/bsn-syntha-6-safety-analysis.html", type: "Whey", keywords: ["bsn", "syntha", "taste"] },
-
-    // PLANT-BASED
-    { name: "OWYN Pro Elite", url: "/blog/owyn-pro-elite-protein-powder-safety-only-safe-plant-protein-2025.html", type: "Plant", keywords: ["owyn", "vegan"] },
-    { name: "Orgain Organic", url: "/blog/orgain-organic-protein-powder-lead-levels-consumer-reports-2025.html", type: "Plant", keywords: ["orgain"] },
-    { name: "Vega Sport", url: "/blog/vega-vs-orgain-protein-powder-lead-testing-2025.html", type: "Plant", keywords: ["vega"] },
-    { name: "Garden of Life", url: "/blog/garden-of-life-lawsuit-lead-contamination-class-action-2025.html", type: "Plant", keywords: ["garden", "life", "gol"] },
-    { name: "Jocko Fuel (Mölk)", url: "/blog/jocko-protein-lawsuit-lead-contamination-2026.html", type: "Whey", keywords: ["jocko", "molk", "mölk", "clean fuel"] },
-    { name: "Naked Nutrition", url: "/blog/naked-nutrition-vegan-mass-gainer-lead.html", type: "Plant", keywords: ["naked", "pea protein"] },
-    { name: "Huel Black Edition", url: "/blog/huel-black-edition-lead-content.html", type: "Plant", keywords: ["huel", "meal replacement"] }
-];
-
         const searchInput = document.getElementById('brandSearch');
         const resultsDiv = document.getElementById('brandResults');
 
         searchInput.addEventListener('input', function() {
-            const query = this.value.trim().toLowerCase();
+            const raw = this.value.trim();
+            const query = raw.toLowerCase();
             if (query.length < 2) { resultsDiv.innerHTML = ''; return; }
-            
-            const matches = brands.filter(brand => 
-                brand.name.toLowerCase().includes(query) || 
-                brand.keywords.some(k => k.includes(query))
+
+            const matches = window.CPL_BRANDS.filter(brand =>
+                brand.name.toLowerCase().includes(query) ||
+                (brand.kw && brand.kw.toLowerCase().includes(query))
             );
-            
+
             if (matches.length === 0) {
-                resultsDiv.innerHTML = '<p style="font-size:12px; color:#999; margin-top:10px;">Brand not in database yet. <a href="quiz.html">Check alternatives.</a></p>';
+                resultsDiv.innerHTML = `<p style="font-size:12px; color:#999; margin-top:10px;">Brand not in database yet. <a href="brand-database.html?q=${encodeURIComponent(raw)}">Search the full database →</a></p>`;
             } else {
-                resultsDiv.innerHTML = matches.map(brand => `
-                    <a href="${brand.url}" class="brand-result">
+                resultsDiv.innerHTML = matches.map(brand => {
+                    const link = brand.url || (brand.alt && brand.alt.url) || ('brand-database.html?q=' + encodeURIComponent(brand.name));
+                    return `
+                    <a href="${link}" class="brand-result">
                         <strong>${brand.name}</strong>
                         <span class="brand-type">${brand.type}</span>
                     </a>
-                `).join('');
+                `;
+                }).join('');
             }
         });
     </script>

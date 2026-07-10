@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href="https://cleanproteinlist.com/brand-database.html" />
+    <title>Protein Brand Safety Database — Search Any Brand | Clean Protein List</title>
+    <meta name="description" content="Search any protein powder or shake brand for its heavy-metal safety rating. Clear symbols, lead-level bands, price tiers, and links to full analysis. If a brand isn't tested yet, we point you to a certified alternative.">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .db-wrap { max-width: 1080px; margin: 0 auto; padding: 40px 20px 80px; }
+        .db-lede { font-size: 17px; color: #555; max-width: 760px; margin: 4px 0 8px; }
+        .db-fresh { font-size: 13px; color: #888; margin: 0 0 28px; }
+
+        /* Search */
+        .db-search-shell { position: relative; margin: 0 0 18px; }
+        #dbSearch {
+            width: 100%; padding: 16px 18px 16px 46px; font-size: 17px;
+            border: 2px solid #2d6a4f; border-radius: 10px; font-family: inherit;
+            background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%232d6a4f' stroke-width='2'%3E%3Ccircle cx='11' cy='11' r='7'/%3E%3Cline x1='21' y1='21' x2='16.65' y2='16.65'/%3E%3C/svg%3E") no-repeat 14px center;
+        }
+        #dbSearch:focus { outline: none; border-color: #52b788; box-shadow: 0 0 0 3px rgba(82,183,136,0.2); }
+
+        /* Filters */
+        .db-filters { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 10px; align-items: center; }
+        .db-filters .flabel { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: #888; margin-right: 4px; }
+        .db-pill {
+            background: #f0f7f3; border: 1px solid #dfeae4; color: #1a1a18; padding: 7px 14px;
+            border-radius: 20px; font-size: 13px; font-weight: 600; cursor: pointer; transition: all .15s;
+        }
+        .db-pill:hover { background: #e2efe8; }
+        .db-pill.active { background: #2d6a4f; color: #fff; border-color: #2d6a4f; }
+
+        .db-count { font-size: 13px; color: #888; margin: 6px 0 14px; }
+
+        /* Legend */
+        .db-legend { display: flex; flex-wrap: wrap; gap: 16px; background: #f8f9fa; border: 1px solid #eee; border-radius: 10px; padding: 12px 16px; margin-bottom: 20px; font-size: 13px; color: #555; }
+        .db-legend span { white-space: nowrap; }
+
+        /* Table */
+        .db-table-scroll { overflow-x: auto; }
+        table.db { width: 100%; border-collapse: collapse; font-size: 15px; min-width: 720px; }
+        table.db thead th { background: #1a1a18; color: #fff; text-align: left; padding: 12px 14px; font-size: 12px; letter-spacing: 0.04em; text-transform: uppercase; font-weight: 600; cursor: pointer; user-select: none; white-space: nowrap; }
+        table.db thead th .arrow { opacity: 0.5; font-size: 10px; }
+        table.db tbody td { padding: 12px 14px; border-bottom: 1px solid #eee; vertical-align: middle; }
+        table.db tbody tr:hover td { background: #f0f7f3; }
+        .rating-cell { font-size: 18px; white-space: nowrap; }
+        .brand-name { font-weight: 700; color: #1a1a18; }
+        .brand-kw { display:block; font-size: 12px; color:#aaa; font-weight:400; }
+        .type-tag { font-size: 11px; padding: 2px 8px; border-radius: 10px; background: #eef2ff; color: #3b5bdb; font-weight: 600; white-space: nowrap; }
+        .type-tag.plant { background:#e9f7ef; color:#1f8a4c; }
+        .type-tag.rtd { background:#fff3e0; color:#c46a10; }
+        .type-tag.collagen, .type-tag.meal { background:#f3eefe; color:#7b4fce; }
+        .lead-band { font-weight:600; }
+        .lb-nd { color:#1f8a4c; } .lb-low { color:#4a9e5f; } .lb-mod { color:#c46a10; }
+        .lb-high { color:#c0392b; } .lb-vhigh { color:#8e1c1c; } .lb-none { color:#999; font-weight:500; }
+        .price-tier { font-weight:700; color:#2d6a4f; }
+        .price-tier .muted { color:#ccc; }
+        .db-link { font-weight:600; color:#2d6a4f; text-decoration:none; font-size:14px; white-space:nowrap; }
+        .db-link:hover { text-decoration:underline; }
+        .db-link.alt { color:#c46a10; }
+
+        /* No-result helper (the anti-dead-end) */
+        .db-noresult { background:#fff8f0; border:2px solid #e07a2f; border-radius:12px; padding:24px 28px; margin:20px 0; }
+        .db-noresult h3 { margin:0 0 8px; color:#c46a10; }
+        .db-noresult .alts { display:flex; gap:12px; flex-wrap:wrap; margin-top:14px; }
+        .db-noresult .alts a { background:#2d6a4f; color:#fff; padding:10px 16px; border-radius:8px; text-decoration:none; font-weight:600; font-size:14px; }
+        .db-noresult .alts a:hover { background:#235a41; }
+
+        .db-note { font-size:13px; color:#888; margin-top:22px; line-height:1.6; }
+        @media (max-width: 640px){ .db-lede{font-size:15px} }
+    </style>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "Protein Brand Safety Database",
+      "url": "https://cleanproteinlist.com/brand-database.html",
+      "about": "Heavy-metal safety ratings for protein powder and shake brands",
+      "dateModified": "2026-07-09",
+      "isPartOf": { "@type": "WebSite", "url": "https://cleanproteinlist.com" }
+    }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo">Clean Protein List</a>
+            <button class="hamburger" id="hamburger-btn" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+            <nav id="mobile-nav">
+                <a href="index.html">Home</a>
+                <a href="blog.html">Articles</a>
+                <a href="brand-database.html">Brand Database</a>
+                <a href="tools.html">Tools</a>
+                <a href="quiz.html" class="quiz-highlight">Take Quiz</a>
+                <a href="about.html">About</a>
+            </nav>
+        </div>
+    </header>
+    <div class="menu-overlay" id="menu-overlay"></div>
+
+    <main class="db-wrap">
+        <h1>Protein Brand Safety Database</h1>
+        <p class="db-lede">Type any protein brand to see its heavy-metal safety rating, lead-level band, and price tier. If we haven't tested a brand yet, we'll point you to a certified option in the same category — no dead ends.</p>
+        <p class="db-fresh">Last updated July 9, 2026 · Ratings based on Consumer Reports (Oct 2025 &amp; Jan 2026) and Clean Label Project data.</p>
+
+        <div class="db-search-shell">
+            <input type="text" id="dbSearch" placeholder="Search a brand — e.g. Designer Whey, Tera's, Orgain, Nutricost…" autocomplete="off" aria-label="Search brands">
+        </div>
+
+        <div class="db-filters">
+            <span class="flabel">Type</span>
+            <button class="db-pill active" data-filter="type" data-val="all">All</button>
+            <button class="db-pill" data-filter="type" data-val="Whey">Whey</button>
+            <button class="db-pill" data-filter="type" data-val="Plant">Plant</button>
+            <button class="db-pill" data-filter="type" data-val="RTD">RTD Shakes</button>
+        </div>
+        <div class="db-filters">
+            <span class="flabel">Rating</span>
+            <button class="db-pill active" data-filter="rating" data-val="all">All</button>
+            <button class="db-pill" data-filter="rating" data-val="safe">✅ Safe</button>
+            <button class="db-pill" data-filter="rating" data-val="caution">⚠️ Caution</button>
+            <button class="db-pill" data-filter="rating" data-val="avoid">❌ Avoid</button>
+            <button class="db-pill" data-filter="rating" data-val="untested">❓ Not yet tested</button>
+        </div>
+
+        <div class="db-legend">
+            <span>✅ <strong>Safe</strong> — low/non-detectable lead, OK for daily use</span>
+            <span>⚠️ <strong>Caution</strong> — moderate; limit frequency</span>
+            <span>❌ <strong>Avoid</strong> — high lead and/or active lawsuit</span>
+            <span>❓ <strong>Not yet tested</strong> — no independent data; see alternative</span>
+            <span>💲 <strong>$</strong> &lt;$1 · <strong>$$</strong> $1–2 · <strong>$$$</strong> $2+ /serving (approx.)</span>
+        </div>
+
+        <p class="db-count" id="dbCount"></p>
+
+        <div id="dbNoResult"></div>
+
+        <div class="db-table-scroll">
+        <table class="db">
+            <thead>
+                <tr>
+                    <th data-sort="rating">Rating <span class="arrow">▲▼</span></th>
+                    <th data-sort="name">Brand <span class="arrow">▲▼</span></th>
+                    <th data-sort="type">Type <span class="arrow">▲▼</span></th>
+                    <th data-sort="leadrank">Lead level <span class="arrow">▲▼</span></th>
+                    <th data-sort="pricerank">Price <span class="arrow">▲▼</span></th>
+                    <th>More info</th>
+                </tr>
+            </thead>
+            <tbody id="dbBody"></tbody>
+        </table>
+        </div>
+
+        <p class="db-note">
+            <strong>How to read this:</strong> Ratings use qualitative lead-level bands (from Consumer Reports and Clean Label Project) rather than a single lab number, because contamination varies by flavor and batch. Prices are approximate per-serving figures and change constantly on Amazon — use them as a rough affordability guide, not a quote.
+            <br><br>
+            <strong>Don't see your brand?</strong> Search still gives you a safe direction. To have a brand added, submit it through the <a href="quiz.html">safety quiz</a>.
+            <br><br>
+            <em>Editor's note: this is a seeded starter set. It's structured so the full 134-brand dataset can be dropped straight into the <code>BRANDS</code> array below.</em>
+        </p>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Clean Protein List | Independent Lab Data Analysis</p>
+            <p><a href="index.html">Home</a> | <a href="blog.html">Articles</a> | <a href="quiz.html">Take Quiz</a> | <a href="about.html">About</a></p>
+        </div>
+    </footer>
+
+    <script src="includes/brands-data.js"></script>
+    <script>
+    /* =========================================================
+       BRAND DATA (now loaded from includes/brands-data.js)  — extend this array to the full 134.
+       Fields:
+         name, type (Whey|Plant|RTD|Collagen|Meal),
+         rating (safe|caution|avoid|untested),
+         lead  (Non-detect|Low|Moderate|High|Very high|— ),
+         price (per-serving number or null),
+         cert  (string or ''),
+         url   (article path, or null if untested/no page),
+         alt   ({name,url} shown when url is null),
+         kw    (extra search keywords)
+       Only figures sourced from CPL's own published articles are seeded.
+       ========================================================= */
+    // Data + metadata come from includes/brands-data.js (single source of truth)
+    const BRANDS      = window.CPL_BRANDS;
+    const META        = window.CPL_BRANDS_META;
+    const ALT_WHEY    = META.altWhey;
+    const ALT_PLANT   = META.altPlant;
+    const RATING_META = META.ratings;
+    const LEAD_RANK   = META.leadRank;
+    const LEAD_CLASS  = META.leadClass;
+
+    function priceTier(p){
+      if(p==null) return {txt:'—', rank:9};
+      if(p<1)  return {txt:'$', rank:1};
+      if(p<=2) return {txt:'$$', rank:2};
+      return {txt:'$$$', rank:3};
+    }
+    function priceTierHtml(p){
+      const t = priceTier(p);
+      if(p==null) return '<span class="price-tier muted">—</span>';
+      const full = t.txt, faded = '$$$'.slice(full.length);
+      return `<span class="price-tier">${full}<span class="muted">${faded}</span></span>` + (p!=null?` <span style="font-size:11px;color:#aaa">~$${p.toFixed(2)}</span>`:'');
+    }
+
+    const state = { type:'all', rating:'all', q:'', sort:'rating', dir:1 };
+    const body = document.getElementById('dbBody');
+    const countEl = document.getElementById('dbCount');
+    const noResEl = document.getElementById('dbNoResult');
+
+    function matches(b){
+      if(state.type!=='all' && b.type!==state.type) return false;
+      if(state.rating!=='all' && b.rating!==state.rating) return false;
+      if(state.q){
+        const hay = (b.name+' '+(b.kw||'')+' '+b.type).toLowerCase();
+        if(!hay.includes(state.q)) return false;
+      }
+      return true;
+    }
+    function sortRows(rows){
+      const s = state.sort, d = state.dir;
+      return rows.sort((a,b)=>{
+        let av,bv;
+        if(s==='name'){ av=a.name.toLowerCase(); bv=b.name.toLowerCase(); }
+        else if(s==='type'){ av=a.type; bv=b.type; }
+        else if(s==='rating'){ av=RATING_META[a.rating].rank; bv=RATING_META[b.rating].rank; }
+        else if(s==='leadrank'){ av=LEAD_RANK[a.lead]; bv=LEAD_RANK[b.lead]; }
+        else if(s==='pricerank'){ av=priceTier(a.price).rank; bv=priceTier(b.price).rank; }
+        if(av<bv) return -1*d; if(av>bv) return 1*d; return a.name.localeCompare(b.name);
+      });
+    }
+    function render(){
+      const rows = sortRows(BRANDS.filter(matches));
+      body.innerHTML = rows.map(b=>{
+        const rm = RATING_META[b.rating];
+        const info = b.url
+          ? `<a class="db-link" href="${b.url}">Read analysis →</a>`
+          : `<a class="db-link alt" href="${b.alt.url}">Untested — try ${b.alt.name} →</a>`;
+        return `<tr>
+          <td class="rating-cell" title="${b.rating}">${rm.sym}</td>
+          <td><span class="brand-name">${b.name}</span>${b.cert?`<span class="brand-kw">${b.cert}</span>`:''}</td>
+          <td><span class="type-tag ${b.type.toLowerCase()}">${b.type}</span></td>
+          <td><span class="lead-band ${LEAD_CLASS[b.lead]}">${b.lead}</span></td>
+          <td>${priceTierHtml(b.price)}</td>
+          <td>${info}</td>
+        </tr>`;
+      }).join('');
+      countEl.textContent = `Showing ${rows.length} of ${BRANDS.length} brands`;
+
+      // Anti-dead-end: query typed but nothing matched
+      if(state.q && rows.length===0){
+        noResEl.innerHTML = `<div class="db-noresult">
+          <h3>We don't have data on "${state.q}" yet</h3>
+          <p>That doesn't mean it's unsafe — just that it hasn't been independently lead-tested in the rounds we track. Here's the safe move while you wait: pick a third-party <strong>certified</strong> option in your category.</p>
+          <div class="alts">
+            <a href="${ALT_WHEY.url}">Safe whey → ${ALT_WHEY.name}</a>
+            <a href="${ALT_PLANT.url}">Safe plant → ${ALT_PLANT.name}</a>
+            <a href="quiz.html">Request this brand →</a>
+          </div>
+        </div>`;
+      } else {
+        noResEl.innerHTML = '';
+      }
+    }
+
+    // Wire search
+    document.getElementById('dbSearch').addEventListener('input', e=>{
+      state.q = e.target.value.trim().toLowerCase();
+      render();
+    });
+    // Wire filter pills
+    document.querySelectorAll('.db-pill').forEach(p=>{
+      p.addEventListener('click', ()=>{
+        const f = p.dataset.filter;
+        state[f] = p.dataset.val;
+        document.querySelectorAll(`.db-pill[data-filter="${f}"]`).forEach(x=>x.classList.remove('active'));
+        p.classList.add('active');
+        render();
+      });
+    });
+    // Wire sortable headers
+    document.querySelectorAll('th[data-sort]').forEach(th=>{
+      th.addEventListener('click', ()=>{
+        const s = th.dataset.sort;
+        if(state.sort===s){ state.dir*=-1; } else { state.sort=s; state.dir=1; }
+        render();
+      });
+    });
+
+    // Deep-link support: brand-database.html?q=designer+whey pre-fills the search
+    (function(){
+      var p = new URLSearchParams(window.location.search).get('q');
+      if(p){ var box=document.getElementById('dbSearch'); box.value=p; state.q=p.trim().toLowerCase(); }
+    })();
+
+    render();
+    </script>
+    <script src="includes/mobile-menu.js"></script>
+</body>
+</html>
