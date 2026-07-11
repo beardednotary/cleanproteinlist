@@ -476,25 +476,7 @@
             <div id="pollResult" style="display:none; margin-top:15px;"></div>
         </div>
 
-        <script>
-        function submitPollAndRedirect() {
-            const brandInput = document.getElementById("brandInput").value.trim();
-            const typeRadio = document.querySelector('input[name="type"]:checked');
-            const result = document.getElementById("pollResult");
-            if (!brandInput || !typeRadio) { alert("⚠️ Please enter your brand and select a type"); return; }
-            const brand = brandInput.toLowerCase();
-            const type = typeRadio.value;
-            fetch("https://formspree.io/f/xeopynkp", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ brand: brandInput, type: type, page: window.location.pathname }) }).catch(err => console.log('Error:', err));
-            let redirectUrl = "", brandMsg = "";
-            if (type === "RTD") { redirectUrl = "/blog/owyn-pro-elite-protein-powder-safety-only-safe-plant-protein-2025.html"; brandMsg = "OWYN Pro Elite (Verified Safe RTD)"; }
-            else if (brand.includes("naked") || brand.includes("huel") || brand.includes("vega") || brand.includes("orgain")) { redirectUrl = "/blog/truvani-protein-lead-testing-results-2026.html"; brandMsg = "Truvani (Verified Safe &amp; Clean Label)"; }
-            else if (type === "Switching") { redirectUrl = "/blog/best-protein-powder-2025.html"; brandMsg = "the Top 10 Safest Proteins of 2026"; }
-            else { redirectUrl = "/blog/lead-free-protein-brands-ranked-2025.html"; brandMsg = "our 134+ Brand Safety Database"; }
-            result.style.display = "block";
-            result.innerHTML = `<p style="color:#1b5e20;font-weight:600;margin:0 0 8px;">✅ Analyzing ${brandInput}...</p><p style="color:#2e7d32;font-weight:bold;margin:0;">Redirecting you to ${brandMsg} now...</p>`;
-            setTimeout(() => { window.location.href = redirectUrl; }, 1800);
-        }
-        </script>
+        <script src="/includes/protein-poll.js"></script>
 
         <section id="what-we-know">
             <h2>What Fairlife's Manufacturing Tells Us</h2>

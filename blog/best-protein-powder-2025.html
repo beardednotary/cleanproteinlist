@@ -832,17 +832,6 @@
         </div>
     </footer>
     <script src="../includes/mobile-menu.js"></script>
-    <script>
-        /* Re-insertion of the submitPoll function in case it was lost in encoding */
-        function submitPollAndRedirect() {
-            const brandInput = document.getElementById("brandInput").value.trim();
-            const typeRadio = document.querySelector('input[name="type"]:checked');
-            if (!brandInput || !typeRadio) { alert("⚠️ Please complete the form"); return; }
-            const result = document.getElementById("pollResult");
-            result.style.display = "block";
-            result.innerHTML = "<p>✅ Checking safety data for " + brandInput + "...</p>";
-            setTimeout(() => { window.location.href = "../quiz.html"; }, 1500);
-        }
-    </script>
+    <script src="/includes/protein-poll.js"></script>
 </body>
 </html>

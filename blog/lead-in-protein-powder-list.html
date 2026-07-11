@@ -670,26 +670,7 @@ function toggleMethodology() {
 @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
 </style>
 
-<script>
-function submitPollAndRedirect() {
-  const brandInput = document.getElementById("brandInput").value.trim();
-  const typeRadio = document.querySelector('input[name="type"]:checked');
-  const result = document.getElementById("pollResult");
-  if (!brandInput || !typeRadio) { alert("⚠️ Please enter your brand and select a type"); return; }
-  const brand = brandInput.toLowerCase();
-  const type = typeRadio.value;
-  fetch("https://formspree.io/f/xeopynkp", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ brand: brandInput, type: type, page: window.location.pathname }) }).catch(err => console.log('Error:', err));
-  let redirectUrl = "";
-  let brandMsg = "";
-  if (type === "RTD") { redirectUrl = "/blog/owyn-pro-elite-protein-powder-safety-only-safe-plant-protein-2025.html"; brandMsg = "OWYN Pro Elite (The #1 Verified Safe RTD)"; }
-  else if (brand.includes("naked") || brand.includes("huel") || brand.includes("vega") || brand.includes("orgain")) { redirectUrl = "/blog/truvani-protein-lead-testing-results-2026.html"; brandMsg = "Truvani (Verified Safe & Clean Label)"; }
-  else if (type === "Switching") { redirectUrl = "/blog/best-protein-powder-2025.html"; brandMsg = "the Top 10 Safest Proteins of 2026"; }
-  else { redirectUrl = "/blog/lead-free-protein-brands-ranked-2025.html"; brandMsg = "our 134+ Brand Safety Database"; }
-  result.style.display = "block";
-  result.innerHTML = `<p>✅ Analyzing ${brandInput}...<span class="spinner"></span></p><p class="redirect-message" style="color: #2e7d32; font-weight: bold;">Redirecting you to ${brandMsg} now...</p>`;
-  setTimeout(() => { window.location.href = redirectUrl; }, 1800);
-}
-</script>
+<script src="/includes/protein-poll.js"></script>
 
     <div class="buying-cta">
         <h3>🛒 Quick Buy: Top 3 Verified-Safe Proteins</h3>

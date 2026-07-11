@@ -30,7 +30,9 @@ window.CPL_BRANDS_META = {
   leadRank:  { 'Non-detect':1,'Low':2,'Moderate':3,'High':4,'Very high':5,'—':6,'Not yet tested':7 },
   leadClass: { 'Non-detect':'lb-nd','Low':'lb-low','Moderate':'lb-mod','High':'lb-high','Very high':'lb-vhigh','—':'lb-none','Not yet tested':'lb-none' },
   altWhey:  { name: 'Dymatize ISO100',  url: 'blog/dymatize-iso-100-safety-analysis.html' },
-  altPlant: { name: 'OWYN Pro Elite',   url: 'blog/owyn-pro-elite-protein-powder-safety-only-safe-plant-protein-2025.html' }
+  altPlant: { name: 'Truvani Plant Protein', url: 'blog/truvani-protein-lead-testing-results-2026.html' },
+  // Safe plant-based RTD (distinct product line from powders — never transfer results between them)
+  altRTD:   { name: 'OWYN Pro Elite (RTD)',  url: 'blog/owyn-pro-elite-protein-powder-safety-only-safe-plant-protein-2025.html' }
 };
 
 (function () {
@@ -42,11 +44,11 @@ window.CPL_BRANDS_META = {
     { name:'MuscleTech 100% Mass Gainer', type:'Whey', rating:'safe', lead:'Non-detect', price:0.94, cert:'CR #1 safest', url:'blog/muscletech-mass-gainer-safety.html', kw:'mass gainer muscle tech' },
     { name:'Dymatize ISO100', type:'Whey', rating:'safe', lead:'Low', price:1.09, cert:'NSF Certified for Sport · Informed', url:'blog/dymatize-iso-100-safety-analysis.html', kw:'iso100 isolate' },
     { name:'Optimum Nutrition Gold Standard', type:'Whey', rating:'safe', lead:'Low', price:0.75, cert:'Informed Sport (select)', url:'blog/optimum-nutrition-gold-standard-whey-lead-testing-results-2025.html', kw:'on optimum gold standard' },
-    { name:'OWYN Pro Elite', type:'Plant', rating:'safe', lead:'Non-detect', price:1.33, cert:'NSF Certified for Sport', url:'blog/owyn-pro-elite-protein-powder-safety-only-safe-plant-protein-2025.html', kw:'vegan pea' },
+    { name:'OWYN Pro Elite (RTD)', type:'RTD', rating:'safe', lead:'Non-detect', price:1.33, cert:'Plant-based RTD · NSF Certified for Sport', url:'blog/owyn-pro-elite-protein-powder-safety-only-safe-plant-protein-2025.html', kw:'owyn vegan pea plant rtd shake' },
     { name:'Body Fortress Whey', type:'Whey', rating:'safe', lead:'Non-detect', price:0.67, cert:'Clean Label Project', url:'blog/body-fortress-protein-powder-lead-testing-budget-clean-2025.html', kw:'budget walmart' },
     { name:'Momentous Whey', type:'Whey', rating:'safe', lead:'Low', price:2.50, cert:'NSF Certified for Sport', url:'blog/momentous-protein-safety-analysis.html', kw:'grass fed' },
     { name:'Clean Simple Eats', type:'Whey', rating:'safe', lead:'Low', price:null, cert:'CR Jan 2026 — safest chocolate whey', url:'blog/consumer-reports-new-protein-powder-tests-january-2026.html', kw:'cse simple eats' },
-    { name:'Truvani Plant Protein', type:'Plant', rating:'safe', lead:'Low', price:null, cert:'CR Jan 2026 — passed', url:'blog/consumer-reports-new-protein-powder-tests-january-2026.html', kw:'vani' },
+    { name:'Truvani Plant Protein', type:'Plant', rating:'safe', lead:'Low', price:null, cert:'CR Jan 2026 — passed (plant powder)', url:'blog/truvani-protein-lead-testing-results-2026.html', kw:'truvani vani plant powder' },
 
     // ---- CAUTION ----
     { name:'Orgain Organic', type:'Plant', rating:'caution', lead:'Moderate', price:null, cert:'CR: OK occasionally · lawsuit filed', url:'blog/costco-orgain-protein-powder-lawsuit-heavy-metals-2026.html', kw:'organic costco' },
@@ -77,7 +79,7 @@ window.CPL_BRANDS_META = {
     { name:'Elevation (Aldi)', type:'Whey', rating:'untested', lead:'—', price:null, cert:'See Kirkland vs Elevation', url:'blog/kirkland-vs-elevation-protein-lead-testing.html', kw:'aldi' },
 
     // ---- NOT YET TESTED — high demand from finder data (→ alternative) ----
-    { name:'Levels Grass-Fed Whey', type:'Whey', rating:'untested', lead:'Not yet tested', price:null, cert:'', url:null, alt:ALT_WHEY, kw:'levels grass fed' },
+    { name:'Levels Grass-Fed Whey', type:'Whey', rating:'safe', lead:'Low', price:0.75, cert:'Clean Label Project Purity Award · CR pending', url:'blog/levels-protein-powder-lead-testing-safety-2026.html', kw:'levels grass fed' },
     { name:'Nutricost Whey', type:'Whey', rating:'untested', lead:'Not yet tested', price:null, cert:'', url:null, alt:ALT_WHEY, kw:'nutricost' },
     { name:'Transparent Labs', type:'Whey', rating:'untested', lead:'Not yet tested', price:null, cert:'', url:null, alt:ALT_WHEY, kw:'transparent labs grass fed' },
     { name:'Sunwarrior', type:'Plant', rating:'untested', lead:'Not yet tested', price:null, cert:'', url:null, alt:ALT_PLANT, kw:'sun warrior' },
