@@ -80,13 +80,13 @@ window.CPL_BRANDS_META = {
 
     // ---- NOT YET TESTED — high demand from finder data (→ alternative) ----
     { name:'Levels Grass-Fed Whey', type:'Whey', rating:'safe', lead:'Low', price:0.75, cert:'Clean Label Project Purity Award · CR pending', url:'blog/levels-protein-powder-lead-testing-safety-2026.html', kw:'levels grass fed' },
-    { name:'Nutricost Whey', type:'Whey', rating:'untested', lead:'Not yet tested', price:null, cert:'', url:null, alt:ALT_WHEY, kw:'nutricost' },
-    { name:'Transparent Labs', type:'Whey', rating:'untested', lead:'Not yet tested', price:null, cert:'', url:null, alt:ALT_WHEY, kw:'transparent labs grass fed' },
-    { name:'Sunwarrior', type:'Plant', rating:'untested', lead:'Not yet tested', price:null, cert:'', url:null, alt:ALT_PLANT, kw:'sun warrior' },
-    { name:'NOW Sports Whey', type:'Whey', rating:'untested', lead:'Not yet tested', price:null, cert:'', url:null, alt:ALT_WHEY, kw:'now foods' },
+    { name:'Nutricost Whey', type:'Whey', rating:'untested', lead:'Not independently tested', price:1.40, cert:'ISO-accredited labs · no NSF/CLP/CR verification', url:'blog/nutricost-whey-protein-lead-testing-safety-2026.html', kw:'nutricost whey isolate' },
+    { name:'Transparent Labs Whey Isolate', type:'Whey', rating:'safe', lead:'Below detection', price:1.80, cert:'Informed Choice · CLP below detection · public lot COAs', url:'blog/transparent-labs-whey-protein-lead-testing-safety-2026.html', kw:'transparent labs grass fed isolate' },
+    { name:'Sunwarrior', type:'Plant', rating:'untested', lead:'No published figure', price:null, cert:'Admits heavy metals · no Purity Award · numbers unpublished', url:'blog/sunwarrior-protein-powder-lead-testing-safety-2026.html', kw:'sun warrior warrior blend classic' },
+    { name:'NOW Sports Whey Isolate', type:'Whey', rating:'safe', lead:'Undetected', price:1.15, cert:'Labdoor: lead undetected · Informed Sport (every batch)', url:'blog/now-sports-whey-protein-lead-testing-safety-2026.html', kw:'now foods sports isolate' },
     { name:'Designer Whey', type:'Whey', rating:'untested', lead:'Not yet tested', price:null, cert:'', url:null, alt:ALT_WHEY, kw:'designer' },
     { name:"Tera's Whey", type:'Whey', rating:'untested', lead:'Not yet tested', price:null, cert:'', url:null, alt:ALT_WHEY, kw:'teras tera' },
-    { name:'MyProtein', type:'Whey', rating:'untested', lead:'Not yet tested', price:null, cert:'', url:null, alt:ALT_WHEY, kw:'my protein impact' },
+    { name:'MyProtein Impact Whey Isolate', type:'Whey', rating:'safe', lead:'Below LOQ', price:1.10, cert:'Labdoor: lead below LOQ · Informed Choice · 2020 Prop 65 settlement', url:'blog/myprotein-impact-whey-lead-testing-safety-2026.html', kw:'my protein impact isolate' },
     { name:'Legion Whey+', type:'Whey', rating:'untested', lead:'Not yet tested', price:null, cert:'', url:null, alt:ALT_WHEY, kw:'legion' },
     { name:'Promix', type:'Whey', rating:'untested', lead:'Not yet tested', price:null, cert:'', url:null, alt:ALT_WHEY, kw:'promix grass fed' },
     { name:'Thorne', type:'Whey', rating:'untested', lead:'Not yet tested', price:null, cert:'NSF brand — not independently lead-tested here', url:null, alt:ALT_WHEY, kw:'thorne' },

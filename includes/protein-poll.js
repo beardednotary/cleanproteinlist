@@ -59,6 +59,11 @@
 
     // --- Whey powders with their own analysis ---
     { match: ['levels'],      url: '/blog/levels-protein-powder-lead-testing-safety-2026.html',          msg: 'our Levels safety analysis' },
+    { match: ['nutricost'],   url: '/blog/nutricost-whey-protein-lead-testing-safety-2026.html',         msg: 'our Nutricost safety analysis' },
+    { match: ['transparent labs', 'transparent'], url: '/blog/transparent-labs-whey-protein-lead-testing-safety-2026.html', msg: 'our Transparent Labs safety analysis' },
+    { match: ['sunwarrior', 'sun warrior'], url: '/blog/sunwarrior-protein-powder-lead-testing-safety-2026.html', msg: 'our Sunwarrior safety analysis' },
+    { match: ['now sports', 'now foods', 'now whey'], url: '/blog/now-sports-whey-protein-lead-testing-safety-2026.html', msg: 'our NOW Sports safety analysis' },
+    { match: ['myprotein', 'my protein', 'impact whey'], url: '/blog/myprotein-impact-whey-lead-testing-safety-2026.html', msg: 'our MyProtein safety analysis' },
     { match: ['optimum', 'gold standard'], url: '/blog/optimum-nutrition-gold-standard-whey-lead-testing-results-2025.html', msg: 'our ON Gold Standard analysis' },
     { match: ['dymatize', 'iso100', 'iso 100'], url: SAFE.wheyPowder.url,                                msg: 'our Dymatize ISO 100 analysis' },
     { match: ['body fortress'], url: '/blog/body-fortress-protein-powder-lead-testing-budget-clean-2025.html', msg: 'our Body Fortress analysis' },
