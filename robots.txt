@@ -14,6 +14,9 @@ Allow: /
 User-agent: Bingbot
 Allow: /
 
+User-agent: Amazonbot
+Allow: /
+
 # Block common spam bots
 User-agent: SemrushBot
 User-agent: AhrefsBot
