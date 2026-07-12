@@ -66,6 +66,26 @@
         .sidebar-links a:hover { color: #2d6a4f; }
         .sidebar-cta { display: block; background: #ff9900; color: white !important; text-align: center; padding: 10px; border-radius: 4px; text-decoration: none; font-weight: 700; margin-top: 15px; }
         @media (max-width: 992px) { .page-layout { flex-direction: column; } .sidebar { flex: none; width: 100%; } .sidebar-box { position: static; } }
+    
+        /* --- Buy column in the rankings table (added: conversion fix) --- */
+        .table-buy-btn {
+            display: inline-block;
+            background: #ff9900;
+            color: #fff !important;
+            padding: 7px 14px;
+            border-radius: 6px;
+            font-weight: 700;
+            font-size: 13px;
+            text-decoration: none;
+            white-space: nowrap;
+            transition: background .15s ease, transform .15s ease;
+        }
+        .table-buy-btn:hover { background: #e88b00; transform: translateY(-1px); }
+        .buy-na { color: #ccc; text-align: center; }
+        .rankings-table td:last-child { text-align: center; }
+        @media (max-width: 768px) {
+            .table-buy-btn { padding: 6px 10px; font-size: 12px; }
+        }
     </style>
 <script type="application/ld+json">
 {
@@ -284,6 +304,10 @@ function toggleMethodology() {
             <p style="margin-top: 20px; font-size: 14px; color: #666;"><a href="../images/protein-powder-lead-ranking-infographic.png" download>⬇️ Download High-Res Version</a></p>
         </div>
 
+        <p style="font-size:13px;color:#777;margin:0 0 12px;border-left:3px solid #e07a2f;padding-left:12px;">
+            <strong>Note:</strong> "Buy" links are Amazon affiliate links — we may earn a commission at no extra cost to you.
+            They appear <em>only</em> on products independently verified as safe for daily use. Rankings come from Consumer Reports testing and are never influenced by commissions.
+        </p>
         <table class="rankings-table">
             <thead>
                 <tr>
@@ -292,6 +316,7 @@ function toggleMethodology() {
                     <th>Concern Level</th>
                     <th>Max Servings</th>
                     <th>CR Guidance</th>
+                    <th>Buy</th>
                 </tr>
             </thead>
             <tbody>
@@ -301,6 +326,7 @@ function toggleMethodology() {
                     <td class="safe">Lead not detected</td>
                     <td class="safe">No limit</td>
                     <td class="safe">✅ Daily consumption</td>
+                    <td><a href="https://amzn.to/3IZsKsr" target="_blank" rel="sponsored noopener noreferrer" class="table-buy-btn">Buy&nbsp;→</a></td>
                 </tr>
                 <tr class="rank-safe">
                     <td>2</td>
@@ -308,6 +334,7 @@ function toggleMethodology() {
                     <td class="safe">25% of daily limit</td>
                     <td class="safe">4 servings/day</td>
                     <td class="safe">✅ Daily consumption</td>
+                    <td><a href="https://amzn.to/3Wl18B2" target="_blank" rel="sponsored noopener noreferrer" class="table-buy-btn">Buy&nbsp;→</a></td>
                 </tr>
                 <tr class="rank-safe">
                     <td>3</td>
@@ -315,6 +342,7 @@ function toggleMethodology() {
                     <td class="safe">30% of daily limit</td>
                     <td class="safe">3.3 servings/day</td>
                     <td class="safe">✅ Daily consumption</td>
+                    <td><a href="https://www.amazon.com/dp/B09F21D98X?ref=t_ac_spc_accepted_tile&linkCode=tr1&tag=beardednotary-20" target="_blank" rel="sponsored noopener noreferrer" class="table-buy-btn">Buy&nbsp;→</a></td>
                 </tr>
                 <tr class="rank-safe">
                     <td>4</td>
@@ -322,6 +350,7 @@ function toggleMethodology() {
                     <td class="safe">46% of daily limit</td>
                     <td class="safe">2 servings/day</td>
                     <td class="safe">✅ Daily consumption</td>
+                    <td><a href="https://www.amazon.com/dp/B000GP0NSI?ref=t_ac_spc_accepted_tile&linkCode=tr1&tag=beardednotary-20" target="_blank" rel="sponsored noopener noreferrer" class="table-buy-btn">Buy&nbsp;→</a></td>
                 </tr>
                 <tr class="rank-safe">
                     <td>5</td>
@@ -329,6 +358,7 @@ function toggleMethodology() {
                     <td class="safe">56% of daily limit</td>
                     <td class="safe">1.75 servings/day</td>
                     <td class="safe">✅ Daily consumption</td>
+                    <td><a href="https://amzn.to/4hpjiuZ" target="_blank" rel="sponsored noopener noreferrer" class="table-buy-btn">Buy&nbsp;→</a></td>
                 </tr>
                 <tr class="rank-safe">
                     <td>6</td>
@@ -336,6 +366,7 @@ function toggleMethodology() {
                     <td class="safe">87% of daily limit</td>
                     <td class="safe">1 serving/day</td>
                     <td class="safe">✅ Daily consumption</td>
+                    <td><a href="https://amzn.to/49hvX0U" target="_blank" rel="sponsored noopener noreferrer" class="table-buy-btn">Buy&nbsp;→</a></td>
                 </tr>
                 <tr class="rank-safe">
                     <td>7</td>
@@ -343,6 +374,7 @@ function toggleMethodology() {
                     <td class="safe">88% of daily limit</td>
                     <td class="safe">1 serving/day</td>
                     <td class="safe">✅ Daily consumption</td>
+                    <td><a href="https://www.amazon.com/dp/B0764GPB51?ref=t_ac_spc_accepted_tile&linkCode=tr1&tag=beardednotary-20" target="_blank" rel="sponsored noopener noreferrer" class="table-buy-btn">Buy&nbsp;→</a></td>
                 </tr>
                 <tr class="rank-moderate">
                     <td>8</td>
@@ -350,6 +382,7 @@ function toggleMethodology() {
                     <td class="moderate">112% of daily limit</td>
                     <td class="moderate">6¼ servings/week</td>
                     <td class="moderate">⚠️ Occasional use</td>
+                    <td class="buy-na">—</td>
                 </tr>
                 <tr class="rank-moderate">
                     <td>9</td>
@@ -357,6 +390,7 @@ function toggleMethodology() {
                     <td class="moderate">128% of daily limit</td>
                     <td class="moderate">5.5 servings/week</td>
                     <td class="moderate">⚠️ Occasional use</td>
+                    <td class="buy-na">—</td>
                 </tr>
                 <tr class="rank-moderate">
                     <td>10</td>
@@ -364,6 +398,7 @@ function toggleMethodology() {
                     <td class="moderate">132% of daily limit</td>
                     <td class="moderate">5 servings/week</td>
                     <td class="moderate">⚠️ Occasional use</td>
+                    <td class="buy-na">—</td>
                 </tr>
                 <tr class="rank-moderate">
                     <td>11</td>
@@ -371,6 +406,7 @@ function toggleMethodology() {
                     <td class="moderate">140% of daily limit</td>
                     <td class="moderate">5 servings/week</td>
                     <td class="moderate">⚠️ Occasional use</td>
+                    <td class="buy-na">—</td>
                 </tr>
                 <tr class="rank-moderate">
                     <td>12</td>
@@ -378,6 +414,7 @@ function toggleMethodology() {
                     <td class="moderate">143% of daily limit</td>
                     <td class="moderate">4.75 servings/week</td>
                     <td class="moderate">⚠️ Occasional use</td>
+                    <td class="buy-na">—</td>
                 </tr>
                 <tr class="rank-moderate">
                     <td>13</td>
@@ -385,6 +422,7 @@ function toggleMethodology() {
                     <td class="moderate">144% of daily limit</td>
                     <td class="moderate">4.75 servings/week</td>
                     <td class="moderate">⚠️ Occasional use</td>
+                    <td class="buy-na">—</td>
                 </tr>
                 <tr class="rank-moderate">
                     <td>14</td>
@@ -392,6 +430,7 @@ function toggleMethodology() {
                     <td class="moderate">150% of daily limit</td>
                     <td class="moderate">4⅔ servings/week</td>
                     <td class="moderate">⚠️ Occasional use</td>
+                    <td class="buy-na">—</td>
                 </tr>
                 <tr class="rank-moderate">
                     <td>15</td>
@@ -399,6 +438,7 @@ function toggleMethodology() {
                     <td class="moderate">161% of daily limit</td>
                     <td class="moderate">4.33 servings/week</td>
                     <td class="moderate">⚠️ Occasional use</td>
+                    <td class="buy-na">—</td>
                 </tr>
                 <tr class="rank-moderate">
                     <td>16</td>
@@ -406,6 +446,7 @@ function toggleMethodology() {
                     <td class="moderate">185% of daily limit</td>
                     <td class="moderate">3.75 servings/week</td>
                     <td class="moderate">⚠️ Occasional use</td>
+                    <td class="buy-na">—</td>
                 </tr>
                 <tr class="rank-moderate">
                     <td>17</td>
@@ -413,6 +454,7 @@ function toggleMethodology() {
                     <td class="moderate">199% of daily limit</td>
                     <td class="moderate">3.5 servings/week</td>
                     <td class="moderate">⚠️ Occasional use</td>
+                    <td class="buy-na">—</td>
                 </tr>
                 <tr class="rank-moderate">
                     <td>18</td>
@@ -420,6 +462,7 @@ function toggleMethodology() {
                     <td class="moderate">202% of daily limit</td>
                     <td class="moderate">3.5 servings/week</td>
                     <td class="moderate">⚠️ Occasional (arsenic concern)</td>
+                    <td class="buy-na">—</td>
                 </tr>
                 <tr class="rank-moderate">
                     <td>19</td>
@@ -427,6 +470,7 @@ function toggleMethodology() {
                     <td class="moderate">247% of daily limit</td>
                     <td class="moderate">2.75 servings/week</td>
                     <td class="moderate">⚠️ Occasional use</td>
+                    <td class="buy-na">—</td>
                 </tr>
                 <tr class="rank-bad">
                     <td>20</td>
@@ -434,6 +478,7 @@ function toggleMethodology() {
                     <td class="bad">476% of daily limit</td>
                     <td class="bad">1½ servings/week</td>
                     <td class="bad">⛔ Once per week max</td>
+                    <td class="buy-na">—</td>
                 </tr>
                 <tr class="rank-bad">
                     <td>21</td>
@@ -441,6 +486,7 @@ function toggleMethodology() {
                     <td class="bad">564% of daily limit</td>
                     <td class="bad">1¼ servings/week</td>
                     <td class="bad">⛔ Once per week max</td>
+                    <td class="buy-na">—</td>
                 </tr>
                 <tr class="rank-worst">
                     <td><strong>22</strong></td>
@@ -448,6 +494,7 @@ function toggleMethodology() {
                     <td class="worst"><strong>1,288% of daily limit</strong></td>
                     <td class="worst"><strong>0 servings/week</strong></td>
                     <td class="worst"><strong>🚫 AVOID</strong></td>
+                    <td class="buy-na">—</td>
                 </tr>
                 <tr class="rank-worst">
                     <td><strong>23</strong></td>
@@ -455,6 +502,7 @@ function toggleMethodology() {
                     <td class="worst"><strong>1,572% of daily limit</strong></td>
                     <td class="worst"><strong>0 servings/week</strong></td>
                     <td class="worst"><strong>🚫 AVOID</strong></td>
+                    <td class="buy-na">—</td>
                 </tr>
             </tbody>
         </table>
