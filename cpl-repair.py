@@ -57,12 +57,42 @@ ROOT   = "."
 # drift that caused the original problem.
 # ─────────────────────────────────────────────────────────────────
 _DATA_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "cpl-data.json")
-try:
-    _DATA = json.load(open(_DATA_PATH, encoding="utf-8"))
-except FileNotFoundError:
-    sys.exit(f"ERROR: cpl-data.json not found next to this script ({_DATA_PATH}).\n"
-             "       That file is the single source of truth for every CR figure.\n"
-             "       This script will not guess. Put it in place and re-run.")
+
+def _load_data(path):
+    if not os.path.exists(path):
+        sys.exit(f"ERROR: cpl-data.json not found next to this script.\n"
+                 f"       Looked in: {path}\n"
+                 "       That file is the single source of truth for every CR figure.\n"
+                 "       This script will not guess. Put it in place and re-run.")
+
+    size = os.path.getsize(path)
+    if size == 0:
+        sys.exit(f"ERROR: cpl-data.json is EMPTY (0 bytes).\n"
+                 f"       {path}\n"
+                 "       The download didn't write. Re-download it and re-run.")
+
+    # encoding="utf-8" chokes on a UTF-8 BOM, which Windows adds freely.
+    # "utf-8-sig" strips it if present and behaves like utf-8 if not.
+    raw = open(path, encoding="utf-8-sig").read().strip()
+
+    if not raw:
+        sys.exit(f"ERROR: cpl-data.json contains only whitespace ({size} bytes).\n"
+                 "       Re-download it and re-run.")
+
+    if raw.lstrip().startswith("<"):
+        sys.exit("ERROR: cpl-data.json looks like HTML, not JSON.\n"
+                 "       You probably saved a web page instead of the raw file.\n"
+                 f"       It starts with: {raw[:60]!r}")
+
+    try:
+        return json.loads(raw)
+    except json.JSONDecodeError as e:
+        sys.exit(f"ERROR: cpl-data.json is not valid JSON.\n"
+                 f"       {e}\n"
+                 f"       File starts with: {raw[:60]!r}\n"
+                 "       Re-download it — do not hand-edit.")
+
+_DATA = _load_data(_DATA_PATH)
 
 # Regex to match each product in the page text -> its real CR figure.
 # Order matters: most specific pattern first.
