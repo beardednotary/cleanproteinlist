@@ -1,0 +1,1035 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Protein Powder Recalls &amp; Lawsuits 2025-2026: FDA + Class Action Tracker</title>
+    <meta name="description" content="Every protein powder FDA recall AND heavy-metal class action lawsuit in 2025-2026. Genepro, Garden of Life, Jocko, Costco/Orgain and more — lot numbers, case details, and what to do. Updated as new alerts are issued.">
+    <link rel="canonical" href="https://cleanproteinlist.com/blog/protein-powder-recalls-2025.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Protein Powder Recalls &amp; Lawsuits 2025-2026: FDA + Class Action Tracker">
+    <meta property="og:description" content="Every FDA recall and heavy-metal class action for protein powders in 2025-2026. Lot numbers, case details, and what to do. Updated continuously.">
+    <meta property="og:url" content="https://cleanproteinlist.com/blog/protein-powder-recalls-2025.html">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Protein Powder Recalls &amp; Lawsuits 2025-2026: FDA + Class Action Tracker">
+    <meta name="twitter:description" content="Every FDA recall and class action lawsuit for protein powders. Updated continuously as new alerts are issued.">
+
+    <link rel="stylesheet" href="../style.css">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6RL8K3H3ZC"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-6RL8K3H3ZC');
+    </script>
+
+    <script src="/includes/affiliate-tracker.js"></script>
+
+    <style>
+        /* ── Update banner ── */
+        .update-banner {
+            background: #eef2ff;
+            border: 2px solid #2d6a4f;
+            border-radius: 10px;
+            padding: 18px 24px;
+            margin-bottom: 30px;
+            font-size: 15px;
+            color: #333;
+        }
+        .update-banner strong { color: #2d6a4f; }
+
+        /* ── Master summary table ── */
+        .recall-summary-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+            font-size: 15px;
+        }
+        .recall-summary-table thead tr {
+            background: #333;
+            color: white;
+        }
+        .recall-summary-table th {
+            padding: 14px 12px;
+            text-align: left;
+            font-weight: 600;
+        }
+        .recall-summary-table td {
+            padding: 12px;
+            border-bottom: 1px solid #e0e0e0;
+            vertical-align: top;
+        }
+        .recall-summary-table tr:nth-child(even) td {
+            background: #f9f9f9;
+        }
+        .class-i   { color: #c0392b; font-weight: 700; }
+        .class-ii  { color: #e67e22; font-weight: 700; }
+        .class-iii { color: #27ae60; font-weight: 700; }
+        .status-active   { background: #fdecea; color: #c0392b; padding: 3px 10px; border-radius: 20px; font-size: 13px; font-weight: 600; white-space: nowrap; }
+        .status-closed   { background: #e9f7ef; color: #27ae60; padding: 3px 10px; border-radius: 20px; font-size: 13px; font-weight: 600; white-space: nowrap; }
+        /* ── Lawsuit status pills ── */
+        .status-pending  { background: #fef5e7; color: #b9770e; padding: 3px 10px; border-radius: 20px; font-size: 13px; font-weight: 600; white-space: nowrap; }
+        .status-settled  { background: #eaf2fb; color: #1f6dbf; padding: 3px 10px; border-radius: 20px; font-size: 13px; font-weight: 600; white-space: nowrap; }
+        .status-drafting { background: #f2f3f4; color: #7a7d80; padding: 3px 10px; border-radius: 20px; font-size: 13px; font-weight: 600; white-space: nowrap; }
+
+        /* ── Individual recall cards ── */
+        .recall-card {
+            border: 2px solid #e0e0e0;
+            border-radius: 12px;
+            margin: 40px 0;
+            overflow: hidden;
+        }
+        .recall-card-header {
+            padding: 20px 28px;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+        .recall-card-header.class-i-header   { background: #c0392b; }
+        .recall-card-header.class-ii-header  { background: #e07a2f; }
+        .recall-card-header.class-iii-header { background: #2d6a4f; }
+        .recall-card-header.lawsuit-header   { background: #34495e; }
+        .recall-card-header h3 {
+            color: white;
+            margin: 0;
+            font-size: 22px;
+            line-height: 1.3;
+        }
+        .class-badge {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255,255,255,0.25);
+            border: 2px solid white;
+            color: white;
+            padding: 6px 14px;
+            border-radius: 4px;
+            font-weight: 700;
+            font-size: 13px;
+            white-space: nowrap;
+        }
+        .recall-card-body {
+            padding: 24px 28px;
+        }
+
+        /* ── Details grid ── */
+        .recall-details-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 16px 0 24px;
+        }
+        .recall-detail-item { font-size: 15px; line-height: 1.5; }
+        .recall-detail-item span { font-weight: 600; display: block; font-size: 13px; color: #888; text-transform: uppercase; letter-spacing: 0.04em; }
+        @media (max-width: 600px) {
+            .recall-details-grid { grid-template-columns: 1fr; }
+
+            .recall-summary-table { font-size: 13px; }
+            .recall-summary-table th, .recall-summary-table td { padding: 8px 6px; }
+        }
+
+        /* ── Action boxes ── */
+        .action-box {
+            border-radius: 10px;
+            padding: 22px 26px;
+            margin: 20px 0;
+        }
+        .action-box.red    { background: #fff5f5; border: 2px solid #e74c3c; }
+        .action-box.green  { background: #f0faf4; border: 2px solid #27ae60; }
+        .action-box.blue   { background: #f0f7f3; border: 2px solid #2d6a4f; }
+        .action-box.orange { background: #fff8f0; border: 2px solid #e67e22; }
+        .action-box h4 { margin-top: 0; }
+
+        /* ── How-to-use box ── */
+        .how-to-use {
+            background: #f0f7f3;
+            border: 2px solid #2d6a4f;
+            border-radius: 10px;
+            padding: 24px 28px;
+            margin: 30px 0;
+        }
+        .how-to-use h3 { margin-top: 0; color: #2d6a4f; }
+
+        /* ── No-recalls placeholder ── */
+        .no-recall-placeholder {
+            background: #f8f9fa;
+            border: 2px dashed #ccc;
+            border-radius: 10px;
+            padding: 30px;
+            text-align: center;
+            color: #888;
+            font-size: 16px;
+            margin: 20px 0;
+        }
+
+        /* ── FAQ ── */
+        .faq-section .faq-item {
+            border-bottom: 1px solid #e0e0e0;
+            padding: 20px 0;
+        }
+        .faq-section .faq-item:last-child { border-bottom: none; }
+        .faq-section h4 { margin: 0 0 10px; color: #333; font-size: 18px; }
+
+        /* ── CTA box ── */
+        .cta-box {
+            background: #2d6a4f;
+            border-radius: 12px;
+            padding: 36px;
+            text-align: center;
+            margin: 50px 0;
+        }
+        .cta-box h3 { color: white; margin-top: 0; font-size: 26px; }
+        .cta-box p  { color: rgba(255,255,255,0.9); font-size: 17px; }
+        .cta-box a  {
+            display: inline-block;
+            background: white;
+            color: #2d6a4f;
+            padding: 14px 32px;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 16px;
+            text-decoration: none;
+            margin-top: 10px;
+        }
+        .cta-box a:hover { opacity: 0.9; }
+
+        /* ── Sources ── */
+        .sources-list { font-size: 14px; color: #666; }
+        .sources-list a { color: #2d6a4f; }
+
+        blockquote {
+            background: #f8f9fa;
+            border-left: 5px solid #2d6a4f;
+            padding: 20px 24px;
+            margin: 28px 0;
+            border-radius: 0 8px 8px 0;
+            font-size: 16px;
+            color: #444;
+            line-height: 1.7;
+        }
+
+        .comparison-table thead tr { background: #333; color: white; }
+
+        .comparison-table tr:nth-child(even) td { background: #f9f9f9; }
+
+        .related-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .related-card {
+            background: #f8f9fa;
+            border: 1px solid #e0e0e0;
+            border-radius: 10px;
+            padding: 20px;
+            text-decoration: none;
+            color: #333;
+            transition: box-shadow 0.2s;
+        }
+        .related-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.10); }
+        .related-card h4 { margin: 0 0 8px; font-size: 16px; color: #333; }
+        .related-card p  { margin: 0; font-size: 14px; color: #666; }
+        </style>
+
+    <!-- Schema: Article -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Protein Powder Recalls & Lawsuits 2025-2026: FDA + Class Action Tracker",
+      "description": "Every protein powder FDA recall and heavy-metal class action lawsuit in 2025-2026. Recall lot numbers, lawsuit case details, and consumer action steps. Updated continuously.",
+      "datePublished": "2025-12-14T10:00:00+00:00",
+      "dateModified": "2026-07-10T10:00:00+00:00",
+      "author": {
+        "@type": "Person",
+        "name": "Ray Rothwell"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Clean Protein List",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://cleanproteinlist.com/assets/logo-512.png"
+        }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://cleanproteinlist.com/blog/protein-powder-recalls-2025.html"
+      }
+    }
+    </script>
+
+    <!-- Schema: Organization + Website -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://cleanproteinlist.com/#organization",
+          "name": "Clean Protein List",
+          "url": "https://cleanproteinlist.com",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://cleanproteinlist.com/images/logo.png"
+          },
+          "description": "Independent supplement safety database analyzing protein powders for heavy metal contamination.",
+          "founder": { "@type": "Person", "name": "Ray" }
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://cleanproteinlist.com/#website",
+          "url": "https://cleanproteinlist.com",
+          "name": "Clean Protein List",
+          "publisher": { "@id": "https://cleanproteinlist.com/#organization" }
+        }
+      ]
+    }
+    </script>
+
+    <!-- Schema: Breadcrumb -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home",    "item": "https://cleanproteinlist.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Blog",    "item": "https://cleanproteinlist.com/blog.html" },
+        { "@type": "ListItem", "position": 3, "name": "Protein Powder Recalls & Lawsuits 2025-2026" }
+      ]
+    }
+    </script>
+
+    <!-- Schema: FAQ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How do I know if my protein powder has been recalled?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Check this page and cross-reference the lot number on your product's packaging against any active recalls listed here. You can also search the FDA's official enforcement database at accessdata.fda.gov using the product name."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the difference between a recall and a class action lawsuit?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "An FDA recall is a regulatory action removing a specific defective lot from sale, usually for allergen mislabeling or contamination. A class action lawsuit is a civil case filed by consumers alleging deception or failure to disclose — most recent protein lawsuits allege undisclosed heavy metals like lead. A lawsuit is not a recall and does not require the product to be pulled from shelves."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is a Class I recall and is it dangerous?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A Class I recall is the FDA's most serious classification. It means there is a reasonable probability that consuming or using the product will cause serious adverse health consequences or death. Stop using the product immediately if it falls under a Class I recall."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are protein powder recalls common?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Recalls are relatively rare compared to the number of products on market, but they do occur. The most common reasons are undeclared allergens, contamination, and mislabeling. This page tracks all protein-adjacent supplement recalls as they are issued by the FDA."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does a recall or lawsuit mean a protein powder has lead in it?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not necessarily for a recall — most supplement recalls are triggered by allergen mislabeling or pathogens, not heavy metals. However, the recent wave of protein class action lawsuits (Garden of Life, Jocko, Costco/Orgain) specifically alleges undisclosed lead, cadmium, and arsenic. Lead contamination is tracked in detail by Consumer Reports and the Clean Label Project. See our complete lead testing database for that data."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How often is this page updated?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We check the FDA enforcement database monthly and monitor new protein-related class actions as they are filed. We update this tracker whenever a new recall or lawsuit is issued. The last update date is shown at the top of this page."
+          }
+        }
+      ]
+    }
+    </script>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <a href="../index.html" class="logo">Clean Protein List</a>
+            <button class="hamburger" id="hamburger-btn" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+            <nav id="mobile-nav">
+                <a href="../index.html">Home</a>
+                <a href="../blog.html#protein-articles">Protein</a>
+                <a href="../blog.html#creatine-articles">Creatine</a>
+                <a href="../stats.html">Stats</a>
+                <a href="../tools.html">Tools</a>
+                <a href="../quiz.html" class="quiz-highlight">Take Quiz</a>
+                <a href="../about.html">About</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="menu-overlay" id="menu-overlay"></div>
+
+    <article class="blog-post">
+
+        <h1>Protein Powder Recalls &amp; Lawsuits: 2025–2026 Tracker (FDA + Class Actions)</h1>
+
+        <div class="blog-meta">
+            Maintained by Ray Rothwell &nbsp;|&nbsp; Last updated: July 10, 2026 &nbsp;|&nbsp; Sources: FDA Enforcement Database + Court Filings
+        </div>
+
+        <!-- ── Live update banner ── -->
+        <div class="update-banner">
+            <strong>📋 Currently tracking:</strong> 1 active recall &middot; 4 active lawsuits &nbsp;|&nbsp;
+            <strong>Last recall check:</strong> February 21, 2026 &nbsp;|&nbsp;
+            <strong>Last lawsuit update:</strong> July 10, 2026 (Quest)
+        </div>
+
+        <!-- ── Quick-nav ── -->
+        <div class="how-to-use" style="margin-top:0;">
+            <h3>Jump To</h3>
+            <ul style="margin:0;">
+                <li><a href="#lawsuit-tracker"><strong>⚖️ Lawsuit Tracker</strong></a> — heavy-metal class actions (Garden of Life, Jocko, Costco/Orgain, Quest)</li>
+                <li><a href="#recall-tracker"><strong>🚨 FDA Recall Tracker</strong></a> — official recalls with lot numbers</li>
+                <li><a href="#difference"><strong>❓ Recall vs. Lawsuit vs. Lead</strong></a> — how these three differ</li>
+            </ul>
+        </div>
+
+        <!-- ── Direct answer box ── -->
+        <div class="action-box blue" style="margin-bottom:30px;">
+            <h2 style="margin-top:0; font-size:20px; border:none; padding:0; color:#333;">
+                📌 Quick Answer: What's Active Right Now?
+            </h2>
+            <p style="margin-bottom:0; font-size:16px; line-height:1.7;">
+                <strong>One active FDA recall and three active class action lawsuits as of July 2026.</strong>
+                The recall (Genepro Whey, Lot 250214) is for an undeclared milk allergen. The lawsuits — against
+                <strong>Garden of Life</strong>, <strong>Jocko Fuel</strong>, <strong>Costco (Orgain)</strong>, and <strong>Quest</strong> — allege
+                <strong>undisclosed heavy metals</strong> (lead, cadmium, arsenic) in plant/organic protein. None of the
+                lawsuits is a recall; the products remain on sale, and the allegations are unproven. Details below.
+            </p>
+        </div>
+
+        <!-- ══════════════════════════════════════════
+             LAWSUIT TRACKER  (NEW)
+        ══════════════════════════════════════════ -->
+        <h2 id="lawsuit-tracker">⚖️ Heavy-Metal Lawsuit Tracker</h2>
+
+        <p>
+            Since late 2025, a wave of consumer class actions has targeted protein brands for allegedly
+            failing to disclose heavy metals — primarily lead — in plant-based and organic protein products.
+            Unlike a recall, a lawsuit does not pull a product from shelves; it is a civil claim that must
+            work through the courts. We track each case below and link it to our full brand safety coverage.
+        </p>
+
+        <div style="overflow-x:auto;">
+        <table class="recall-summary-table">
+            <thead>
+                <tr>
+                    <th>Filed</th>
+                    <th>Target / Product</th>
+                    <th>Core Allegation</th>
+                    <th>Court / Firm</th>
+                    <th>Status</th>
+                    <th>Details</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Jul&nbsp;7,&nbsp;2026</td>
+                    <td><a href="#lawsuit-costco-orgain"><strong>Costco / Orgain</strong> Organic Protein Powder</a></td>
+                    <td>Undisclosed lead (67 ppb), cadmium, arsenic; false advertising &amp; failure to disclose</td>
+                    <td>W.D. Wash. (Seattle) · Hagens Berman</td>
+                    <td><span class="status-pending">Pending</span></td>
+                    <td><a href="costco-orgain-protein-powder-lawsuit-heavy-metals-2026.html">Read breakdown →</a></td>
+                </tr>
+                <tr>
+                    <td>Mar&nbsp;11,&nbsp;2026</td>
+                    <td><strong>Quest Nutrition</strong> RTD Shakes &amp; Milkshakes</td>
+                    <td>Lead above Prop 65 limit — vanilla milkshake ~580%, vanilla shake ~130%; failure to warn (7 RTD products)</td>
+                    <td>LA County Superior Court (26STCV07966)</td>
+                    <td><span class="status-pending">Pending</span></td>
+                    <td><a href="quest-protein-shake-lawsuit-lead-prop65-2026.html">Read breakdown →</a></td>
+                </tr>
+                <tr>
+                    <td>Feb&nbsp;9,&nbsp;2026</td>
+                    <td><strong>Jocko Fuel</strong> Mölk Protein (Chocolate Milkshake)</td>
+                    <td>Lead 1.326 µg/serving (2.65× Prop 65 limit); failure to disclose; "Clean Fuel" marketing</td>
+                    <td>Calif. federal court (Case 3:26-cv-791)</td>
+                    <td><span class="status-pending">Pending</span></td>
+                    <td><a href="jocko-protein-lawsuit-lead-contamination-2026.html">Read breakdown →</a></td>
+                </tr>
+                <tr>
+                    <td>Dec&nbsp;16,&nbsp;2025</td>
+                    <td><strong>Garden of Life</strong> Organic Plant-Based Protein</td>
+                    <td>Undisclosed lead (2.76 µg/serving, ~564% over CR limit); false "clean &amp; certified" claims</td>
+                    <td>C.D. Cal. · DeHerrera v. Garden of Life (5:25-cv-03118)</td>
+                    <td><span class="status-pending">Pending</span></td>
+                    <td><a href="garden-of-life-lawsuit-lead-contamination-class-action-2025.html">Read breakdown →</a></td>
+                </tr>
+            </tbody>
+        </table>
+        </div>
+
+        <p style="font-size:14px; color:#888; margin-top:-10px;">
+            Allegations are unproven unless a court rules otherwise. Nothing here is legal advice.
+            Aware of a case not listed? <a href="mailto:hello@cleanproteinlist.com">Contact us</a>.
+        </p>
+
+        <!-- ── Featured lawsuit card: Costco / Orgain ── -->
+        <div class="recall-card" id="lawsuit-costco-orgain">
+            <div class="recall-card-header lawsuit-header">
+                <span class="class-badge">CLASS ACTION</span>
+                <h3>⚖️ Costco / Orgain Organic Protein Powder — Undisclosed Heavy Metals (Newest)</h3>
+            </div>
+            <div class="recall-card-body">
+
+                <div class="action-box blue" style="margin-top:0;">
+                    <h4 style="margin-top:0;">What This Is</h4>
+                    <p style="margin-bottom:0;">
+                        A proposed class action filed July 7, 2026 alleging Costco sold Orgain Organic Protein Powder
+                        without disclosing lead, cadmium, and arsenic. <strong>This is a lawsuit, not a recall</strong> —
+                        the product remains on sale, Orgain says it is safe, and the allegations are unproven.
+                    </p>
+                </div>
+
+                <div class="recall-details-grid">
+                    <div class="recall-detail-item"><span>Defendant</span> Costco Wholesale Corporation</div>
+                    <div class="recall-detail-item"><span>Product</span> Orgain Organic Protein Powder (Vanilla Bean, Creamy Chocolate Fudge cited)</div>
+                    <div class="recall-detail-item"><span>Filed</span> July 7, 2026</div>
+                    <div class="recall-detail-item"><span>Court</span> U.S. District Court, W.D. Washington (Seattle)</div>
+                    <div class="recall-detail-item"><span>Plaintiffs' Firm</span> Hagens Berman</div>
+                    <div class="recall-detail-item"><span>Plaintiffs</span> Seven named consumers</div>
+                    <div class="recall-detail-item"><span>Metals Alleged</span> Lead (up to 67 ppb), cadmium (70.3 ppb), arsenic (19.8 ppb)</div>
+                    <div class="recall-detail-item"><span>Proposed Classes</span> WA, CA, IL, MN, OH, TX</div>
+                    <div class="recall-detail-item"><span>Status</span> <span class="status-pending">Filed · Pending</span></div>
+                    <div class="recall-detail-item"><span>Recall?</span> No — product remains on sale</div>
+                </div>
+
+                <p style="margin-bottom:0;">
+                    <a href="costco-orgain-protein-powder-lawsuit-heavy-metals-2026.html" style="font-weight:600;">
+                        → Read our full Costco/Orgain lawsuit breakdown, the testing data, and safer certified alternatives
+                    </a>
+                </p>
+            </div>
+        </div>
+
+        <!-- ══════════════════════════════════════════
+             MASTER RECALL SUMMARY TABLE
+        ══════════════════════════════════════════ -->
+        <h2 id="recall-tracker">🚨 FDA Recalls: 2025–2026 At a Glance</h2>
+
+        <p>The table below covers every protein powder or protein supplement <strong>FDA recall</strong> we are tracking. Click the recall name to jump to full details.</p>
+
+        <div style="overflow-x:auto;">
+        <table class="recall-summary-table">
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Product</th>
+                    <th>Brand</th>
+                    <th>Reason</th>
+                    <th>Class</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Dec&nbsp;2025</td>
+                    <td><a href="#recall-genepro-dec-2025">Genepro Whey 4th Gen Plasma Treated Protein — Unflavored, 225g (Lot 250214)</a></td>
+                    <td>Genepro Protein, Inc.</td>
+                    <td>Undeclared milk allergen — labeled "Dairy Free" but contains whey (milk protein)</td>
+                    <td><span class="class-i">Class I</span></td>
+                    <td><span class="status-active">Active</span></td>
+                </tr>
+            </tbody>
+        </table>
+        </div>
+
+        <p style="font-size:14px; color:#888; margin-top:-10px;">
+            Table updated February 2026. If you are aware of a recall not listed here, 
+            <a href="mailto:hello@cleanproteinlist.com">contact us</a>.
+        </p>
+
+        <!-- ══════════════════════════════════════════
+             FDA RECALL CLASS EXPLAINER
+        ══════════════════════════════════════════ -->
+        <h2>Understanding FDA Recall Classes</h2>
+
+        <p>Before diving into specific recalls, here is what each class actually means. This matters because the media often treats any recall as a crisis — but a Class III is categorically different from a Class I.</p>
+
+        <table class="comparison-table">
+            <thead>
+                <tr>
+                    <th>Class</th>
+                    <th>FDA Definition</th>
+                    <th>What It Means Practically</th>
+                    <th>Urgency</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong class="class-i">Class I</strong></td>
+                    <td>Reasonable probability of serious adverse health consequences or death</td>
+                    <td>Stop using immediately. This is a genuine safety emergency. Life-threatening allergens, dangerous contamination levels, or serious adulteration.</td>
+                    <td style="color:#c0392b; font-weight:700;">IMMEDIATE</td>
+                </tr>
+                <tr>
+                    <td><strong class="class-ii">Class II</strong></td>
+                    <td>May cause temporary or medically reversible adverse consequences</td>
+                    <td>Stop using and return the product. Risk is real but unlikely to be permanent or fatal in most people.</td>
+                    <td style="color:#e67e22; font-weight:700;">SOON</td>
+                </tr>
+                <tr>
+                    <td><strong class="class-iii">Class III</strong></td>
+                    <td>Not likely to cause adverse health consequences</td>
+                    <td>Minor labeling or packaging issues. Often issued proactively. Lower urgency, but products should still not be used.</td>
+                    <td style="color:#27ae60; font-weight:700;">ROUTINE</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <blockquote>
+            <strong>Important context:</strong> The FDA does not routinely test supplements before they reach store shelves. Unlike pharmaceuticals, protein powders can be sold without pre-market approval. This means recalls happen <em>after</em> a problem is discovered — through consumer complaints, manufacturer self-reporting, or FDA surveillance testing. The burden is on consumers to stay informed.
+        </blockquote>
+
+        <!-- ══════════════════════════════════════════
+             RECALL #1 — GENEPRO DEC 2025
+        ══════════════════════════════════════════ -->
+        <h2 id="recall-genepro-dec-2025">December 2025: Genepro Whey Protein — Class I Recall</h2>
+
+        <div class="recall-card">
+            <div class="recall-card-header class-i-header">
+                <span class="class-badge">CLASS I</span>
+                <h3>🚨 Genepro Whey 4th Generation Plasma Treated Protein — Undeclared Milk Allergen</h3>
+            </div>
+            <div class="recall-card-body">
+
+                <div class="action-box red" style="margin-top:0;">
+                    <h4 style="color:#c0392b; margin-top:0;">⚠️ Who Is at Risk</h4>
+                    <p style="margin-bottom:0;">
+                        This recall only poses a risk to people with a <strong>diagnosed milk allergy</strong>. 
+                        If you do not have a milk allergy, there is no health risk from this product. 
+                        If you have a milk allergy and consumed this product, monitor for symptoms and contact your doctor.
+                        Lactose intolerance is different from a milk allergy — intolerant individuals may experience 
+                        GI discomfort but are not at risk of anaphylaxis.
+                    </p>
+                </div>
+
+                <!-- Details grid -->
+                <div class="recall-details-grid">
+                    <div class="recall-detail-item">
+                        <span>Product</span>
+                        Genepro Whey 4th Generation Plasma Treated Protein, Unflavored
+                    </div>
+                    <div class="recall-detail-item">
+                        <span>Brand / Manufacturer</span>
+                        Genepro Protein, Inc.
+                    </div>
+                    <div class="recall-detail-item">
+                        <span>Lot Number</span>
+                        <strong>250214</strong>
+                    </div>
+                    <div class="recall-detail-item">
+                        <span>Best By Date</span>
+                        <strong>2-13-2027</strong>
+                    </div>
+                    <div class="recall-detail-item">
+                        <span>UPC</span>
+                        850053365126
+                    </div>
+                    <div class="recall-detail-item">
+                        <span>Package Size</span>
+                        225g (30 servings)
+                    </div>
+                    <div class="recall-detail-item">
+                        <span>Units Recalled</span>
+                        250 bags
+                    </div>
+                    <div class="recall-detail-item">
+                        <span>States Affected</span>
+                        40+ states (nationwide distribution)
+                    </div>
+                    <div class="recall-detail-item">
+                        <span>Recall Initiated</span>
+                        November 12, 2025
+                    </div>
+                    <div class="recall-detail-item">
+                        <span>FDA Classification Date</span>
+                        December 11, 2025
+                    </div>
+                    <div class="recall-detail-item">
+                        <span>FDA Event ID</span>
+                        98013
+                    </div>
+                    <div class="recall-detail-item">
+                        <span>Recall Class</span>
+                        <span class="class-i">Class I — Highest Risk</span>
+                    </div>
+                </div>
+
+                <h4>Why Was This Recalled?</h4>
+                <p>
+                    The product is labeled <strong>"DAIRY FREE," "LACTOSE FREE," and "ALLERGEN FREE"</strong> on its front panel. 
+                    In reality, the product contains <strong>whey protein</strong> — which is derived directly from milk and contains 
+                    milk proteins (beta-lactoglobulin, alpha-lactalbumin) that trigger allergic reactions in people with milk allergies.
+                </p>
+                <p>
+                    This is a fundamental contradiction: whey protein is, by definition, a dairy product. 
+                    It cannot be dairy-free. The most likely explanation is that marketing copy describing 
+                    another product (possibly a plant-based SKU) was accidentally applied to this product's label — 
+                    a quality control failure that should have been caught before manufacturing.
+                </p>
+
+                <h4>Affected States</h4>
+                <p>
+                    AL, AR, AZ, CA, CO, CT, FL, GA, IA, IL, IN, MA, MD, MN, MO, MS, NC, ND, NH, NJ, NM, NV, NY, OH, OK, OR, PA, RI, SC, SD, TN, TX, UT, VA, VT, WA, WY
+                </p>
+
+                <div class="action-box red">
+                    <h4 style="margin-top:0;">🚨 Immediate Actions If You Have This Product</h4>
+                    <ol style="margin-bottom:0;">
+                        <li>Check your packaging for <strong>Lot 250214</strong> and <strong>Best By: 2-13-2027</strong>.</li>
+                        <li>Check the UPC: <strong>850053365126</strong>.</li>
+                        <li>If your product matches, <strong>stop using it immediately</strong> — regardless of whether you have a milk allergy.</li>
+                        <li>Do not throw it away yet. Return it to the retailer for a full refund.</li>
+                        <li>If you have a milk allergy and already consumed this product, monitor for symptoms (hives, swelling, difficulty breathing). Seek emergency care if you experience any allergic reaction.</li>
+                    </ol>
+                </div>
+
+                <div class="action-box green">
+                    <h4 style="margin-top:0;">✅ How to Get a Refund</h4>
+                    <ul style="margin-bottom:0;">
+                        <li><strong>Return to any retailer</strong> where purchased — most will accept returns on recalled products without a receipt.</li>
+                        <li><strong>Amazon purchases:</strong> Contact Amazon customer service with FDA Event ID <strong>98013</strong> for an immediate refund.</li>
+                        <li><strong>Contact Genepro directly:</strong><br>
+                            Genepro Protein, Inc.<br>
+                            15000 Weston Parkway, Cary, NC 27513
+                        </li>
+                    </ul>
+                </div>
+
+                <h4>Safer Alternatives If You Were Using Genepro</h4>
+
+                <p><strong>If you have a milk allergy and need a truly dairy-free protein:</strong></p>
+                <ul>
+                    <li><strong>OWYN Pro Elite</strong> — pea protein, ranked #3 safest by Consumer Reports. <a href="owyn-pro-elite-protein-powder-safety-only-safe-plant-protein-2025.html">Full safety analysis →</a></li>
+                    <li><strong>Truvani Plant-Based Protein</strong> — pea, plant-based, Consumer Reports tested. <a href="consumer-reports-new-protein-powder-tests-january-2026.html">Full analysis →</a></li>
+                </ul>
+
+                <p><strong>If you don't have a milk allergy and just want a well-tested protein:</strong></p>
+                <ul>
+                    <li><strong>Dymatize ISO-100</strong> — ranked #2 safest in Consumer Reports testing. <a href="dymatize-iso-100-safety-analysis.html">Full analysis →</a></li>
+                    <li><strong>Optimum Nutrition Gold Standard Whey</strong> — ranked #5, widely available. <a href="optimum-nutrition-gold-standard-whey-lead-testing-results-2025.html">Full analysis →</a></li>
+                </ul>
+
+                <p>
+                    <a href="lead-free-protein-brands-ranked-2025.html" style="font-weight:600;">
+                        → See all 134+ protein brands ranked by safety testing
+                    </a>
+                </p>
+
+                <p style="font-size:14px; color:#888; margin-bottom:0;">
+                    <strong>Source:</strong> 
+                    <a href="https://www.accessdata.fda.gov/scripts/ires/?Event=98013" target="_blank" rel="noopener" style="color:#e74c3c; font-weight:700;">
+                        FDA Enforcement Report Event ID 98013 (December 11, 2025)
+                    </a>
+                    &nbsp;|&nbsp; 
+                    <a href="genepro-whey-protein-fda-recall-allergen-mislabeling-2025.html">Read our full Genepro recall analysis →</a>
+                </p>
+            </div>
+        </div>
+        <!-- END recall card -->
+
+        <!-- ══════════════════════════════════════════
+             PLACEHOLDER FOR FUTURE RECALLS
+        ══════════════════════════════════════════ -->
+        <h2>Earlier Recalls: 2024 and Prior</h2>
+
+        <div class="no-recall-placeholder">
+            <p style="margin:0; font-size:17px;">
+                📋 No protein powder recalls were identified in our monitoring period prior to December 2025 
+                that remain relevant for consumer action. We will add historical entries as we expand this tracker.
+            </p>
+        </div>
+
+        <!-- ══════════════════════════════════════════
+             WHAT RECALLS DON'T COVER: LEAD
+        ══════════════════════════════════════════ -->
+        <h2 id="difference">Recalls vs. Lawsuits vs. Lead Contamination: What's the Difference?</h2>
+
+        <p>
+            This is one of the most common points of confusion we see in search queries.
+            An FDA recall, a class action lawsuit, and lead contamination are three separate things —
+            and it is important to understand how they relate.
+        </p>
+
+        <table class="comparison-table">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>FDA Recall</th>
+                    <th>Class Action Lawsuit</th>
+                    <th>Lead / Heavy Metal Contamination</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>What it is</strong></td>
+                    <td>Regulatory removal of a specific defective lot</td>
+                    <td>Civil case by consumers alleging deception or failure to disclose</td>
+                    <td>The underlying <em>data</em> — metals absorbed from soil during growing</td>
+                </tr>
+                <tr>
+                    <td><strong>Triggered by</strong></td>
+                    <td>Allergen mislabeling, pathogens, foreign objects, undeclared ingredients</td>
+                    <td>Independent testing + marketing claims plaintiffs say are deceptive</td>
+                    <td>Naturally occurring heavy metals — not a violation per se</td>
+                </tr>
+                <tr>
+                    <td><strong>Product pulled?</strong></td>
+                    <td>Yes — the affected lot is removed from sale</td>
+                    <td>No — product stays on shelves unless a court orders otherwise</td>
+                    <td>No — rarely a formal recall since no single supplement limit exists</td>
+                </tr>
+                <tr>
+                    <td><strong>Who tracks it</strong></td>
+                    <td>FDA enforcement database</td>
+                    <td>Court filings (and this page)</td>
+                    <td>Consumer Reports, Clean Label Project, academic researchers</td>
+                </tr>
+                <tr>
+                    <td><strong>Where to check</strong></td>
+                    <td><a href="#recall-tracker">This page ↑</a></td>
+                    <td><a href="#lawsuit-tracker">This page ↑</a></td>
+                    <td><a href="lead-in-protein-powder-list.html">Our lead testing database →</a></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <blockquote>
+            <strong>Bottom line:</strong> A protein powder being "not recalled" does not mean it's free of lead or heavy metals.
+            A lawsuit alleging lead is not the same as a recall — the product usually stays on sale. And elevated lead
+            in a product does not automatically trigger either. These are parallel safety questions that require separate
+            investigation. We cover all three on this site so you don't have to piece it together from multiple sources.
+        </blockquote>
+
+        <!-- ══════════════════════════════════════════
+             HOW WE MONITOR
+        ══════════════════════════════════════════ -->
+        <h2>How We Monitor Recalls &amp; Lawsuits</h2>
+
+        <p>
+            The FDA publishes a weekly <a href="https://www.accessdata.fda.gov/scripts/ires/" target="_blank" rel="noopener">
+            Enforcement Report</a> listing all new recalls across food, drugs, devices, and dietary supplements. 
+            We check this database monthly — and more frequently when news reports suggest an active supplement issue — 
+            and filter for any product that falls into the protein powder, protein supplement, or weight/sports nutrition category.
+            For lawsuits, we monitor consumer-protection court filings and plaintiff-firm announcements for protein and
+            supplement heavy-metal cases, then link each to our underlying brand safety coverage.
+        </p>
+
+        <div class="action-box blue">
+            <h4 style="margin-top:0;">Our Monitoring Criteria</h4>
+            <p style="margin-bottom:0;">We include a recall or lawsuit on this tracker if the product is:</p>
+            <ul style="margin-bottom:0; margin-top:10px;">
+                <li>A protein powder, protein shake, RTD protein drink, or protein supplement in any form</li>
+                <li>A sports nutrition product marketed primarily for protein content</li>
+                <li>A meal replacement with protein as a primary nutrient claim</li>
+                <li>A collagen, creatine, or amino acid supplement (tracked separately where volume warrants)</li>
+            </ul>
+        </div>
+
+        <p>
+            We do not include recalls for unrelated supplement categories (vitamins, herbal products, weight loss pills) 
+            unless they are directly relevant to the protein supplement audience. 
+            If you want to search for all supplement recalls, use the 
+            <a href="https://www.accessdata.fda.gov/scripts/ires/" target="_blank" rel="noopener">FDA's full enforcement database</a> directly.
+        </p>
+
+        <!-- ══════════════════════════════════════════
+             FAQ
+        ══════════════════════════════════════════ -->
+        <h2>Recall &amp; Lawsuit FAQ</h2>
+
+        <div class="faq-section">
+
+            <div class="faq-item">
+                <h4>Q: What's the difference between a recall and a lawsuit?</h4>
+                <p>
+                    An FDA recall is a regulatory action that removes a specific defective lot from sale — usually for
+                    allergen mislabeling or contamination. A class action lawsuit is a civil case filed by consumers
+                    alleging deception, most recently over undisclosed heavy metals. A lawsuit does <strong>not</strong>
+                    pull the product from shelves and does not mean the claims are proven — it means a court will decide.
+                </p>
+            </div>
+
+            <div class="faq-item">
+                <h4>Q: How do I know if my specific tub of protein powder is recalled?</h4>
+                <p>
+                    Check the lot number on your packaging — usually printed or stamped on the bottom 
+                    of the container or on the seal — and compare it against the lot numbers listed in 
+                    this tracker. A recall affects specific production lots, not all products a brand makes. 
+                    If your lot number is different from what's listed, your product is not affected by that recall.
+                </p>
+            </div>
+
+            <div class="faq-item">
+                <h4>Q: Does a recall or lawsuit mean the protein powder has lead in it?</h4>
+                <p>
+                    For recalls: usually no — most are for allergen mislabeling or contamination, not heavy metals.
+                    For the recent lawsuits (Garden of Life, Jocko, Costco/Orgain): yes, those specifically allege
+                    undisclosed lead, cadmium, and arsenic. Lead contamination is a chronic, low-level issue caused
+                    by soil absorption during ingredient growing, tracked in our
+                    <a href="lead-in-protein-powder-list.html">lead testing database</a>.
+                </p>
+            </div>
+
+            <div class="faq-item">
+                <h4>Q: Are protein powder recalls common?</h4>
+                <p>
+                    Less common than most people assume. Given that tens of millions of Americans use protein 
+                    supplements regularly, formal FDA recalls are relatively infrequent. When they do happen, 
+                    they are most often Class I allergen mislabeling issues — serious for allergy sufferers, 
+                    but not a risk to the general population.
+                </p>
+            </div>
+
+            <div class="faq-item">
+                <h4>Q: Can I still buy a brand even if one of their products was recalled or sued?</h4>
+                <p>
+                    Generally yes, as long as you are not buying a specific recalled lot. A single-lot recall 
+                    reflects a quality control failure in one production run. A lawsuit is an unproven allegation.
+                    Both should factor into how you evaluate a brand's quality standards. For broader brand safety
+                    evaluations, see our <a href="lead-free-protein-brands-ranked-2025.html">brand safety rankings</a>.
+                </p>
+            </div>
+
+            <div class="faq-item">
+                <h4>Q: What should I do if I've already consumed a recalled protein powder?</h4>
+                <p>
+                    First, assess whether you are in the at-risk population for the specific recall reason. 
+                    For allergen mislabeling recalls: if you don't have the allergy in question, you are not at risk. 
+                    If you do have the allergy and consumed the product, contact your doctor immediately and monitor 
+                    for symptoms. For contamination-based recalls, the FDA's press release for that specific recall 
+                    will outline appropriate health steps.
+                </p>
+            </div>
+
+            <div class="faq-item">
+                <h4>Q: How often is this page updated?</h4>
+                <p>
+                    We check the FDA enforcement database monthly and monitor new protein-related class actions as
+                    they are filed. We update this page whenever a new recall or lawsuit falls within our monitoring
+                    criteria. The date of our last update is shown in the banner at the top of this page. If you know
+                    of a recall or case that is not listed here, please <a href="mailto:hello@cleanproteinlist.com">contact us</a>.
+                </p>
+            </div>
+
+        </div>
+
+        <!-- ══════════════════════════════════════════
+             CTA
+        ══════════════════════════════════════════ -->
+        <div class="cta-box">
+            <h3>Concerned About Lead in Your Protein Powder?</h3>
+            <p>
+                Recalls and lawsuits are two pieces of the supplement safety picture. Lead and heavy metal contamination 
+                is the underlying issue behind the recent wave of cases. We've tested and ranked 134+ brands 
+                so you don't have to guess.
+            </p>
+            <a href="lead-free-protein-brands-ranked-2025.html">See Complete Safety Rankings →</a>
+        </div>
+
+        <!-- ══════════════════════════════════════════
+             RELATED
+        ══════════════════════════════════════════ -->
+        <hr style="margin:60px 0; border:none; border-top:1px solid #e0e0e0;">
+
+        <section>
+            <h3>Related Articles</h3>
+            <div class="related-grid">
+                <a href="costco-orgain-protein-powder-lawsuit-heavy-metals-2026.html" class="related-card">
+                    <h4>Costco / Orgain Lawsuit (2026)</h4>
+                    <p>Newest heavy-metal class action — full breakdown and safer picks</p>
+                </a>
+                <a href="garden-of-life-lawsuit-lead-contamination-class-action-2025.html" class="related-card">
+                    <h4>Garden of Life Lawsuit</h4>
+                    <p>The Dec 2025 case: 2.76 µg lead/serving, 564% over limit</p>
+                </a>
+                <a href="genepro-whey-protein-fda-recall-allergen-mislabeling-2025.html" class="related-card">
+                    <h4>Genepro Whey Recall: Full Analysis</h4>
+                    <p>Complete breakdown of the Class I recall and what to do</p>
+                </a>
+                <a href="lead-free-protein-brands-ranked-2025.html" class="related-card">
+                    <h4>Lead-Free Protein Brands Ranked</h4>
+                    <p>Verified safe brands and the ones to avoid</p>
+                </a>
+            </div>
+        </section>
+
+        <!-- ══════════════════════════════════════════
+             SOURCES
+        ══════════════════════════════════════════ -->
+        <hr style="margin:60px 0; border:none; border-top:1px solid #e0e0e0;">
+
+        <div class="sources-list">
+            <p><strong>Sources &amp; References:</strong></p>
+            <ul>
+                <li>
+                    <a href="https://www.accessdata.fda.gov/scripts/ires/?Event=98013" target="_blank" rel="noopener">
+                        FDA Enforcement Report: Event ID 98013 — Genepro Whey Protein Recall (December 11, 2025)
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.accessdata.fda.gov/scripts/ires/" target="_blank" rel="noopener">
+                        FDA Enforcement Reports Database (accessed February 2026)
+                    </a>
+                </li>
+                <li>Hagens Berman — Consumer Lawsuit Against Costco Alleges Toxic Heavy Metals in Orgain Protein Supplements (filed July 7, 2026, W.D. Wash.)</li>
+                <li>DeHerrera v. Garden of Life LLC, Case No. 5:25-cv-03118, U.S. District Court, Central District of California (filed December 16, 2025)</li>
+                <li>Barrales v. Quest Nutrition, LLC, Case No. 26STCV07966, Superior Court of California, County of Los Angeles (filed March 11, 2026)</li>
+                <li>Food Allergen Labeling and Consumer Protection Act (FALCPA), 2004</li>
+                <li>FDA Recall Classification Guidance: 21 CFR Part 7</li>
+            </ul>
+            <p><strong>Last Updated:</strong> July 10, 2026 &nbsp;|&nbsp; <strong>Next Review:</strong> August 2026</p>
+        </div>
+
+    </article>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Clean Protein List. Independent supplement safety database.</p>
+            <p>
+                <a href="../index.html">Home</a> |
+                <a href="../quiz.html" class="quiz-highlight">Quiz</a> |
+                <a href="../blog.html">Articles</a> |
+                <a href="../tools.html">Tools</a> |
+                <a href="../about.html">About</a> |
+                <a href="mailto:hello@cleanproteinlist.com">Contact</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="../includes/mobile-menu.js"></script>
+</body>
+</html>
+

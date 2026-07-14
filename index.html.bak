@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clean Protein List - Find Safe Protein Powder After Consumer Reports Lead Testing</title>
+    <meta name="description" content="Consumer Reports found lead in popular protein powders. Take our 60-second quiz to find safe alternatives based on the latest testing data.">
+    <link rel="canonical" href="https://cleanproteinlist.com/">
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="theme-color" content="#2d6a4f">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6RL8K3H3ZC"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-6RL8K3H3ZC');
+    </script>
+
+    <script src="/includes/affiliate-tracker.js"></script>
+
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Clean Protein List",
+  "alternateName": "CPL",
+  "url": "https://cleanproteinlist.com/",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://cleanproteinlist.com/search?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://cleanproteinlist.com/#organization",
+      "name": "Clean Protein List",
+      "url": "https://cleanproteinlist.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://cleanproteinlist.com/images/logo.png"
+      },
+      "description": "Independent supplement safety database analyzing protein powders for heavy metal contamination.",
+      "founder": { "@type": "Person", "name": "Ray" },
+      "knowsAbout": ["Protein Powder Safety","Heavy Metal Testing","Lead Contamination","Supplement Analysis"]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://cleanproteinlist.com/#website",
+      "url": "https://cleanproteinlist.com",
+      "name": "Clean Protein List",
+      "publisher": { "@id": "https://cleanproteinlist.com/#organization" }
+    }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{ "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [ { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://cleanproteinlist.com/" }, { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://cleanproteinlist.com/blog/" } ] }
+</script>
+</head>
+<body>
+
+<!-- BREAKING BANNER — COSTCO ORGAIN LAWSUIT -->
+<div class="alert-banner">
+    <div class="container">
+        <div class="alert-tag">Breaking Legal News</div>
+
+        <h2>
+            <strong>Costco Sued Over Orgain Protein Powder:</strong>
+            Lawsuit Alleges Undisclosed Lead, Cadmium &amp; Arsenic
+        </h2>
+
+        <p>
+            Independent testing cited in the complaint reported lead up to 67 ppb.
+            There is no recall, and the allegations have not been proven in court.
+        </p>
+
+        <a href="blog/costco-orgain-protein-powder-lawsuit-heavy-metals-2026.html"
+           class="alert-cta">
+            Read the Lawsuit Breakdown &rarr;
+        </a>
+    </div>
+</div>
+
+<header>
+    <div class="container">
+        <a href="index.html" class="logo">Clean Protein List</a>
+
+        <button class="hamburger" id="hamburger-btn" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav id="mobile-nav">
+            <a href="index.html">Home</a>
+            <a href="blog.html#protein-articles">Protein</a>
+            <a href="blog.html#creatine-articles">Creatine</a>
+            <a href="stats.html">Stats</a>
+            <a href="research/protein-safety-consumer-survey-2026.html">Research</a>
+            <a href="tools.html">Tools</a>
+            <a href="quiz.html" class="quiz-highlight">Take Quiz</a>
+            <a href="about.html">About</a>
+        </nav>
+    </div>
+</header>
+
+<div class="menu-overlay" id="menu-overlay"></div>
+
+<!-- Hero -->
+<div class="hero-parallax">
+    <img src="images/hero-protein-lead-warning.jpeg"
+         alt="Consumer Reports Lead Testing Warning">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <h1>74% of Protein Powders<br>Failed Lead Testing</h1>
+        <p class="hero-sub">Find out if YOUR brand is safe in 60 seconds</p>
+        <a href="quiz.html" class="cta-button">Take Free Safety Quiz &rarr;</a>
+    </div>
+</div>
+
+<main>
+    <section class="stats">
+        <div class="container">
+            <div class="stat-grid">
+                <div class="stat-item">
+                    <div class="stat-number">23</div>
+                    <div class="stat-label">Protein powders tested by Consumer Reports</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">Multiple</div>
+                    <div class="stat-label">Popular brands exceeded safe lead limits</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">60 sec</div>
+                    <div class="stat-label">To find your safest option</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="how-it-works">
+        <div class="container">
+            <h2>How It Works</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Tell us what you're using</h3>
+                    <p>We'll check it against the latest Consumer Reports testing data</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>See your safety rating</h3>
+                    <p>Understand the heavy metal levels in your current brand</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Get cleaner alternatives</h3>
+                    <p>Personalized recommendations based on your needs and preferences</p>
+                </div>
+            </div>
+            <a href="quiz.html" class="cta-button secondary">Take the Quiz Now</a>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2>Why We Built This</h2>
+            <p>After Consumer Reports published their protein powder contamination study on October 14, 2025, thousands of people started searching for answers about their specific brands. We built this tool to help you quickly find safe alternatives based on the latest testing data.</p>
+
+            <p><strong>Our recommendations are based on:</strong></p>
+            <ul>
+                <li>Consumer Reports October 2025 and January 2026 heavy metal testing</li>
+                <li>Third-party certifications (NSF Certified for Sport, Informed Choice, USP Verified)</li>
+                <li>Manufacturer transparency about testing practices</li>
+                <li>Independent lab results when available</li>
+            </ul>
+
+            <p class="disclosure"><strong>Disclosure:</strong> This site contains affiliate links. When you purchase through our recommendations, we may earn a commission at no extra cost to you. This helps us keep the tool free and up-to-date with the latest testing data.</p>
+        </div>
+    </section>
+</main>
+
+<!-- Tools Section -->
+<section class="tools-section">
+    <div class="container">
+        <h2>Is <em>Your</em> Protein Powder Safe?</h2>
+        <p class="tools-subtitle">Check your brand, calculate your protein needs, and assess your lead exposure — free, instant results.</p>
+
+        <div class="tools-grid">
+
+            <!-- TOOL CARD 1: BRAND CHECKER -->
+            <div class="tool-card">
+                <h3>Check Your Brand</h3>
+                <p>See if your protein was tested by Consumer Reports and whether it's safe for daily use.</p>
+
+                <select id="home-brand-quick">
+                    <option value="">Select your brand...</option>
+                    <optgroup label="Verified Safe">
+                        <option value="safe-muscletech">MuscleTech Mass Gainer</option>
+                        <option value="safe-cse">Clean Simple Eats</option>
+                        <option value="safe-owyn">OWYN Pro Elite</option>
+                        <option value="safe-dymatize">Dymatize ISO-100</option>
+                        <option value="safe-on">Optimum Nutrition</option>
+                    </optgroup>
+                    <optgroup label="Unsafe — Avoid">
+                        <option value="unsafe-naked">Naked Nutrition</option>
+                        <option value="unsafe-garden">Garden of Life</option>
+                        <option value="unsafe-huel">Huel Black Edition</option>
+                    </optgroup>
+                    <option value="other">Not listed — check all 28 &rarr;</option>
+                </select>
+
+                <div id="home-brand-result" style="display:none;" class="tool-result"></div>
+
+                <a href="tools.html#brand-checker" class="tool-cta">Check All 28 Tested Brands &rarr;</a>
+            </div>
+
+            <!-- TOOL CARD 2: PROTEIN CALCULATOR -->
+            <div class="tool-card accent">
+                <h3>Calculate Your Needs</h3>
+                <p>How much protein should you consume daily based on your weight and fitness goals?</p>
+
+                <input type="number" id="home-weight-quick" placeholder="Your weight (lbs)">
+
+                <select id="home-goal-quick">
+                    <option value="">Your goal...</option>
+                    <option value="lose">Lose Weight</option>
+                    <option value="maintain">Maintain Weight</option>
+                    <option value="gain">Build Muscle</option>
+                </select>
+
+                <div id="home-protein-result" style="display:none;" class="tool-result"></div>
+
+                <a href="tools.html#protein-calculator" class="tool-cta accent">Get Detailed Recommendations &rarr;</a>
+            </div>
+
+            <!-- TOOL CARD 3: LEAD EXPOSURE -->
+            <div class="tool-card warning">
+                <h3>Assess Your Exposure</h3>
+                <p>If you've been using contaminated protein, calculate your cumulative lead exposure.</p>
+
+                <div class="callout-box">
+                    <strong>Used Naked Nutrition, Garden of Life, or Huel daily?</strong> Check your exposure immediately.
+                </div>
+
+                <a href="tools.html#lead-calculator" class="tool-cta warning">Calculate My Lead Exposure &rarr;</a>
+            </div>
+
+        </div>
+
+        <div class="tools-footer-link">
+            <a href="tools.html">View all tools including Creatine Safety Checker &rarr;</a>
+        </div>
+    </div>
+</section>
+
+<script>
+// Mini brand checker on homepage
+document.getElementById('home-brand-quick').addEventListener('change', function() {
+    const value = this.value;
+    const brandName = this.options[this.selectedIndex].text;
+    const result = document.getElementById('home-brand-result');
+
+    if (!value) { result.style.display = 'none'; return; }
+
+    if (value.startsWith('safe-')) {
+        result.className = 'tool-result safe';
+        result.innerHTML = '<strong>' + brandName + '</strong> is verified safe &mdash; lead below detection or minimal.';
+    } else if (value.startsWith('unsafe-')) {
+        result.className = 'tool-result unsafe';
+        result.innerHTML = '<strong>' + brandName + '</strong> is unsafe &mdash; 5&ndash;15&times; over safe lead limit.';
+    } else {
+        result.className = 'tool-result neutral';
+        result.innerHTML = 'Check all 28 tested brands for full results.';
+    }
+
+    result.style.display = 'block';
+});
+
+// Mini protein calculator on homepage
+function updateProteinCalc() {
+    const weight = parseFloat(document.getElementById('home-weight-quick').value);
+    const goal   = document.getElementById('home-goal-quick').value;
+    const result = document.getElementById('home-protein-result');
+
+    if (!weight || !goal) { result.style.display = 'none'; return; }
+
+    const weightKg  = weight / 2.205;
+    const mult      = goal === 'lose' ? 2.0 : goal === 'maintain' ? 1.6 : 2.2;
+    const protein   = Math.round(weightKg * mult);
+
+    result.className = 'tool-result safe';
+    result.innerHTML = '<strong style="font-size:26px;">' + protein + 'g</strong> protein per day';
+    result.style.display = 'block';
+}
+
+document.getElementById('home-weight-quick').addEventListener('input',  updateProteinCalc);
+document.getElementById('home-goal-quick').addEventListener('change', updateProteinCalc);
+</script>
+
+<!-- Blog Preview -->
+<section class="blog-preview">
+    <div class="container">
+        <h2>Latest Articles on Protein Powder Safety</h2>
+        <p class="subtitle">Stay informed about heavy metal testing and which brands to avoid</p>
+
+        <div class="blog-grid">
+
+<!-- COSTCO ORGAIN LAWSUIT — FEATURED ALERT -->
+<div class="blog-card featured alert">
+    <span class="card-tag">July 2026 &middot; Class Action Filed</span>
+
+    <h3>
+        <a href="blog/costco-orgain-protein-powder-lawsuit-heavy-metals-2026.html">
+            Costco Sued Over Orgain Protein Powder: Lead, Cadmium &amp; Arsenic Claims Explained
+        </a>
+    </h3>
+
+    <p>
+        A proposed class action filed July 7 alleges Costco sold Orgain Organic
+        Protein Powder without disclosing detectable heavy metals. Testing cited
+        in the complaint reported lead up to 67 ppb, cadmium up to 70.3 ppb and
+        arsenic up to 19.8 ppb.
+    </p>
+
+    <div class="featured-inset">
+        <p>
+            <strong>What consumers should know:</strong>
+            This is a pending civil lawsuit, not a product recall. The allegations
+            are unproven, and Orgain says its products meet applicable food-safety
+            standards.
+        </p>
+    </div>
+
+    <a href="blog/costco-orgain-protein-powder-lawsuit-heavy-metals-2026.html"
+       class="featured-cta">
+        See the Testing Data &amp; Safer Alternatives &rarr;
+    </a>
+</div>
+
+            <!-- SB 1033 LEGISLATIVE — FEATURED ALERT -->
+            <div class="blog-card featured alert">
+                <span class="card-tag">Legislative Breaking News</span>
+                <h3><a href="blog/california-sb-1033-protein-powder-heavy-metal-testing-2026.html">California SB 1033: First-in-Nation Bill Requires Heavy Metal Testing &amp; Public Disclosure</a></h3>
+                <p>Senator Padilla introduces groundbreaking legislation requiring protein manufacturers to test every batch for lead, arsenic, cadmium, and mercury — and publish results publicly. Products that don't comply would be banned from California. <strong>70% of tested brands would be affected.</strong></p>
+                <div class="featured-inset">
+                    <p><strong>Key Impact:</strong> Premier Protein, Orgain, Garden of Life, Naked Nutrition, and 16 other brands would require public disclosure. MuscleTech (0.0 lead) would be exempt.</p>
+                </div>
+                <a href="blog/california-sb-1033-protein-powder-heavy-metal-testing-2026.html" class="featured-cta">Read Complete Analysis &amp; Brand Impact &rarr;</a>
+            </div>
+
+            <!-- MEGA DATABASE — FEATURED -->
+            <div class="blog-card featured">
+                <span class="card-tag">Complete Database</span>
+                <h3><a href="blog/lead-free-protein-brands-ranked-2025.html">Lead-Free Protein Brands Ranked (2026): 134+ Brands Laboratory Database</a></h3>
+                <p>The ultimate safety database. 21 verified-safe brands, 4 dangerous brands to avoid, complete plant protein analysis, and price comparisons.</p>
+                <a href="blog/lead-free-protein-brands-ranked-2025.html" class="read-more">Explore Database &rarr;</a>
+            </div>
+
+            <div class="blog-card">
+                <h3><a href="blog/best-protein-ozempic-glp1-weight-loss-lead-free-2026.html">Best Protein for Ozempic &amp; GLP-1 Users (2026)</a></h3>
+                <p>74% of protein powders contain dangerous lead levels. Safe picks for Ozempic, Wegovy &amp; Mounjaro users — plus the 3 brands to avoid immediately.</p>
+                <a href="blog/best-protein-ozempic-glp1-weight-loss-lead-free-2026.html" class="read-more">Read Guide &rarr;</a>
+            </div>
+
+            <div class="blog-card">
+                <h3><a href="blog/lead-in-protein-powder-list.html">Complete List: Consumer Reports Testing Results</a></h3>
+                <p>All 23 products tested by Consumer Reports, ranked from safest to most contaminated. Full analysis and recommendations.</p>
+                <a href="blog/lead-in-protein-powder-list.html" class="read-more">Read Article &rarr;</a>
+            </div>
+
+            <div class="blog-card">
+                <h3><a href="blog/premier-protein-lead-testing.html">Does Premier Protein Have Lead? (2026 Update)</a></h3>
+                <p>The powder vs RTD shake confusion explained, plus which Premier Protein products are verified safe.</p>
+                <a href="blog/premier-protein-lead-testing.html" class="read-more">Read Article &rarr;</a>
+            </div>
+
+            <div class="blog-card">
+                <h3><a href="blog/muscletech-mass-gainer-safety.html">MuscleTech 100% Mass Gainer: #1 Safest Protein (2026 Update)</a></h3>
+                <p>Ranked #1 out of 23 protein powders in Consumer Reports testing — ZERO detectable lead. The cleanest mass gainer you can buy.</p>
+                <a href="blog/muscletech-mass-gainer-safety.html" class="read-more">Read Article &rarr;</a>
+            </div>
+
+            <div class="blog-card">
+                <h3><a href="blog/body-fortress-protein-powder-lead-testing-budget-clean-2025.html">Body Fortress: Budget Protein, Premium Safety</a></h3>
+                <p>Clean Label certified with non-detectable heavy metals for only $0.67 per serving. The best cheap protein that's actually clean.</p>
+                <a href="blog/body-fortress-protein-powder-lead-testing-budget-clean-2025.html" class="read-more">Read Article &rarr;</a>
+            </div>
+
+            <div class="blog-card">
+                <h3><a href="blog/naked-nutrition-vegan-mass-gainer-lead.html">Naked Nutrition Vegan Mass Gainer: Ranked Worst in Testing</a></h3>
+                <p>7.7 µg of lead per serving — 15.4× over safe limit. Why this popular vegan mass gainer failed catastrophically.</p>
+                <a href="blog/naked-nutrition-vegan-mass-gainer-lead.html" class="read-more">Read Article &rarr;</a>
+            </div>
+
+            <div class="blog-card">
+                <h3><a href="blog/huel-black-edition-lead-content.html">Huel Black Edition: Second-Worst Lead Contamination</a></h3>
+                <p>Ranked #16 with 6.3 µg lead. What Huel's premium users need to know about daily consumption risks.</p>
+                <a href="blog/huel-black-edition-lead-content.html" class="read-more">Read Article &rarr;</a>
+            </div>
+
+        </div>
+
+        <div style="text-align:center; margin-top:30px;">
+            <a href="blog.html" class="cta-button secondary">View All Articles</a>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2026 Clean Protein List. Updated based on Consumer Reports October 2025 and 2026 testing.</p>
+        <p><a href="blog/lead-in-protein-powder-list.html">Read the full report &rarr;</a></p>
+    </div>
+</footer>
+
+<script src="includes/mobile-menu.js"></script>
+
+</body>
+</html>
+
+
