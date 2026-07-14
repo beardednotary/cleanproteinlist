@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Orgain Organic Protein Powder Lead Levels: Testing Results (2026 Update)</title>
-    <meta name="description" content="Orgain Organic Plant-Based Protein ranked #12 in Consumer Reports testing with 0.72 µg lead per serving - 143% over safe limit. Does 'organic' mean safe? Complete analysis + verified-clean alternatives.">
+    <meta name="description" content="Orgain Organic Plant-Based Protein ranked #12 in Consumer Reports testing with 0.72 µg lead per serving - 143% of CR&rsquo;s level of concern. Does 'organic' mean safe? Complete analysis + verified-clean alternatives.">
     <link rel="stylesheet" href="../style.css">
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-6RL8K3H3ZC"></script>
     <script>
@@ -28,7 +28,7 @@
                 "name": "Does Orgain protein powder contain lead?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Yes. Orgain Organic Plant-Based Protein Powder contains 0.72 µg of lead per serving according to Consumer Reports October 2025 testing. This is 143% over California's Prop 65 safe harbor limit of 0.5 µg per day. Orgain ranked #12 out of 23 tested protein powders, placing it in the contaminated category."
+                    "text": "Yes. Orgain Organic Plant-Based Protein Powder contains 0.72 µg of lead per serving according to Consumer Reports October 2025 testing. This is 143% of CR&rsquo;s level of concern California's Prop 65 safe harbor limit of 0.5 µg per day. Orgain ranked #12 out of 23 tested protein powders, placing it in the contaminated category."
                 }
             },
             {
@@ -60,7 +60,7 @@
                 "name": "What should I use instead of Orgain?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "For plant-based: OWYN Pro Elite is the only plant protein verified safe by Consumer Reports (#7 ranked, lead below detection). For organic whey: Garden of Life Grass Fed Whey is Clean Label certified with non-detectable lead. For budget: Body Fortress Super Advanced Whey ($0.67/serving, Clean Label certified). For premium: Dymatize ISO 100 (#2 ranked, dual verified safe)."
+                    "text": "For plant-based: OWYN Pro Elite is the only plant protein verified safe by Consumer Reports (#7 ranked, lead 88% of CR&rsquo;s level of concern). For organic whey: Garden of Life Grass Fed Whey is Clean Label certified with 88% of CR&rsquo;s level of concern lead. For budget: Body Fortress Super Advanced Whey ($0.67/serving, Clean Label certified). For premium: Dymatize Super Mass Gainer (#2 ranked, dual verified safe)."
                 }
             },
             {
@@ -68,7 +68,7 @@
                 "name": "How does Orgain compare to other plant proteins?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Orgain (0.72 µg lead, ranked #12) is less contaminated than the worst plant proteins like Naked Nutrition (7.86 µg, #23) and Huel (6.44 µg, #22), but still exceeds safe limits. All tested plant proteins except OWYN Pro Elite (#7) failed safety standards. OWYN had lead below detection limits - the only safe plant-based option."
+                    "text": "Orgain (0.72 µg lead, ranked #12) is less contaminated than the worst plant proteins like Naked Nutrition (7.7 µg, #23) and Huel (6.3 µg, #22), but still exceeds safe limits. All tested plant proteins except OWYN Pro Elite (#7) failed safety standards. OWYN had lead 88% of CR&rsquo;s level of concern - the only safe plant-based option."
                 }
             },
             {
@@ -84,7 +84,7 @@
                 "name": "Can I still use Orgain occasionally?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "At 143% over the safe limit, Orgain is not recommended even for occasional use. The safe harbor limit of 0.5 µg/day is designed for daily exposure - occasional use (2-3x per week) is lower risk than daily consumption, but still results in lead accumulation over time. For occasional use, consider verified-safe alternatives that have no serving restrictions. If you already have Orgain, finish the container with 2-3x weekly use maximum, then switch to verified-safe protein."
+                    "text": "At 143% of CR&rsquo;s level of concern, Orgain is not recommended even for occasional use. The safe harbor limit of 0.5 µg/day is designed for daily exposure - occasional use (2-3x per week) is lower risk than daily consumption, but still results in lead accumulation over time. For occasional use, consider verified-safe alternatives that have no serving restrictions. If you already have Orgain, finish the container with 2-3x weekly use maximum, then switch to verified-safe protein."
                 }
             }
         ]
@@ -97,7 +97,7 @@
         "@context": "https://schema.org",
         "@type": "Product",
         "name": "Orgain Organic Plant-Based Protein Powder",
-        "description": "USDA Organic plant-based protein powder - contaminated with 0.72 µg lead per serving (143% over safe limit)",
+        "description": "USDA Organic plant-based protein powder - contaminated with 0.72 µg lead per serving (143% of CR&rsquo;s level of concern)",
         "brand": {
             "@type": "Brand",
             "name": "Orgain"
@@ -122,7 +122,7 @@
                 "@type": "Organization",
                 "name": "Consumer Reports"
             },
-            "reviewBody": "Ranked #12 in Consumer Reports October 2025 testing with 0.72 µg lead per serving - 143% over California Prop 65 safe harbor limit. Moderately contaminated. USDA Organic certification did not prevent heavy metal contamination."
+            "reviewBody": "Ranked #12 in Consumer Reports October 2025 testing with 0.72 µg lead per serving - 143% of CR&rsquo;s level of concern California Prop 65 safe harbor limit. Moderately contaminated. USDA Organic certification did not prevent heavy metal contamination."
         }
     }
     </script>
@@ -133,7 +133,7 @@
         "@context": "https://schema.org",
         "@type": "Article",
         "headline": "Orgain Organic Protein Powder Lead Levels: Consumer Reports Results",
-        "description": "Consumer Reports found Orgain Organic Plant-Based Protein contains 0.72 µg lead (143% over safe limit). Analysis of why organic certification doesn't prevent contamination.",
+        "description": "Consumer Reports found Orgain Organic Plant-Based Protein contains 0.72 µg lead (143% of CR&rsquo;s level of concern). Analysis of why organic certification doesn't prevent contamination.",
         "image": "https://cleanproteinlist.com/images/orgain-lead-testing.jpg",
         "author": {
             "@type": "Organization",
@@ -154,7 +154,7 @@
         "@context": "https://schema.org",
         "@type": "VideoObject",
         "name": "Orgain Organic Protein Lead Testing Results",
-        "description": "Orgain Organic Plant-Based Protein tested at 0.72 µg lead per serving - 143% over safe limit. Does organic certification prevent heavy metal contamination?",
+        "description": "Orgain Organic Plant-Based Protein tested at 0.72 µg lead per serving - 143% of CR&rsquo;s level of concern. Does organic certification prevent heavy metal contamination?",
         "thumbnailUrl": "https://img.youtube.com/vi/YOUR_ORGAIN_VIDEO_ID/maxresdefault.jpg",
         "uploadDate": "2025-01-16T08:00:00Z",
         "duration": "PT60S",
@@ -264,7 +264,7 @@
                 <div class="direct-answer-box" style="background: #fff5f5; border: 2px solid #e74c3c; padding: 25px; border-radius: 12px; margin-bottom: 30px;">
                     <h2 style="margin-top: 0; color: #c0392b; font-size: 20px;">🚨 Direct Answer: Is Orgain Protein Safe?</h2>
                     <p style="margin-bottom: 0; font-size: 16px; line-height: 1.6;">
-                        <strong>No, not for daily use.</strong> Orgain Organic Protein ranked <strong>#12 out of 23</strong> with <strong>0.72 µg of lead per serving</strong> — <strong>143% over</strong> the safe daily limit. Its USDA Organic certification does not test for heavy metals.
+                        <strong>No, not for daily use.</strong> Orgain Organic Protein ranked <strong>#12 out of 23</strong> with <strong>0.72 µg of lead per serving</strong> — <strong>143% of CR&rsquo;s level of concern</strong> the safe daily limit. Its USDA Organic certification does not test for heavy metals.
                     </p>
                 </div>
 
@@ -372,7 +372,7 @@ function toggleMethodology() {
                 <!-- Quick Answer -->
                 <div class="highlight-box yellow">
                     <h4>📊 Quick Answer: Is Orgain Safe?</h4>
-                    <p><strong>No. Orgain Organic Plant-Based Protein Powder contains 0.72 µg lead per serving</strong> - 143% over California's Prop 65 safe harbor limit (0.5 µg/day).</p>
+                    <p><strong>No. Orgain Organic Plant-Based Protein Powder contains 0.72 µg lead per serving</strong> - 143% of CR&rsquo;s level of concern California's Prop 65 safe harbor limit (0.5 µg/day).</p>
                     <p><strong>Consumer Reports ranking: #12 out of 23 tested products.</strong> This places Orgain in the "contaminated" category - not safe for daily use.</p>
                     <p><strong>The organic paradox:</strong> USDA Organic certification tests for pesticides, not heavy metals. Orgain's organic status didn't prevent lead contamination from soil.</p>
                 </div>
@@ -413,7 +413,7 @@ function toggleMethodology() {
                                 <td><strong>Lead per serving</strong></td>
                                 <td><strong>0.72 µg</strong></td>
                                 <td>0.5 µg/day</td>
-                                <td>⚠️ 143% OVER</td>
+                                <td>⚠️ 143% of CR&rsquo;s level of concern</td>
                             </tr>
                             <tr class="moderate-row">
                                 <td><strong>Ranking</strong></td>
@@ -458,17 +458,17 @@ function toggleMethodology() {
                             <tr class="moderate-row">
                                 <td><strong>MINIMALLY OVER</strong></td>
                                 <td>Ranks 8-11</td>
-                                <td>2-18% over limit (finish container, then switch)</td>
+                                <td>2-18% of CR&rsquo;s level of concern (finish container, then switch)</td>
                             </tr>
                             <tr class="moderate-row">
                                 <td><strong>CONTAMINATED</strong></td>
                                 <td><strong>Ranks 12-19 (Orgain is here)</strong></td>
-                                <td><strong>143-365% over limit (switch within weeks)</strong></td>
+                                <td><strong>143-365% of CR&rsquo;s level of concern (switch within weeks)</strong></td>
                             </tr>
                             <tr class="danger-row">
                                 <td><strong>DANGEROUS</strong></td>
                                 <td>Ranks 20-23</td>
-                                <td>476-1,572% over limit (stop immediately)</td>
+                                <td>476-1,572% of CR&rsquo;s level of concern (stop immediately)</td>
                             </tr>
                         </tbody>
                     </table>
@@ -476,7 +476,7 @@ function toggleMethodology() {
                     <p><strong>Orgain sits in the middle of the "contaminated" tier.</strong> Not as extreme as the worst products (Naked Nutrition #23, Huel #22), but significantly over safe limits.</p>
 
                     <div class="highlight-box yellow">
-                        <h4>⚠️ What "143% Over Limit" Means</h4>
+                        <h4>⚠️ What "143% of CR&rsquo;s level of concern" Means</h4>
                         <p><strong>California Prop 65 safe harbor limit: 0.5 µg lead per day.</strong></p>
                         <p><strong>Orgain delivers: 0.72 µg per serving.</strong></p>
                         <p>You're consuming 1.43x the amount of lead that's considered "safe" for daily exposure. While not as egregiously contaminated as ranks #20-23, this still results in lead accumulation with daily use.</p>
@@ -712,7 +712,7 @@ function toggleMethodology() {
                             <tr class="safe-row">
                                 <td>OWYN Pro Elite</td>
                                 <td>NOT Organic</td>
-                                <td>Below detection</td>
+                                <td>88% of CR&rsquo;s level of concern</td>
                                 <td>#7 (SAFE)</td>
                             </tr>
                         </tbody>
@@ -742,13 +742,13 @@ function toggleMethodology() {
                         <div class="spectrum-item orgain">
                             <h4>⚠️ Orgain</h4>
                             <p><strong>0.72 µg lead</strong></p>
-                            <p>143% over safe limit</p>
+                            <p>143% of CR&rsquo;s level of concern</p>
                             <p><strong>Health effects accumulate over months/years</strong></p>
                         </div>
 
                         <div class="spectrum-item extreme">
                             <h4>🚫 Worst Brands</h4>
-                            <p><strong>2.82-7.86 µg lead</strong></p>
+                            <p><strong>2.82-7.7 µg lead</strong></p>
                             <p>Garden of Life Plant, Huel, Naked Nutrition</p>
                             <p><strong>Serious health risks within months</strong></p>
                         </div>
@@ -837,7 +837,7 @@ function toggleMethodology() {
                     <div class="highlight-box yellow">
                         <h4>⚠️ The Moderate Contamination Trap</h4>
                         <p><strong>Orgain isn't "extremely dangerous" like ranks #20-23.</strong> This can create false reassurance.</p>
-                        <p><strong>But 143% over the safe limit IS dangerous with long-term use.</strong> It's just slower poisoning rather than immediate crisis.</p>
+                        <p><strong>But 143% of CR&rsquo;s level of concern IS dangerous with long-term use.</strong> It's just slower poisoning rather than immediate crisis.</p>
                         <p><strong>The safe approach: Switch to verified-clean protein (0-0.1 µg lead) and eliminate the risk entirely.</strong></p>
                     </div>
                 </section>
@@ -913,7 +913,7 @@ function toggleMethodology() {
                     <tbody>
                         <tr class="safe-row">
                             <td><strong>OWYN Pro Elite</strong></td>
-                            <td>Below detection</td>
+                            <td>88% of CR&rsquo;s level of concern</td>
                             <td>#7</td>
                             <td>✅ Safe</td>
                             <td>$2.25</td>
@@ -948,14 +948,14 @@ function toggleMethodology() {
                         </tr>
                         <tr class="danger-row">
                             <td>Huel Black Edition</td>
-                            <td>6.44 µg</td>
+                            <td>6.3 µg</td>
                             <td>#22</td>
                             <td>1,288%</td>
                             <td>$3.00</td>
                         </tr>
                         <tr class="danger-row">
                             <td>Naked Nutrition Vegan</td>
-                            <td>7.86 µg</td>
+                            <td>7.7 µg</td>
                             <td>#23</td>
                             <td>1,572%</td>
                             <td>$2.50</td>
@@ -992,7 +992,7 @@ function toggleMethodology() {
                             <td>Infinitely safer, 1.7x cost</td>
                         </tr>
                         <tr class="safe-row">
-                            <td>Dymatize ISO 100</td>
+                            <td>Dymatize Super Mass Gainer</td>
                             <td>Below detection</td>
                             <td>#2</td>
                             <td>$1.25</td>
@@ -1037,13 +1037,13 @@ function toggleMethodology() {
                     <div class="rank-badge plant">🌱 ONLY SAFE PLANT OPTION</div>
                     <h4>OWYN Pro Elite Plant Protein</h4>
                     <div class="alt-specs">
-                        <p><strong>Lead Level:</strong> Below detection limits</p>
+                        <p><strong>Lead Level:</strong> 88% of CR&rsquo;s level of concern</p>
                         <p><strong>Ranking:</strong> #7 (Consumer Reports verified safe)</p>
                         <p><strong>Price:</strong> ~$2.25/serving</p>
                         <p><strong>Protein Source:</strong> Pea protein</p>
                     </div>
                     <p><strong>Why it's the only choice:</strong> Every other tested plant protein failed safety standards. OWYN uses premium sourcing + rigorous heavy metal testing to achieve the only verified-safe plant protein.</p>
-                    <p><strong>vs Orgain:</strong> Infinitely safer (below detection vs 0.72 µg), slightly higher cost ($0.50 more per serving), but worth it for zero health risk.</p>
+                    <p><strong>vs Orgain:</strong> Infinitely safer (88% of CR&rsquo;s level of concern vs 0.72 µg), slightly higher cost ($0.50 more per serving), but worth it for zero health risk.</p>
                     <a href="https://www.amazon.com/dp/B0764GPB51?ref=t_ac_spc_accepted_tile&linkCode=tr1&tag=beardednotary-20&linkId=B0764GPB51_1783571931329" target="_blank" rel="sponsored noopener noreferrer" class="amazon-button">Buy OWYN Pro Elite (Only Safe Plant Protein) →</a>
                 </div>
 
@@ -1083,7 +1083,7 @@ function toggleMethodology() {
 
                 <div class="alternative-card premium-best">
                     <div class="rank-badge premium">🥈 #2 RANKED</div>
-                    <h4>Dymatize ISO 100 Hydrolyzed Whey Isolate</h4>
+                    <h4>Dymatize Super Mass Gainer Hydrolyzed Whey Isolate</h4>
                     <div class="alt-specs">
                         <p><strong>Lead Level:</strong> Below detection limits</p>
                         <p><strong>Ranking:</strong> #2 in Consumer Reports</p>
@@ -1092,7 +1092,7 @@ function toggleMethodology() {
                     </div>
                     <p><strong>Premium without the contamination:</strong> Hydrolyzed for fastest absorption, 99% pure isolate, dual independent verification.</p>
                     <p><strong>vs Orgain:</strong> 29% cheaper ($0.50 less per serving) AND infinitely safer. Premium quality at a better price than contaminated Orgain.</p>
-                    <a href="https://www.amazon.com/dp/B099HXNRKK?ref=t_ac_spc_accepted_tile&linkCode=tr1&tag=beardednotary-20&linkId=B099HXNRKK_1783571743927" target="_blank" rel="sponsored noopener noreferrer" class="amazon-button">Buy Dymatize ISO 100 (#2 Safest) →</a>
+                    <a href="https://www.amazon.com/dp/B099HXNRKK?ref=t_ac_spc_accepted_tile&linkCode=tr1&tag=beardednotary-20&linkId=B099HXNRKK_1783571743927" target="_blank" rel="sponsored noopener noreferrer" class="amazon-button">Buy Dymatize Super Mass Gainer (#2 Safest) →</a>
                 </div>
 
                 <div class="highlight-box green">
@@ -1102,7 +1102,7 @@ function toggleMethodology() {
                         <li><strong>Must be plant-based:</strong> OWYN Pro Elite (only safe option)</li>
                         <li><strong>Want organic certification:</strong> Garden of Life Grass Fed Whey</li>
                         <li><strong>Budget matters most:</strong> Body Fortress ($0.67, safest AND cheapest)</li>
-                        <li><strong>Want premium isolate:</strong> Dymatize ISO 100 (#2 ranked)</li>
+                        <li><strong>Want premium isolate:</strong> Dymatize Super Mass Gainer (#2 ranked)</li>
                         <li><strong>Best overall value:</strong> Optimum Nutrition Gold Standard ($0.75, #5 ranked)</li>
                     </ul>
                     <p><a href="lead-free-protein-brands-ranked-2025.html"><strong>See all 21 verified-safe brands →</strong></a></p>
@@ -1117,12 +1117,12 @@ function toggleMethodology() {
 
                     <div class="faq-item">
                         <h3>Does Orgain protein powder contain lead?</h3>
-                        <p><strong>Yes. Orgain Organic Plant-Based Protein Powder contains 0.72 µg of lead per serving</strong> according to Consumer Reports October 2025 testing. This is 143% over California's Prop 65 safe harbor limit (0.5 µg/day). Orgain ranked #12 out of 23 tested proteins.</p>
+                        <p><strong>Yes. Orgain Organic Plant-Based Protein Powder contains 0.72 µg of lead per serving</strong> according to Consumer Reports October 2025 testing. This is 143% of CR&rsquo;s level of concern California's Prop 65 safe harbor limit (0.5 µg/day). Orgain ranked #12 out of 23 tested proteins.</p>
                     </div>
 
                     <div class="faq-item">
                         <h3>Is Orgain protein powder safe?</h3>
-                        <p><strong>No, not for daily use.</strong> At 143% over safe limits (0.72 µg vs 0.5 µg), Orgain poses health risks with regular consumption. While not as extremely contaminated as the worst products, daily use over months and years will result in lead accumulation and potential health effects. Consumer Reports does not recommend it.</p>
+                        <p><strong>No, not for daily use.</strong> At 143% of CR&rsquo;s level of concerns (0.72 µg vs 0.5 µg), Orgain poses health risks with regular consumption. While not as extremely contaminated as the worst products, daily use over months and years will result in lead accumulation and potential health effects. Consumer Reports does not recommend it.</p>
                     </div>
 
                     <div class="faq-item">
@@ -1150,7 +1150,7 @@ function toggleMethodology() {
                             <li><strong>Plant-based:</strong> OWYN Pro Elite (#7, only safe plant protein)</li>
                             <li><strong>Organic:</strong> Garden of Life Grass Fed Whey (Clean Label certified)</li>
                             <li><strong>Budget:</strong> Body Fortress ($0.67/serving, Clean Label certified)</li>
-                            <li><strong>Premium:</strong> Dymatize ISO 100 (#2, dual verified)</li>
+                            <li><strong>Premium:</strong> Dymatize Super Mass Gainer (#2, dual verified)</li>
                         </ul>
                     </div>
 
@@ -1158,8 +1158,8 @@ function toggleMethodology() {
                         <h3>How does Orgain compare to other plant proteins?</h3>
                         <p><strong>Orgain (0.72 µg, #12) is middle-tier for plant protein contamination:</strong></p>
                         <ul>
-                            <li><strong>Better than:</strong> Naked Nutrition (7.86 µg, #23), Huel (6.44 µg, #22), Garden of Life Plant (2.82 µg, #21)</li>
-                            <li><strong>Worse than:</strong> OWYN Pro Elite (below detection, #7 - the ONLY safe plant protein)</li>
+                            <li><strong>Better than:</strong> Naked Nutrition (7.7 µg, #23), Huel (6.3 µg, #22), Garden of Life Plant (2.82 µg, #21)</li>
+                            <li><strong>Worse than:</strong> OWYN Pro Elite (88% of CR&rsquo;s level of concern, #7 - the ONLY safe plant protein)</li>
                         </ul>
                         <p>All tested plant proteins except OWYN failed safety standards. If you need plant-based, OWYN is your only verified-safe option.</p>
                     </div>
@@ -1176,7 +1176,7 @@ function toggleMethodology() {
 
                     <div class="faq-item">
                         <h3>Can I still use Orgain occasionally?</h3>
-                        <p><strong>At 143% over safe limits, Orgain is not recommended even for occasional use.</strong></p>
+                        <p><strong>At 143% of CR&rsquo;s level of concerns, Orgain is not recommended even for occasional use.</strong></p>
                         <p>The 0.5 µg/day safe harbor limit is designed for daily exposure. Occasional use (2-3x per week) is lower risk than daily, but still results in lead accumulation.</p>
                         <p><strong>Better approach:</strong> Switch to verified-safe protein (OWYN for plant-based, Body Fortress for budget, Dymatize for premium) that has no serving restrictions. If you already have Orgain, finish container with 2-3x weekly maximum, then switch.</p>
                     </div>
@@ -1192,7 +1192,7 @@ function toggleMethodology() {
                     <h3>Key Takeaways:</h3>
                     
                     <ul class="conclusion-bullets">
-                        <li>⚠️ <strong>Orgain Organic Plant-Based ranked #12</strong> - 143% over safe lead limit (0.72 µg)</li>
+                        <li>⚠️ <strong>Orgain Organic Plant-Based ranked #12</strong> - 143% of CR&rsquo;s level of concern (0.72 µg)</li>
                         <li>⚠️ <strong>USDA Organic certification doesn't test for heavy metals</strong> - only pesticides</li>
                         <li>⚠️ <strong>Organic plant proteins had 3x MORE lead than conventional</strong> (Clean Label data)</li>
                         <li>⚠️ <strong>Not as extreme as worst products, but still unsafe</strong> for daily consumption</li>
@@ -1226,7 +1226,7 @@ function toggleMethodology() {
                         <div class="final-cta-buttons">
                             <a href="https://www.amazon.com/dp/B0764GPB51?ref=t_ac_spc_accepted_tile&linkCode=tr1&tag=beardednotary-20&linkId=B0764GPB51_1783571931329" target="_blank" rel="sponsored noopener noreferrer" class="amazon-button">OWYN Pro Elite (Only Safe Plant) →</a>
                             <a href="https://amzn.to/4hKvWoM" target="_blank" rel="sponsored noopener noreferrer" class="amazon-button">Body Fortress (62% Cheaper + Safe) →</a>
-                            <a href="https://www.amazon.com/dp/B099HXNRKK?ref=t_ac_spc_accepted_tile&linkCode=tr1&tag=beardednotary-20&linkId=B099HXNRKK_1783571743927" target="_blank" rel="sponsored noopener noreferrer" class="amazon-button">Dymatize ISO 100 (#2 Safest) →</a>
+                            <a href="https://www.amazon.com/dp/B099HXNRKK?ref=t_ac_spc_accepted_tile&linkCode=tr1&tag=beardednotary-20&linkId=B099HXNRKK_1783571743927" target="_blank" rel="sponsored noopener noreferrer" class="amazon-button">Dymatize Super Mass Gainer (#2 Safest) →</a>
                         </div>
                     </div>
                 </div>
@@ -1258,7 +1258,7 @@ function toggleMethodology() {
                     </a>
                     <a href="naked-nutrition-vegan-mass-gainer-lead-worst-contamination-2025.html" class="related-card">
                         <h4>Naked Nutrition: Worst Contamination</h4>
-                        <p>Ranked #23 with 7.86 µg lead - 11x more contaminated than Orgain</p>
+                        <p>Ranked #23 with 7.7 µg lead - 11x more contaminated than Orgain</p>
                     </a>
                     <a href="beyond-lead-arsenic-cadmium-mercury-protein-powder-2025.html" class="related-card">
                         <h4>Beyond Lead: All Heavy Metals</h4>

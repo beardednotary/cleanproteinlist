@@ -381,7 +381,7 @@ function toggleMethodology() {
                         <li>Third-party verification (not self-reported)</li>
                     </ul>
 
-                    <p><strong>Body Fortress joins elite company:</strong> MuscleTech, Optimum Nutrition, Dymatize ISO 100, Momentous, and only 11 other brands achieved this certification.</p>
+                    <p><strong>Body Fortress joins elite company:</strong> MuscleTech, Optimum Nutrition, Dymatize Super Mass Gainer, Momentous, and only 11 other brands achieved this certification.</p>
 
                     <div class="highlight-box blue">
                         <h4>🏆 Recognition Where It's Due</h4>
@@ -539,7 +539,7 @@ function toggleMethodology() {
                                 <li><strong>Marketing budget</strong> - Fancy ads don't remove heavy metals</li>
                                 <li><strong>Packaging design</strong> - Pretty tubs don't filter lead</li>
                                 <li><strong>Influencer endorsements</strong> - Social media hype ≠ safety</li>
-                                <li><strong>"Premium" positioning</strong> - Huel Black ($3.00) ranked #22 (1,288% over limit)</li>
+                                <li><strong>"Premium" positioning</strong> - Huel Black ($3.00) ranked #22 (1,288% of CR&rsquo;s level of concern)</li>
                             </ul>
                         </div>
                     </div>
@@ -626,7 +626,7 @@ function toggleMethodology() {
                                 <td>⭐⭐⭐⭐ Great Value</td>
                             </tr>
                             <tr class="safe-row">
-                                <td>Dymatize ISO 100</td>
+                                <td>Dymatize Super Mass Gainer</td>
                                 <td>$1.25</td>
                                 <td>Non-detect</td>
                                 <td>✅ Yes (Clean 16)</td>
@@ -642,14 +642,14 @@ function toggleMethodology() {
                             <tr class="danger-row">
                                 <td>Huel Black (Premium)</td>
                                 <td>$3.00</td>
-                                <td><strong>6.44 µg</strong></td>
+                                <td><strong>6.3 µg</strong></td>
                                 <td>❌ No (#22 ranked)</td>
                                 <td>❌ Terrible Value</td>
                             </tr>
                             <tr class="danger-row">
                                 <td>Naked Nutrition (Premium)</td>
                                 <td>$2.50</td>
-                                <td><strong>7.86 µg</strong></td>
+                                <td><strong>7.7 µg</strong></td>
                                 <td>❌ No (#23 worst)</td>
                                 <td>❌ Worst Value</td>
                             </tr>
@@ -671,7 +671,7 @@ function toggleMethodology() {
                                 <th>Metric</th>
                                 <th>Body Fortress</th>
                                 <th>Optimum Nutrition</th>
-                                <th>Dymatize ISO 100</th>
+                                <th>Dymatize Super Mass Gainer</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -883,7 +883,7 @@ function toggleMethodology() {
                     <li><strong>Want grass-fed/organic</strong> - Body Fortress is conventional whey. Use Garden of Life Grass Fed Whey (also Clean Label certified)</li>
                     <li><strong>Prioritize taste above all</strong> - Premium brands may have slightly better flavor systems (subjective)</li>
                     <li><strong>Are plant-based</strong> - Body Fortress is whey only. Use OWYN Pro Elite (only safe plant option)</li>
-                    <li><strong>Want ultra-premium isolate</strong> - Dymatize ISO 100 (hydrolyzed isolate) may digest faster</li>
+                    <li><strong>Want ultra-premium isolate</strong> - Dymatize Super Mass Gainer (hydrolyzed isolate) may digest faster</li>
                 </ul>
 
                 <p><strong>But for heavy metal safety specifically? Body Fortress is identical to brands costing 2-4x more.</strong></p>
@@ -946,8 +946,8 @@ function toggleMethodology() {
                         <p><strong>Absolutely - for heavy metal safety.</strong></p>
                         <p>Body Fortress ($0.67, non-detect lead) vs:</p>
                         <ul>
-                            <li><strong>Huel Black</strong> - $3.00/serving, 6.44 µg lead (#22 ranked, 1,288% over limit)</li>
-                            <li><strong>Naked Nutrition Vegan</strong> - $2.50/serving, 7.86 µg lead (#23 worst, 1,572% over limit)</li>
+                            <li><strong>Huel Black</strong> - $3.00/serving, 6.3 µg lead (#22 ranked, 1,288% of CR&rsquo;s level of concern)</li>
+                            <li><strong>Naked Nutrition Vegan</strong> - $2.50/serving, 7.7 µg lead (#23 worst, 1,572% of CR&rsquo;s level of concern)</li>
                         </ul>
                         <p><strong>Body Fortress is 4-5x cheaper AND infinitely safer.</strong> Premium price doesn't predict safety - independent testing does.</p>
                     </div>
@@ -965,7 +965,7 @@ function toggleMethodology() {
                         <p>Other budget brands (Six Star, Pure Protein, EAS) were either:</p>
                         <ul>
                             <li>Not tested by independent labs (unknown safety)</li>
-                            <li>Exceeded safe limits when tested (EAS ranked #17, 245% over limit)</li>
+                            <li>Exceeded safe limits when tested (EAS ranked #17, 245% of CR&rsquo;s level of concern)</li>
                         </ul>
                         <p><strong>Body Fortress is unique:</strong> Budget pricing + verified safety. No other brand offers this combination.</p>
                     </div>
@@ -1008,7 +1008,7 @@ function toggleMethodology() {
                         <li>Non-detectable lead, cadmium, arsenic, mercury</li>
                         <li><strong>Total cost: $0.67 per serving of clean protein</strong></li>
                     </ul>
-                    <p><strong>Compare to Huel Black:</strong> $90 for a 3.5 lb bag with 6.44 µg lead per serving (12.9x over safe limit) = $3.00/serving for contaminated protein.</p>
+                    <p><strong>Compare to Huel Black:</strong> $90 for a 3.5 lb bag with 6.3 µg lead per serving (12.9x over safe limit) = $3.00/serving for contaminated protein.</p>
                     <p><strong>You're getting 4.5x better value AND infinitely better safety.</strong> Body Fortress is the smart choice.</p>
                 </div>
             </section>
@@ -1023,7 +1023,7 @@ function toggleMethodology() {
         </a>
         <a href="owyn-pro-elite-protein-powder-safety-only-safe-plant-protein-2025.html" class="related-card">
             <h4>OWYN: Only Safe Plant Protein</h4>
-            <p>#7 ranked, lead below detection</p>
+            <p>#7 ranked, lead 88% of CR&rsquo;s level of concern</p>
         </a>
         <a href="optimum-nutrition-gold-standard-whey-lead-testing-results-2025.html" class="related-card">
             <h4>Optimum Nutrition: World's #1</h4>

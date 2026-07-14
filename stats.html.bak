@@ -729,7 +729,7 @@
                     <span class="s-num red">15.7×</span>
                     <span class="s-src">Consumer Reports, Oct 2025</span>
                     <p class="s-label">— the worst product (Naked Nutrition Vegan) exceeded the safe lead limit by this multiple</p>
-                    <button class="copy-btn" onclick="copyStat(this,'The worst-tested protein powder — Naked Nutrition Vegan Mass Gainer — contained 15.7x the safe daily lead limit (7.86 µg vs 0.5 µg). Source: Consumer Reports, October 2025.')">📋 Copy Stat</button>
+                    <button class="copy-btn" onclick="copyStat(this,'The worst-tested protein powder — Naked Nutrition Vegan Mass Gainer — contained 15.7x the safe daily lead limit (7.7 µg vs 0.5 µg). Source: Consumer Reports, October 2025.')">📋 Copy Stat</button>
                 </div>
             </div>
 
@@ -746,8 +746,8 @@
                 <li>
                     <span class="l-num red">2</span>
                     <div class="l-body">
-                        <p><strong>2 products</strong> received "AVOID" ratings — Naked Nutrition Vegan Mass Gainer (7.86 µg) and Huel Black Edition (6.3 µg).</p>
-                        <button class="copy-btn-sm" onclick="copyStat(this,'2 protein powders received AVOID ratings in 2026: Naked Nutrition Vegan Mass Gainer (7.86 µg lead) and Huel Black Edition (6.3 µg lead). Source: Consumer Reports / Clean Protein List.')">📋 Copy</button>
+                        <p><strong>2 products</strong> received "AVOID" ratings — Naked Nutrition Vegan Mass Gainer (7.7 µg) and Huel Black Edition (6.3 µg).</p>
+                        <button class="copy-btn-sm" onclick="copyStat(this,'2 protein powders received AVOID ratings in 2026: Naked Nutrition Vegan Mass Gainer (7.7 µg lead) and Huel Black Edition (6.3 µg lead). Source: Consumer Reports / Clean Protein List.')">📋 Copy</button>
                     </div>
                 </li>
                 <!-- Stat 7 -->
@@ -1166,7 +1166,7 @@
                         </tr>
                         <tr class="row-safe">
                             <td>#2</td>
-                            <td>Dymatize ISO-100</td>
+                            <td>Dymatize Super Mass Gainer</td>
                             <td>Below Detection</td>
                             <td>✅ Safe</td>
                             <td class="verdict-safe">✅ Safe</td>
@@ -1174,28 +1174,28 @@
                         <tr class="row-safe">
                             <td>#3</td>
                             <td>Momentous Whey Isolate</td>
-                            <td>Below Detection</td>
+                            <td>30% of CR&rsquo;s level of concern</td>
                             <td>✅ Safe</td>
                             <td class="verdict-safe">✅ Safe</td>
                         </tr>
                         <tr class="row-safe">
                             <td>#4</td>
                             <td>BSN Syntha-6</td>
-                            <td>Below Detection</td>
+                            <td>46% of CR&rsquo;s level of concern</td>
                             <td>✅ Safe</td>
                             <td class="verdict-safe">✅ Safe</td>
                         </tr>
                         <tr class="row-safe">
                             <td>#5</td>
                             <td>Optimum Nutrition Gold Standard</td>
-                            <td>Below Detection</td>
+                            <td>56% of CR&rsquo;s level of concern</td>
                             <td>✅ Safe</td>
                             <td class="verdict-safe">✅ Safe</td>
                         </tr>
                         <tr class="row-safe">
                             <td>#7</td>
                             <td>OWYN Pro Elite <em>(plant)</em></td>
-                            <td>Below Detection</td>
+                            <td>88% of CR&rsquo;s level of concern</td>
                             <td>✅ Safe</td>
                             <td class="verdict-safe">✅ Safe</td>
                         </tr>
@@ -1258,7 +1258,7 @@
                         <tr class="row-avoid">
                             <td>#23</td>
                             <td>Naked Nutrition Vegan <em>(plant)</em></td>
-                            <td>7.86 µg</td>
+                            <td>7.7 µg</td>
                             <td>🚨 15.7× limit</td>
                             <td class="verdict-avoid">🚨 Avoid</td>
                         </tr>

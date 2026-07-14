@@ -28,7 +28,7 @@
                 "name": "Which protein powders at Costco are safest?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Based on independent heavy metal testing, whey-based brands such as MuscleTech 100% Mass Gainer, Dymatize ISO 100, Body Fortress whey, Optimum Nutrition Gold Standard, and Levels Whey Protein have consistently tested far below California Prop 65 lead limits. Availability at Costco varies by warehouse and region, so always verify the exact product and flavor against current data."
+                    "text": "Based on independent heavy metal testing, whey-based brands such as MuscleTech 100% Mass Gainer, Dymatize Super Mass Gainer, Body Fortress whey, Optimum Nutrition Gold Standard, and Levels Whey Protein have consistently tested far below California Prop 65 lead limits. Availability at Costco varies by warehouse and region, so always verify the exact product and flavor against current data."
                 }
             },
             {
@@ -503,7 +503,7 @@
                                 <td>Bulking, hardgainers, high-calorie needs</td>
                             </tr>
                             <tr>
-                                <td><strong>Dymatize ISO 100</strong></td>
+                                <td><strong>Dymatize Super Mass Gainer</strong></td>
                                 <td>Hydrolyzed whey isolate</td>
                                 <td><span class="tag-safe">Lead below detection (CR 2025)</span></td>
                                 <td>Lean muscle, fast absorption, premium users</td>
@@ -511,7 +511,7 @@
                             <tr>
                                 <td><strong>Optimum Nutrition Gold Standard</strong></td>
                                 <td>Whey blend</td>
-                                <td><span class="tag-safe">Lead below detection — #5 CR 2025</span></td>
+                                <td><span class="tag-safe">Lead 56% of CR&rsquo;s level of concern — #5 CR 2025</span></td>
                                 <td>Everyday whey, best value, fully dual-verified</td>
                             </tr>
                             <tr>
@@ -529,7 +529,7 @@
                             <tr>
                                 <td><strong>OWYN Pro Elite Plant Protein</strong></td>
                                 <td>Plant-based (pea blend)</td>
-                                <td><span class="tag-safe">Lead below detection (CR 2025)</span></td>
+                                <td><span class="tag-safe">Lead 88% of CR&rsquo;s level of concern (CR 2025)</span></td>
                                 <td>Vegan or dairy-free users — only safe plant option</td>
                             </tr>
                         </tbody>
@@ -554,20 +554,20 @@
 
                         <div class="product-card">
                             <span class="product-tag blue">Premium Whey — CR #2</span>
-                            <h3>Dymatize ISO 100</h3>
+                            <h3>Dymatize Super Mass Gainer</h3>
                             <p><strong>Why it's a safe pick:</strong> Hydrolyzed whey isolate with lead below detection limits and excellent purity. Ranked #2 by Consumer Reports — great for people who want fast-absorbing, extremely clean protein.</p>
                             <ul>
                                 <li>~110–120 calories per serving</li>
                                 <li>~25g protein</li>
                                 <li>Low heavy metals + great mixability</li>
                             </ul>
-                            <a href="https://www.amazon.com/dp/B099HXNRKK?ref=t_ac_spc_accepted_tile&linkCode=tr1&tag=beardednotary-20&linkId=B099HXNRKK_1783571743927" target="_blank" rel="sponsored noopener noreferrer" class="amazon-button">View Dymatize ISO 100 →</a>
+                            <a href="https://www.amazon.com/dp/B099HXNRKK?ref=t_ac_spc_accepted_tile&linkCode=tr1&tag=beardednotary-20&linkId=B099HXNRKK_1783571743927" target="_blank" rel="sponsored noopener noreferrer" class="amazon-button">View Dymatize Super Mass Gainer →</a>
                         </div>
 
                         <div class="product-card">
                             <span class="product-tag green">Best Overall Value — CR #5</span>
                             <h3>Optimum Nutrition Gold Standard</h3>
-                            <p><strong>Why it's the Costco benchmark:</strong> Consumer Reports #5 (lead below detection) plus Clean Label Project Purity Award — dual-verified at ~$0.75/serving. The strongest verification stack at this price point.</p>
+                            <p><strong>Why it's the Costco benchmark:</strong> Consumer Reports #5 (lead 56% of CR&rsquo;s level of concern) plus Clean Label Project Purity Award — dual-verified at ~$0.75/serving. The strongest verification stack at this price point.</p>
                             <ul>
                                 <li>~120 calories, 24g protein per serving</li>
                                 <li>Dual independent verification</li>
@@ -591,7 +591,7 @@
                         <div class="product-card">
                             <span class="product-tag purple">Only Safe Plant Option (CR)</span>
                             <h3>OWYN Pro Elite Plant Protein</h3>
-                            <p><strong>Why it's special:</strong> In the same 2025 testing where most plant proteins failed, OWYN Pro Elite was the <strong>only plant-based powder with lead below detection limits</strong>. If you're vegan and shopping at Costco or online, this is the benchmark.</p>
+                            <p><strong>Why it's special:</strong> In the same 2025 testing where most plant proteins failed, OWYN Pro Elite was the <strong>only plant-based powder with lead 88% of CR&rsquo;s level of concern</strong>. If you're vegan and shopping at Costco or online, this is the benchmark.</p>
                             <ul>
                                 <li>~180 calories, 35g plant protein</li>
                                 <li>Third-party sports certification</li>
@@ -603,7 +603,7 @@
 
                     <div class="highlight-box green">
                         <h3>Simple Rule for Costco Shoppers</h3>
-                        <p>If you walk into Costco and see <strong>MuscleTech mass gainer, Dymatize ISO 100, Optimum Nutrition Gold Standard, Body Fortress whey, or Levels Whey Protein</strong>, you're generally looking at safer bets than untested or "mystery blend" tubs — especially if the alternatives are plant-based mixes with Prop 65 warnings.</p>
+                        <p>If you walk into Costco and see <strong>MuscleTech mass gainer, Dymatize Super Mass Gainer, Optimum Nutrition Gold Standard, Body Fortress whey, or Levels Whey Protein</strong>, you're generally looking at safer bets than untested or "mystery blend" tubs — especially if the alternatives are plant-based mixes with Prop 65 warnings.</p>
                     </div>
                 </section>
 
@@ -686,7 +686,7 @@
                         <tbody>
                             <tr>
                                 <td><strong>Naked Nutrition Vegan Mass Gainer</strong></td>
-                                <td>Tested at 7.86 µg lead per serving in 2025 testing — about <strong>15.7× over Prop 65 safe-harbor level</strong>.</td>
+                                <td>Tested at 7.7 µg lead per serving in 2025 testing — about <strong>15.7× over Prop 65 safe-harbor level</strong>.</td>
                                 <td><span class="tag-avoid">🚫 Avoid</span></td>
                             </tr>
                             <tr>
@@ -814,7 +814,7 @@
                     </a>
                     <a href="owyn-pro-elite-protein-powder-safety-only-safe-plant-protein-2025.html" class="related-card">
                         <h4>OWYN: Only Safe Plant Protein</h4>
-                        <p>#7 ranked by Consumer Reports — lead below detection</p>
+                        <p>#7 ranked by Consumer Reports — lead 88% of CR&rsquo;s level of concern</p>
                     </a>
                 </div>
             </section>

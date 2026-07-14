@@ -230,14 +230,14 @@
         <div style="background:#fdf8ec; border:2px solid #e07a2f; border-radius:10px; padding:20px 24px; margin:24px 0;">
             <h3 style="margin:0 0 10px; color:#c46a10; font-size:18px;">📌 Correction (July 2026)</h3>
             <p style="margin:0 0 10px; line-height:1.65;">
-                We previously listed <strong>ON Serious Mass at "202% over the safe lead limit."</strong> <strong>That was wrong on two counts.</strong>
+                We previously listed <strong>ON Serious Mass at "202% &mdash; <em>inorganic arsenic</em>, not lead</strong> <strong>That was wrong on two counts.</strong>
                 CR's 202% for Serious Mass is for <strong>inorganic arsenic</strong> (8.5&nbsp;µg) &mdash; the only product in CR's round where a metal
                 other than lead posed the greater risk. <strong>CR published no lead figure for it at all.</strong>
             </p>
             <p style="margin:0 0 10px; line-height:1.65;">
-                We also wrote <strong>"25% over limit"</strong> and <strong>"56% over limit"</strong> for Dymatize and ON Gold Standard. Those are CR's
+                We also wrote <strong>"25% of CR&rsquo;s level of concern"</strong> and <strong>"56% of CR&rsquo;s level of concern"</strong> for Dymatize and ON Gold Standard. Those are CR's
                 <strong>% <em>of</em> its level of concern</strong> &mdash; i.e. <em>under</em> the bar, not over it. Writing "over" inverted the meaning.
-                And ON Gold Standard was described as <strong>"below detection"</strong>; CR measured it at <strong>56%</strong>.
+                And ON Gold Standard was described as <strong>"56% of CR&rsquo;s level of concern"</strong>; CR measured it at <strong>56%</strong>.
             </p>
             <p style="margin:0; line-height:1.65;">
                 <strong>MuscleTech's result is unchanged and still unique:</strong> it was the <em>only</em> product out of 23 where lead was
@@ -530,7 +530,7 @@ function toggleMethodology() {
                 <tr>
                     <td class="good">2</td>
                     <td>Dymatize Super Mass</td>
-                    <td class="good">25% over</td>
+                    <td class="good">25% of CR&rsquo;s level of concern</td>
                     <td>Mass gainer</td>
                     <td>Bulking</td>
                     <td>~$3</td>
@@ -538,7 +538,7 @@ function toggleMethodology() {
                 <tr>
                     <td class="good">3</td>
                     <td>Momentous Whey Isolate</td>
-                    <td class="good">30% over</td>
+                    <td class="good">30% of CR&rsquo;s level of concern</td>
                     <td>Whey isolate</td>
                     <td>Athletes</td>
                     <td>~$2.50</td>
@@ -546,7 +546,7 @@ function toggleMethodology() {
                 <tr>
                     <td class="good">4</td>
                     <td>BSN Syntha-6</td>
-                    <td class="good">46% over</td>
+                    <td class="good">46% of CR&rsquo;s level of concern</td>
                     <td>Whey blend</td>
                     <td>Post-workout</td>
                     <td>~$1.50</td>
@@ -554,7 +554,7 @@ function toggleMethodology() {
                 <tr>
                     <td class="good">5</td>
                     <td>Optimum Nutrition Gold</td>
-                    <td class="good">56% over</td>
+                    <td class="good">56% of CR&rsquo;s level of concern</td>
                     <td>Whey blend</td>
                     <td>Value</td>
                     <td>~$0.75</td>
@@ -788,7 +788,7 @@ function toggleMethodology() {
                 <tr style="background: #e8f5e9;">
                     <td>Dymatize Super Mass</td>
                     <td class="good">#2</td>
-                    <td class="good">25% over</td>
+                    <td class="good">25% of CR&rsquo;s level of concern</td>
                     <td>Whey</td>
                     <td>$3</td>
                     <td class="good">4/day</td>
@@ -796,7 +796,7 @@ function toggleMethodology() {
                 <tr style="background: #e8f5e9;">
                     <td>Transparent Labs Mass</td>
                     <td class="good">#6</td>
-                    <td class="good">87% over</td>
+                    <td class="good">87% of CR&rsquo;s level of concern</td>
                     <td>Whey</td>
                     <td>$3.50</td>
                     <td class="good">1/day</td>
@@ -812,7 +812,7 @@ function toggleMethodology() {
                 <tr style="background: #fff3e0;">
                     <td>Carnivor Mass</td>
                     <td class="warning">#19</td>
-                    <td class="warning">247% over</td>
+                    <td class="warning">247% of CR&rsquo;s level of concern</td>
                     <td>Beef</td>
                     <td>$3</td>
                     <td class="warning">2.75/week</td>
@@ -820,7 +820,7 @@ function toggleMethodology() {
                 <tr style="background: #ffebee;">
                     <td>Naked Nutrition Vegan</td>
                     <td class="bad">#23 (WORST)</td>
-                    <td class="bad">1,572% over</td>
+                    <td class="bad">1,572% of CR&rsquo;s level of concern</td>
                     <td>Plant (pea)</td>
                     <td>$2.50</td>
                     <td class="bad">AVOID</td>

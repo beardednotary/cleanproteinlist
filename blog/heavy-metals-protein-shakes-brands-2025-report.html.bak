@@ -28,7 +28,7 @@
                 "name": "Which protein powder has the least lead?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "MuscleTech 100% Mass Gainer had lead levels that were not detected - the only product tested with completely undetectable contamination. Dymatize ISO 100 (#2) and Momentous Whey Isolate (#3) also had lead below detection limits, making them the safest options for daily use."
+                    "text": "MuscleTech 100% Mass Gainer had lead levels that were not detected - the only product tested with completely undetectable contamination. Dymatize Super Mass Gainer (#2) and Momentous Whey Isolate (#3) also had lead 30% of CR&rsquo;s level of concern, making them the safest options for daily use."
                 }
             },
             {
@@ -353,7 +353,7 @@
                             <p><strong>Key findings:</strong></p>
                             <ul>
                                 <li>11 products exceeded Prop 65 safe harbor limits</li>
-                                <li>Lead ranged from "not detected" to 7.86 µg per serving</li>
+                                <li>Lead ranged from "not detected" to 7.7 µg per serving</li>
                                 <li>Plant-based products consistently more contaminated</li>
                                 <li>No correlation between price and safety</li>
                             </ul>
@@ -529,14 +529,14 @@
                             <tr class="moderate-row">
                                 <td>Muscle Milk Pro Advanced</td>
                                 <td>Powder</td>
-                                <td>0.51 µg (2% over)</td>
+                                <td>0.51 µg (2% of CR&rsquo;s level of concern)</td>
                                 <td>#8</td>
                                 <td>⚠️ Minimally over limit</td>
                             </tr>
                             <tr class="moderate-row">
                                 <td>Muscle Milk Genuine</td>
                                 <td>Powder</td>
-                                <td>0.54 µg (8% over)</td>
+                                <td>0.54 µg (8% of CR&rsquo;s level of concern)</td>
                                 <td>#9</td>
                                 <td>⚠️ Minimally over limit</td>
                             </tr>
@@ -601,9 +601,9 @@
                     <p>If the powder version of a brand was contaminated, the RTD version likely has similar contamination (same protein source, same manufacturer). Examples:</p>
 
                     <ul>
-                        <li><strong>Orgain powder</strong> ranked #12 (143% over limit) → Orgain RTD likely contaminated</li>
-                        <li><strong>Ensure powder</strong> ranked #11 (18% over limit) → Ensure RTD likely contaminated</li>
-                        <li><strong>Boost powder</strong> ranked #14 (174% over limit) → Boost RTD likely contaminated</li>
+                        <li><strong>Orgain powder</strong> ranked #12 (143% of CR&rsquo;s level of concern) → Orgain RTD likely contaminated</li>
+                        <li><strong>Ensure powder</strong> ranked #11 (18% of CR&rsquo;s level of concern) → Ensure RTD likely contaminated</li>
+                        <li><strong>Boost powder</strong> ranked #14 (174% of CR&rsquo;s level of concern) → Boost RTD likely contaminated</li>
                     </ul>
 
                     <h3>RTD vs Powder: Which Should You Choose?</h3>
@@ -670,7 +670,7 @@
 
                         <div class="product-card rank-2">
                             <div class="rank-badge silver">🥈 #2</div>
-                            <h4>Dymatize ISO 100 Hydrolyzed</h4>
+                            <h4>Dymatize Super Mass Gainer Hydrolyzed</h4>
                             <div class="product-stats">
                                 <p><strong>Lead Level:</strong> Below detection limits</p>
                                 <p><strong>Format:</strong> Powder (whey isolate)</p>
@@ -679,7 +679,7 @@
                                 <p><strong>Dual Verified:</strong> Consumer Reports + Clean Label</p>
                             </div>
                             <p><strong>Why it's great:</strong> 99% pure isolate, hydrolyzed for faster absorption, dual verification from independent labs. Premium quality at reasonable price.</p>
-                            <a href="https://www.amazon.com/dp/B099HXNRKK?ref=t_ac_spc_accepted_tile&linkCode=tr1&tag=beardednotary-20&linkId=B099HXNRKK_1783571743927" target="_blank" rel="noopener" class="amazon-button">Buy Dymatize ISO 100 →</a>
+                            <a href="https://www.amazon.com/dp/B099HXNRKK?ref=t_ac_spc_accepted_tile&linkCode=tr1&tag=beardednotary-20&linkId=B099HXNRKK_1783571743927" target="_blank" rel="noopener" class="amazon-button">Buy Dymatize Super Mass Gainer →</a>
                             <p class="product-note"><a href="dymatize-iso-100-safety-analysis.html" class="text-link">Read full Dymatize analysis →</a></p>
                         </div>
 
@@ -687,7 +687,7 @@
                             <div class="rank-badge bronze">🥉‰ #3</div>
                             <h4>Momentous Whey Protein Isolate</h4>
                             <div class="product-stats">
-                                <p><strong>Lead Level:</strong> Below detection limits</p>
+                                <p><strong>Lead Level:</strong> 30% of CR&rsquo;s level of concern</p>
                                 <p><strong>Format:</strong> Powder (whey isolate)</p>
                                 <p><strong>Protein Source:</strong> Whey Isolate</p>
                                 <p><strong>Price:</strong> ~$2.50/serving</p>
@@ -701,7 +701,7 @@
                             <div class="rank-badge">#4</div>
                             <h4>BSN Syntha-6</h4>
                             <div class="product-stats">
-                                <p><strong>Lead Level:</strong> Below detection limits</p>
+                                <p><strong>Lead Level:</strong> 46% of CR&rsquo;s level of concern</p>
                                 <p><strong>Format:</strong> Powder (multi-protein blend)</p>
                                 <p><strong>Protein Source:</strong> Whey + Casein blend</p>
                                 <p><strong>Price:</strong> ~$1.50/serving</p>
@@ -714,7 +714,7 @@
                             <div class="rank-badge">#5</div>
                             <h4>Optimum Nutrition Gold Standard 100% Whey</h4>
                             <div class="product-stats">
-                                <p><strong>Lead Level:</strong> Below detection limits</p>
+                                <p><strong>Lead Level:</strong> 56% of CR&rsquo;s level of concern</p>
                                 <p><strong>Format:</strong> Powder (whey blend)</p>
                                 <p><strong>Protein Source:</strong> Whey Isolate + Concentrate</p>
                                 <p><strong>Price:</strong> ~$0.75/serving</p>
@@ -728,7 +728,7 @@
                             <div class="rank-badge">#6</div>
                             <h4>Transparent Labs Mass Gainer</h4>
                             <div class="product-stats">
-                                <p><strong>Lead Level:</strong> Below detection limits</p>
+                                <p><strong>Lead Level:</strong> 87% of CR&rsquo;s level of concern</p>
                                 <p><strong>Format:</strong> Powder (mass gainer)</p>
                                 <p><strong>Protein Source:</strong> Whey Isolate + Concentrate</p>
                                 <p><strong>Price:</strong> ~$2.00/serving</p>
@@ -741,7 +741,7 @@
                             <div class="rank-badge plant-badge">🌱 #7</div>
                             <h4>OWYN Pro Elite</h4>
                             <div class="product-stats">
-                                <p><strong>Lead Level:</strong> Below detection limits</p>
+                                <p><strong>Lead Level:</strong> 88% of CR&rsquo;s level of concern</p>
                                 <p><strong>Format:</strong> RTD Shake (plant-based)</p>
                                 <p><strong>Protein Source:</strong> Pea Protein</p>
                                 <p><strong>Price:</strong> ~$2.25/serving</p>
@@ -924,7 +924,7 @@
                             <div class="danger-badge">#23 WORST</div>
                             <h4>Naked Nutrition Vegan Mass Gainer</h4>
                             <div class="danger-stats">
-                                <p><strong>Lead Level:</strong> 7.86 µg per serving</p>
+                                <p><strong>Lead Level:</strong> 7.7 µg per serving</p>
                                 <p><strong>Over Limit:</strong> 1,572% (15.7x safe limit)</p>
                                 <p><strong>Format:</strong> Powder (plant-based mass gainer)</p>
                                 <p><strong>Protein Source:</strong> Pea + Rice</p>
@@ -939,7 +939,7 @@
                             <div class="danger-badge">#22</div>
                             <h4>Huel Black Edition</h4>
 							<div class="danger-stats">
-                                <p><strong>Lead Level:</strong> 6.44 µg per serving</p>
+                                <p><strong>Lead Level:</strong> 6.3 µg per serving</p>
                                 <p><strong>Over Limit:</strong> 1,288% (12.9x safe limit)</p>
                                 <p><strong>Format:</strong> Powder (meal replacement)</p>
                                 <p><strong>Protein Source:</strong> Pea + Oat</p>
@@ -1053,7 +1053,7 @@
                                 <td>182%</td>
                                 <td>Powder</td>
                                 <td>Moderate</td>
-                                <td><a href="https://www.amazon.com/dp/B099HXNRKK?ref=t_ac_spc_accepted_tile&linkCode=tr1&tag=beardednotary-20&linkId=B099HXNRKK_1783571743927">Dymatize ISO 100</a></td>
+                                <td><a href="https://www.amazon.com/dp/B099HXNRKK?ref=t_ac_spc_accepted_tile&linkCode=tr1&tag=beardednotary-20&linkId=B099HXNRKK_1783571743927">Dymatize Super Mass Gainer</a></td>
                             </tr>
                             <tr class="moderate-row">
                                 <td>#14</td>
@@ -1127,7 +1127,7 @@
                 <div class="action-guide-grid">
                     <div class="action-card emergency-action">
                         <h4>🚨 HIGH (Ranks 12-19): Switch Within 1-2 Weeks</h4>
-                        <p><strong>143-365% over safe limit</strong></p>
+                        <p><strong>143-365% of CR&rsquo;s level of concern</strong></p>
                         <ul>
                             <li>Reduce current use to 2-3x per week maximum</li>
                             <li>Order safe alternative this week</li>
@@ -1138,7 +1138,7 @@
 
                     <div class="action-card moderate-action">
                         <h4>⚠️ LOW (Ranks 8-11): Switch Next Purchase</h4>
-                        <p><strong>2-18% over safe limit</strong></p>
+                        <p><strong>2-18% of CR&rsquo;s level of concern</strong></p>
                         <ul>
                             <li>Finish current container if using occasionally (2-4x per week)</li>
                             <li>Do not use daily</li>
@@ -1340,7 +1340,7 @@
 
                     <div class="highlight-box yellow">
                         <h4>💡 Muscle Milk Bottom Line</h4>
-                        <p><strong>Muscle Milk powder is one of the LEAST concerning contaminated products</strong> (only 2-8% over limit). If you're currently using it:</p>
+                        <p><strong>Muscle Milk powder is one of the LEAST concerning contaminated products</strong> (only 2-8% of CR&rsquo;s level of concern). If you're currently using it:</p>
                         <ul>
                             <li>Not an emergency - Can finish current container if used occasionally</li>
                             <li>Switch next purchase for peace of mind</li>
@@ -1496,8 +1496,8 @@
 
                 <p><strong>Examples of organic contamination:</strong></p>
                 <ul>
-                    <li><strong>Garden of Life Sport Organic Plant</strong> - Rank #21, 564% over limit</li>
-                    <li><strong>Orgain Organic Plant-Based</strong> - Rank #12, 143% over limit</li>
+                    <li><strong>Garden of Life Sport Organic Plant</strong> - Rank #21, 564% of CR&rsquo;s level of concern</li>
+                    <li><strong>Orgain Organic Plant-Based</strong> - Rank #12, 143% of CR&rsquo;s level of concern</li>
                     <li><strong>Vega Organic products</strong> - Ranks #16, #18, #19 (all contaminated)</li>
                 </ul>
 
@@ -1649,31 +1649,31 @@
                             </tr>
                             <tr class="moderate-row">
                                 <td>Using Muscle Milk daily</td>
-                                <td>0.51-0.54 µg (2-8% over)</td>
+                                <td>0.51-0.54 µg (2-8% of CR&rsquo;s level of concern)</td>
                                 <td>⚠️ Low risk</td>
                                 <td>Cumulative exposure over years</td>
                             </tr>
                             <tr class="moderate-row">
                                 <td>Using Orgain Organic daily</td>
-                                <td>0.72 µg (143% over)</td>
+                                <td>0.72 µg (143% of CR&rsquo;s level of concern)</td>
                                 <td>⚠️ Moderate risk</td>
                                 <td>Cognitive effects likely after 2-3 years</td>
                             </tr>
                             <tr class="danger-row">
                                 <td>Using Garden of Life Plant daily</td>
-                                <td>2.82 µg (564% over)</td>
+                                <td>2.82 µg (564% of CR&rsquo;s level of concern)</td>
                                 <td>🚫 High risk</td>
                                 <td>Measurable cognitive decline within 1 year</td>
                             </tr>
                             <tr class="danger-row">
                                 <td>Using Huel Black daily</td>
-                                <td>6.44 µg (1,288% over)</td>
+                                <td>6.3 µg (1,288% of CR&rsquo;s level of concern)</td>
                                 <td>🚫 Very high risk</td>
                                 <td>Significant health effects likely within months</td>
                             </tr>
                             <tr class="danger-row">
                                 <td>Using Naked Nutrition Vegan daily</td>
-                                <td>7.86 µg (1,572% over)</td>
+                                <td>7.7 µg (1,572% of CR&rsquo;s level of concern)</td>
                                 <td>🚫 Extreme risk</td>
                                 <td>Severe health consequences, potential poisoning</td>
                             </tr>
@@ -1941,11 +1941,11 @@
                         <p><strong>MuscleTech 100% Mass Gainer had lead levels that were NOT DETECTED</strong> - the only product where lead was completely undetectable in Consumer Reports testing.</p>
                         <p><strong>Other very low lead options:</strong></p>
                         <ul>
-                            <li>Dymatize ISO 100 (#2) - Below detection limits</li>
-                            <li>Momentous Whey Isolate (#3) - Below detection limits</li>
-                            <li>Optimum Nutrition Gold Standard (#5) - Below detection limits</li>
+                            <li>Dymatize Super Mass Gainer (#2) - Below detection limits</li>
+                            <li>Momentous Whey Isolate (#3) - 30% of CR&rsquo;s level of concern</li>
+                            <li>Optimum Nutrition Gold Standard (#5) - 56% of CR&rsquo;s level of concern</li>
                         </ul>
-                        <p>All 21 verified-safe brands have lead either non-detect or below 0.5 µg safe limit.</p>
+                        <p>All 21 verified-safe brands have lead either 56% of CR&rsquo;s level of concern or below 0.5 µg safe limit.</p>
                     </div>
 
                     <div class="faq-item">
@@ -2065,7 +2065,7 @@
                         <p><strong>Whey Concentrate:</strong> 70-80% protein, less processing = slightly higher risk</p>
                         <p><strong>Examples of safe products:</strong></p>
                         <ul>
-                            <li>Dymatize ISO 100 (isolate) - #2, below detection ✅</li>
+                            <li>Dymatize Super Mass Gainer (isolate) - #2, below detection ✅</li>
                             <li>Optimum Nutrition (concentrate + isolate blend) - #5, below detection ✅</li>
                         </ul>
                         <p><strong>Both can be safe if manufacturer has good quality control.</strong> Check for independent testing rather than assuming based on type.</p>
@@ -2095,8 +2095,8 @@
                         <p><strong>No - expensive products can be heavily contaminated.</strong></p>
                         <p><strong>Examples:</strong></p>
                         <ul>
-                            <li>Huel Black ($3.00) - #22, 1,288% over limit 🚫</li>
-                            <li>Naked Nutrition ($2.50) - #23, 1,572% over limit 🚫</li>
+                            <li>Huel Black ($3.00) - #22, 1,288% of CR&rsquo;s level of concern 🚫</li>
+                            <li>Naked Nutrition ($2.50) - #23, 1,572% of CR&rsquo;s level of concern 🚫</li>
                             <li>Body Fortress ($0.67) - Clean Label certified ✅</li>
                             <li>Optimum Nutrition ($0.75) - #5, verified safe ✅</li>
                         </ul>
@@ -2210,7 +2210,7 @@
                                 <p><strong>Best options by need:</strong></p>
                                 <ul>
                                     <li><strong>Budget:</strong> <a href="https://amzn.to/bodyfortress">Body Fortress</a> ($0.67) or <a href="https://amzn.to/4041XEF">Optimum Nutrition</a> ($0.75)</li>
-                                    <li><strong>Premium:</strong> <a href="https://www.amazon.com/dp/B099HXNRKK?ref=t_ac_spc_accepted_tile&linkCode=tr1&tag=beardednotary-20&linkId=B099HXNRKK_1783571743927">Dymatize ISO 100</a> ($1.25)</li>
+                                    <li><strong>Premium:</strong> <a href="https://www.amazon.com/dp/B099HXNRKK?ref=t_ac_spc_accepted_tile&linkCode=tr1&tag=beardednotary-20&linkId=B099HXNRKK_1783571743927">Dymatize Super Mass Gainer</a> ($1.25)</li>
                                     <li><strong>Athletes:</strong> <a href="https://www.amazon.com/dp/B09F21D98X?ref=t_ac_spc_accepted_tile&linkCode=tr1&tag=beardednotary-20&linkId=B09F21D98X_1783572059633">Momentous Whey</a> ($2.50, NSF Sport)</li>
                                     <li><strong>Mass Gain:</strong> <a href="https://amzn.to/4hZQ9kD">MuscleTech</a> ($3.00, #1 ranked)</li>
                                     <li><strong>Vegan:</strong> <a href="https://www.amazon.com/dp/B0764GPB51?ref=t_ac_spc_accepted_tile&linkCode=tr1&tag=beardednotary-20&linkId=B0764GPB51_1783571931329">OWYN Pro Elite</a> ($2.25, ONLY safe plant)</li>
@@ -2269,7 +2269,7 @@
         </a>
         <a href="owyn-pro-elite-protein-powder-safety-only-safe-plant-protein-2025.html" class="related-card">
             <h4>OWYN: Only Safe Plant Protein</h4>
-            <p>#7 ranked, lead below detection</p>
+            <p>#7 ranked, lead 88% of CR&rsquo;s level of concern</p>
         </a>
         <a href="optimum-nutrition-gold-standard-whey-lead-testing-results-2025.html" class="related-card">
             <h4>Optimum Nutrition: World's #1</h4>
@@ -2280,7 +2280,7 @@
                         <p>RTD vs powder safety, testing results, and recommendations</p>
                     </a>
                     <a href="dymatize-iso-100-safety-analysis.html" class="related-card">
-                        <h4>Dymatize ISO-100 Review</h4>
+                        <h4>Dymatize Super Mass Gainer Review</h4>
                         <p>Why searches spiked 500% and why it's verified safe</p>
                     </a>
                     <a href="lead-poisoning-protein-powder-symptoms.html" class="related-card">

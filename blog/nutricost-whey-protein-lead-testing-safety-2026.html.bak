@@ -74,7 +74,7 @@
         {
           "@type": "Question",
           "name": "What is a safer alternative to Nutricost?",
-          "acceptedAnswer": { "@type": "Answer", "text": "For verified-safe whey at a comparable price, Optimum Nutrition Gold Standard (Consumer Reports #5, 56% of CR's level of concern, ~$0.75/serving) and Body Fortress (~$0.67/serving, Clean Label certified with non-detectable lead) both have independent confirmation Nutricost lacks. Dymatize ISO100 (Consumer Reports #2, NSF Certified for Sport) is the strongest verification if budget allows." }
+          "acceptedAnswer": { "@type": "Answer", "text": "For verified-safe whey at a comparable price, Optimum Nutrition Gold Standard (Consumer Reports #5, 56% of CR's level of concern, ~$0.75/serving) and Body Fortress (~$0.67/serving, Clean Label certified with 56% of CR&rsquo;s level of concern lead) both have independent confirmation Nutricost lacks. Dymatize Super Mass Gainer (Consumer Reports #2, NSF Certified for Sport) is the strongest verification if budget allows." }
         }
       ]
     }
@@ -329,7 +329,7 @@
                                 <td>❓ Untested</td>
                             </tr>
                             <tr class="safe-row">
-                                <td><strong>Dymatize ISO100</strong></td>
+                                <td><strong>Dymatize Super Mass Gainer</strong></td>
                                 <td>~$1.25</td>
                                 <td>✅ #2 — below detection</td>
                                 <td>NSF Certified for Sport</td>
@@ -349,11 +349,11 @@
 
                     <div class="highlight-box green">
                         <h4>✅ Verified-Safe Whey — What We'd Actually Recommend</h4>
-                        <p><strong>Optimum Nutrition Gold Standard</strong> — Consumer Reports #5, lead below detection, ~$0.75/serving. The best blend of price and proof.<br>
+                        <p><strong>Optimum Nutrition Gold Standard</strong> — Consumer Reports #5, lead 56% of CR&rsquo;s level of concern, ~$0.75/serving. The best blend of price and proof.<br>
                         <a href="https://amzn.to/4hpjiuZ" target="_blank" rel="sponsored noopener noreferrer">Check price on Amazon</a> ·
                         <a href="optimum-nutrition-gold-standard-whey-lead-testing-results-2025.html">Read our analysis</a></p>
 
-                        <p><strong>Dymatize ISO100</strong> — Consumer Reports #2, NSF Certified for Sport. The strongest verification stack available.<br>
+                        <p><strong>Dymatize Super Mass Gainer</strong> — Consumer Reports #2, NSF Certified for Sport. The strongest verification stack available.<br>
                         <a href="https://www.amazon.com/dp/B099HXNRKK?ref=t_ac_spc_accepted_tile&linkCode=tr1&tag=beardednotary-20&linkId=B099HXNRKK_1783571743927" target="_blank" rel="sponsored noopener noreferrer">Check price on Amazon</a> ·
                         <a href="dymatize-iso-100-safety-analysis.html">Read our analysis</a></p>
 
@@ -460,7 +460,7 @@
                             <p>~$0.67/serving with non-detectable lead</p>
                         </a>
                         <a href="dymatize-iso-100-safety-analysis.html" class="related-card">
-                            <h4>Dymatize ISO100: Strongest Verification</h4>
+                            <h4>Dymatize Super Mass Gainer: Strongest Verification</h4>
                             <p>CR #2 plus NSF Certified for Sport</p>
                         </a>
                         <a href="lead-in-protein-powder-list.html" class="related-card">
