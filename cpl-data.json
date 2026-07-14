@@ -1,239 +1,72 @@
-#!/usr/bin/env python3
-"""
-CPL DATA CORRECTION
-===================
-Fixes CR figures against cpl-data.json (the canonical dataset).
+{
+  "_README": [
+    "CANONICAL CONSUMER REPORTS DATASET — the single source of truth for CleanProteinList.",
+    "Every figure below is taken directly from CR's published charts. Nothing is inferred.",
+    "",
+    "CRITICAL NOTES:",
+    "  1. CR reports '% of CR's LEVEL OF CONCERN' (0.5 ug/day). CR does NOT publish a ug",
+    "     figure for most products — only for Naked (7.7) and Huel (6.3) in article text.",
+    "     Any other ug figure on the site is BACK-CALCULATED. Label it as derived or drop it.",
+    "  2. CR explicitly states: 'no Prop 65 judgments can be made from CR's findings.'",
+    "     NEVER write '% over the Prop 65 limit'. Write '% of CR's level of concern'.",
+    "  3. ONLY MuscleTech 100% Mass Gainer was 'lead not detected'. ONE product out of 23.",
+    "  4. Premier Protein RTD was NEVER TESTED — not in October, not in January.",
+    "  5. ON Serious Mass's 202% is INORGANIC ARSENIC, not lead."
+  ],
 
-    py cpl-fix-data.py                 # DRY RUN — shows everything, changes nothing
-    py cpl-fix-data.py --apply         # applies ONLY the safe mechanical fixes
-    py cpl-fix-data.py --worklist      # writes cpl-worklist.md — the prose you must rewrite
+  "level_of_concern_ug": 0.5,
 
-DESIGN PRINCIPLE
-----------------
-This script will NOT touch anything it cannot fix with certainty.
+  "sources": {
+    "oct2025": {
+      "date": "2025-10-14",
+      "updated": "2026-01-08",
+      "n": 23,
+      "title": "Protein Powders and Shakes Contain High Levels of Lead",
+      "url": "https://www.consumerreports.org/lead/protein-powders-and-shakes-contain-high-levels-of-lead-a4206364640/",
+      "scope": "powders AND ready-to-drink shakes; chocolate and vanilla"
+    },
+    "jan2026": {
+      "date": "2026-01-08",
+      "n": 5,
+      "title": "Readers Asked Us to Test These 5 Protein Powders. All Had Low Levels of Lead.",
+      "url": "https://www.consumerreports.org/health/food-safety/these-five-protein-powders-had-low-lead-levels-a1151050701/",
+      "scope": "POWDERS ONLY — 'no premade shakes' — chocolate only"
+    }
+  },
 
-  SAFE   = an unambiguous number swap (7.86 ug -> 7.7 ug). Scripted.
-  UNSAFE = anything where the surrounding SENTENCE carries an argument.
-           Reported with file + line, never auto-edited.
+  "products": [
+    {"brand":"Naked Nutrition","product":"Vegan Mass Gainer","form":"powder","flavor":"Vanilla","round":"oct2025","pct_of_concern":1572,"ug":7.7,"ug_source":"CR article text","guidance":"AVOID","limit":"0 servings/week"},
+    {"brand":"Huel","product":"Black Edition","form":"powder","flavor":"Chocolate","round":"oct2025","pct_of_concern":1288,"ug":6.3,"ug_source":"CR article text","guidance":"AVOID","limit":"0 servings/week","note":"also 9.2 ug cadmium — more than double the 4.1 ug level of concern"},
+    {"brand":"Garden of Life","product":"Sport Organic Plant-Based Protein","form":"powder","flavor":"Vanilla","round":"oct2025","pct_of_concern":564,"ug":null,"ug_source":"NOT PUBLISHED BY CR","guidance":"Limit to once a week","limit":"1.25 servings/week","note":"CR reported concentration of 61 ppb"},
+    {"brand":"Momentous","product":"100% Plant Protein","form":"powder","flavor":"Chocolate","round":"oct2025","pct_of_concern":476,"ug":null,"ug_source":"NOT PUBLISHED BY CR","guidance":"Limit to once a week","limit":"1.5 servings/week","note":"DISCONTINUED per Momentous"},
+    {"brand":"MuscleMeds","product":"Carnivor Mass","form":"powder","flavor":"Chocolate Peanut Butter","round":"oct2025","pct_of_concern":247,"ug":null,"ug_source":"NOT PUBLISHED BY CR","guidance":"Okay occasionally","limit":"2.75 servings/week"},
+    {"brand":"Optimum Nutrition","product":"Serious Mass","form":"powder","flavor":"Vanilla","round":"oct2025","pct_of_concern":202,"metal":"INORGANIC ARSENIC","ug":8.5,"ug_source":"CR article text — ARSENIC","guidance":"Okay occasionally","limit":"3.5 servings/week","note":"*** THE 202% IS ARSENIC, NOT LEAD. Only product where another metal outranked lead. ***"},
+    {"brand":"Jocko Fuel","product":"Molk Protein Shake","form":"RTD","flavor":"Chocolate","round":"oct2025","pct_of_concern":199,"ug":null,"ug_source":"NOT PUBLISHED BY CR","guidance":"Okay occasionally","limit":"3.5 servings/week"},
+    {"brand":"Vega","product":"Premium Sport Plant-Based Protein","form":"powder","flavor":"Chocolate","round":"oct2025","pct_of_concern":185,"ug":null,"ug_source":"NOT PUBLISHED BY CR","guidance":"Okay occasionally","limit":"3.75 servings/week","note":"renamed Vega Protein + Recovery; pea sourcing moved to North America. Also high cadmium."},
+    {"brand":"Quest","product":"Protein Shake","form":"RTD","flavor":"Chocolate","round":"oct2025","pct_of_concern":161,"ug":null,"ug_source":"NOT PUBLISHED BY CR","guidance":"Okay occasionally","limit":"4.33 servings/week"},
+    {"brand":"Optimum Nutrition","product":"Gold Standard Protein Shake","form":"RTD","flavor":"Chocolate","round":"oct2025","pct_of_concern":150,"ug":null,"ug_source":"NOT PUBLISHED BY CR","guidance":"Okay occasionally","limit":"4.67 servings/week","note":"DISTINCT from Gold Standard 100% Whey POWDER (56%)"},
+    {"brand":"Optimum Nutrition","product":"Gold Standard 100% Whey","form":"powder","flavor":"Chocolate","round":"oct2025","pct_of_concern":56,"ug":null,"ug_source":"NOT PUBLISHED BY CR","guidance":"Better for daily","limit":"1.75 servings/day","note":"*** NOT 'below detection'. CR found 56% of level of concern. ***"},
+    {"brand":"Equip Foods","product":"Prime Protein","form":"powder","flavor":"Chocolate","round":"oct2025","pct_of_concern":144,"ug":null,"ug_source":"NOT PUBLISHED BY CR","guidance":"Okay occasionally","limit":"4.75 servings/week"},
+    {"brand":"Orgain","product":"Organic Plant-Based Protein Powder","form":"powder","flavor":"Vanilla Bean","round":"oct2025","pct_of_concern":143,"ug":null,"ug_source":"NOT PUBLISHED BY CR","guidance":"Okay occasionally","limit":"4.75 servings/week","note":"CR reported concentration of 15 ppb"},
+    {"brand":"PlantFusion","product":"Complete Protein","form":"powder","flavor":"Creamy Vanilla Bean","round":"oct2025","pct_of_concern":140,"ug":null,"ug_source":"NOT PUBLISHED BY CR","guidance":"Okay occasionally","limit":"5 servings/week"},
+    {"brand":"Ensure","product":"Plant-Based Protein Nutrition Shake","form":"RTD","flavor":"Chocolate","round":"oct2025","pct_of_concern":132,"ug":null,"ug_source":"NOT PUBLISHED BY CR","guidance":"Okay occasionally","limit":"5.33 servings/week"},
+    {"brand":"Muscle Milk","product":"Pro Advanced Nutrition Protein Shake","form":"RTD","flavor":"Chocolate","round":"oct2025","pct_of_concern":128,"ug":null,"ug_source":"NOT PUBLISHED BY CR","guidance":"Okay occasionally","limit":"5.5 servings/week"},
+    {"brand":"KOS","product":"Organic Superfood Plant Protein","form":"powder","flavor":"Vanilla","round":"oct2025","pct_of_concern":112,"ug":null,"ug_source":"NOT PUBLISHED BY CR","guidance":"Okay occasionally","limit":"6.25 servings/week"},
+    {"brand":"OWYN","product":"Pro Elite High Protein Shake","form":"RTD","flavor":"Chocolate","round":"oct2025","pct_of_concern":88,"ug":null,"ug_source":"NOT PUBLISHED BY CR","guidance":"Better for daily","limit":"1 serving/day","note":"*** NOT 'below detection'. CR found 88% of level of concern. Still the LOWEST plant-based product tested and cleared for daily use — but it is NOT lead-free. ***"},
+    {"brand":"Transparent Labs","product":"Mass Gainer","form":"powder","flavor":"Sweet Vanilla","round":"oct2025","pct_of_concern":87,"ug":null,"ug_source":"NOT PUBLISHED BY CR","guidance":"Better for daily","limit":"1 serving/day"},
+    {"brand":"BSN","product":"Syntha-6 Protein Powder","form":"powder","flavor":"Vanilla Ice Cream","round":"oct2025","pct_of_concern":46,"ug":null,"ug_source":"NOT PUBLISHED BY CR","guidance":"Better for daily","limit":"2 servings/day"},
+    {"brand":"Momentous","product":"Whey Protein Isolate","form":"powder","flavor":"Vanilla","round":"oct2025","pct_of_concern":30,"ug":null,"ug_source":"NOT PUBLISHED BY CR","guidance":"Better for daily","limit":"3.33 servings/day","note":"*** NOT 'below detection'. CR found 30%. DISCONTINUED per Momentous. ***"},
+    {"brand":"Dymatize","product":"Super Mass Gainer","form":"powder","flavor":"Gourmet Vanilla","round":"oct2025","pct_of_concern":25,"ug":null,"ug_source":"NOT PUBLISHED BY CR","guidance":"Better for daily","limit":"4 servings/day"},
+    {"brand":"MuscleTech","product":"100% Mass Gainer","form":"powder","flavor":"Vanilla Milkshake","round":"oct2025","pct_of_concern":0,"ug":null,"ug_source":"NOT PUBLISHED BY CR","guidance":"Better for daily","limit":"No limit","lead_not_detected":true,"note":"THE ONLY PRODUCT CR REPORTED AS 'lead not detected'."},
 
-Why: "below detection" appears 264 times. It is CORRECT for MuscleTech (the only
-product CR reported as not detected) and WRONG for OWYN / ON Gold Standard /
-Momentous Whey. A blind replace would break the one true instance and would leave
-behind sentences like "OWYN is infinitely safer" that are simply false at 88%.
-An argument cannot be find-and-replaced. It has to be rewritten.
-"""
+    {"brand":"Clean Simple Eats","product":"Protein Powder","form":"powder","flavor":"Chocolate Brownie Batter","round":"jan2026","pct_of_concern":42,"ug":0.21,"ug_source":"CR chart","guidance":"Better for daily","limit":"2.33 servings/day"},
+    {"brand":"Equate","product":"Whey Protein Powder","form":"powder","flavor":"Rich Chocolate","round":"jan2026","pct_of_concern":55,"ug":0.27,"ug_source":"CR chart","guidance":"Better for daily","limit":"1.75 servings/day"},
+    {"brand":"Premier Protein","product":"Protein Powder","form":"powder","flavor":"Chocolate Milkshake","round":"jan2026","pct_of_concern":77,"ug":0.38,"ug_source":"CR chart","guidance":"Better for daily","limit":"1.33 servings/day","note":"*** THIS IS THE POWDER. The Premier Protein RTD was NEVER TESTED by CR. ***"},
+    {"brand":"Truvani","product":"Plant-Based Protein","form":"powder","flavor":"Chocolate","round":"jan2026","pct_of_concern":93,"ug":0.46,"ug_source":"CR chart","guidance":"Better for daily","limit":"1 serving/day"},
+    {"brand":"Ritual","product":"Essential Protein Daily Shake","form":"powder","flavor":"Chocolate","round":"jan2026","pct_of_concern":107,"ug":0.53,"ug_source":"CR chart","guidance":"Okay occasionally","limit":"6.5 servings/week"}
+  ],
 
-import re, os, sys, json, glob
-
-ROOT = "."
-DATA = json.load(open("cpl-data.json", encoding="utf-8"))
-BY_KEY = {(p["brand"], p["product"]): p for p in DATA["products"]}
-
-
-# ─────────────────────────────────────────────────────────────
-# SAFE: unambiguous number swaps. CR published these in article text.
-# ─────────────────────────────────────────────────────────────
-SAFE = [
-    (r"7\.86\s*(µg|mcg|ug)", "7.7 µg",
-     "Naked Nutrition: CR's text says 7.7 µg. 7.86 was back-calculated from 1,572%."),
-    (r"6\.44\s*(µg|mcg|ug)", "6.3 µg",
-     "Huel: CR's text says 6.3 µg. 6.44 was back-calculated from 1,288%."),
-]
-
-
-# ─────────────────────────────────────────────────────────────
-# UNSAFE: report only. Each needs a human to rewrite the sentence.
-# ─────────────────────────────────────────────────────────────
-UNSAFE = [
-    ("FALSE 'below detection' — OWYN",
-     r"owyn[^.<]{0,120}?(below detection|non-detect|not detected)|"
-     r"(below detection|non-detect|not detected)[^.<]{0,60}?owyn",
-     "CR found OWYN Pro Elite at 88% of its level of concern. NOT below detection. "
-     "It is still the cleanest plant product tested and cleared for daily use — but it is not lead-free."),
-
-    ("FALSE 'below detection' — ON Gold Standard 100% Whey",
-     r"gold standard[^.<]{0,120}?(below detection|non-detect|not detected)|"
-     r"(below detection|non-detect|not detected)[^.<]{0,60}?gold standard",
-     "CR found ON Gold Standard 100% Whey at 56%. NOT below detection. "
-     "Still 'better for daily use' (1.75 servings/day) — but it is not lead-free."),
-
-    ("FALSE 'below detection' — Momentous Whey Isolate",
-     r"momentous[^.<]{0,120}?(below detection|non-detect|not detected)|"
-     r"(below detection|non-detect|not detected)[^.<]{0,60}?momentous",
-     "CR found Momentous Whey Isolate at 30%. NOT below detection."),
-
-    ("COLLAPSED ARGUMENT — 'infinitely safer'",
-     r"infinitely safer",
-     "This phrase depends on OWYN being below detection. At 88% vs Orgain's 143%, "
-     "OWYN is ~1.6x cleaner, not infinitely. THE ARGUMENT MUST BE REWRITTEN, not patched."),
-
-    ("WRONG METAL — ON Serious Mass 202% is ARSENIC",
-     r"serious mass",
-     "CR: 'This recommendation is based on the 8.5 mcg of INORGANIC ARSENIC found in this "
-     "product... the only product where another heavy metal posed a comparatively higher risk "
-     "than lead.' The 202% is ARSENIC. Do not present it as a lead figure."),
-
-    ("WRONG FIGURE — Quest Protein Shake",
-     r"quest[^.<]{0,80}?(130\s*%|0\.65\s*µg)",
-     "CR says Quest Protein Shake = 161% of level of concern. Not 130% / 0.65 µg."),
-
-    ("WRONG FIGURE — Muscle Milk Pro Advanced",
-     r"muscle milk[^.<]{0,80}?(0\.51|2\s*%\s*over)",
-     "CR says Muscle Milk Pro Advanced = 128%. Not 0.51 µg / 2% over."),
-
-    ("WRONG FIGURE — Ensure Plant-Based",
-     r"ensure plant[^.<]{0,80}?(0\.57|14\s*%)",
-     "CR says Ensure Plant-Based = 132% (≈0.66 µg). Not 0.57 µg / 14%."),
-
-    ("UNSOURCED — Premier Protein RTD",
-     r"premier protein[^.<]{0,100}?(rtd|shake|11\s*oz|0\.59|3\.32)",
-     "CR NEVER TESTED the Premier Protein RTD. Not in October (23 products), not in January "
-     "(powders only — 'no premade shakes'). The ONLY real figure is the POWDER: 0.38 µg / 77%. "
-     "Remove every CR attribution to the RTD."),
-
-    ("SOURCING ERROR — Prop 65 framing",
-     r"(%\s*(?:over|of)\s*(?:the\s*)?(?:safe\s*|daily\s*)?(?:prop\s*65\s*)?limit|prop\s*65\s*(?:daily\s*)?limit)",
-     "CR states explicitly: 'no Prop 65 judgments can be made from CR's findings.' "
-     "CR reports '% of CR's LEVEL OF CONCERN' (0.5 µg/day). Reframe accordingly."),
-]
-
-
-def html_files():
-    out = []
-    for pat in ("*.html", "blog/*.html", "blog\\*.html"):
-        out += glob.glob(os.path.join(ROOT, pat))
-    return sorted(set(os.path.normpath(f) for f in out))
-
-
-def line_of(h, i):
-    return h[:i].count("\n") + 1
-
-
-def context(h, i, j, width=70):
-    s = re.sub(r"<[^>]+>", " ", h[max(0, i - width): j + width])
-    return re.sub(r"\s+", " ", s).strip()
-
-
-def main():
-    apply_fixes = "--apply" in sys.argv
-    worklist    = "--worklist" in sys.argv
-
-    files = html_files()
-    if not files:
-        print("No HTML found. Run from the repo root.")
-        return
-
-    print(f"\nCPL DATA CORRECTION — {len(files)} files")
-    print("DRY RUN (nothing changed). Use --apply for the safe fixes.\n" if not apply_fixes
-          else "APPLYING SAFE FIXES.\n")
-
-    # ── SAFE ──
-    print("=" * 78)
-    print("SAFE — unambiguous number swaps")
-    print("=" * 78)
-    total_safe = 0
-    for pat, repl, why in SAFE:
-        hits = []
-        for f in files:
-            h = open(f, encoding="utf-8", errors="ignore").read()
-            n = len(re.findall(pat, h, re.I))
-            if n:
-                hits.append((f, n))
-                if apply_fixes:
-                    h = re.sub(pat, repl, h, flags=re.I)
-                    open(f, "w", encoding="utf-8").write(h)
-        if hits:
-            n = sum(x[1] for x in hits)
-            total_safe += n
-            print(f"\n  -> {repl}   ({n} instances, {len(hits)} files)")
-            print(f"     {why}")
-            for f, c in hits:
-                print(f"        {os.path.basename(f)}  x{c}")
-    print(f"\n  {total_safe} safe fix(es) {'APPLIED' if apply_fixes else 'available'}.")
-
-    # ── UNSAFE: report per LINE, not per error type ──
-    # A single sentence can carry several false claims. Reporting by error type
-    # means you fix half a sentence and leave the rest. Group by file+line so a
-    # broken sentence is rewritten ONCE, whole.
-    print("\n" + "=" * 78)
-    print("NEEDS A HUMAN — grouped by line, because sentences carry more than one error")
-    print("=" * 78)
-
-    from collections import defaultdict
-    lines = defaultdict(lambda: {"labels": set(), "why": set(), "ctx": ""})
-
-    for label, pat, why in UNSAFE:
-        for f in files:
-            h = open(f, encoding="utf-8", errors="ignore").read()
-            for m in re.finditer(pat, h, re.I):
-                key = (os.path.basename(f), line_of(h, m.start()))
-                lines[key]["labels"].add(label)
-                lines[key]["why"].add(why)
-                if not lines[key]["ctx"]:
-                    lines[key]["ctx"] = context(h, m.start(), m.end(), 90)
-
-    multi  = {k: v for k, v in lines.items() if len(v["labels"]) > 1}
-    single = {k: v for k, v in lines.items() if len(v["labels"]) == 1}
-
-    report = ["# CPL Data Correction Worklist\n\n",
-              "Generated from `cpl-data.json` (canonical Consumer Reports figures).\n\n",
-              "**Grouped by line.** A single sentence can carry several false claims — "
-              "fix the whole sentence once, don't patch it twice.\n"]
-
-    if multi:
-        print(f"\n  !!! {len(multi)} LINE(S) WITH MULTIPLE FALSE CLAIMS — rewrite whole, do not patch\n")
-        report.append("\n## ⚠️ Lines with MULTIPLE false claims — rewrite the whole sentence\n")
-        for (f, ln), d in sorted(multi.items()):
-            print(f"  {f}:{ln}")
-            print(f'      "{d["ctx"][:104]}"')
-            for l in sorted(d["labels"]):
-                print(f"        + {l}")
-            print()
-            report.append(f"\n### `{f}` line {ln}\n\n```\n{d['ctx'][:200]}\n```\n\n")
-            for l in sorted(d["labels"]):
-                report.append(f"- **{l}**\n")
-            for w in sorted(d["why"]):
-                report.append(f"  - {w}\n")
-
-    print(f"\n  {len(single)} line(s) with a single error:\n")
-    report.append("\n## Single-error lines\n")
-    by_label = defaultdict(list)
-    for (f, ln), d in single.items():
-        by_label[list(d["labels"])[0]].append((f, ln, d["ctx"]))
-    for label in sorted(by_label, key=lambda x: -len(by_label[x])):
-        items = by_label[label]
-        print(f"    {len(items):>3}  {label}")
-        report.append(f"\n### {label} — {len(items)} instance(s)\n\n")
-        for w in [u[2] for u in UNSAFE if u[0] == label]:
-            report.append(f"> {w}\n\n")
-        for f, ln, ctx in sorted(items)[:12]:
-            report.append(f"- `{f}` **line {ln}** — `{ctx[:100]}`\n")
-
-    grand = len(lines)
-    print(f"\n  {grand} broken line(s) total.")
-
-    if worklist:
-        open("cpl-worklist.md", "w", encoding="utf-8").write("".join(report))
-        print("  -> cpl-worklist.md written.")
-
-    print("\n" + "=" * 78)
-    print("ORDER OF WORK")
-    print("=" * 78)
-    print("""
-  1. FALSE 'below detection' on OWYN / ON Gold Standard / Momentous Whey.
-     These understate lead in products you EARN COMMISSION ON. Highest exposure.
-     Only MuscleTech was 'lead not detected' — do not break that one.
-
-  2. 'infinitely safer' — rewrite the argument. OWYN at 88% vs Orgain at 143%
-     is ~1.6x cleaner. The claim still stands; the language does not.
-
-  3. Premier Protein RTD — never tested. Strip every CR attribution.
-
-  4. ON Serious Mass — the 202% is ARSENIC, not lead.
-
-  5. Prop 65 framing — CR disclaims it. Use '% of CR's level of concern'.
-""")
-
-
-if __name__ == "__main__":
-    main()
+  "NEVER_TESTED": [
+    {"brand":"Premier Protein","product":"RTD shakes (bottled)","note":"NOT in the October round (23 products) and NOT in the January round (powders only). Any CR attribution to the Premier Protein RTD is unsourced. Both '0.59 ug / #6' and '3.32 ug / #27' on the site are wrong."}
+  ]
+}
