@@ -207,6 +207,89 @@ def check_ranks(files):
 # ═══════════════════════════════════════════════════════════════════
 # 2. SCHEMA
 # ═══════════════════════════════════════════════════════════════════
+def _ctx(h, i, j, width=70):
+    s = re.sub(r"<[^>]+>", " ", h[max(0, i - width): j + width])
+    return re.sub(r"\s+", " ", s).strip()
+
+
+def check_phantom(files):
+    """Detect the fabricated '28-product Consumer Reports ranking'.
+
+    CR published TWO rounds, and NEITHER produced a 28-item ranked list:
+      - October 2025:  23 products
+      - January 2026:   5 chocolate powders (no premade shakes)
+
+    So any of these is a fabrication that traveled across pages:
+      * a CR rank above #23           (#24..#28 cannot exist)
+      * the literal phrase "of 28" / "out of 28" tied to CR
+      * a CR-attributed figure for a product CR never tested
+        (Premier Protein RTD, Garden of Life at 3.32/4.24 ug, etc.)
+
+    These are reported, never auto-fixed — each needs a human to rewrite the
+    sentence against cpl-data.json.
+    """
+    print("\n" + "=" * 74)
+    print("1c. PHANTOM CR DATA — ranks/figures Consumer Reports never published")
+    print("=" * 74)
+
+    # CR never ranked more than 23 products. Anything higher is invented.
+    RANK_HI   = re.compile(r"(?:CR|Consumer Reports)\s*#\s*(\d{1,2})", re.I)
+    RANK_BARE = re.compile(r"#\s*(2[4-9]|[3-9]\d)\b")
+    OF28      = re.compile(r"(?:out\s+of|of)\s*28\b", re.I)
+
+    # Product+figure pairs CR never produced (RTD shakes were never tested;
+    # these specific ug values are back-calculated from a fake 28-item list).
+    PHANTOM_FIGS = [
+        (r"Premier\s+Protein[^.<]{0,60}?(?:RTD|shake)[^.<]{0,40}?(0\.59|3\.32)\s*µg", "Premier RTD ug (never tested)"),
+        (r"Premier\s+Protein[^.<]{0,40}?(?:#\s*6\b|#\s*27\b)", "Premier RTD rank (never tested)"),
+        (r"Garden of Life[^.<]{0,50}?(3\.32|4\.24)\s*µg", "Garden of Life 3.32/4.24 ug (unsourced)"),
+        (r"(?:Naked|Vega)[^.<]{0,40}?#\s*28\b", "#28 (fake 28-item list)"),
+        (r"OWYN[^.<]{0,40}?0\.60\s*µg", "OWYN 0.60 ug / #14 of 28 (fabricated expanded ranking)"),
+    ]
+
+    hits = defaultdict(list)
+    for f in files:
+        h = open(f, encoding="utf-8", errors="ignore").read()
+        h = re.sub(r"<script.*?</script>", " ", h, flags=re.S)
+        h = re.sub(r"<style.*?</style>", " ", h, flags=re.S)
+        base = os.path.basename(f)
+
+        for m in RANK_HI.finditer(h):
+            if int(m.group(1)) > 23:
+                ctx = _ctx(h, m.start(), m.end())
+                hits[base].append((f"CR #{m.group(1)} — CR only ranked 23 products", ctx))
+        for m in OF28.finditer(h):
+            ctx = _ctx(h, m.start(), m.end(), 110)
+            # skip our own correction notices ("we previously said ... #6 of 28. That was wrong.")
+            if re.search(r"(?i)previously|was wrong|we(?:'ve| have) removed|corrected", ctx):
+                continue
+            if re.search(r"(?i)consumer reports|CR\b|rank|tested|safest|of 28 (?:product|tested)", ctx):
+                hits[base].append(("'of 28' — CR never published a 28-item ranking", ctx))
+        for pat, label in PHANTOM_FIGS:
+            for m in re.finditer(pat, h, re.I):
+                hits[base].append((label, _ctx(h, m.start(), m.end())))
+
+    if not hits:
+        print("\n  No phantom CR data found.")
+        return 0
+
+    total = sum(len(v) for v in hits.values())
+    print(f"\n  {total} phantom claim(s) across {len(hits)} file(s):")
+    print("  (CR published 23 products in Oct 2025 and 5 powders in Jan 2026 — nothing else.)\n")
+    for base in sorted(hits):
+        seen = set()
+        print(f"  {base}")
+        for label, ctx in hits[base]:
+            key = (label, ctx[:40])
+            if key in seen:
+                continue
+            seen.add(key)
+            print(f"      {label}")
+            print(f"        \"{ctx[:100]}\"")
+        print()
+    return len(hits)
+
+
 def check_schema(files):
     print("\n" + "=" * 74)
     print("2. SCHEMA — invalid JSON-LD / missing FAQPage")
@@ -358,6 +441,7 @@ def main():
     total = 0
     if only in (None, "data"):      total += check_data(files)
     if only in (None, "data"):      total += check_ranks(files)
+    if only in (None, "data"):      total += check_phantom(files)
     if only in (None, "schema"):    total += check_schema(files)
     if only in (None, "links"):     total += check_links(files)
     if only in (None, "structure"): total += check_structure(files)
