@@ -168,6 +168,15 @@ After shipping approved items:
    product.** `cpl-audit.py`'s data/rank checks flag brand-level collisions;
    check whether the two figures belong to different SKUs (powder vs. RTD,
    different flavor, different product line) before touching either page.
+   Verify the "different SKU" against `cpl-data.json` (or the real CR
+   source) before assuming it's legitimate — **"Vega One" and "Vega Protein
+   & Greens" were never tested by CR at all** (confirmed 2026-08-10 via the
+   real CR source article); only "Vega Premium Sport" (185%/0.93µg, #16) has
+   a real result. A prior version of this rule cited the three Vega products
+   as a legitimate different-SKU example — that was itself a fabrication
+   that had propagated into two blog pages (fake #18/#19 rows, a fake
+   0.93-1.83µg range). Not every same-brand split is real; check the brand
+   actually has multiple *tested* products, not just multiple *products*.
 5. **Distinguish product variants explicitly in the copy, not just in your
    head.** "Optimum Nutrition" alone is ambiguous between Gold Standard
    Whey powder (56%), the Gold Standard RTD shake (150%), and Serious Mass
@@ -180,3 +189,18 @@ After shipping approved items:
 7. **Never assert a µg figure CR didn't publish.** Use the percentage unless
    the product is one of the few (Naked, Huel in Oct 2025; all 5 in Jan
    2026) where CR's own article text gives a raw µg number.
+8. **`cpl-repair.py`'s rule 5 (Dymatize ISO 100 → Super Mass Gainer) is
+   stale — do not `--apply` it.** Added 2026-08-10. Its regex
+   (`Dymatize\s+ISO-?\s?100`) matches the literal product name with no
+   context check, so it can't tell a false CR-attribution claim from a
+   correct "ISO 100 was never tested" sentence. The site has since been
+   hand-corrected (`dymatize-iso-100-safety-analysis.html` and others now
+   correctly explain ISO 100 was never CR-tested and Super Mass Gainer was)
+   — re-running this rule would rewrite dozens of already-accurate sentences
+   into false ones (e.g. turning "ISO 100 holds a Clean Label Purity Award"
+   into a false claim about Super Mass Gainer, which doesn't hold that
+   award). Verified by grep across all live (non-`.bak`) instances of
+   "Dymatize ISO 100" on 2026-08-10 — every one was already correct. If this
+   rule is ever needed again, it must be scoped to only fire near an
+   explicit CR-percentage/rank claim, not on any mention of the product
+   name.

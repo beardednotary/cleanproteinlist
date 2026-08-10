@@ -15,7 +15,10 @@
       "Bash(grep:*)",
       "Bash(echo:*)",
       "Bash(find:*)",
-      "Bash(git commit:*)"
+      "Bash(git commit:*)",
+      "Bash(py cpl-audit.py)",
+      "Bash(PYTHONIOENCODING=utf-8 py cpl-audit.py)",
+      "Bash(echo \"EXIT CODE: $?\")"
     ]
   }
 }

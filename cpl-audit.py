@@ -304,9 +304,17 @@ def check_schema(files):
         for b in blocks:
             try:
                 d = json.loads(b)
-                t = d.get("@type")
-                if t:
-                    types.add(t)
+                nodes = d.get("@graph") if isinstance(d, dict) and "@graph" in d else [d]
+                if not isinstance(nodes, list):
+                    nodes = [nodes]
+                for node in nodes:
+                    if not isinstance(node, dict):
+                        continue
+                    t = node.get("@type")
+                    if isinstance(t, list):
+                        types.update(t)
+                    elif t:
+                        types.add(t)
             except Exception as e:
                 bad_json.append((os.path.basename(f), str(e)[:58]))
 
@@ -316,7 +324,9 @@ def check_schema(files):
         if has_visible_faq and "FAQPage" not in types:
             no_faq.append(os.path.basename(f))
 
-        if "blog" in f and "Article" not in types and "BlogPosting" not in types:
+        in_blog_dir = os.path.normpath(f).split(os.sep)[0] == "blog" if os.sep in os.path.normpath(f) else False
+        has_article_type = any(t == "Article" or t == "BlogPosting" or (isinstance(t, str) and t.endswith("Article")) for t in types)
+        if in_blog_dir and not has_article_type:
             no_article.append(os.path.basename(f))
 
     if bad_json:
