@@ -204,3 +204,32 @@ After shipping approved items:
    rule is ever needed again, it must be scoped to only fire near an
    explicit CR-percentage/rank claim, not on any mention of the product
    name.
+9. **`cpl-audit.py`'s conflict checkers have two known classes of false
+   positive — read the context before treating either as a real bug.**
+   Found and fully diagnosed 2026-08-21:
+   - **`check_data()` does unbounded substring brand matching**
+     (`re.search(re.escape(brand), text, re.I)`), so "Vega" matches inside
+     "Naked **Vega**n Mass Gainer" and "Quest" matches inside "the
+     que**quest**ion isn't...". Every Vega/Quest "conflict" traced this run
+     was one of these two false matches, not a real content error.
+   - **`check_ranks()` only requires a brand name to appear once anywhere
+     in a table row or `<li>`, and does not require the rank number to be
+     adjacent to it** (unlike `check_data()`, which does require the brand
+     in `cells[:2]`). A row naming two products (a comparison row) or a
+     completely unrelated ranking system that happens to share a brand name
+     (the site's own creatine-brand rank tables, e.g. "Dymatize Creatine
+     Monohydrate #9", "MuscleTech Platinum Creatine #5" — a different
+     ranking scheme from CR's protein-powder ranks) gets its rank
+     attributed to the wrong bucket. **Verified this run**: independently
+     rebuilt the canonical CR Oct-2025 rank order by sorting all 23 round-1
+     `cpl-data.json` products by `pct_of_concern` ascending, and cross-checked
+     it against the site's own published table
+     (`lead-in-protein-powder-list.html` rows 1-23) — every single rank
+     matched exactly, including all 8 brands `check_ranks()` flagged as
+     "conflicting." None were real.
+   Do not hand-fix a `check_ranks()` or Vega/Quest `check_data()` flag
+   without first checking whether it's one of these two patterns. A real
+   fix to the script would tighten `check_ranks()` to require brand+rank in
+   the same cell, and switch `check_data()`'s `BRANDS` matching to
+   word-boundary (`\bVega\b`) — not done as of this entry, logged as an
+   open backlog item instead.

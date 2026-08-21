@@ -6,6 +6,117 @@ future runs need to see what was already tried, rejected, or fixed.
 
 ---
 
+## 2026-08-21 — Second full loop run: Prop-65 phrasing, precision cleanup, new-page monetization, tool false-positives diagnosed
+
+**Context:** First loop run since 2026-08-10, and since two off-loop sessions
+that shipped `best-cheap-protein-powder-low-heavy-metals.html`,
+`legion-whey-protein-lead-testing-safety-2026.html`, and
+`thorne-whey-protein-isolate-nsf-certified-safety-2026.html`, plus a language
+fix on `safe-protein-powder-teenagers-kids-2025.html`. Ran Steps 1-4 fresh
+against the current 92-file site plus pasted GSC/Bing exports. Approved in
+full by the site owner ("all").
+
+**Shipped:**
+
+- **Sitewide "X over the safe/Prop 65 limit" phrasing** — CR explicitly
+  states no Prop 65 judgment can be made from its findings (`cpl-data.json`
+  `_README` note 2); this phrasing implies one anyway. Fixed on the 6 files
+  directly verified this run: `lead-in-protein-powder-list.html` (the site's
+  #1-trafficked page — "25% of the Prop 65 limit" → "25% of CR's level of
+  concern," plus a "safe annual limit" rewrite in the Naked Nutrition FAQ),
+  `best-protein-powder-2025.html` (4 instances in the AVOID box),
+  `best-protein-powder-weight-loss-2025.html`, `ascent-protein-powder-lead-
+  testing-safety-2025.html` (2 instances), `bsn-syntha-6-safety-analysis.html`,
+  `momentous-protein-safety-analysis.html`. A broader grep found this pattern
+  in ~129 instances across ~40 live files total — **not fully swept this
+  run**, see "Not shipped" below.
+- **Vague `<0.5µg` precision replaced with real derived figures** — the item
+  flagged "not shipped" on 2026-08-10, now located and fixed: ON Gold
+  Standard (→ 0.28µg/56%) and Momentous Whey Isolate (→ 0.15µg/30% derived)
+  on `lead-poisoning-protein-powder-symptoms.html` and
+  `momentous-protein-safety-analysis.html`; OWYN Pro Elite (→ 0.44µg/88%) on
+  `lead-poisoning-protein-powder-symptoms.html`; Truvani (→ 0.46µg/93%) on
+  `lead-free-protein-brands-ranked-2025.html`. **Correction to the original
+  proposal**: I'd initially misattributed the Momentous/Huel instances to
+  `bsn-syntha-6-safety-analysis.html` — they're actually on
+  `momentous-protein-safety-analysis.html`; caught and fixed on the correct
+  file before shipping.
+- **3 monetization gaps fixed** on pages shipped in the prior off-loop
+  session: `best-cheap-protein-powder-low-heavy-metals.html` got real Amazon
+  buy buttons for Body Fortress and ON Gold Standard (reusing the exact
+  verified links from their own dedicated pages — no new ASINs invented).
+  `legion-whey-protein-lead-testing-safety-2026.html` and `thorne-whey-
+  protein-isolate-nsf-certified-safety-2026.html` got generic
+  tag-only Amazon search links (the same pattern already used on the NOW
+  Sports page) since no verified product-specific ASIN exists for either —
+  deliberately not guessing one. Re-run of `cpl-audit.py`'s monetization
+  check confirms all 3 no longer flagged; only the 2 already-documented
+  correctly-unmonetized pages remain.
+- **Diagnosed, not content bugs**: re-verified every one of the 8 `check_data()`
+  "conflicts" and all 8 `check_ranks()` "conflicts" from this run's `cpl-
+  audit.py` output against `cpl-data.json` and the live pages. Confirmed:
+  Garden of Life 2.76/2.82µg and Naked Nutrition 15.4/7.7µg were already
+  correctly explained (legit lawsuit citation; legit 2-serving/day
+  calculation). Quest's 0.65/2.90µg lawsuit figures are a real, separate,
+  correctly-attributed Nov-2025 ISO-lab source distinct from CR's own 161%
+  — not conflated on the page, no fix needed. Vega/Quest's other flagged
+  conflicts, and **all 8 rank conflicts**, are `cpl-audit.py` false
+  positives (substring brand matching, and `check_ranks()` not requiring
+  brand+rank in the same cell) — full diagnosis and a rebuilt canonical
+  rank table (23 Oct-2025-round products sorted by `pct_of_concern`,
+  cross-checked against `lead-in-protein-powder-list.html`'s own table,
+  100% match) written up as new Standing Rule 9 in `CPL-AUDIT-LOOP.md` so
+  future runs don't re-chase these.
+- **GSC/Bing review**: pasted exports show two different windows — an older
+  one still dominated by "premier protein lead" brand queries, and a current
+  (8/21/2026) one showing the traffic mix has shifted to
+  `lead-in-protein-powder-list.html` (now #1 by far, 1,658 clicks/14,503
+  impressions) plus the creatine cluster and `best-protein-powder-
+  costco-2025.html`. `SearchPerformanceOverview` shows daily clicks
+  recovering from the ~10/day Dec-2025 trough to a ~50-80/day range through
+  August (with a 430-click spike on 7/10 that predates this loop's work) —
+  real but partial recovery, still well below the ~3k/month Dec-2025 peak.
+  Indexing status: 67 indexed, 13 "Crawled — not indexed" (a Google quality
+  signal, no mechanical fix identified, logged as a watch item), 10
+  "Discovered — not indexed" including the 3 pages from the prior off-loop
+  session — flagged to the site owner that IndexNow never reaches Google
+  (Bing/Yandex/Seznam/Naver only, per Step 6) and those 3 need a manual GSC
+  URL Inspection → Request Indexing if faster Google indexing is wanted.
+- **Step 6 housekeeping:** bumped `dateModified`, visible "Last Updated" /
+  "📅 Updated" text, and `sitemap.xml` `lastmod` on all 11 changed pages;
+  re-ran `cpl-audit.py` full + `--only schema` + `--only links` post-fix
+  (0 schema issues, 0 link issues, data conflicts down from 8 to 7 brands
+  with the resolved ones gone, monetization gap down from 5 to 2 pages);
+  submitted all 11 URLs to IndexNow (HTTP 200, accepted).
+
+**Not shipped / deferred:**
+
+- **~34 files / ~100 remaining instances** of the "over the safe/Prop 65
+  limit" phrasing pattern (item 1 above covered 6 files as a first
+  verified batch). Full file list from `grep -lE "over (the )?safe limit|
+  over limit|x over|% of the (Prop 65 )?limit" blog/*.html` (excluding
+  `.bak`) is in this run's working notes, not reproduced here — re-grep at
+  the start of the next run rather than trusting this count to still be
+  accurate. Some fraction of any re-grep's hits will be false positives
+  (the site's own "LIMIT USE" risk-tier badge language is legitimate and
+  must not be rewritten) — read context per-instance, same as this run.
+- **13 "Crawled — currently not indexed" GSC pages** — no mechanical fix
+  identified; flagged as a quality/content-depth question for a future
+  content-focused pass, not a data-accuracy issue this loop is built to
+  catch.
+- **`cpl-audit.py` script tightening** (word-boundary brand matching in
+  `check_data()`, same-cell requirement in `check_ranks()`) — diagnosed and
+  documented (Standing Rule 9) but not implemented; the false positives are
+  now known and don't need re-chasing, so this is lower urgency than
+  content fixes.
+
+**New standing rule added to `CPL-AUDIT-LOOP.md`:**
+- Rule 9 (new): `cpl-audit.py`'s `check_data()` substring-matching and
+  `check_ranks()` same-row-not-same-cell false positives, with the full
+  diagnosis and the verified canonical rank table.
+
+---
+
 ## 2026-08-10 — First full loop run: 43-item backlog triaged, ~50 files shipped
 
 **Context:** First complete run of Steps 1–6 against the backlog `CPL-
