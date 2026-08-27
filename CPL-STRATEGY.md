@@ -6,6 +6,87 @@ future runs need to see what was already tried, rejected, or fixed.
 
 ---
 
+## 2026-08-27 — Third full loop run: avoid-list restatements fixed, larger Prop-65 backlog sized
+
+**Context:** One week after the 2026-08-21 run. Fresh `cpl-audit.py` output
+was byte-for-byte identical to that run's post-fix state (7 data conflicts,
+8 rank conflicts, 0 schema, 0 links, 2 monetization gaps) — nothing new
+broke, every flagged item already diagnosed under Standing Rule 9 or the
+legitimate-different-product splits log. Re-grepped the deferred "over the
+safe/Prop 65 limit" backlog per the 08-21 entry's instruction and read
+context on every match; it turned out larger than the ~34-file/~100-instance
+estimate implied (~19 files with real violations once the legitimate
+"LIMIT USE" tier-badge false positives were excluded). Presented a 5-group,
+19-file proposal; site owner approved group 1 only ("Ship 1").
+
+**Shipped (group 1 — avoid-list restatements, 6 files):** replaced "X.Yx
+over (safe/the) limit" with "X% of CR's level of concern" (per Rule 0 /
+`cpl-data.json` `_README` note 2) on `naked-nutrition-vegan-mass-gainer-
+lead.html`, `new-year-fitness-guide-2026-safe-protein-home-gym.html` (×2),
+`owyn-pro-elite-protein-powder-safety-only-safe-plant-protein-2025.html`,
+`owyn-vs-vega-orgain-garden-of-life-safe-plant-protein-2025.html`,
+`safest-mass-gainer-lead-tested-ranked-2026.html`, and
+`safe-protein-powder-pregnancy-2025.html` (its full "Avoid List" — 10
+products — plus 2 shorter recap lists, ~13 instances on that one file
+alone). Values taken directly from `cpl-data.json` `pct_of_concern`
+(Naked 1572%, Huel 1288%, Garden of Life Sport Organic 564%, Momentous
+Plant 476%, MuscleMeds 247%, ON Serious Mass 202%/arsenic, Jocko Fuel 199%,
+Vega Premium Sport 185%, Quest Protein Shake 161%, ON Gold Standard RTD
+150%). Verified JSON-LD (all blocks parse) and div balance on all 6 files
+before shipping. Bumped `dateModified`, visible "Last Updated" text, and
+`sitemap.xml` `lastmod` to 2026-08-27 on all 6; submitted to IndexNow
+(HTTP 200, accepted). Post-fix `cpl-audit.py` re-run: still 15 total flagged
+items, all already-diagnosed/deferred — no regressions.
+
+**Not shipped this run (groups 2-5 from the proposal, left for a future
+run):**
+- **Group 2 — the "Dymatize 25%/ON 56% mislabeled as Prop 65" template
+  block**, found copy-pasted onto 4 more files beyond the one already fixed
+  on 08-21: `lead-free-protein-brands-ranked-2025.html`,
+  `muscletech-mass-gainer-safety.html` (3 instances total on that file),
+  `muscletech-mass-gainer-vanilla-milkshake-review.html`,
+  `muscletech-protein-powder-ranking-analysis.html`.
+- **Group 3 — cumulative-exposure calculation boxes** needing the
+  "×California's Prop 65 annualized threshold (182.5 µg/year)" framing
+  (same pattern as the 08-21 teens-page fix): `huel-black-edition-lead-
+  content.html` (a 3-scenario box where scenario 1 was already
+  half-fixed to a label that doesn't actually match its own math — flagged
+  for a careful fix, not a blind find/replace), `safe-protein-powder-
+  pregnancy-2025.html` line ~494 (a separate pregnancy-specific calc, not
+  touched today since it wasn't part of the approved group), `vega-vs-
+  orgain-protein-powder-lead-testing-2025.html` (4 instances).
+- **Group 4 — table row headers literally labeled "Times over safe
+  limit"**: `naked-nutrition-vegan-mass-gainer-lead.html` line 413,
+  `orgain-organic-protein-powder-lead-levels-consumer-reports-2025.html`
+  line 425.
+- **Group 5 — misc single instances**: `heavy-metals-protein-shakes-
+  brands-2025-report.html`, `body-fortress-protein-powder-lead-testing-
+  budget-clean-2025.html`, `ghost-protein-powder-lead-testing-2025.html`
+  (×3), `consumer-reports-new-protein-powder-tests-january-2026.html`
+  (×2, Jan-round Truvani/Ritual figures), `orgain-organic-protein-powder-
+  lead-levels-consumer-reports-2025.html` (×1 more beyond its group-4
+  header).
+- **`prop-65-warning-protein-powder.html` — flagged as a separate,
+  bigger problem, not part of any group.** This page's core framing
+  conflates CR's "level of concern" benchmark with an actual Prop 65
+  legal-warning-requirement determination ("16 out of 23 exceeded this
+  limit," "if your protein has a Prop 65 warning, it contains lead above
+  0.5 µg per day") — CR explicitly disclaims making that judgment. This
+  needs a real rewrite of the page's premise, not a phrasing substitution.
+  Recommend its own dedicated pass.
+
+**GSC/Bing:** traffic flat week-over-week (~55/day avg both weeks) — one
+week is too short to expect movement from precision-only fixes, no
+red flags. Indexing status unchanged from 08-21: still 10 "Discovered —
+not indexed" / 13 "Crawled — not indexed," same page lists.
+`best-cheap-protein-powder-low-heavy-metals.html` is still stuck in
+"Discovered — not indexed" a full week after being flagged for manual GSC
+Request Indexing — Legion/Thorne (flagged the same day) cleared it, so this
+one specifically may not have been manually requested yet. Flagged to site
+owner again.
+
+---
+
 ## 2026-08-21 — Second full loop run: Prop-65 phrasing, precision cleanup, new-page monetization, tool false-positives diagnosed
 
 **Context:** First loop run since 2026-08-10, and since two off-loop sessions
