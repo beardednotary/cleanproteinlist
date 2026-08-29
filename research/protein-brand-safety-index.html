@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Protein Brand Safety Search Index | CleanProteinList.com</title>
+<meta name="description" content="Which protein brands are consumers actively researching for heavy-metal safety information? A living, monthly-updated index built from 3,407 real visitor poll submissions. Orgain and Premier Protein lead; Garden of Life is this period's biggest mover.">
+<meta property="og:title" content="Protein Brand Safety Search Index | CleanProteinList.com" />
+<meta property="og:description" content="A living, monthly index of which protein brands consumers are checking for heavy-metal safety information — built from real visitor poll data, not brand submissions." />
+<meta property="og:url" content="https://cleanproteinlist.com/research/protein-brand-safety-index.html" />
+<meta property="og:type" content="article" />
+<link rel="canonical" href="https://cleanproteinlist.com/research/protein-brand-safety-index.html">
+<link rel="stylesheet" href="../style.css">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6RL8K3H3ZC"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-6RL8K3H3ZC');
+    </script>
+
+    <script src="/includes/affiliate-tracker.js"></script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "name": "Protein Brand Safety Search Index",
+  "description": "A recurring index of which protein supplement brands site visitors are researching for heavy-metal contamination safety information, based on poll submissions collected on CleanProteinList.com.",
+  "url": "https://cleanproteinlist.com/research/protein-brand-safety-index.html",
+  "creator": { "@type": "Organization", "name": "Clean Protein List" },
+  "temporalCoverage": "2025-11-06/2026-08-29",
+  "dateModified": "2026-08-29",
+  "license": "https://cleanproteinlist.com/about.html",
+  "measurementTechnique": "Voluntary, embedded on-site poll; open-text brand entry; deduplicated by normalized brand name within a 6-minute session window."
+}
+</script>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Protein Brand Safety Search Index",
+    "description": "A living, monthly-updated index of which protein brands consumers are researching for heavy-metal safety information.",
+    "author": { "@type": "Person", "name": "Ray Rothwell" },
+    "publisher": { "@type": "Organization", "name": "Clean Protein List" },
+    "datePublished": "2026-08-29",
+    "dateModified": "2026-08-29"
+}
+</script>
+
+<style>
+  :root {
+    --green:    #2d6a4f;
+    --green-lt: #52b788;
+    --green-xs: #95d5b2;
+    --cream:    #f8f5ef;
+    --ink:      #1a1a18;
+    --muted:    #6b7167;
+    --rule:     #d8d4cc;
+    --accent:   #e07a2f;
+    --bg:       #ffffff;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--cream);
+    color: var(--ink);
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  .site-header {
+    background: var(--green);
+    padding: 14px 32px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .site-header .logo {
+    font-family: 'DM Serif Display', serif;
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+  }
+  .site-header .tag {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--green-lt);
+    border-left: 1px solid rgba(255,255,255,.2);
+    padding-left: 12px;
+  }
+
+  .hero {
+    background: var(--ink);
+    padding: 56px 32px 44px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -60px;
+    right: -60px;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(82,183,136,.12) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .hero-inner { max-width: 820px; margin: 0 auto; position: relative; }
+  .update-badge {
+    display: inline-block;
+    background: var(--accent);
+    color: #fff;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    padding: 3px 9px;
+    border-radius: 2px;
+    margin-bottom: 12px;
+  }
+  .hero-eyebrow {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+    color: var(--green-lt);
+    margin-bottom: 16px;
+  }
+  .hero h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(28px, 4.6vw, 46px);
+    line-height: 1.1;
+    color: #fff;
+    margin-bottom: 16px;
+  }
+  .hero .deck {
+    font-size: 16.5px;
+    font-weight: 300;
+    color: rgba(255,255,255,.75);
+    max-width: 640px;
+    line-height: 1.65;
+    margin-bottom: 24px;
+  }
+  .hero-headline-stat {
+    font-size: 15px;
+    color: #fff;
+    background: rgba(82,183,136,.13);
+    border-left: 3px solid var(--green-lt);
+    padding: 12px 16px;
+    border-radius: 0 3px 3px 0;
+    max-width: 640px;
+    margin-bottom: 24px;
+    line-height: 1.6;
+  }
+  .hero-headline-stat strong { color: var(--green-lt); }
+  .hero-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    border-top: 1px solid rgba(255,255,255,.1);
+    padding-top: 18px;
+  }
+  .hero-meta-item { font-size: 12px; color: rgba(255,255,255,.5); }
+  .hero-meta-item strong { color: rgba(255,255,255,.85); display: block; font-size: 14px; }
+
+  .article-body {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 44px 32px 80px;
+  }
+  .section-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+    color: var(--green);
+    margin-bottom: 6px;
+  }
+  h2.section-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(20px, 3.2vw, 28px);
+    line-height: 1.15;
+    color: var(--ink);
+    margin-bottom: 18px;
+  }
+  .article-body p {
+    font-size: 15.5px;
+    line-height: 1.75;
+    color: var(--ink);
+    margin-bottom: 16px;
+    font-weight: 300;
+  }
+  .article-body p strong { font-weight: 600; color: var(--ink); }
+  .article-body ul { margin: 0 0 16px 20px; }
+  .article-body li { font-size: 15px; line-height: 1.7; margin-bottom: 6px; font-weight: 300; }
+  .section-break {
+    border: none;
+    border-top: 2px solid var(--rule);
+    margin: 40px 0 34px;
+  }
+  .section-break.heavy { border-top: 2px solid var(--green); }
+
+  /* neutrality rule banner */
+  .rule-banner {
+    background: var(--ink);
+    color: #fff;
+    border-radius: 3px;
+    padding: 16px 20px;
+    margin: 24px 0 8px;
+    font-size: 13.5px;
+    line-height: 1.6;
+  }
+  .rule-banner strong { color: var(--green-lt); }
+
+  /* ranked table */
+  .index-table-wrap { overflow-x: auto; margin: 20px 0; }
+  .index-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    background: var(--bg);
+  }
+  .index-table th {
+    text-align: left;
+    padding: 10px 12px;
+    background: var(--ink);
+    color: #fff;
+    font-size: 10.5px;
+    font-weight: 600;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+  .index-table td {
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--rule);
+    color: var(--ink);
+    vertical-align: middle;
+  }
+  .index-table tr:nth-child(even) td { background: #faf9f6; }
+  .index-table .rk { font-family: 'DM Serif Display', serif; font-size: 17px; color: var(--green); width: 34px; }
+  .index-table .brand-name { font-weight: 600; }
+  .index-table .n-val { font-weight: 600; color: var(--ink); }
+  .move { display: inline-flex; align-items: center; gap: 3px; font-size: 11.5px; font-weight: 700; padding: 2px 7px; border-radius: 10px; white-space: nowrap; }
+  .move.up { background: #edf7f1; color: var(--green); }
+  .move.down { background: #fef0e7; color: var(--accent); }
+  .move.same { background: #f0f0ee; color: var(--muted); }
+  .move.new { background: #eaf2fb; color: #2b6cb0; }
+
+  .finding-box {
+    background: var(--ink);
+    color: #fff;
+    border-radius: 3px;
+    padding: 18px 22px;
+    margin: 24px 0;
+  }
+  .finding-box .fb-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: .13em;
+    text-transform: uppercase;
+    color: var(--green-lt);
+    margin-bottom: 8px;
+  }
+  .finding-box p {
+    color: rgba(255,255,255,.85) !important;
+    font-size: 14px !important;
+    margin: 0 !important;
+    line-height: 1.65 !important;
+  }
+  .finding-box strong { color: #fff !important; }
+
+  .limitations {
+    background: #fdf5ee;
+    border: 1px solid #f0d9bc;
+    border-radius: 3px;
+    padding: 16px 20px;
+    margin: 20px 0;
+    font-size: 13px;
+    color: var(--ink);
+    line-height: 1.65;
+  }
+  .limitations strong { color: var(--accent); }
+
+  .method-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+    margin: 16px 0;
+  }
+  .method-table th {
+    text-align: left;
+    padding: 8px 12px;
+    background: var(--ink);
+    color: #fff;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: .06em;
+  }
+  .method-table td {
+    padding: 9px 12px;
+    border-bottom: 1px solid var(--rule);
+    color: var(--ink);
+    vertical-align: top;
+    line-height: 1.5;
+  }
+  .method-table tr:last-child td { border-bottom: none; }
+  .method-table tr:nth-child(even) td { background: #faf9f6; }
+
+  .chart-embed {
+    background: var(--bg);
+    border: 1px solid var(--rule);
+    border-radius: 3px;
+    padding: 16px 20px 14px;
+    margin: 20px 0;
+  }
+  .chart-embed .chart-fig {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 6px;
+  }
+  .chart-embed .chart-title { font-size: 14px; font-weight: 600; color: var(--ink); margin-bottom: 4px; }
+  .chart-embed .chart-caption { font-size: 12px; color: var(--muted); margin-bottom: 4px; line-height: 1.5; }
+
+  .opt-in-box {
+    background: #f0f7f3;
+    border: 1px solid var(--green-xs);
+    border-radius: 3px;
+    padding: 22px 24px;
+    margin: 28px 0;
+  }
+  .opt-in-box h3 { font-family: 'DM Serif Display', serif; font-size: 19px; color: var(--green); margin-bottom: 8px; }
+  .opt-in-box p { font-size: 14px !important; color: var(--ink) !important; margin-bottom: 12px !important; }
+  .opt-in-box a.email-btn {
+    display: inline-block;
+    background: var(--green);
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 10px 20px;
+    border-radius: 3px;
+  }
+  .opt-in-form { display: flex; flex-wrap: wrap; gap: 10px; }
+  .opt-in-form input[type="email"],
+  .opt-in-form input[type="text"] {
+    flex: 1 1 200px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    padding: 10px 12px;
+    border: 1px solid var(--green-xs);
+    border-radius: 3px;
+    background: #fff;
+    color: var(--ink);
+  }
+  .opt-in-form button {
+    flex: 0 0 auto;
+    background: var(--green);
+    color: #fff;
+    border: none;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 10px 20px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-family: 'DM Sans', sans-serif;
+  }
+  .opt-in-form button:hover { background: #24573f; }
+  .opt-in-box p.opt-in-note { font-size: 11.5px !important; color: var(--muted) !important; margin-top: 8px !important; margin-bottom: 0 !important; }
+  .opt-in-honeypot { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+
+  .about-box {
+    background: var(--green);
+    color: #fff;
+    border-radius: 3px;
+    padding: 22px 26px;
+    margin-top: 44px;
+  }
+  .about-box h3 { font-family: 'DM Serif Display', serif; font-size: 19px; color: #fff; margin-bottom: 10px; }
+  .about-box p { font-size: 13.5px; color: rgba(255,255,255,.8); margin: 0 !important; line-height: 1.65 !important; }
+  .about-box a { color: var(--green-lt); }
+
+  footer {
+    background: var(--ink);
+    padding: 24px 32px;
+    text-align: center;
+    font-size: 12px;
+    color: rgba(255,255,255,.4);
+  }
+  footer a { color: rgba(255,255,255,.6); }
+
+  @media (max-width: 640px) {
+    .hero { padding: 36px 20px; }
+    .article-body { padding: 30px 20px 60px; }
+    .index-table { font-size: 12.5px; }
+    .index-table th, .index-table td { padding: 8px 8px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <a href="/" class="logo">CleanProteinList.com</a>
+  <span class="tag">Original Research &middot; Living Index</span>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="update-badge">Updated August 29, 2026</div>
+    <div class="hero-eyebrow">CleanProteinList.com &middot; Protein Brand Safety Search Index</div>
+    <h1>Which Protein Brands Are Consumers <em style="font-style:italic;color:var(--green-lt);">Actually Worried About?</em></h1>
+    <p class="deck">A recurring index of which protein supplement brands site visitors are checking for heavy-metal contamination safety &mdash; built from real visitor submissions, not brand popularity or ad spend.</p>
+    <div class="hero-headline-stat">This edition is built from <strong>3,407 poll submissions</strong> collected since November 6, 2025 (2,881 deduplicated, brand-identifiable respondents since the brand question was added in January 2026). <strong>Orgain, Premier Protein, and Levels</strong> remain the three most-searched brands. The biggest mover this period: <strong>Garden of Life, up from #7 to #5.</strong></div>
+    <div class="hero-meta">
+      <div class="hero-meta-item"><strong>3,407</strong>Total poll submissions</div>
+      <div class="hero-meta-item"><strong>2,881</strong>Unique, brand-identifiable respondents</div>
+      <div class="hero-meta-item"><strong>Nov 6, 2025 &#8211; Aug 29, 2026</strong>Collection window</div>
+      <div class="hero-meta-item"><strong>Monthly</strong>Update cadence</div>
+    </div>
+  </div>
+</section>
+
+<article class="article-body">
+
+  <p>Every brand-safety article on this site carries a small embedded poll: <em>"What protein do you currently use?"</em> It was built to help individual readers get a fast answer about their own brand. It has quietly become something else &mdash; a running record of which brands a large, self-selected population of safety-motivated consumers is worried enough about to go check.</p>
+
+  <p>This page pulls that data out of a one-time report and gives it a permanent home. It will be updated on a fixed monthly schedule, not left to go stale. What you're looking at is not a popularity ranking. Brands with the most search volume in the mainstream sense &mdash; Optimum Nutrition, Muscle Milk &mdash; are not necessarily at the top here. <strong>This is a safety-concern index:</strong> which brands are people specifically checking on a site built around heavy-metal testing data.</p>
+
+  <div class="rule-banner">
+    <strong>The rule that governs this page:</strong> this index ranks brands strictly by how often visitors named them in the poll. No brand can pay to enter it, leave it, or move within it, and none has. If that ever stops being true, this page stops being worth citing &mdash; and worth reading.
+  </div>
+
+  <hr class="section-break heavy">
+
+  <div class="section-label">The Index</div>
+  <h2 class="section-title">Top 20 Brands, Ranked by Safety Search Volume</h2>
+
+  <p>Ranked by deduplicated, normalized poll submissions. "Move" compares this edition's rank to the last published ranking (CleanProteinList.com's July 14, 2026 consumer survey, n&#8201;=&#8201;2,669). Brands with no July rank are new to the tracked top 20 this edition &mdash; not necessarily new to the market.</p>
+
+  <div class="index-table-wrap">
+    <table class="index-table">
+      <thead>
+        <tr><th>Rank</th><th>Brand</th><th>Submissions</th><th>Move</th></tr>
+      </thead>
+      <tbody>
+        <tr><td class="rk">1</td><td class="brand-name">Orgain</td><td class="n-val">419</td><td><span class="move same">&mdash; #1</span></td></tr>
+        <tr><td class="rk">2</td><td class="brand-name">Premier Protein</td><td class="n-val">256</td><td><span class="move same">&mdash; #2</span></td></tr>
+        <tr><td class="rk">3</td><td class="brand-name">Levels</td><td class="n-val">88</td><td><span class="move same">&mdash; #3</span></td></tr>
+        <tr><td class="rk">4</td><td class="brand-name">Naked Nutrition</td><td class="n-val">84</td><td><span class="move same">&mdash; #4</span></td></tr>
+        <tr><td class="rk">5</td><td class="brand-name">Garden of Life</td><td class="n-val">58</td><td><span class="move up">&#9650; +2</span></td></tr>
+        <tr><td class="rk">6</td><td class="brand-name">Optimum Nutrition</td><td class="n-val">56</td><td><span class="move down">&#9660; &minus;1</span></td></tr>
+        <tr><td class="rk">7</td><td class="brand-name">Isopure</td><td class="n-val">54</td><td><span class="move up">&#9650; +1</span></td></tr>
+        <tr><td class="rk">8</td><td class="brand-name">Nutricost</td><td class="n-val">51</td><td><span class="move down">&#9660; &minus;2</span></td></tr>
+        <tr><td class="rk">9</td><td class="brand-name">OWYN</td><td class="n-val">50</td><td><span class="move up">&#9650; +1</span></td></tr>
+        <tr><td class="rk">10</td><td class="brand-name">Sunwarrior</td><td class="n-val">50</td><td><span class="move down">&#9660; &minus;1</span></td></tr>
+        <tr><td class="rk">11</td><td class="brand-name">Fairlife</td><td class="n-val">42</td><td><span class="move up">&#9650; +4</span></td></tr>
+        <tr><td class="rk">12</td><td class="brand-name">Transparent Labs</td><td class="n-val">41</td><td><span class="move same">&mdash; #12</span></td></tr>
+        <tr><td class="rk">13</td><td class="brand-name">Vital Proteins</td><td class="n-val">41</td><td><span class="move down">&#9660; &minus;2</span></td></tr>
+        <tr><td class="rk">14</td><td class="brand-name">Truvani</td><td class="n-val">40</td><td><span class="move same">&mdash; #14</span></td></tr>
+        <tr><td class="rk">15</td><td class="brand-name">Ascent</td><td class="n-val">37</td><td><span class="move new">NEW</span></td></tr>
+        <tr><td class="rk">16</td><td class="brand-name">Muscle Milk</td><td class="n-val">37</td><td><span class="move new">NEW</span></td></tr>
+        <tr><td class="rk">17</td><td class="brand-name">Vega</td><td class="n-val">35</td><td><span class="move down">&#9660; &minus;4</span></td></tr>
+        <tr><td class="rk">18</td><td class="brand-name">NOW Sports</td><td class="n-val">32</td><td><span class="move new">NEW</span></td></tr>
+        <tr><td class="rk">19</td><td class="brand-name">MyProtein</td><td class="n-val">27</td><td><span class="move new">NEW</span></td></tr>
+        <tr><td class="rk">20</td><td class="brand-name">LeanFit</td><td class="n-val">27</td><td><span class="move new">NEW</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p style="font-size:12.5px;color:var(--muted);">Behind the top 20, submissions spread across more than 90 additional distinct brands and product lines, none exceeding roughly 20 mentions &mdash; 836 raw submissions named a brand outside this tracked set (763 after deduplication). The field beyond the top four remains genuinely fragmented; no single brand outside the leaders commands more than about 2% of unique respondents.</p>
+
+  <hr class="section-break">
+
+  <div class="section-label">What Moved</div>
+  <h2 class="section-title">The Story Behind This Edition's Rankings</h2>
+
+  <p><strong>The top four did not change.</strong> Orgain, Premier Protein, Levels, and Naked Nutrition held their exact same positions from the July 14 baseline through this edition, with Orgain adding 31 net new submissions and extending its lead over #2 to a wider margin than it held in July. Orgain's continued dominance is worth reading alongside two active pieces of litigation this site already tracks: an Amazon class action and a Costco class action, both filed July 31, 2026, alleging undisclosed lead, cadmium, and arsenic in Orgain Organic Protein Powder. Consumers checking a brand's safety data after seeing it in the news is exactly the behavior this index is built to catch.</p>
+
+  <p><strong>Garden of Life is this edition's clearest mover</strong>, climbing from #7 to #5 with 12 additional net submissions &mdash; including 9 of its 58 total submissions arriving in just the 14 days before this update, a faster recent pace than all but Orgain itself. This tracks with an active, ongoing class action against the brand: <em>DeHerrera v. Garden of Life</em> (C.D. Cal., No. 5:25-cv-03118), filed December 16, 2025 over undisclosed lead in Organic Plant-Based Protein, remained pending as of this site's own <a href="../blog/protein-powder-recalls-2025.html#lawsuit-tracker" style="color:var(--green);">lawsuit tracker</a> in August 2026 &mdash; see our <a href="../blog/garden-of-life-lawsuit-lead-contamination-class-action-2025.html" style="color:var(--green);">full breakdown</a>. The case isn't new this period, but continued visibility of an active suit against a major brand is a plausible, honest explanation for sustained search interest &mdash; unlike Fairlife, which also gained meaningfully (four spots, #15 to #11) with no comparable event we can point to. We're reporting Fairlife's move as real and measured, without an attributed cause.</p>
+
+  <p><strong>Vega posted the largest decline</strong> among ranked brands, falling four spots from #13 to #17 on essentially flat submission volume (36 in July, 35 now) &mdash; a relative decline driven by other brands growing around it rather than Vega losing ground outright.</p>
+
+  <p>Five brands are new to the tracked top 20 this edition: Ascent, Muscle Milk, NOW Sports, MyProtein, and LeanFit. None of these are new to the market or necessarily new to the data &mdash; they simply did not place in the July 14 top 15 as previously published. Expanding this edition's table to 20 brands (versus 15 previously) surfaces more of the real field.</p>
+
+  <hr class="section-break">
+
+  <div class="section-label">Method</div>
+  <h2 class="section-title">How This Index Is Built</h2>
+
+  <p>The underlying instrument is a short, voluntary poll embedded across CleanProteinList.com's blog content: visitors are asked what protein brand they currently use and whether it's a powder, ready-to-drink shake, or that they're switching brands. The free-text brand field was added to the poll on January 21, 2026; submissions before that date recorded only the product-type answer and are excluded from the brand rankings above.</p>
+
+  <table class="method-table">
+    <tbody>
+      <tr><td><strong>Platform</strong></td><td>Formspree, embedded site-wide on blog articles</td></tr>
+      <tr><td><strong>Total raw poll submissions (all-time)</strong></td><td>3,407</td></tr>
+      <tr><td><strong>Submissions naming a brand</strong></td><td>3,343 (raw)</td></tr>
+      <tr><td><strong>Unique, brand-identifiable respondents (deduplicated)</strong></td><td>2,881</td></tr>
+      <tr><td><strong>Brand field added</strong></td><td>January 21, 2026</td></tr>
+      <tr><td><strong>Collection window (this edition)</strong></td><td>November 6, 2025 &#8211; August 29, 2026</td></tr>
+      <tr><td><strong>Deduplication method</strong></td><td>Brand names normalized for spelling, capitalization, and recognizable product-line variants (e.g. "ON Gold Standard" &rarr; Optimum Nutrition), then consecutive same-brand submissions within a 6-minute window collapsed to one. No IP or account data is collected or used.</td></tr>
+      <tr><td><strong>Incentive</strong></td><td>None</td></tr>
+      <tr><td><strong>Previous published ranking (comparison baseline)</strong></td><td>CleanProteinList.com, "2026 Protein Safety Consumer Survey," July 14, 2026 (top 15, n=2,669)</td></tr>
+      <tr><td><strong>Next update</strong></td><td>Monthly, on a fixed date. If two consecutive updates are missed, treat this page as stale until a new update badge appears above.</td></tr>
+    </tbody>
+  </table>
+
+  <div class="limitations">
+    <strong>Limitations:</strong> Respondents are self-selected visitors to CleanProteinList.com, arriving primarily via organic search on heavy-metal testing and brand safety content. This population is meaningfully more safety-motivated than the general protein supplement consumer, so this index measures search/concern behavior among that segment &mdash; it is not a claim about which brands are least safe, most contaminated, or most popular overall. A brand's presence or absence, and its position, reflects how often visitors named it, nothing else. Normalization is moderate: obvious spelling and capitalization variants and recognizable product-line names are grouped under a parent brand (for example, "ON Gold Standard" under Optimum Nutrition); ambiguous or clearly distinct entries are left ungrouped. Rank-change comparisons are directional; the July 14 baseline used a slightly different top-N cutoff (15 vs. this edition's 20) and a marginally different dedup pass, so treat single-position moves near the bottom of the table as noise and multi-position moves as signal. Data in this edition is current as of August 29, 2026.
+  </div>
+
+  <hr class="section-break">
+
+  <div class="section-label">Citation</div>
+  <h2 class="section-title">Media &amp; Citation</h2>
+
+  <p>Journalists and researchers may cite this page as: <strong>CleanProteinList.com, &ldquo;Protein Brand Safety Search Index,&rdquo; updated August 29, 2026.</strong> Because this is a living index, please cite the update date shown in the badge at the top of the page &mdash; the ranking will change at the next update, and a citation without a date will go stale.</p>
+
+  <div class="chart-embed">
+    <div class="chart-fig">Suggested Citation</div>
+    <div class="chart-title">CleanProteinList.com. &ldquo;Protein Brand Safety Search Index.&rdquo; Updated August 29, 2026.</div>
+    <div class="chart-caption" style="margin-bottom:0;">Available at https://cleanproteinlist.com/research/protein-brand-safety-index.html</div>
+  </div>
+
+  <p>This index draws on the same underlying poll instrument as CleanProteinList.com's broader <a href="protein-safety-consumer-survey-2026.html" style="color:var(--green);">2026 Protein Safety Consumer Survey</a>, which covers consumer awareness, purchase motivation, and pricing tolerance in more depth. Anonymized aggregate data is available to journalists and researchers on request: <a href="mailto:research@cleanproteinlist.com" style="color:var(--green)">research@cleanproteinlist.com</a>.</p>
+
+  <div class="opt-in-box">
+    <h3>Get notified when this index updates</h3>
+    <p>For journalists tracking a specific brand, or consumers watching one they use: sign up and we'll let you know when the next edition of this index goes live, or the moment a brand you're watching moves.</p>
+    <form class="opt-in-form" id="index-optin-form" action="https://formspree.io/f/mrpgboog" method="POST">
+      <input type="email" name="email" placeholder="you@email.com" required aria-label="Email address">
+      <input type="text" name="brand_watching" placeholder="Brand you're watching (optional)" aria-label="Brand you're watching, optional">
+      <input type="hidden" name="_subject" value="Index Alert Signup">
+      <input type="hidden" name="source" value="protein-brand-safety-index">
+      <input type="hidden" name="_next" value="https://cleanproteinlist.com/research/protein-brand-safety-index.html?subscribed=1">
+      <input type="text" name="_gotcha" class="opt-in-honeypot" tabindex="-1" autocomplete="off">
+      <button type="submit">Email me when it updates &rarr;</button>
+    </form>
+    <p class="opt-in-note" id="index-optin-note">We'll only email you about index updates. No spam, unsubscribe anytime.</p>
+  </div>
+  <script>
+    if (new URLSearchParams(window.location.search).get('subscribed') === '1') {
+      var f = document.getElementById('index-optin-form');
+      var n = document.getElementById('index-optin-note');
+      if (f) f.outerHTML = '<p style="font-size:14px;color:var(--green);font-weight:600;margin:0;">You\'re on the list — we\'ll email you when this index next updates.</p>';
+      if (n) n.style.display = 'none';
+    }
+  </script>
+
+  <div class="about-box">
+    <h3>About CleanProteinList.com</h3>
+    <p>CleanProteinList.com is an independent consumer resource tracking heavy metal contamination, third-party testing results, and safety data for protein supplements. The site aggregates publicly available testing data, publishes original brand-by-brand safety analyses, and provides consumers with the information they need to make informed purchasing decisions. CleanProteinList.com accepts no advertising or payment from protein supplement brands and is not affiliated with any manufacturer. Visit <a href="https://cleanproteinlist.com">cleanproteinlist.com</a> for the full brand database and testing archive.</p>
+  </div>
+
+</article>
+
+<footer>
+  &copy; 2026 CleanProteinList.com &middot; Original Research &middot; Protein Brand Safety Search Index &middot; Updated August 29, 2026
+  <br><a href="../research/protein-safety-consumer-survey-2026.html">Full Consumer Survey</a> &middot; <a href="../blog.html">Articles</a> &middot; <a href="../about.html">About</a>
+</footer>
+
+</body>
+</html>

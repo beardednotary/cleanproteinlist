@@ -6,6 +6,114 @@ future runs need to see what was already tried, rejected, or fixed.
 
 ---
 
+## 2026-08-29 — New page: Protein Brand Safety Search Index (living, monthly-updated)
+
+**Context:** Not part of the standing audit loop. Built at the user's request
+following an outreach-kit spec (written by a separate Claude Opus session)
+for a permanently-updated, no-year-slug page designed to be citable by
+journalists: a ranked index of which protein brands site visitors are
+researching for heavy-metal safety, sourced from the site's own embedded
+poll (Formspree form `xeopynkp`), explicitly excluding quiz data per the
+user's instruction.
+
+**Shipped:**
+- New page: `research/protein-brand-safety-index.html`. Reuses the design
+  system from `research/protein-safety-consumer-survey-2026.html` (CSS vars,
+  component classes) rather than the standard blog template, for visual
+  consistency between the two research pages.
+- Data pipeline: built a fresh Python normalization/dedup pass directly
+  against the raw Formspree export
+  (`formspree_xeopynkp_2026-08-29T20_56_59_export.json`, 3,407 raw
+  submissions), independent of the outreach kit's own stated numbers — the
+  kit claimed 3,409 raw submissions; my direct count was 3,407, so I used my
+  own verified number throughout rather than the kit's.
+  - Canonical brand matching: ~90 ordered regex rules, `\b` word-boundary
+    disciplined (verified `\bsprout\b` does not false-match "Sprouts" the
+    grocery retailer; verified `\bvega\b(?!n\b)` does not false-match
+    "Vegan").
+  - Dedup: consecutive same-brand submissions within a 6-minute window
+    collapsed to one — same method already established on the July 2026
+    survey page, for methodological consistency.
+  - Result: 2,881 unique, brand-identifiable respondents (3,343 raw
+    brand-answered submissions; 3,407 total raw poll submissions overall).
+  - Rank-change column computed against the site's own previously-published
+    July 14, 2026 baseline (top 15, n≈2,669).
+- Page includes every section the outreach kit's spec required: above-the-
+  fold summary sentence with period/total/top-3, a top-20 ranked table with
+  movement indicators (▲/▼/NEW), a "What Moved" narrative, a method note
+  kept above the fold-equivalent position (right after the table, not
+  buried at the bottom), a copy-pasteable citation block, an email opt-in
+  (`mailto:` link — no live-form backend exists for this yet, see below),
+  a stated monthly-cadence policy, and a one-line no-pay-to-play neutrality
+  rule.
+- "What Moved" narrative: reported all rank/count movement factually. Only
+  attached a causal explanation where one is actually verifiable —
+  Orgain's continued #1 position and growth is noted alongside the real,
+  already-covered-on-this-site Amazon and Costco class actions filed
+  July 31, 2026. Did NOT invent a cause for Garden of Life's #7→#5 rise or
+  Fairlife's #15→#11 rise — reported as real, measured movement with no
+  attributed reason, since no corroborating event was found.
+- Added `research/protein-brand-safety-index.html` to `sitemap.xml`
+  (priority 0.95, matching the survey page). Bumped the survey page's own
+  `lastmod` since it was edited (see below).
+- Added a reciprocal link: a one-line callout on
+  `research/protein-safety-consumer-survey-2026.html`'s hero pointing to
+  the new index, so the two research pages cross-link. Did NOT touch the
+  site-wide nav (`includes/header-blog.html` / `includes/header-root.html`)
+  — that currently has a single "Research" link to the survey page; adding
+  a second nav item is an IA decision I left for the user rather than
+  deciding unilaterally.
+- Ran IndexNow on both changed URLs (index page + survey page). HTTP 200.
+
+**Not shipped / open questions for the user:**
+- **Email opt-in has no real backend.** The page currently uses a
+  `mailto:research@cleanproteinlist.com` link, not a working signup form.
+  If a real "notify me" list is wanted, it needs either a new Formspree
+  form (separate from the poll's `xeopynkp` endpoint, to avoid mixing
+  signup data with poll data) or another list tool — not yet set up.
+- **CSV twin not cross-checked.** A same-export CSV
+  (`formspree_xeopynkp_2026-08-29T20_58_28_export.csv`) exists in
+  Downloads alongside the JSON used; not yet diffed against it as a sanity
+  check.
+- **Nav/blog.html linking** — the new page isn't linked from `blog.html` or
+  the site-wide nav yet; flagged above, left for the user's call.
+- Monthly cadence is stated as site policy copy only — nothing automated
+  will actually regenerate this page on a schedule; it's a manual audit-
+  loop-style task for next month.
+
+**Follow-up same day (2026-08-29, later):**
+- **Garden of Life "what moved" cause upgraded from unattributed to real.**
+  User flagged there's an existing Garden of Life lawsuit on the site.
+  Found it: *DeHerrera v. Garden of Life* (C.D. Cal., No. 5:25-cv-03118),
+  filed Dec 16, 2025 over undisclosed lead in Organic Plant-Based Protein,
+  logged as "Pending" on `blog/protein-powder-recalls-2025.html`'s lawsuit
+  tracker as of Aug 1, 2026, full breakdown at
+  `blog/garden-of-life-lawsuit-lead-contamination-class-action-2025.html`.
+  Rewrote the index page's Garden of Life paragraph to cite this real,
+  verifiable case (noting it's not new this period, just still active) and
+  linked both the tracker and the full breakdown article in-page.
+- **Nav updated site-wide** to add an "Index" link next to "Research," per
+  the user (blog.html link explicitly declined as unnecessary). The
+  `includes/header-*.html` files turned out NOT to be live-included
+  anywhere (no fetch/SSI reference found) — they're reference copies only.
+  The real nav lives hard-coded in each page's own `<header>`; only 5 live
+  pages actually carry the full nav with a "Research" link:
+  `index.html`, `about.html`, `stats.html`, `tools.html`,
+  `blog/lead-free-protein-brands-ranked-2025.html`. Updated all 5, plus
+  both `includes/header-*.html` reference files for consistency. Most
+  blog posts use a shorter header without "Research" at all, so they were
+  left untouched.
+- **Formspree opt-in endpoint received: `https://formspree.io/f/mrpgboog`.**
+  Wired up a real form on the index page replacing the `mailto:` placeholder
+  — email field (required) + optional "brand you're watching" field,
+  honeypot (`_gotcha`) anti-spam field, `_subject`/`source` hidden fields,
+  and a `_next` redirect back to the page with `?subscribed=1`, which a
+  small inline script detects to swap the form for a thank-you message.
+  This is a separate Formspree form ID from the poll's `xeopynkp` endpoint,
+  so signup data won't mix with poll submissions.
+
+---
+
 ## 2026-08-27 — Third full loop run: avoid-list restatements fixed, larger Prop-65 backlog sized
 
 **Context:** One week after the 2026-08-21 run. Fresh `cpl-audit.py` output
