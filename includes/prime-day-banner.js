@@ -33,6 +33,18 @@
   var now = Date.now();
   if (now < SHOW_FROM || now >= END) return;
 
+  // In-article sale blocks (e.g. the Orgain swap box) ship with `hidden` and
+  // are revealed only inside the window — independent of the bar being dismissed.
+  function revealSaleBlocks() {
+    var els = document.querySelectorAll('.prime-day-only');
+    for (var i = 0; i < els.length; i++) els[i].hidden = false;
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', revealSaleBlocks);
+  } else {
+    revealSaleBlocks();
+  }
+
   try {
     if (sessionStorage.getItem(DISMISS_KEY)) return;
   } catch (e) { /* storage blocked — just show the bar */ }

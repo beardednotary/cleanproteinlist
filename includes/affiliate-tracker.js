@@ -46,6 +46,7 @@
   // Maps a DOM ancestor/class to a human-readable placement name.
   var PLACEMENTS = [
     ['.cpl-prime-bar',        'prime_banner'],       // sitewide Prime Day bar
+    ['.prime-swap-box',       'prime_swap_box'],     // in-article "switch on sale" box
     ['.prime-trial-cta',      'prime_trial_box'],
     ['.prime-deal-card',      'prime_day_page'],
     ['.table-buy-btn',        'table_buy_button'],   // the new Buy column
