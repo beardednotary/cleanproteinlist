@@ -45,6 +45,9 @@
   // Placement detection — checked in order, first match wins.
   // Maps a DOM ancestor/class to a human-readable placement name.
   var PLACEMENTS = [
+    ['.cpl-prime-bar',        'prime_banner'],       // sitewide Prime Day bar
+    ['.prime-trial-cta',      'prime_trial_box'],
+    ['.prime-deal-card',      'prime_day_page'],
     ['.table-buy-btn',        'table_buy_button'],   // the new Buy column
     ['.rankings-table',       'rankings_table'],
     ['.comparison-table',     'comparison_table'],
@@ -96,7 +99,7 @@
       }
     }
     // 2) In a product card → use its heading
-    var card = a.closest && a.closest('.product-card, .rtd-product-card, .highlight-box, li');
+    var card = a.closest && a.closest('.product-card, .rtd-product-card, .prime-deal-card, .highlight-box, li');
     if (card) {
       var h = card.querySelector('h3, h4, strong');
       if (h && h.textContent.trim()) return clean(h.textContent);
