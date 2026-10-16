@@ -6,6 +6,80 @@ future runs need to see what was already tried, rejected, or fixed.
 
 ---
 
+## 2026-10-16 — Fourth loop run: 6 fact fixes; Bing identified as the live channel
+
+**Context:** First loop run since 2026-08-27. `cpl-audit.py` output was the
+same 15 already-diagnosed flags (7 data / 8 rank conflicts, all Rule 9 false
+positives or legit different-product splits; schema/links/structure clean;
+2 deliberately unmonetized pages). Reading the printed context around those
+flags surfaced 6 real bugs the tool's conflict logic doesn't isolate, plus a
+32-file stale claim. Site owner approved items 1-6 ("1-6").
+
+**Shipped (6 files):**
+1. `chocolate-protein-powder-lead-contamination-2025.html` — Momentous Whey
+   Isolate "Below detection (#3)" → 30% of CR's level of concern (#3), per
+   `cpl-data.json` (which explicitly notes NOT below detection).
+2. `ebt-protein-powder-complete-guide-2025.html` — "Vega products (#16-19 -
+   all contaminated)" (the fabricated Vega range Rule 4 warns about) → "Vega
+   Premium Sport (#16 - 185%)", the only Vega product CR tested.
+3. `body-fortress-protein-powder-lead-testing-budget-clean-2025.html` — ON
+   Gold Standard Whey and Momentous Whey Isolate were labeled "Non-detect"
+   for lead (comparison table, macro table "Heavy metals" row, prose, FAQ
+   visible + JSON-LD). Rewrote to 56% / 30% / Dymatize Super Mass Gainer 25%
+   per `cpl-data.json`; Body Fortress's own Clean Label Project non-detect
+   claims left untouched (outside CR data, CLP-sourced). Bulk Supplements'
+   CLP "Non-detect" row also left untouched (not in `cpl-data.json`).
+4. `lead-in-protein-powder-list.html` — Vega Sport "1.86× the safe limit" →
+   "185% of CR's level of concern" (Prop 65 framing, `_README` note 2).
+5. `stats.html` — Truvani "92% of limit" → "93% of CR's level of concern"
+   (`cpl-data.json` says 93).
+6. `consumer-reports-new-protein-powder-tests-january-2026.html` — "of limit"
+   → "of CR's level of concern" (Truvani 93%; the 42-93% range, visible +
+   JSON-LD FAQ).
+
+All 6 files: JSON-LD re-parsed OK, `dateModified` / visible updated text /
+`sitemap.xml` `lastmod` bumped to 2026-10-16, IndexNow HTTP 200. Post-fix
+`cpl-audit.py`: same 15 known flags, no regressions. (`stats.html` has no
+visible "Last Updated" date to bump — only its JSON-LD.)
+
+**Proposed, not approved this run (re-propose, don't re-derive):**
+- **Item 7 — stale "OWYN is the only safe plant protein" claim on 32 files**
+  (`grep -l -i -E "only safe plant|only plant protein safe|only plant
+  protein (verified|cleared)"`). False since Jan 2026: Truvani Plant-Based
+  (93%, "Better for daily") also cleared. Needs per-instance reading, not a
+  blind replace. Suggested first batch: top 5 Bing-traffic pages.
+- **Item 8 — unverifiable Garden of Life Grass Fed Whey "SAFE (Clean Label
+  certified)"** on `chocolate-...:547`, and `cpl-audit.py`'s own hard-coded
+  hint "Garden of Life WHEY = non-detect". Neither is in `cpl-data.json`;
+  left for the owner.
+- Groups 2-5 of the 08-27 Prop-65 backlog and the
+  `prop-65-warning-protein-powder.html` premise rewrite remain open.
+
+**Search data (Step 3):** The pasted `cleanproteinlist.com_*_10_16_2026.csv`
+files are **Bing Webmaster** exports, not GSC. `Pages.csv`/`Queries.csv` are
+GSC but appear to be an old (pre-Dec-2025, "premier protein lead" at pos ~4)
+window — not used for trend. Bing clicks: ~60/day Apr-Aug → 1,272 in
+Aug 20-Sep 16 → 863 in Sep 17-Oct 14 (-32%). The drop starts Sep 18, the day
+after the Sep 15-17 CNAME delete/create churn: CTR fell first (~5% → 2.65%,
+impressions flat), then impressions fell from Sep 25. Looks like a crawl/
+availability hit, not an algorithmic verdict. Google is ~73 clicks/28d
+(owner-reported 10/14). Recommended to the owner: check Bing Webmaster crawl
+errors for Sep 15-20 and resubmit the sitemap in Bing.
+
+**Strategic question raised (not a loop item):** owner asked whether to
+trim/combine pages. Recommendation given: consolidate duplicated CR-table
+pages (5 pages restate the same 23-row table) and near-duplicate pairs
+(MuscleTech vanilla review → mass-gainer safety; vega-vs-orgain →
+owyn-vs-vega-orgain-gol; body-fortress-vs-ON → Body Fortress page), mainly
+to shrink the fact-drift surface, not for Google. GitHub Pages has no 301s —
+merges need meta-refresh + canonical stubs (pattern:
+`beyond-lead-heavy-metals-protein-powders.html`). Don't delete low-traffic
+monetized pages on traffic alone. Left as a separate proposal.
+
+**New standing rule:** Rule 10 (see `CPL-AUDIT-LOOP.md`).
+
+---
+
 ## 2026-08-29 — New page: Protein Brand Safety Search Index (living, monthly-updated)
 
 **Context:** Not part of the standing audit loop. Built at the user's request

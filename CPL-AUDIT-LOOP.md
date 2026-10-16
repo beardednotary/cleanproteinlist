@@ -233,3 +233,15 @@ After shipping approved items:
    the same cell, and switch `check_data()`'s `BRANDS` matching to
    word-boundary (`\bVega\b`) — not done as of this entry, logged as an
    open backlog item instead.
+10. **Identify the search-data source before reading a trend, and read
+    the context around audit flags even when the flag count is unchanged.**
+    Added 2026-10-16. Files named `cleanproteinlist.com_*Report_<date>.csv`
+    / `SearchPerformanceOverview` are Bing Webmaster exports; `Pages.csv` /
+    `Queries.csv` / `Search appearance.csv` are GSC. Check the date window
+    before comparing. As of Oct 2026 Bing (~30/day) outweighs Google (~3/day)
+    roughly 12:1, so Bing is the primary channel to watch, and IndexNow is
+    the one lever that reaches it. Separately: this run's `cpl-audit.py`
+    count was identical to the previous run (15), yet 6 real bugs sat in
+    the context lines it printed (a false "below detection", a fabricated
+    "Vega #16-19" range, "non-detect" claims for ON/Momentous). An unchanged
+    count is not a clean bill — read every printed context line.
