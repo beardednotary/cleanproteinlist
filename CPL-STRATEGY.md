@@ -6,6 +6,98 @@ future runs need to see what was already tried, rejected, or fixed.
 
 ---
 
+## 2026-10-21 (c) — Open items from (a)/(b): lead-poisoning rewrite + 4 refreshes
+
+**Context:** Worked the items held over in (b). The "light refreshes" turned
+out not to be light: 3 of the 4 pages had fabricated or wrong claims beyond
+date drift. Verified third-party claims at the source this time (CLP's live
+protein study page, Informed Sport database, FDA/CDC pages, retail prices)
+instead of trusting the site's own copy. Bing check (Rule 11): Ascent 17
+clicks (pos 3.2), Jan-2026 CR 14, lead-poisoning 5, RYSE 3, NOW 0. All
+URLs kept; no merges.
+
+**Shipped (5 pages + sitemap):**
+1. `lead-poisoning-protein-powder-symptoms` — full rewrite. Removed: Prop 65
+   framing ("15x California's safe limit", "Naked and Huel clearly violate
+   Prop 65"), fabricated "searches spiked 500%", outdated BLL bands, chelation
+   at ">25 µg/dL", hydration/fiber "detox", self-diagnosis symptom checklist +
+   risk-tier table, unlabeled derived µg (Vega 0.93, ON 0.28, OWYN 0.44),
+   OWYN mislabeled as a powder, Muscle Milk "5 servings/week". Added: FDA
+   interim reference levels (2.2 / 8.8 µg/day) as health context next to
+   CR's 0.5 benchmark; CDC/NIOSH 3.5 µg/dL reference value; "most low-level
+   exposure has no symptoms → blood test is the only way to know"; who should
+   ask a doctor; Poison Control; chelation = specialist decision. Byline is
+   now Person "Ray Rothwell" with an explicit "not a physician, not medically
+   reviewed" note (no reviewer invented). Sources linked (CR, FDA, CDC/NIOSH,
+   ATSDR, MedlinePlus). Fixed broken `tools.html#lead-calculator` relative link.
+2. `now-sports-whey…` — 2 "Prop 65" → CR level of concern; TL 87% row
+   credited to "CLP" → CR #6 *Mass Gainer*; "14 of 15 plant proteins" →
+   "9 of the 10 plant-based products in CR's October round" (counted from
+   `cpl-data.json`).
+3. `consumer-reports-new-protein-powder-tests-january-2026` — 42 edits.
+   Rule 2 violations ("#9 overall of 28", "top half of all 28", "safer than
+   17 of 23"); **inverted fact** "Truvani (93%) cleaner than OWYN (88%), 23%
+   less lead"; Premier powder "35% cleaner than the RTD" (RTD never tested);
+   OWYN card "120% of CR limit"; comparison table had % text in the µg column
+   and "0%" in the % column for 4 October rows; "% of limit" → CR's level of
+   concern; "74%" → CR's own "more than two-thirds"; BREAKING banner removed.
+4. `ascent-…` — body rewrite. Page said NSF Certified for Sport (and in one
+   box, not certified); **actual cert is Informed Sport** (listing since
+   2017; no NSF record found). Page said CLP never tested Ascent; **CLP did**
+   (Native Fuel Whey Chocolate + Plant Protein Vanilla Bean, neither on
+   Clean Sixteen). Price "$2.50–3.00/serving" → actual ~$0.60–1.40 (58
+   scoops/4.25 lb; Costco carries it), which voided the page's whole
+   "premium for unverified purity" argument. Alternatives rebuilt from
+   `cpl-data.json` (ON GS 56%, BSN 46%, Clean Simple Eats 0.21 µg, Equate
+   0.27 µg); dropped discontinued Momentous WPI as top pick, the "TL isolate
+   = CR #6" transfer, the ISO-100-described-as-Super-Mass-Gainer card, the
+   fabricated "native whey concentrates lead" math, GoL Sport Plant called
+   "grass-fed", and the placeholder "16 3 tested proteins (70%)".
+5. `ryse-…` — body rewrite. Premise is real: RYSE Loaded **Jet-Puffed
+   Marshmallow** is on CLP's Clean Sixteen (verified on CLP's page, which
+   marks 16 of 165). Fixed: it's flavor-specific (Chocolate Cookie Blast was
+   tested and *not* listed), it's a study ranking not a "certification", no
+   "non-detectable" / "unlimited daily use" claims, Body Fortress is not
+   CR-tested (page called it "double verified"), CR does not publish "full µg
+   for all 28" or rank "#1–28". Real dual-listed brands are ON GS and
+   Premier powder — each for different flavors in CLP vs CR.
+- Housekeeping: dateModified / visible Updated / sitemap `lastmod` →
+  2026-10-21 on the 5 pages. `cpl-audit.py` schema / links / structure: 0.
+  No new data-check flags from these pages (reworded the FDA cells on the
+  lead-poisoning table so "8.8 µg" doesn't read as a product figure).
+- **Not yet done:** commit, deploy, IndexNow for the 5 URLs.
+
+**CLP Clean Sixteen — protein (verified 2026-10-21, `cleanlabelproject.org/protein-powder-v2-category-tested-products/`):**
+Body Fortress Super Advanced Whey Vanilla; BulkSupplements WPI; Cellucor
+Whey Sport Vanilla; Dymatize ISO100 Gourmet Vanilla; Garden of Life Grass
+Fed Whey Vanilla; GNC Pro Performance 100% Whey Banana Cream; Isopure Zero
+Carb Unflavored; Nutrabox 100% Whey Mango; ON Gold Standard 100% Whey
+Vanilla Ice Cream; Premier Protein 100% Whey Powder Vanilla Milkshake; Puori
+PW1 Bourbon Vanilla; Ritual Essential Protein Pregnancy & Postpartum; RYSE
+Loaded Jet-Puffed Marshmallow; Vital Proteins Collagen Peptides Unflavored;
+Wellbeing Nutrition WPI Unflavored; Wicked Protein Cherry Limeade Clear WPI.
+Use this list (flavor included) before repeating any "Clean 16" claim.
+
+**Sitewide backlog surfaced (NOT fixed — next audit run):**
+- "14 of 15 plant proteins exceeded" — 7 more pages + `stats.html`. Not
+  supported by `cpl-data.json` (9 of 10 plant-based products over 100%).
+- Dymatize Super Mass Gainer priced at "$1.00–1.30" / "$1.25" and described
+  as a hydrolyzed isolate with Informed Choice on several pages. Real price
+  ~$6–8/serving (8 servings / 6 lb, ~1,280 kcal). It's ISO 100's
+  description again (Rule 8 territory). 51 pages mention Super Mass Gainer.
+- Methodology template ("Benchmark: California Prop 65 safe harbor", "28
+  proteins tested", "Clean 16 certification") on 23 pages — fixed only on
+  Ascent and RYSE.
+- Momentous Whey Isolate (discontinued) still recommended as a buy on
+  multiple pages.
+
+**Still open:** Kirkland/Elevation editorial call (options sent to site
+owner; see next entry once decided).
+
+**New standing rule:** Rule 12 (see `CPL-AUDIT-LOOP.md`).
+
+---
+
 ## 2026-10-21 (b) — Crawled-not-indexed triage: 4 pages stubbed, 4 held
 
 **Context:** Of the 14 Crawled - not indexed pages from entry (a), 8 were

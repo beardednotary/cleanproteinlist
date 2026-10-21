@@ -254,3 +254,17 @@ After shipping approved items:
     Pull the latest `cleanproteinlist.com_PageTrafficReport_<date>.csv`, and
     also check what the target actually covers (a page linked as the "full
     breakdown" from its would-be target can't be merged into it).
+12. **Verify third-party claims at the source, by flavor, before repeating
+    them — the site's own copy is not a source.** Added 2026-10-21. A
+    "light refresh" pass found the site asserting certifications, test
+    results and prices that the third party's own page contradicted: Ascent
+    called NSF Certified for Sport (it's Informed Sport) and "never tested by
+    CLP" (CLP tested two Ascent products); RYSE's Clean Sixteen listing
+    applied to every flavor (only Jet-Puffed Marshmallow is listed); Body
+    Fortress called CR-tested; Ascent priced 2–4× too high; Dymatize Super
+    Mass Gainer priced like ISO 100. For CLP use the protein study page
+    (`cleanlabelproject.org/protein-powder-v2-category-tested-products/` —
+    the icon marks the 16), for Informed Sport / NSF their search databases,
+    for prices a current retailer listing. Copy that sounds settled across
+    many pages ("14 of 15", "Clean 16 certified") is usually a single
+    unsourced sentence that propagated.
