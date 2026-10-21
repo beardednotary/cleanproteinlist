@@ -245,3 +245,12 @@ After shipping approved items:
     the context lines it printed (a false "below detection", a fabricated
     "Vega #16-19" range, "non-detect" claims for ON/Momentous). An unchanged
     count is not a clean bill — read every printed context line.
+11. **Check Bing page traffic before merging, stubbing or retiring any
+    page — never decide on GSC data alone.** Added 2026-10-21. A merge list
+    built from Google data only (`cpl-gsc-index.py` + GSC page clicks) had
+    `costco-orgain-protein-powder-lawsuit-heavy-metals-2026.html` slated to
+    redirect into the Amazon/Orgain page; Bing's PageTrafficReport showed it
+    earning 285 clicks / 6 months (~5% of Bing traffic) vs 4 for the target.
+    Pull the latest `cleanproteinlist.com_PageTrafficReport_<date>.csv`, and
+    also check what the target actually covers (a page linked as the "full
+    breakdown" from its would-be target can't be merged into it).

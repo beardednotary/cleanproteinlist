@@ -6,6 +6,48 @@ future runs need to see what was already tried, rejected, or fixed.
 
 ---
 
+## 2026-10-21 (b) — Crawled-not-indexed triage: 4 pages stubbed, 4 held
+
+**Context:** Of the 14 Crawled - not indexed pages from entry (a), 8 were
+proposed for merge/retire on Google data (GSC clicks before the Dec 2025
+core update vs last 90 days: these 14 had 2 clicks combined). Site owner
+approved "1-8". Before shipping, checked Bing (`PageTrafficReport_10_16_2026`,
+window 2026-04-16 → 10-14) per Rule 10 — it changed three of the eight.
+
+**Shipped — meta-refresh + canonical stubs (no content moved):**
+1. `vega-vs-orgain-protein-powder-lead-testing-2025` → `owyn-vs-vega-orgain-garden-of-life-safe-plant-protein-2025` (Bing 0 clicks; target covers Vega Premium Sport). Repointed 2 links in `lead-in-protein-powder-list` and the Vega Sport entry in `includes/brands-data.js`.
+2. `body-fortress-vs-optimum-nutrition-whey-protein-comparison-2025` → `body-fortress-protein-powder-lead-testing-budget-clean-2025` (Bing 3; target already has the ON comparison table and was NOT edited — it's the site's #1 Google page). Removed its related cards on `best-cheap-protein-powder-low-heavy-metals` and `six-star-…` (both already link the target).
+3. `new-year-fitness-guide-2026-safe-protein-home-gym` → `best-protein-powder-2025` (Bing 0, seasonal; 65 affiliate links but no traffic on either engine). Removed its related cards on `best-clean-creatine-2026-nsf-tested-brands` and `thorne-creatine-vs-bulksupplements-comparison`.
+4. `protein-pancakes-lead-free-safe-protein-powder-2025` → `lead-free-protein-brands-ranked-2025` (no Bing data, no inbound links).
+- `blog.html`: removed the Vega-vs-Orgain and BF-vs-ON cards.
+- Stubs removed from `sitemap.xml`; `dateModified` / visible updated text /
+  `lastmod` bumped to 2026-10-21 on the 6 edited pages (also fixed a stale
+  second "Updated February 14, 2026" header on best-clean-creatine missed in
+  entry (a)). `cpl-audit.py` schema / links / structure: 0 issues.
+
+**Held — don't re-propose without new data:**
+- `costco-orgain-protein-powder-lawsuit-heavy-metals-2026` — **Bing 285
+  clicks / 6,114 impr**, vs 4 for the proposed target (`amazon-orgain-…`).
+  If these two ever merge, it's Amazon → Costco, not the reverse.
+- `truvani-protein-lead-testing-results-2026` — Bing 23 clicks (brand query).
+- `beyond-lead-arsenic-cadmium-mercury-protein-powder-2025` — Bing 24
+  clicks. Note: `beyond-lead-heavy-metals-protein-powders.html` is already a
+  stub pointing at it; if it's ever stubbed, repoint the old stub straight to
+  the final target (no redirect chains).
+- `kirkland-vs-elevation-protein-lead-testing` — low traffic (Bing 2), but
+  it's the only real coverage of Aldi's Elevation and is wired into
+  `brands-data.js` (Kirkland + Elevation) and `protein-poll.js`; the Costco
+  page links to it as the "full breakdown". Needs an editorial call on where
+  Elevation coverage lives before any merge.
+
+**Still open from (a):** rewrite `lead-poisoning-protein-powder-symptoms`
+(medical sourcing); light refreshes of `now-sports-whey` (GSC pos 4.9),
+`consumer-reports-new-tests-january-2026`, `ascent`, `ryse`.
+
+**New standing rule:** Rule 11 (see `CPL-AUDIT-LOOP.md`).
+
+---
+
 ## 2026-10-21 — First Google index check; internal-linking + sitemap fixes
 
 **Context:** New `cpl-gsc-index.py` (Search Console URL Inspection API,
@@ -45,7 +87,7 @@ index status is now checkable per URL. First run over the 94-URL sitemap
 4. Step 6 housekeeping: `dateModified`, visible "Last Updated" text and
    `sitemap.xml` `lastmod` bumped to 2026-10-21 on the 6 changed pages
    only. `cpl-audit.py` schema / links / structure: 0 issues.
-   **IndexNow pending** — run after the push is live.
+   IndexNow submitted after deploy (HTTP 200, 7 URLs).
 
 **Not shipped / next:** the 14 Crawled - not indexed pages need a
 merge-or-rewrite decision per page (meta-refresh + canonical stub pattern

@@ -61,7 +61,7 @@ window.CPL_BRANDS_META = {
     { name:'Garden of Life Organic', type:'Plant', rating:'avoid', lead:'Very high', price:null, cert:'~564% over limit · lawsuit', url:'blog/garden-of-life-lawsuit-lead-contamination-class-action-2025.html', kw:'gol' },
     { name:'Jocko Fuel Mölk (Chocolate)', type:'Whey', rating:'avoid', lead:'High', price:null, cert:'265% over Prop 65 · lawsuit', url:'blog/jocko-protein-lawsuit-lead-contamination-2026.html', kw:'molk clean fuel' },
     { name:'Naked Nutrition (Vegan Gainer)', type:'Plant', rating:'avoid', lead:'Very high', price:null, cert:'Ranked worst tested', url:'blog/naked-nutrition-vegan-mass-gainer-lead.html', kw:'naked whey pea' },
-    { name:'Vega Sport', type:'Plant', rating:'avoid', lead:'Very high', price:null, cert:'High lead in CR testing', url:'blog/vega-vs-orgain-protein-powder-lead-testing-2025.html', kw:'vega one' },
+    { name:'Vega Sport', type:'Plant', rating:'avoid', lead:'Very high', price:null, cert:'High lead in CR testing', url:'blog/owyn-vs-vega-orgain-garden-of-life-safe-plant-protein-2025.html', kw:'vega one' },
     { name:'Quest Protein Shakes (RTD)', type:'RTD', rating:'avoid', lead:'High', price:null, cert:'Prop 65 lawsuit · milkshake ~580% over', url:'blog/quest-protein-shake-lawsuit-lead-prop65-2026.html', kw:'quest milkshake rtd' },
 
     // ---- HAS PAGE, emerging/untested analysis ----
