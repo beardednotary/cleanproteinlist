@@ -91,8 +91,17 @@ Use this list (flavor included) before repeating any "Clean 16" claim.
 - Momentous Whey Isolate (discontinued) still recommended as a buy on
   multiple pages.
 
-**Still open:** Kirkland/Elevation editorial call (options sent to site
-owner; see next entry once decided).
+**Kirkland/Elevation — decided: rewrite in place, no merge.** Site owner
+picked rewrite over merge. `kirkland-vs-elevation-protein-lead-testing`
+is now a store-brand page (Kirkland, Elevation, Member's Mark, Equate) so
+it no longer duplicates the Costco page's Kirkland section; Equate (CR Jan
+2026, 0.27 µg) is the one store brand with a published result. Removed
+the unsourced "Elevation uses fillers/creatine to boost nitrogen counts"
+and "budget brands fail cadmium tests" claims and the Body Fortress
+"Clean 16 certification" wording. Added mobile-menu script + overlay
+(were missing). URL unchanged, so `brands-data.js`, `protein-poll.js`
+and the Costco "full breakdown" link need no repointing; `blog.html`
+card retitled. Shipped separately from the 5 pages above.
 
 **New standing rule:** Rule 12 (see `CPL-AUDIT-LOOP.md`).
 
