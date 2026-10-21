@@ -1,0 +1,5 @@
+# Search Console credentials + reports (public repo -- never commit)
+gsc_client.json
+gsc_token.json
+gsc_reports/
+__pycache__/

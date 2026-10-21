@@ -6,6 +6,55 @@ future runs need to see what was already tried, rejected, or fixed.
 
 ---
 
+## 2026-10-21 — First Google index check; internal-linking + sitemap fixes
+
+**Context:** New `cpl-gsc-index.py` (Search Console URL Inspection API,
+read-only) gives the loop a Google-side lever it didn't have — the earlier
+"no IndexNow-equivalent for GSC" note still holds for *submitting*, but
+index status is now checkable per URL. First run over the 94-URL sitemap
+(snapshot `gsc_reports/index-2026-10-21.csv`, gitignored):
+63 indexed, 14 Crawled - not indexed, 13 Discovered - not indexed,
+3 Unknown, 1 Alternate (`/index.html`).
+
+**Diagnosis — two different problems:**
+- **Discovered - not indexed (13): links.** 8 of 13 were creatine posts.
+  The indexed creatine hubs linked only to Thorne / NSF guide / Momentous;
+  BulkSupplements, Myprotein, Muscle Feast and NOW reviews had zero hub
+  links (even `thorne-creatine-vs-bulksupplements-comparison` didn't link
+  the BulkSupplements review). Ghost, EBT and Boost posts weren't on
+  `blog.html` at all (Ghost and EBT had 0 internal links).
+- **Crawled - not indexed (14): quality/overlap, not links** (median 4
+  internal links vs 7 for indexed). Most overlap an indexed page:
+  vega-vs-orgain ↔ owyn-vs-vega-orgain-garden-of-life; costco-orgain ↔
+  amazon-orgain lawsuit; consumer-reports-new-tests-jan-2026 ↔ CR one-year
+  retrospective; kirkland-vs-elevation ↔ best-protein-powder-costco; plus
+  single-brand lead-testing posts (Ascent, Ryse, NOW Sports, Truvani).
+
+**Shipped (7 files):**
+1. "Creatine Brand Reviews" related-card block (all 7 creatine review /
+   guide spokes, card text from each post's own meta description) added to
+   the 5 indexed hubs: `best-clean-creatine-2026-nsf-tested-brands`,
+   `creapure-creatine-brands-complete-list`,
+   `thorne-creatine-vs-bulksupplements-comparison`,
+   `creapure-vs-regular-creatine-comparison`,
+   `dcd-dicyandiamide-creatine-contamination`.
+2. `blog.html`: cards for Ghost and Boost (Protein Powder Safety) and EBT
+   (Life-Stage Safety Guides).
+3. `sitemap.xml`: removed `/index.html` (Google treats it as an alternate
+   of `/`).
+4. Step 6 housekeeping: `dateModified`, visible "Last Updated" text and
+   `sitemap.xml` `lastmod` bumped to 2026-10-21 on the 6 changed pages
+   only. `cpl-audit.py` schema / links / structure: 0 issues.
+   **IndexNow pending** — run after the push is live.
+
+**Not shipped / next:** the 14 Crawled - not indexed pages need a
+merge-or-rewrite decision per page (meta-refresh + canonical stub pattern
+for merges, since GitHub Pages can't 301). `contact.html` has zero internal
+links — left as-is. Re-run `py cpl-gsc-index.py --sitemap` ~2026-11-04 and
+compare against the 10-21 snapshot.
+
+---
+
 ## 2026-10-16 — Fourth loop run: 6 fact fixes; Bing identified as the live channel
 
 **Context:** First loop run since 2026-08-27. `cpl-audit.py` output was the
