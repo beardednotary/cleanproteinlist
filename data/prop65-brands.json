@@ -15,30 +15,6 @@
   },
   "page": null
  },
- "AN USA HOLDINGS": {
-  "notices": 1,
-  "latest": "2025-08-15",
-  "chemicals": {
-   "Lead": 1
-  },
-  "page": null
- },
- "Abbot's Butcher": {
-  "notices": 2,
-  "latest": "2026-03-24",
-  "chemicals": {
-   "Lead": 2
-  },
-  "page": null
- },
- "Aldi": {
-  "notices": 2,
-  "latest": "2026-07-02",
-  "chemicals": {
-   "Cadmium": 2
-  },
-  "page": null
- },
  "Alfa Vitamins Laboratories": {
   "notices": 1,
   "latest": "2026-01-09",
@@ -48,23 +24,11 @@
   "page": null
  },
  "Aloha": {
-  "notices": 7,
-  "latest": "2026-05-01",
+  "notices": 2,
+  "latest": "2025-10-09",
   "chemicals": {
    "PFOA / PFOS": 2,
-   "Lead": 5,
-   "Cadmium": 5,
-   "Mercury": 4
-  },
-  "page": "/prop65/brands/aloha.html"
- },
- "Alpha Prime Supps": {
-  "notices": 1,
-  "latest": "2025-07-17",
-  "chemicals": {
-   "Lead": 1,
-   "Cadmium": 1,
-   "PFOA / PFOS": 1
+   "Lead": 1
   },
   "page": null
  },
@@ -77,22 +41,12 @@
   },
   "page": null
  },
- "American Dream Nut Butter": {
-  "notices": 2,
-  "latest": "2025-03-26",
-  "chemicals": {
-   "Lead": 2,
-   "Cadmium": 1
-  },
-  "page": null
- },
  "Amrita Health Foods": {
-  "notices": 2,
-  "latest": "2026-01-07",
+  "notices": 1,
+  "latest": "2025-04-04",
   "chemicals": {
-   "Lead": 2,
-   "Mercury": 1,
-   "Cadmium": 1
+   "Lead": 1,
+   "Mercury": 1
   },
   "page": null
  },
@@ -220,33 +174,9 @@
   },
   "page": null
  },
- "Bearded Brothers": {
-  "notices": 1,
-  "latest": "2026-05-06",
-  "chemicals": {
-   "Lead": 1
-  },
-  "page": null
- },
  "BestBodiesforLife": {
   "notices": 1,
   "latest": "2025-09-26",
-  "chemicals": {
-   "Lead": 1
-  },
-  "page": null
- },
- "Better Brownie Bites": {
-  "notices": 1,
-  "latest": "2026-03-16",
-  "chemicals": {
-   "Lead": 1
-  },
-  "page": null
- },
- "Better Life Foods": {
-  "notices": 1,
-  "latest": "2026-09-30",
   "chemicals": {
    "Lead": 1
   },
@@ -266,14 +196,6 @@
   "latest": "2025-08-01",
   "chemicals": {
    "PFOA / PFOS": 1,
-   "Lead": 1
-  },
-  "page": null
- },
- "Big L Brands": {
-  "notices": 1,
-  "latest": "2025-06-06",
-  "chemicals": {
    "Lead": 1
   },
   "page": null
@@ -345,14 +267,6 @@
   },
   "page": null
  },
- "Bonk Breaker": {
-  "notices": 1,
-  "latest": "2025-01-03",
-  "chemicals": {
-   "Lead": 1
-  },
-  "page": null
- },
  "BrainMD Health": {
   "notices": 1,
   "latest": "2025-02-18",
@@ -399,22 +313,6 @@
   "latest": "2025-07-03",
   "chemicals": {
    "Lead": 1
-  },
-  "page": null
- },
- "Catalina Crunch": {
-  "notices": 1,
-  "latest": "2026-08-07",
-  "chemicals": {
-   "Other": 1
-  },
-  "page": null
- },
- "Caulipower": {
-  "notices": 2,
-  "latest": "2026-09-12",
-  "chemicals": {
-   "Lead": 2
   },
   "page": null
  },
@@ -517,14 +415,6 @@
   },
   "page": null
  },
- "Crisp Power": {
-  "notices": 2,
-  "latest": "2026-09-25",
-  "chemicals": {
-   "Lead": 2
-  },
-  "page": null
- },
  "DIYA Beauty and Wellness": {
   "notices": 1,
   "latest": "2026-10-30",
@@ -536,14 +426,6 @@
  "DPL Trading": {
   "notices": 1,
   "latest": "2025-09-11",
-  "chemicals": {
-   "Lead": 1
-  },
-  "page": null
- },
- "Dave\u2019s Killer Bread": {
-  "notices": 1,
-  "latest": "2025-02-13",
   "chemicals": {
    "Lead": 1
   },
@@ -601,22 +483,6 @@
   },
   "page": null
  },
- "Earth\u2019s Creation": {
-  "notices": 1,
-  "latest": "2025-09-29",
-  "chemicals": {
-   "Lead": 1
-  },
-  "page": null
- },
- "Eat Mezcla": {
-  "notices": 1,
-  "latest": "2026-10-15",
-  "chemicals": {
-   "Lead": 1
-  },
-  "page": null
- },
  "Edible Garden AG Incorporated": {
   "notices": 1,
   "latest": "2026-01-23",
@@ -634,28 +500,12 @@
   },
   "page": null
  },
- "Electric Youth": {
-  "notices": 1,
-  "latest": "2026-08-24",
-  "chemicals": {
-   "Lead": 1
-  },
-  "page": null
- },
  "Elements Truffles": {
   "notices": 2,
   "latest": "2026-05-15",
   "chemicals": {
    "Lead": 2,
    "Cadmium": 1
-  },
-  "page": null
- },
- "Elisabeth Hasselbeck Enterprises": {
-  "notices": 1,
-  "latest": "2026-08-07",
-  "chemicals": {
-   "Lead": 1
   },
   "page": null
  },
@@ -676,33 +526,9 @@
   },
   "page": null
  },
- "Everglobe": {
-  "notices": 1,
-  "latest": "2026-08-20",
-  "chemicals": {
-   "Lead": 1
-  },
-  "page": null
- },
  "Evlution Nutrition": {
   "notices": 1,
   "latest": "2025-09-26",
-  "chemicals": {
-   "Lead": 1
-  },
-  "page": null
- },
- "Evolution X": {
-  "notices": 1,
-  "latest": "2026-01-30",
-  "chemicals": {
-   "Lead": 1
-  },
-  "page": null
- },
- "Evolution-X": {
-  "notices": 1,
-  "latest": "2026-02-13",
   "chemicals": {
    "Lead": 1
   },
@@ -730,15 +556,6 @@
   "chemicals": {
    "Lead": 2,
    "Cadmium": 2
-  },
-  "page": null
- },
- "Flourish Pancakes": {
-  "notices": 2,
-  "latest": "2026-06-12",
-  "chemicals": {
-   "Lead": 2,
-   "Cadmium": 1
   },
   "page": null
  },
@@ -809,18 +626,10 @@
   "page": null
  },
  "Gains In Bulk": {
-  "notices": 3,
+  "notices": 2,
   "latest": "2026-05-22",
   "chemicals": {
-   "Lead": 3
-  },
-  "page": "/prop65/brands/gains-in-bulk.html"
- },
- "General Mills": {
-  "notices": 1,
-  "latest": "2026-07-02",
-  "chemicals": {
-   "Cadmium": 1
+   "Lead": 2
   },
   "page": null
  },
@@ -856,43 +665,11 @@
   },
   "page": null
  },
- "Glanbia Performance Nutrition (N)": {
-  "notices": 1,
-  "latest": "2025-07-28",
-  "chemicals": {
-   "Lead": 1
-  },
-  "page": null
- },
- "Gluten Free Foods MFG": {
-  "notices": 1,
-  "latest": "2026-10-30",
-  "chemicals": {
-   "Lead": 1
-  },
-  "page": null
- },
  "Gnarly Brands": {
   "notices": 1,
   "latest": "2026-09-15",
   "chemicals": {
    "Lead": 1
-  },
-  "page": null
- },
- "Gooder Foods": {
-  "notices": 1,
-  "latest": "2026-05-21",
-  "chemicals": {
-   "Lead": 1
-  },
-  "page": null
- },
- "Gourmet Nut": {
-  "notices": 1,
-  "latest": "2026-02-20",
-  "chemicals": {
-   "Cadmium": 1
   },
   "page": null
  },
@@ -939,38 +716,6 @@
   },
   "page": null
  },
- "Hethstia": {
-  "notices": 1,
-  "latest": "2026-06-26",
-  "chemicals": {
-   "Lead": 1
-  },
-  "page": null
- },
- "Hormel Foods": {
-  "notices": 1,
-  "latest": "2026-07-31",
-  "chemicals": {
-   "Other": 1
-  },
-  "page": null
- },
- "I Won Nutrition": {
-  "notices": 1,
-  "latest": "2025-09-29",
-  "chemicals": {
-   "Lead": 1
-  },
-  "page": null
- },
- "Idahoan Foods": {
-  "notices": 2,
-  "latest": "2026-06-05",
-  "chemicals": {
-   "Cadmium": 2
-  },
-  "page": null
- },
  "Imagine Biolabs": {
   "notices": 1,
   "latest": "2026-05-22",
@@ -990,22 +735,6 @@
  "Infinite Commerce": {
   "notices": 1,
   "latest": "2025-07-29",
-  "chemicals": {
-   "Lead": 1
-  },
-  "page": null
- },
- "Insurgent Brands": {
-  "notices": 1,
-  "latest": "2026-08-14",
-  "chemicals": {
-   "Other": 1
-  },
-  "page": null
- },
- "Isagenix International": {
-  "notices": 1,
-  "latest": "2026-03-13",
   "chemicals": {
    "Lead": 1
   },
@@ -1062,31 +791,6 @@
   },
   "page": null
  },
- "Kate\u2019s Real Food": {
-  "notices": 1,
-  "latest": "2026-05-08",
-  "chemicals": {
-   "Lead": 1
-  },
-  "page": null
- },
- "Kellanova USA": {
-  "notices": 2,
-  "latest": "2026-08-07",
-  "chemicals": {
-   "Lead": 1,
-   "Other": 1
-  },
-  "page": null
- },
- "Kellogg Sales": {
-  "notices": 1,
-  "latest": "2025-11-24",
-  "chemicals": {
-   "Lead": 1
-  },
-  "page": null
- },
  "Kencko": {
   "notices": 1,
   "latest": "2025-01-31",
@@ -1095,35 +799,11 @@
   },
   "page": null
  },
- "Kenover Marketing": {
-  "notices": 1,
-  "latest": "2026-04-17",
-  "chemicals": {
-   "Lead": 1
-  },
-  "page": null
- },
  "Keystone-Pack Manufacturing f/k/a TKS Products": {
   "notices": 1,
   "latest": "2025-03-19",
   "chemicals": {
    "Lead": 1
-  },
-  "page": null
- },
- "Kroger (store brand)": {
-  "notices": 1,
-  "latest": "2026-07-02",
-  "chemicals": {
-   "Cadmium": 1
-  },
-  "page": null
- },
- "L & J Enterprises": {
-  "notices": 1,
-  "latest": "2026-01-30",
-  "chemicals": {
-   "Cadmium": 1
   },
   "page": null
  },
@@ -1143,14 +823,6 @@
   },
   "page": null
  },
- "Legendary Foods": {
-  "notices": 7,
-  "latest": "2026-09-20",
-  "chemicals": {
-   "Lead": 7
-  },
-  "page": "/prop65/brands/legendary-foods.html"
- },
  "Legion": {
   "notices": 1,
   "latest": "2026-04-28",
@@ -1167,35 +839,9 @@
   },
   "page": null
  },
- "Lenny & Larry\u2019s": {
-  "notices": 1,
-  "latest": "2026-10-28",
-  "chemicals": {
-   "Lead": 1,
-   "Cadmium": 1,
-   "Mercury": 1
-  },
-  "page": null
- },
  "Life Extension Foundation Buyers Club": {
   "notices": 1,
   "latest": "2025-05-30",
-  "chemicals": {
-   "Lead": 1
-  },
-  "page": null
- },
- "Lifestyle Evolution": {
-  "notices": 1,
-  "latest": "2026-09-25",
-  "chemicals": {
-   "Lead": 1
-  },
-  "page": null
- },
- "Live Kaizen": {
-  "notices": 1,
-  "latest": "2026-06-23",
   "chemicals": {
    "Lead": 1
   },
@@ -1257,15 +903,6 @@
   },
   "page": null
  },
- "Magic Spoon": {
-  "notices": 2,
-  "latest": "2026-08-18",
-  "chemicals": {
-   "Cadmium": 1,
-   "Lead": 1
-  },
-  "page": null
- },
  "Maxi Health Research": {
   "notices": 3,
   "latest": "2026-02-20",
@@ -1284,14 +921,6 @@
    "Lead": 4
   },
   "page": "/prop65/brands/maximum-human-performance.html"
- },
- "Meir & Bagel Industries": {
-  "notices": 1,
-  "latest": "2025-12-19",
-  "chemicals": {
-   "Lead": 1
-  },
-  "page": null
  },
  "Metabolic Health and Nutrition": {
   "notices": 1,
@@ -1334,33 +963,9 @@
   },
   "page": null
  },
- "Milton's Baking": {
-  "notices": 1,
-  "latest": "2025-06-12",
-  "chemicals": {
-   "Lead": 1
-  },
-  "page": null
- },
- "Milton\u2019s Baking": {
-  "notices": 4,
-  "latest": "2026-05-22",
-  "chemicals": {
-   "Lead": 4
-  },
-  "page": "/prop65/brands/milton-s-baking.html"
- },
  "Mindworks Innovations": {
   "notices": 1,
   "latest": "2025-08-01",
-  "chemicals": {
-   "Lead": 1
-  },
-  "page": null
- },
- "Misfits Health": {
-  "notices": 1,
-  "latest": "2026-10-15",
   "chemicals": {
    "Lead": 1
   },
@@ -1371,22 +976,6 @@
   "latest": "2025-08-14",
   "chemicals": {
    "Lead": 2
-  },
-  "page": null
- },
- "Mrs. Gooch's Natural Food Markets": {
-  "notices": 1,
-  "latest": "2025-02-21",
-  "chemicals": {
-   "Lead": 1
-  },
-  "page": null
- },
- "Mrs. Gooch\u2019s Natural Food Markets": {
-  "notices": 1,
-  "latest": "2026-06-23",
-  "chemicals": {
-   "Lead": 1
   },
   "page": null
  },
@@ -1447,14 +1036,6 @@
   },
   "page": null
  },
- "Nestle USA": {
-  "notices": 1,
-  "latest": "2026-02-06",
-  "chemicals": {
-   "Cadmium": 1
-  },
-  "page": null
- },
  "Nestl\u00e9 Health Science US Holdings": {
   "notices": 1,
   "latest": "2026-05-22",
@@ -1464,13 +1045,13 @@
   "page": null
  },
  "No Cow": {
-  "notices": 5,
-  "latest": "2025-06-12",
+  "notices": 1,
+  "latest": "2025-03-26",
   "chemicals": {
-   "Lead": 5,
-   "Mercury": 4
+   "Lead": 1,
+   "Mercury": 1
   },
-  "page": "/prop65/brands/no-cow.html"
+  "page": null
  },
  "NuBest": {
   "notices": 1,
@@ -1497,19 +1078,11 @@
   },
   "page": null
  },
- "Nurture": {
-  "notices": 1,
-  "latest": "2025-03-23",
-  "chemicals": {
-   "Lead": 1
-  },
-  "page": null
- },
  "Nutrient Survival": {
-  "notices": 4,
-  "latest": "2026-06-25",
+  "notices": 3,
+  "latest": "2026-04-17",
   "chemicals": {
-   "Lead": 4
+   "Lead": 3
   },
   "page": "/prop65/brands/nutrient-survival.html"
  },
@@ -1578,19 +1151,11 @@
   "page": "/prop65/brands/oat-mama.html"
  },
  "Oats Overnight": {
-  "notices": 2,
-  "latest": "2026-05-06",
-  "chemicals": {
-   "Lead": 2,
-   "Cadmium": 1
-  },
-  "page": null
- },
- "One Brands": {
   "notices": 1,
-  "latest": "2025-06-18",
+  "latest": "2026-04-07",
   "chemicals": {
-   "Lead": 1
+   "Lead": 1,
+   "Cadmium": 1
   },
   "page": null
  },
@@ -1603,10 +1168,10 @@
   "page": "/prop65/brands/optimum-nutrition.html"
  },
  "Orgain": {
-  "notices": 6,
+  "notices": 5,
   "latest": "2026-08-03",
   "chemicals": {
-   "Lead": 6,
+   "Lead": 5,
    "Cadmium": 1
   },
   "page": "/prop65/brands/orgain.html"
@@ -1685,14 +1250,6 @@
   },
   "page": null
  },
- "Preferred Brands International": {
-  "notices": 1,
-  "latest": "2025-01-30",
-  "chemicals": {
-   "Lead": 1
-  },
-  "page": null
- },
  "Premier Protein": {
   "notices": 1,
   "latest": "2025-10-13",
@@ -1717,14 +1274,6 @@
    "PFOA / PFOS": 1
   },
   "page": null
- },
- "Protein Puck": {
-  "notices": 3,
-  "latest": "2026-06-26",
-  "chemicals": {
-   "Cadmium": 3
-  },
-  "page": "/prop65/brands/protein-puck.html"
  },
  "Puori": {
   "notices": 1,
@@ -1824,25 +1373,9 @@
   },
   "page": null
  },
- "Ryno Power": {
-  "notices": 1,
-  "latest": "2026-08-07",
-  "chemicals": {
-   "Lead": 1
-  },
-  "page": null
- },
  "SAVA Nutrition": {
   "notices": 1,
   "latest": "2026-09-21",
-  "chemicals": {
-   "Lead": 1
-  },
-  "page": null
- },
- "SDC Nutrition": {
-  "notices": 1,
-  "latest": "2026-03-27",
   "chemicals": {
    "Lead": 1
   },
@@ -1863,15 +1396,6 @@
    "Lead": 1
   },
   "page": null
- },
- "Seven Sundays": {
-  "notices": 3,
-  "latest": "2026-10-14",
-  "chemicals": {
-   "Other": 1,
-   "Lead": 2
-  },
-  "page": "/prop65/brands/seven-sundays.html"
  },
  "Shaklee": {
   "notices": 1,
@@ -1897,22 +1421,6 @@
   },
   "page": null
  },
- "Simply Good Foods USA": {
-  "notices": 1,
-  "latest": "2025-12-18",
-  "chemicals": {
-   "Lead": 1
-  },
-  "page": null
- },
- "Simply Snacks": {
-  "notices": 2,
-  "latest": "2025-06-13",
-  "chemicals": {
-   "Cadmium": 2
-  },
-  "page": null
- },
  "Simpson Labs": {
   "notices": 4,
   "latest": "2026-07-02",
@@ -1929,14 +1437,6 @@
    "Lead": 1
   },
   "page": "/prop65/brands/six-star.html"
- },
- "Snacks Generation": {
-  "notices": 1,
-  "latest": "2026-05-08",
-  "chemicals": {
-   "Cadmium": 1
-  },
-  "page": null
  },
  "Snap Supplements": {
   "notices": 1,
@@ -2019,14 +1519,6 @@
   },
   "page": null
  },
- "T&R Kitchens": {
-  "notices": 1,
-  "latest": "2025-07-25",
-  "chemicals": {
-   "Lead": 1
-  },
-  "page": null
- },
  "T.A.C.T. Holding": {
   "notices": 1,
   "latest": "2025-09-22",
@@ -2034,15 +1526,6 @@
    "Lead": 1
   },
   "page": null
- },
- "TRUBAR": {
-  "notices": 5,
-  "latest": "2026-06-12",
-  "chemicals": {
-   "Lead": 5,
-   "Cadmium": 1
-  },
-  "page": "/prop65/brands/trubar.html"
  },
  "Tapuya Brands": {
   "notices": 1,
@@ -2068,14 +1551,6 @@
   },
   "page": null
  },
- "Taylor Farms": {
-  "notices": 3,
-  "latest": "2026-10-30",
-  "chemicals": {
-   "Cadmium": 3
-  },
-  "page": "/prop65/brands/taylor-farms.html"
- },
  "The Genius Brand": {
   "notices": 1,
   "latest": "2025-02-26",
@@ -2097,14 +1572,6 @@
   "latest": "2026-08-18",
   "chemicals": {
    "Lead": 2
-  },
-  "page": null
- },
- "Tralom - Sat Management": {
-  "notices": 1,
-  "latest": "2025-11-26",
-  "chemicals": {
-   "Lead": 1
   },
   "page": null
  },
@@ -2216,30 +1683,6 @@
    "Lead": 3
   },
   "page": "/prop65/brands/vital-proteins.html"
- },
- "Vivo Tribe": {
-  "notices": 2,
-  "latest": "2026-08-10",
-  "chemicals": {
-   "Lead": 2
-  },
-  "page": null
- },
- "Wellness Natural USA": {
-  "notices": 1,
-  "latest": "2025-09-25",
-  "chemicals": {
-   "Lead": 1
-  },
-  "page": null
- },
- "Worldwide Sport Nutritional Supplements": {
-  "notices": 1,
-  "latest": "2026-02-06",
-  "chemicals": {
-   "Lead": 1
-  },
-  "page": null
  },
  "Xeela": {
   "notices": 1,

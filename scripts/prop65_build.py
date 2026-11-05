@@ -93,12 +93,41 @@ SUFFIX = re.compile(
     re.I,
 )
 
-CATEGORIES = [
-    ("Bar", r"\bbars?\b"),
-    ("Shake / drink", r"\bshakes?\b|\bdrinks?\b|beverage|ready.to.drink|\brtd\b|smoothie|\bmilk\b|coffee"),
-    ("Powder", r"powder|whey|isolate|\bblend\b|gainer|scoops?|\bprotein\b.*\b(lb|lbs|oz|g)\b|plant.based protein|pea protein|meal replacement"),
-    ("Snack / food", r"chips?|puffs?|cereal|cookies?|pretzel|bites?|crisps?|pancake|oats?|granola|pasta|bowl|noodle|jerky|bread|waffle|bark|candy|popcorn"),
-]
+# The tracker covers protein *supplements* only: powders, drink mixes and
+# ready-to-drink shakes. A notice is kept if any product it names is one of
+# these (e.g. a notice naming both a bar and a powder stays). Bars, snacks,
+# pasta, baked goods, meal kits etc. are excluded.
+SUPPLEMENT = re.compile(
+    r"powder|whey|isolate|casein|gainer|scoops?\b|drink mix|shake mix|\bshakes?\b|smoothie|"
+    r"meal replacement|ready.to.drink|\brtd\b|protein drink|\bgreens\b|superfood|collagen|supplement|"
+    r"(plant|plant.based|vegan|pea|rice|hemp|soy|pumpkin|seed|mushroom|organic|sports?|active|complete|"
+    r"essential|iso|whole food|performance|body|living|time released|matcha)\W+protein|"
+    r"\bprotein\W+(power|vanilla|chocolate|unflavored|matcha|powder|blend|isolate|caramel|berry|cinnamon|creamy|smooth)|"
+    r"\bblend\b|superblend|supergreens|plant.powered|all.in.one nutrition",
+    re.I,
+)
+# Food words veto a generic match ("Plant Based Protein Bar") unless a clear
+# supplement word is also present ("Protein Bar ..., Protein Powder ...").
+FOOD = re.compile(
+    r"\bbars?\b|crackers?|cookies?|pasta|pretzels?|crisps?|cereal|granola|\boats?\b|muffins?|pizza|"
+    r"bread|ramen|soup|pudding|puffs?|\bbites\b|\bkit\b|potatoes|burger|scampi|pastry|sweet roll|donuts?|"
+    r"pop.?tarts|pancake|peanut butter\s*$|topper|\bbowl\b|lentils|keto mix|chips?|brownies?",
+    re.I,
+)
+STRONG = re.compile(
+    r"powder|whey|isolate|casein|gainer|scoops?\b|drink mix|shake mix|\bshakes?\b|smoothie|"
+    r"ready.to.(drink|mix)|\brtd\b|\bgreens\b|supergreens|superfood|collagen|"
+    r"electrolyte|protein power",
+    re.I,
+)
+# Flavor names that look like food words but describe a powder.
+FLAVORS = re.compile(
+    r"cookies?\s*['’]?\s*n\s*['’]?\s*cream|cookie dough|birthday cake|banana bread|apple pie|"
+    r"cinnamon toast|monster cookie|fudge cookie|brownie batter",
+    re.I,
+)
+SHAKE = re.compile(r"\bshakes?\b|smoothie|\bdrinks?\b|ready.to.drink|\brtd\b|beverage", re.I)
+MIX = re.compile(r"powder|\bmix\b|scoops?\b|\bblend\b|whey|isolate|gainer", re.I)
 
 CHEM_GROUPS = [
     ("Lead", r"\blead\b"),
@@ -139,11 +168,18 @@ def brand_of(n: dict) -> tuple[str, str | None]:
     return "Unknown", None
 
 
+def is_supplement(n: dict) -> bool:
+    s = n["source"]
+    if not SUPPLEMENT.search(s):
+        return False
+    return bool(STRONG.search(s)) or not FOOD.search(FLAVORS.sub(" ", s))
+
+
 def category_of(n: dict) -> str:
-    for name, rx in CATEGORIES:
-        if re.search(rx, n["source"], re.I):
-            return name
-    return "Other"
+    s = n["source"]
+    if SHAKE.search(s) and not MIX.search(s):
+        return "Shake / drink"
+    return "Powder / mix"
 
 
 def chem_groups(n: dict) -> list[str]:
@@ -218,8 +254,10 @@ HEAD = """<!DOCTYPE html>
                 <a href="{up}index.html">Home</a>
                 <a href="{up}blog.html#protein-articles">Protein</a>
                 <a href="{up}blog.html#creatine-articles">Creatine</a>
+                <a href="{up}stats.html">Stats</a>
                 <a href="{up}prop65/">Prop 65 Tracker</a>
                 <a href="{up}tools.html">Tools</a>
+                <a href="{up}quiz.html" class="quiz-highlight">Take Quiz</a>
                 <a href="{up}about.html">About</a>
             </nav>
         </div>
@@ -300,11 +338,11 @@ def build_brand_page(name: str, items: list[dict], article: str | None, updated_
     named = [("PFOA/PFOS" if k == "PFOA / PFOS" else k) for k, _ in chems.most_common() if k != "Other"]
     title = f"{name} Prop 65 Notices: {count} Alleging {' & '.join(named[:2]) or 'Listed Chemicals'} (2026)"
     desc = (
-        f"{count} California Prop 65 60-day {noun} have named {name} protein products since 2025, "
+        f"{count} California Prop 65 60-day {noun} have named {name} protein supplements since 2025, "
         f"alleging {chem_phrase(chems)}. Every notice, its status, and what it means."
     )
     answer = (
-        f"<strong>{count} California Prop 65 60-day {noun} named {esc(name)} protein products between "
+        f"<strong>{count} California Prop 65 60-day {noun} named {esc(name)} protein supplements between "
         f"{first} and {last}</strong>, alleging {esc(chem_phrase(chems))} without the required warning. "
         f"{status.get('Settled', 0)} of them show a settlement and {status.get('Complaint filed', 0)} more show a "
         f"court complaint. A notice is an allegation, not a lab result or recall."
@@ -387,12 +425,12 @@ def build_index(notices: list[dict], brand_pages: dict, updated_h: str, updated_
 
     title = f"Prop 65 Protein Tracker: {total} Notices for Lead, Cadmium & More Since 2025"
     desc = (
-        f"Every California Prop 65 60-day notice naming a protein product since {since}: {total} notices, "
+        f"Every California Prop 65 60-day notice naming a protein powder or shake since {since}: {total} notices, "
         f"{chems.get('Lead', 0)} alleging lead. Search by brand, product and chemical. Updated weekly."
     )
     answer = (
-        f"<strong>Since {since}, {total} California Prop 65 60-day notices have named protein products</strong> "
-        f"(powders, shakes, bars and protein snacks), {len(last12)} of them in the last 12 months. "
+        f"<strong>Since {since}, {total} California Prop 65 60-day notices have named protein supplements</strong> "
+        f"(powders, drink mixes and ready-to-drink shakes), {len(last12)} of them in the last 12 months. "
         f"{chems.get('Lead', 0)} allege lead, {chems.get('Cadmium', 0)} cadmium and {chems.get('PFOA / PFOS', 0)} PFOA/PFOS. "
         f"{settled} have reached a settlement. Search the full list below by brand or product."
     )
@@ -440,7 +478,7 @@ def build_index(notices: list[dict], brand_pages: dict, updated_h: str, updated_
   </table></div>
 
   <h2>How this tracker works</h2>
-  <p>Every week we query the California Attorney General&rsquo;s public <a href="https://oag.ca.gov/prop65/60-day-notice-search" rel="nofollow">60-Day Notice Search</a> for notices whose product description mentions &ldquo;protein&rdquo;, and record each notice once (the AG lists a notice once per chemical). Brand is taken from the product name where it matches a known brand, otherwise from the first company named that isn&rsquo;t a retailer, so a manufacturer may appear instead of a brand. Status reflects whether the AG lists a complaint, settlement or withdrawal. We don&rsquo;t edit or interpret the product names.</p>
+  <p>Every week we query the California Attorney General&rsquo;s public <a href="https://oag.ca.gov/prop65/60-day-notice-search" rel="nofollow">60-Day Notice Search</a> for notices whose product description mentions &ldquo;protein&rdquo;, record each notice once (the AG lists a notice once per chemical), and keep only notices that name a protein supplement: a powder, drink mix or ready-to-drink shake. Notices that only name protein bars, snacks, pasta, baked goods or other foods are left out. Brand is taken from the product name where it matches a known brand, otherwise from the first company named that isn&rsquo;t a retailer, so a manufacturer may appear instead of a brand. Status reflects whether the AG lists a complaint, settlement or withdrawal. We don&rsquo;t edit or interpret the product names.</p>
   <p>Want the lab numbers? Notices rarely include them. For measured lead levels, see our <a href="../blog/lead-free-protein-brands-ranked-2025.html">Consumer Reports lead rankings</a>.</p>
   <p class="p65-small">Data: California Department of Justice, Office of the Attorney General. Compiled by Clean Protein List; free to cite with a link.</p>
 </main>
@@ -467,7 +505,7 @@ def main() -> None:
     store = json.loads(DATA.read_text())
     updated_iso = store["updated"]
     updated_h = fmt_date(updated_iso[:10])
-    notices = [n for n in store["notices"].values() if n.get("date")]
+    notices = [n for n in store["notices"].values() if n.get("date") and is_supplement(n)]
     articles = {}
     for n in notices:
         n["_brand"], art = brand_of(n)
@@ -507,7 +545,81 @@ def main() -> None:
     }
     (ROOT / "data" / "prop65-brands.json").write_text(json.dumps(summary, indent=1) + "\n")
     update_sitemap(brand_pages, by_brand, max(n["date"] for n in notices))
-    print(f"index + {len(brand_pages)} brand pages from {len(notices)} notices")
+    boxed = update_articles(by_brand, brand_pages)
+    print(f"index + {len(brand_pages)} brand pages from {len(notices)} notices; boxes in {boxed} articles")
+
+
+BOX_START, BOX_END = "<!-- prop65:start -->", "<!-- prop65:end -->"
+
+
+def article_box(name: str, items: list[dict], page: str) -> str:
+    chems = collections.Counter(c for n in items for c in n["_chem"])
+    count = len(items)
+    noun = "notice has" if count == 1 else "notices have"
+    first = fmt_date(min(n["date"] for n in items))
+    latest = fmt_date(max(n["date"] for n in items))
+    when = f"on {latest}" if count == 1 else f"since {first} (most recent {latest})"
+    return (
+        f"{BOX_START}\n"
+        '<aside class="prop65-box" style="border:1px solid #d8d4cc;border-left:4px solid #e07a2f;'
+        'background:#f8f5ef;border-radius:0 8px 8px 0;padding:14px 18px;margin:20px 0;line-height:1.6">\n'
+        f"  <strong>California Prop 65 notices:</strong> {count} 60-day {noun} named {esc(name)} protein "
+        f"supplements {esc(when)}, alleging {esc(chem_phrase(chems))} without a required warning. "
+        "A notice is an allegation by a private enforcer, not a lab result or recall.\n"
+        f'  <a href="../prop65/brands/{esc(page)}">See every {esc(name)} notice and its status &rarr;</a>\n'
+        "</aside>\n"
+        f"{BOX_END}"
+    )
+
+
+def end_of_div(s: str, start: int) -> int:
+    """Index just past the </div> that closes the <div> opening at `start`."""
+    depth = 0
+    for m in re.finditer(r"<div\b|</div>", s[start:]):
+        depth += 1 if m.group(0) == "<div" else -1
+        if depth == 0:
+            return start + m.end()
+    return -1
+
+
+def update_articles(by_brand: dict, brand_pages: dict) -> int:
+    """Keep a Prop 65 box in each brand article, right after its direct-answer box.
+
+    Re-runs replace the box between the markers. A brand with no supplement
+    notices gets no box (and an old one is removed).
+    """
+    done = 0
+    for name, _, article in BRANDS:
+        if not article:
+            continue
+        path = ROOT / article
+        if not path.exists():
+            continue
+        s = path.read_text(encoding="utf-8")
+        items = by_brand.get(name, [])
+        box = article_box(name, items, brand_pages[name]) if items and name in brand_pages else ""
+        if BOX_START in s:
+            a, b = s.index(BOX_START), s.index(BOX_END) + len(BOX_END)
+            new = s[:a] + box + s[b:] if box else s[:a].rstrip(" ") + s[b:].lstrip("\n")
+        elif box:
+            # First direct-answer box after the H1 (some pages also have one above it).
+            h1_end = max(s.find("</h1>"), 0)
+            m = re.compile(r'<div class="direct-answer-box').search(s, h1_end)
+            at = end_of_div(s, m.start()) if m else -1
+            if at < 0:
+                h1 = s.find("</h1>")
+                m2 = re.search(r"<(section|h2)\b", s[h1:]) if h1 >= 0 else None
+                if not m2:
+                    print(f"  no insertion point in {article}; skipped")
+                    continue
+                at = h1 + m2.start()
+            new = s[:at] + "\n" + box + "\n" + s[at:]
+        else:
+            continue
+        if new != s:
+            path.write_text(new, encoding="utf-8")
+        done += bool(box)
+    return done
 
 
 def update_sitemap(brand_pages: dict, by_brand: dict, latest: str) -> None:
