@@ -1,0 +1,2268 @@
+{
+ "1440 Foods": {
+  "notices": 1,
+  "latest": "2025-10-13",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "6AM RUN": {
+  "notices": 1,
+  "latest": "2025-08-08",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "AN USA HOLDINGS": {
+  "notices": 1,
+  "latest": "2025-08-15",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "Abbot's Butcher": {
+  "notices": 2,
+  "latest": "2026-03-24",
+  "chemicals": {
+   "Lead": 2
+  },
+  "page": null
+ },
+ "Aldi": {
+  "notices": 2,
+  "latest": "2026-07-02",
+  "chemicals": {
+   "Cadmium": 2
+  },
+  "page": null
+ },
+ "Alfa Vitamins Laboratories": {
+  "notices": 1,
+  "latest": "2026-01-09",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "Aloha": {
+  "notices": 7,
+  "latest": "2026-05-01",
+  "chemicals": {
+   "PFOA / PFOS": 2,
+   "Lead": 5,
+   "Cadmium": 5,
+   "Mercury": 4
+  },
+  "page": "/prop65/brands/aloha.html"
+ },
+ "Alpha Prime Supps": {
+  "notices": 1,
+  "latest": "2025-07-17",
+  "chemicals": {
+   "Lead": 1,
+   "Cadmium": 1,
+   "PFOA / PFOS": 1
+  },
+  "page": null
+ },
+ "Amazing Grass": {
+  "notices": 2,
+  "latest": "2025-04-21",
+  "chemicals": {
+   "Lead": 2,
+   "Cadmium": 1
+  },
+  "page": null
+ },
+ "American Dream Nut Butter": {
+  "notices": 2,
+  "latest": "2025-03-26",
+  "chemicals": {
+   "Lead": 2,
+   "Cadmium": 1
+  },
+  "page": null
+ },
+ "Amrita Health Foods": {
+  "notices": 2,
+  "latest": "2026-01-07",
+  "chemicals": {
+   "Lead": 2,
+   "Mercury": 1,
+   "Cadmium": 1
+  },
+  "page": null
+ },
+ "Ancestral Supplements": {
+  "notices": 2,
+  "latest": "2026-05-20",
+  "chemicals": {
+   "Lead": 2
+  },
+  "page": null
+ },
+ "Ancient Brands": {
+  "notices": 1,
+  "latest": "2025-04-04",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "Anima Mundi Herbals": {
+  "notices": 2,
+  "latest": "2026-04-17",
+  "chemicals": {
+   "Lead": 2
+  },
+  "page": null
+ },
+ "Arbonne": {
+  "notices": 2,
+  "latest": "2026-10-28",
+  "chemicals": {
+   "Lead": 2,
+   "Cadmium": 1
+  },
+  "page": null
+ },
+ "ArboryPharm Foods": {
+  "notices": 1,
+  "latest": "2025-09-29",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "Archon Vitamin": {
+  "notices": 2,
+  "latest": "2025-10-31",
+  "chemicals": {
+   "Lead": 2
+  },
+  "page": null
+ },
+ "Ascent": {
+  "notices": 3,
+  "latest": "2025-07-21",
+  "chemicals": {
+   "Lead": 2,
+   "Cadmium": 2,
+   "PFOA / PFOS": 1
+  },
+  "page": "/prop65/brands/ascent.html"
+ },
+ "Asher House Wellness": {
+  "notices": 1,
+  "latest": "2026-01-02",
+  "chemicals": {
+   "PFOA / PFOS": 1
+  },
+  "page": null
+ },
+ "Augustine": {
+  "notices": 1,
+  "latest": "2026-03-13",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "Avador Business Group": {
+  "notices": 1,
+  "latest": "2026-04-17",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "Azuretale": {
+  "notices": 1,
+  "latest": "2026-07-14",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "BCP Enterprise": {
+  "notices": 2,
+  "latest": "2026-07-24",
+  "chemicals": {
+   "Lead": 2
+  },
+  "page": null
+ },
+ "BSN": {
+  "notices": 1,
+  "latest": "2025-07-21",
+  "chemicals": {
+   "Lead": 1,
+   "Cadmium": 1
+  },
+  "page": "/prop65/brands/bsn.html"
+ },
+ "Beachbody": {
+  "notices": 1,
+  "latest": "2026-05-22",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "Beam Organics": {
+  "notices": 1,
+  "latest": "2025-06-24",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "Bearded Brothers": {
+  "notices": 1,
+  "latest": "2026-05-06",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "BestBodiesforLife": {
+  "notices": 1,
+  "latest": "2025-09-26",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "Better Brownie Bites": {
+  "notices": 1,
+  "latest": "2026-03-16",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "Better Life Foods": {
+  "notices": 1,
+  "latest": "2026-09-30",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "BetterAlt": {
+  "notices": 2,
+  "latest": "2025-06-13",
+  "chemicals": {
+   "PFOA / PFOS": 1,
+   "Lead": 1
+  },
+  "page": null
+ },
+ "Beverly International Nutrition": {
+  "notices": 2,
+  "latest": "2025-08-01",
+  "chemicals": {
+   "PFOA / PFOS": 1,
+   "Lead": 1
+  },
+  "page": null
+ },
+ "Big L Brands": {
+  "notices": 1,
+  "latest": "2025-06-06",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "Bio Nutrihealth": {
+  "notices": 1,
+  "latest": "2026-04-17",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "Bio Trust Nutrition": {
+  "notices": 1,
+  "latest": "2025-08-01",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "Bio-Cat": {
+  "notices": 1,
+  "latest": "2025-07-18",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "Biopharma Scientific": {
+  "notices": 1,
+  "latest": "2025-07-28",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "Birdman USA": {
+  "notices": 1,
+  "latest": "2025-04-25",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "Blueprint and/or Blueprint Bryan Johnson": {
+  "notices": 1,
+  "latest": "2025-02-19",
+  "chemicals": {
+   "Lead": 1,
+   "Cadmium": 1
+  },
+  "page": null
+ },
+ "Boba Tea Protein": {
+  "notices": 1,
+  "latest": "2026-01-23",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "Bomb IP": {
+  "notices": 1,
+  "latest": "2025-04-24",
+  "chemicals": {
+   "Lead": 1,
+   "Cadmium": 1,
+   "PFOA / PFOS": 1
+  },
+  "page": null
+ },
+ "Bonk Breaker": {
+  "notices": 1,
+  "latest": "2025-01-03",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "BrainMD Health": {
+  "notices": 1,
+  "latest": "2025-02-18",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "Brandless": {
+  "notices": 1,
+  "latest": "2025-09-29",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "Buff Chick": {
+  "notices": 1,
+  "latest": "2026-01-15",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "CGETC": {
+  "notices": 1,
+  "latest": "2025-10-31",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "Call Grocery": {
+  "notices": 2,
+  "latest": "2025-05-23",
+  "chemicals": {
+   "Lead": 2,
+   "Cadmium": 1
+  },
+  "page": null
+ },
+ "Casa Tejas": {
+  "notices": 1,
+  "latest": "2025-07-03",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "Catalina Crunch": {
+  "notices": 1,
+  "latest": "2026-08-07",
+  "chemicals": {
+   "Other": 1
+  },
+  "page": null
+ },
+ "Caulipower": {
+  "notices": 2,
+  "latest": "2026-09-12",
+  "chemicals": {
+   "Lead": 2
+  },
+  "page": null
+ },
+ "Chagit Products": {
+  "notices": 1,
+  "latest": "2026-04-17",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "Chemi-Source": {
+  "notices": 1,
+  "latest": "2026-08-10",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "Class Delta": {
+  "notices": 2,
+  "latest": "2025-03-07",
+  "chemicals": {
+   "Lead": 2
+  },
+  "page": null
+ },
+ "Clean Simple Eats": {
+  "notices": 1,
+  "latest": "2025-07-21",
+  "chemicals": {
+   "Lead": 1,
+   "Cadmium": 1
+  },
+  "page": null
+ },
+ "Click Nutra": {
+  "notices": 1,
+  "latest": "2026-08-05",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "Complement": {
+  "notices": 2,
+  "latest": "2026-06-12",
+  "chemicals": {
+   "PFOA / PFOS": 1,
+   "Lead": 1
+  },
+  "page": null
+ },
+ "Core Culture": {
+  "notices": 2,
+  "latest": "2025-08-22",
+  "chemicals": {
+   "Lead": 2,
+   "PFOA / PFOS": 1
+  },
+  "page": null
+ },
+ "Core Med Science": {
+  "notices": 1,
+  "latest": "2026-06-26",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "Corvive": {
+  "notices": 1,
+  "latest": "2025-07-28",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "Country Life": {
+  "notices": 1,
+  "latest": "2025-12-05",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "Country Life Vitamins": {
+  "notices": 1,
+  "latest": "2025-08-25",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "Creative Pea": {
+  "notices": 1,
+  "latest": "2025-12-31",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "Crisp Power": {
+  "notices": 2,
+  "latest": "2026-09-25",
+  "chemicals": {
+   "Lead": 2
+  },
+  "page": null
+ },
+ "DIYA Beauty and Wellness": {
+  "notices": 1,
+  "latest": "2026-10-30",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "DPL Trading": {
+  "notices": 1,
+  "latest": "2025-09-11",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "Dave\u2019s Killer Bread": {
+  "notices": 1,
+  "latest": "2025-02-13",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "Deal Supplement": {
+  "notices": 1,
+  "latest": "2025-09-11",
+  "chemicals": {
+   "Lead": 1,
+   "PFOA / PFOS": 1
+  },
+  "page": null
+ },
+ "Designs For Health": {
+  "notices": 1,
+  "latest": "2025-08-11",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "Don't Quit": {
+  "notices": 1,
+  "latest": "2025-11-07",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "Dr. Anna Cabeca and dba The Girlfriend Doctor": {
+  "notices": 1,
+  "latest": "2025-09-11",
+  "chemicals": {
+   "Lead": 1,
+   "Cadmium": 1,
+   "PFOA / PFOS": 1
+  },
+  "page": null
+ },
+ "DrFuhrman Online": {
+  "notices": 1,
+  "latest": "2025-08-01",
+  "chemicals": {
+   "Lead": 1,
+   "PFOA / PFOS": 1
+  },
+  "page": null
+ },
+ "EC Sports": {
+  "notices": 1,
+  "latest": "2025-07-17",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "Earth\u2019s Creation": {
+  "notices": 1,
+  "latest": "2025-09-29",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "Eat Mezcla": {
+  "notices": 1,
+  "latest": "2026-10-15",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "Edible Garden AG Incorporated": {
+  "notices": 1,
+  "latest": "2026-01-23",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "Elderwise Organics": {
+  "notices": 1,
+  "latest": "2026-05-15",
+  "chemicals": {
+   "Lead": 1,
+   "Cadmium": 1
+  },
+  "page": null
+ },
+ "Electric Youth": {
+  "notices": 1,
+  "latest": "2026-08-24",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "Elements Truffles": {
+  "notices": 2,
+  "latest": "2026-05-15",
+  "chemicals": {
+   "Lead": 2,
+   "Cadmium": 1
+  },
+  "page": null
+ },
+ "Elisabeth Hasselbeck Enterprises": {
+  "notices": 1,
+  "latest": "2026-08-07",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "Eniva Health": {
+  "notices": 1,
+  "latest": "2025-10-27",
+  "chemicals": {
+   "Lead": 1,
+   "PFOA / PFOS": 1
+  },
+  "page": null
+ },
+ "Equip Foods": {
+  "notices": 1,
+  "latest": "2025-09-08",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "Everglobe": {
+  "notices": 1,
+  "latest": "2026-08-20",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "Evlution Nutrition": {
+  "notices": 1,
+  "latest": "2025-09-26",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "Evolution X": {
+  "notices": 1,
+  "latest": "2026-01-30",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "Evolution-X": {
+  "notices": 1,
+  "latest": "2026-02-13",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "Evolve": {
+  "notices": 1,
+  "latest": "2025-07-21",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "Fitwithdasha": {
+  "notices": 1,
+  "latest": "2026-05-22",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "FlavCity": {
+  "notices": 2,
+  "latest": "2025-05-06",
+  "chemicals": {
+   "Lead": 2,
+   "Cadmium": 2
+  },
+  "page": null
+ },
+ "Flourish Pancakes": {
+  "notices": 2,
+  "latest": "2026-06-12",
+  "chemicals": {
+   "Lead": 2,
+   "Cadmium": 1
+  },
+  "page": null
+ },
+ "Folk Revival": {
+  "notices": 1,
+  "latest": "2025-03-14",
+  "chemicals": {
+   "Cadmium": 1
+  },
+  "page": null
+ },
+ "Food to Live": {
+  "notices": 1,
+  "latest": "2025-08-25",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "Four Sigma Foods": {
+  "notices": 1,
+  "latest": "2026-01-23",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "FuXion Biotech USA": {
+  "notices": 1,
+  "latest": "2025-02-11",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "Functional Formularies": {
+  "notices": 1,
+  "latest": "2025-10-27",
+  "chemicals": {
+   "Lead": 1,
+   "PFOA / PFOS": 1
+  },
+  "page": null
+ },
+ "Further Food and Further Food": {
+  "notices": 1,
+  "latest": "2026-05-11",
+  "chemicals": {
+   "Arsenic": 1,
+   "Mercury": 1
+  },
+  "page": null
+ },
+ "G & G Brands": {
+  "notices": 2,
+  "latest": "2026-05-22",
+  "chemicals": {
+   "Lead": 2
+  },
+  "page": null
+ },
+ "Gainful Health": {
+  "notices": 1,
+  "latest": "2025-02-20",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "Gains In Bulk": {
+  "notices": 3,
+  "latest": "2026-05-22",
+  "chemicals": {
+   "Lead": 3
+  },
+  "page": "/prop65/brands/gains-in-bulk.html"
+ },
+ "General Mills": {
+  "notices": 1,
+  "latest": "2026-07-02",
+  "chemicals": {
+   "Cadmium": 1
+  },
+  "page": null
+ },
+ "GenoPalate": {
+  "notices": 1,
+  "latest": "2025-07-10",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "Get Chia": {
+  "notices": 1,
+  "latest": "2026-04-17",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "Ghost": {
+  "notices": 1,
+  "latest": "2025-10-10",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": "/prop65/brands/ghost.html"
+ },
+ "Glanbia Performance Nutrition (Manufacturing)": {
+  "notices": 1,
+  "latest": "2026-07-30",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "Glanbia Performance Nutrition (N)": {
+  "notices": 1,
+  "latest": "2025-07-28",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "Gluten Free Foods MFG": {
+  "notices": 1,
+  "latest": "2026-10-30",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "Gnarly Brands": {
+  "notices": 1,
+  "latest": "2026-09-15",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "Gooder Foods": {
+  "notices": 1,
+  "latest": "2026-05-21",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "Gourmet Nut": {
+  "notices": 1,
+  "latest": "2026-02-20",
+  "chemicals": {
+   "Cadmium": 1
+  },
+  "page": null
+ },
+ "Green Boy Products": {
+  "notices": 2,
+  "latest": "2025-03-07",
+  "chemicals": {
+   "Lead": 2,
+   "PFOA / PFOS": 1,
+   "Mercury": 1
+  },
+  "page": null
+ },
+ "Green Foods": {
+  "notices": 1,
+  "latest": "2025-03-21",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "Green Regimen": {
+  "notices": 1,
+  "latest": "2025-05-16",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "Greens First": {
+  "notices": 4,
+  "latest": "2026-04-15",
+  "chemicals": {
+   "Lead": 4,
+   "PFOA / PFOS": 3
+  },
+  "page": "/prop65/brands/greens-first.html"
+ },
+ "Health Ranger Store": {
+  "notices": 1,
+  "latest": "2026-09-08",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "Hethstia": {
+  "notices": 1,
+  "latest": "2026-06-26",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "Hormel Foods": {
+  "notices": 1,
+  "latest": "2026-07-31",
+  "chemicals": {
+   "Other": 1
+  },
+  "page": null
+ },
+ "I Won Nutrition": {
+  "notices": 1,
+  "latest": "2025-09-29",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "Idahoan Foods": {
+  "notices": 2,
+  "latest": "2026-06-05",
+  "chemicals": {
+   "Cadmium": 2
+  },
+  "page": null
+ },
+ "Imagine Biolabs": {
+  "notices": 1,
+  "latest": "2026-05-22",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "InScience Solutions": {
+  "notices": 1,
+  "latest": "2026-03-13",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "Infinite Commerce": {
+  "notices": 1,
+  "latest": "2025-07-29",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "Insurgent Brands": {
+  "notices": 1,
+  "latest": "2026-08-14",
+  "chemicals": {
+   "Other": 1
+  },
+  "page": null
+ },
+ "Isagenix International": {
+  "notices": 1,
+  "latest": "2026-03-13",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "Isagenix Worldwide": {
+  "notices": 1,
+  "latest": "2026-05-08",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "Isopure": {
+  "notices": 3,
+  "latest": "2026-03-18",
+  "chemicals": {
+   "Lead": 3
+  },
+  "page": "/prop65/brands/isopure.html"
+ },
+ "JUST INGREDIENTS": {
+  "notices": 1,
+  "latest": "2026-07-13",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "Just Ingredients": {
+  "notices": 2,
+  "latest": "2026-06-24",
+  "chemicals": {
+   "Lead": 2
+  },
+  "page": null
+ },
+ "Just Move Supplements": {
+  "notices": 2,
+  "latest": "2026-01-02",
+  "chemicals": {
+   "Lead": 1,
+   "Cadmium": 1,
+   "Mercury": 1,
+   "PFOA / PFOS": 2
+  },
+  "page": null
+ },
+ "KOS": {
+  "notices": 1,
+  "latest": "2025-02-07",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "Kate\u2019s Real Food": {
+  "notices": 1,
+  "latest": "2026-05-08",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "Kellanova USA": {
+  "notices": 2,
+  "latest": "2026-08-07",
+  "chemicals": {
+   "Lead": 1,
+   "Other": 1
+  },
+  "page": null
+ },
+ "Kellogg Sales": {
+  "notices": 1,
+  "latest": "2025-11-24",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "Kencko": {
+  "notices": 1,
+  "latest": "2025-01-31",
+  "chemicals": {
+   "PFOA / PFOS": 1
+  },
+  "page": null
+ },
+ "Kenover Marketing": {
+  "notices": 1,
+  "latest": "2026-04-17",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "Keystone-Pack Manufacturing f/k/a TKS Products": {
+  "notices": 1,
+  "latest": "2025-03-19",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "Kroger (store brand)": {
+  "notices": 1,
+  "latest": "2026-07-02",
+  "chemicals": {
+   "Cadmium": 1
+  },
+  "page": null
+ },
+ "L & J Enterprises": {
+  "notices": 1,
+  "latest": "2026-01-30",
+  "chemicals": {
+   "Cadmium": 1
+  },
+  "page": null
+ },
+ "LTH": {
+  "notices": 2,
+  "latest": "2025-09-03",
+  "chemicals": {
+   "Lead": 2
+  },
+  "page": null
+ },
+ "Lakavish Nutratech Private": {
+  "notices": 1,
+  "latest": "2026-10-30",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "Legendary Foods": {
+  "notices": 7,
+  "latest": "2026-09-20",
+  "chemicals": {
+   "Lead": 7
+  },
+  "page": "/prop65/brands/legendary-foods.html"
+ },
+ "Legion": {
+  "notices": 1,
+  "latest": "2026-04-28",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": "/prop65/brands/legion.html"
+ },
+ "Lekithos": {
+  "notices": 1,
+  "latest": "2026-02-27",
+  "chemicals": {
+   "Cadmium": 1
+  },
+  "page": null
+ },
+ "Lenny & Larry\u2019s": {
+  "notices": 1,
+  "latest": "2026-10-28",
+  "chemicals": {
+   "Lead": 1,
+   "Cadmium": 1,
+   "Mercury": 1
+  },
+  "page": null
+ },
+ "Life Extension Foundation Buyers Club": {
+  "notices": 1,
+  "latest": "2025-05-30",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "Lifestyle Evolution": {
+  "notices": 1,
+  "latest": "2026-09-25",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "Live Kaizen": {
+  "notices": 1,
+  "latest": "2026-06-23",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "Living Fuel": {
+  "notices": 1,
+  "latest": "2026-05-22",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "Lunar Lifts Nutrition": {
+  "notices": 1,
+  "latest": "2026-07-24",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "MD Logic Wellness": {
+  "notices": 1,
+  "latest": "2025-07-28",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "MRM Nutrition": {
+  "notices": 1,
+  "latest": "2025-07-23",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "MS Brands": {
+  "notices": 1,
+  "latest": "2025-07-02",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "MTN OPS": {
+  "notices": 1,
+  "latest": "2026-05-15",
+  "chemicals": {
+   "Cadmium": 1
+  },
+  "page": null
+ },
+ "Macrolife Naturals": {
+  "notices": 2,
+  "latest": "2026-05-22",
+  "chemicals": {
+   "Lead": 2
+  },
+  "page": null
+ },
+ "Magic Spoon": {
+  "notices": 2,
+  "latest": "2026-08-18",
+  "chemicals": {
+   "Cadmium": 1,
+   "Lead": 1
+  },
+  "page": null
+ },
+ "Maxi Health Research": {
+  "notices": 3,
+  "latest": "2026-02-20",
+  "chemicals": {
+   "Lead": 3,
+   "Cadmium": 2,
+   "Mercury": 1,
+   "PFOA / PFOS": 1
+  },
+  "page": "/prop65/brands/maxi-health-research.html"
+ },
+ "Maximum Human Performance": {
+  "notices": 4,
+  "latest": "2026-07-30",
+  "chemicals": {
+   "Lead": 4
+  },
+  "page": "/prop65/brands/maximum-human-performance.html"
+ },
+ "Meir & Bagel Industries": {
+  "notices": 1,
+  "latest": "2025-12-19",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "Metabolic Health and Nutrition": {
+  "notices": 1,
+  "latest": "2025-12-19",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "Metabolic Technology Center": {
+  "notices": 1,
+  "latest": "2026-05-22",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "Metagenics": {
+  "notices": 1,
+  "latest": "2026-06-26",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "Micro Ingredients": {
+  "notices": 1,
+  "latest": "2025-09-18",
+  "chemicals": {
+   "Lead": 1,
+   "PFOA / PFOS": 1
+  },
+  "page": null
+ },
+ "Milk Dust": {
+  "notices": 1,
+  "latest": "2026-04-17",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "Milton's Baking": {
+  "notices": 1,
+  "latest": "2025-06-12",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "Milton\u2019s Baking": {
+  "notices": 4,
+  "latest": "2026-05-22",
+  "chemicals": {
+   "Lead": 4
+  },
+  "page": "/prop65/brands/milton-s-baking.html"
+ },
+ "Mindworks Innovations": {
+  "notices": 1,
+  "latest": "2025-08-01",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "Misfits Health": {
+  "notices": 1,
+  "latest": "2026-10-15",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "Momsanity": {
+  "notices": 2,
+  "latest": "2025-08-14",
+  "chemicals": {
+   "Lead": 2
+  },
+  "page": null
+ },
+ "Mrs. Gooch's Natural Food Markets": {
+  "notices": 1,
+  "latest": "2025-02-21",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "Mrs. Gooch\u2019s Natural Food Markets": {
+  "notices": 1,
+  "latest": "2026-06-23",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "Muscle Milk": {
+  "notices": 1,
+  "latest": "2025-07-21",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": "/prop65/brands/muscle-milk.html"
+ },
+ "Naked Nutrition": {
+  "notices": 2,
+  "latest": "2025-11-14",
+  "chemicals": {
+   "Lead": 2
+  },
+  "page": "/prop65/brands/naked-nutrition.html"
+ },
+ "NativePath": {
+  "notices": 1,
+  "latest": "2026-06-08",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "Natural Organics": {
+  "notices": 1,
+  "latest": "2026-05-11",
+  "chemicals": {
+   "Mercury": 1
+  },
+  "page": null
+ },
+ "Nature's Sunshine Products": {
+  "notices": 1,
+  "latest": "2025-08-04",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "Naturelo Premium Supplements": {
+  "notices": 1,
+  "latest": "2025-06-20",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "Neora": {
+  "notices": 1,
+  "latest": "2025-11-07",
+  "chemicals": {
+   "Lead": 1,
+   "PFOA / PFOS": 1
+  },
+  "page": null
+ },
+ "Nestle USA": {
+  "notices": 1,
+  "latest": "2026-02-06",
+  "chemicals": {
+   "Cadmium": 1
+  },
+  "page": null
+ },
+ "Nestl\u00e9 Health Science US Holdings": {
+  "notices": 1,
+  "latest": "2026-05-22",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "No Cow": {
+  "notices": 5,
+  "latest": "2025-06-12",
+  "chemicals": {
+   "Lead": 5,
+   "Mercury": 4
+  },
+  "page": "/prop65/brands/no-cow.html"
+ },
+ "NuBest": {
+  "notices": 1,
+  "latest": "2025-10-17",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "Nubest": {
+  "notices": 1,
+  "latest": "2025-07-11",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "Nugevity": {
+  "notices": 1,
+  "latest": "2025-05-06",
+  "chemicals": {
+   "Lead": 1,
+   "PFOA / PFOS": 1
+  },
+  "page": null
+ },
+ "Nurture": {
+  "notices": 1,
+  "latest": "2025-03-23",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "Nutrient Survival": {
+  "notices": 4,
+  "latest": "2026-06-25",
+  "chemicals": {
+   "Lead": 4
+  },
+  "page": "/prop65/brands/nutrient-survival.html"
+ },
+ "Nutritional Energetics And Human Performance": {
+  "notices": 1,
+  "latest": "2026-01-09",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "Nutrivo": {
+  "notices": 1,
+  "latest": "2026-06-26",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "Nuzest": {
+  "notices": 1,
+  "latest": "2025-08-15",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "OA Foods": {
+  "notices": 1,
+  "latest": "2026-08-07",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "OP2 Labs": {
+  "notices": 1,
+  "latest": "2026-01-23",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "ORGANICGIRL": {
+  "notices": 2,
+  "latest": "2026-03-27",
+  "chemicals": {
+   "Cadmium": 2
+  },
+  "page": null
+ },
+ "OWYN": {
+  "notices": 2,
+  "latest": "2025-11-26",
+  "chemicals": {
+   "Lead": 2
+  },
+  "page": "/prop65/brands/owyn.html"
+ },
+ "Oat Mama": {
+  "notices": 3,
+  "latest": "2026-09-29",
+  "chemicals": {
+   "Lead": 3
+  },
+  "page": "/prop65/brands/oat-mama.html"
+ },
+ "Oats Overnight": {
+  "notices": 2,
+  "latest": "2026-05-06",
+  "chemicals": {
+   "Lead": 2,
+   "Cadmium": 1
+  },
+  "page": null
+ },
+ "One Brands": {
+  "notices": 1,
+  "latest": "2025-06-18",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "Optimum Nutrition": {
+  "notices": 2,
+  "latest": "2025-08-01",
+  "chemicals": {
+   "Lead": 2
+  },
+  "page": "/prop65/brands/optimum-nutrition.html"
+ },
+ "Orgain": {
+  "notices": 6,
+  "latest": "2026-08-03",
+  "chemicals": {
+   "Lead": 6,
+   "Cadmium": 1
+  },
+  "page": "/prop65/brands/orgain.html"
+ },
+ "Outwork Nutrition": {
+  "notices": 1,
+  "latest": "2026-04-17",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "PEScience": {
+  "notices": 1,
+  "latest": "2025-10-24",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "PaleoValley": {
+  "notices": 1,
+  "latest": "2026-06-12",
+  "chemicals": {
+   "Lead": 1,
+   "Cadmium": 1
+  },
+  "page": null
+ },
+ "Paradise Herbs & Essentials": {
+  "notices": 1,
+  "latest": "2025-07-03",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "Pepsico": {
+  "notices": 1,
+  "latest": "2025-11-14",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "Performance Nutrition Formulators": {
+  "notices": 1,
+  "latest": "2025-12-12",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "Philosophie": {
+  "notices": 1,
+  "latest": "2025-08-07",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "Pink Stork": {
+  "notices": 1,
+  "latest": "2026-04-22",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "PlantFusion": {
+  "notices": 1,
+  "latest": "2025-07-21",
+  "chemicals": {
+   "Lead": 1,
+   "Cadmium": 1
+  },
+  "page": null
+ },
+ "Preferred Brands International": {
+  "notices": 1,
+  "latest": "2025-01-30",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "Premier Protein": {
+  "notices": 1,
+  "latest": "2025-10-13",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": "/prop65/brands/premier-protein.html"
+ },
+ "Professional Botanicals": {
+  "notices": 1,
+  "latest": "2026-01-15",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "Prolon": {
+  "notices": 1,
+  "latest": "2026-10-13",
+  "chemicals": {
+   "Lead": 1,
+   "PFOA / PFOS": 1
+  },
+  "page": null
+ },
+ "Protein Puck": {
+  "notices": 3,
+  "latest": "2026-06-26",
+  "chemicals": {
+   "Cadmium": 3
+  },
+  "page": "/prop65/brands/protein-puck.html"
+ },
+ "Puori": {
+  "notices": 1,
+  "latest": "2026-05-22",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "Puris Proteins": {
+  "notices": 1,
+  "latest": "2026-06-30",
+  "chemicals": {
+   "Lead": 1,
+   "Cadmium": 1
+  },
+  "page": null
+ },
+ "Quest": {
+  "notices": 2,
+  "latest": "2025-12-31",
+  "chemicals": {
+   "Lead": 2
+  },
+  "page": "/prop65/brands/quest.html"
+ },
+ "Rawnature5": {
+  "notices": 1,
+  "latest": "2026-07-14",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "Redcon1": {
+  "notices": 1,
+  "latest": "2026-09-08",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "Reliance Vitamin": {
+  "notices": 1,
+  "latest": "2026-07-14",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "Reliv' International": {
+  "notices": 1,
+  "latest": "2025-04-02",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "Remedy Organics": {
+  "notices": 4,
+  "latest": "2026-08-11",
+  "chemicals": {
+   "Lead": 1,
+   "PFOA / PFOS": 3
+  },
+  "page": "/prop65/brands/remedy-organics.html"
+ },
+ "Ripple Foods": {
+  "notices": 2,
+  "latest": "2026-09-18",
+  "chemicals": {
+   "PFOA / PFOS": 2
+  },
+  "page": null
+ },
+ "Rise Wellness": {
+  "notices": 1,
+  "latest": "2025-09-18",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "Ritual": {
+  "notices": 1,
+  "latest": "2026-02-10",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "Rule One Proteins": {
+  "notices": 1,
+  "latest": "2025-10-24",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "Ryno Power": {
+  "notices": 1,
+  "latest": "2026-08-07",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "SAVA Nutrition": {
+  "notices": 1,
+  "latest": "2026-09-21",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "SDC Nutrition": {
+  "notices": 1,
+  "latest": "2026-03-27",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "Saraya USA": {
+  "notices": 1,
+  "latest": "2026-07-14",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "Sequoia Group": {
+  "notices": 1,
+  "latest": "2025-11-21",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "Seven Sundays": {
+  "notices": 3,
+  "latest": "2026-10-14",
+  "chemicals": {
+   "Other": 1,
+   "Lead": 2
+  },
+  "page": "/prop65/brands/seven-sundays.html"
+ },
+ "Shaklee": {
+  "notices": 1,
+  "latest": "2026-02-20",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "Shamrock Foods": {
+  "notices": 2,
+  "latest": "2025-07-14",
+  "chemicals": {
+   "Lead": 2
+  },
+  "page": null
+ },
+ "Shannon C. Wilhite": {
+  "notices": 1,
+  "latest": "2025-10-29",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "Simply Good Foods USA": {
+  "notices": 1,
+  "latest": "2025-12-18",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "Simply Snacks": {
+  "notices": 2,
+  "latest": "2025-06-13",
+  "chemicals": {
+   "Cadmium": 2
+  },
+  "page": null
+ },
+ "Simpson Labs": {
+  "notices": 4,
+  "latest": "2026-07-02",
+  "chemicals": {
+   "Lead": 2,
+   "PFOA / PFOS": 3
+  },
+  "page": "/prop65/brands/simpson-labs.html"
+ },
+ "Six Star": {
+  "notices": 1,
+  "latest": "2026-04-17",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": "/prop65/brands/six-star.html"
+ },
+ "Snacks Generation": {
+  "notices": 1,
+  "latest": "2026-05-08",
+  "chemicals": {
+   "Cadmium": 1
+  },
+  "page": null
+ },
+ "Snap Supplements": {
+  "notices": 1,
+  "latest": "2025-07-11",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "Solle Naturals": {
+  "notices": 2,
+  "latest": "2025-08-01",
+  "chemicals": {
+   "Lead": 2,
+   "PFOA / PFOS": 1
+  },
+  "page": null
+ },
+ "Source Naturals": {
+  "notices": 1,
+  "latest": "2026-04-17",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "Sprout Living": {
+  "notices": 2,
+  "latest": "2025-07-14",
+  "chemicals": {
+   "Lead": 2
+  },
+  "page": null
+ },
+ "Sprouts (store brand)": {
+  "notices": 4,
+  "latest": "2026-02-10",
+  "chemicals": {
+   "Lead": 4
+  },
+  "page": "/prop65/brands/sprouts-store-brand.html"
+ },
+ "Standard Process": {
+  "notices": 1,
+  "latest": "2025-12-19",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "Starday Foods": {
+  "notices": 1,
+  "latest": "2025-11-14",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "Sunwarrior": {
+  "notices": 8,
+  "latest": "2026-09-11",
+  "chemicals": {
+   "Lead": 8
+  },
+  "page": "/prop65/brands/sunwarrior.html"
+ },
+ "Sweat Ethic": {
+  "notices": 1,
+  "latest": "2025-08-08",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "Synchro": {
+  "notices": 2,
+  "latest": "2026-07-17",
+  "chemicals": {
+   "Cadmium": 2
+  },
+  "page": null
+ },
+ "T&R Kitchens": {
+  "notices": 1,
+  "latest": "2025-07-25",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "T.A.C.T. Holding": {
+  "notices": 1,
+  "latest": "2025-09-22",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "TRUBAR": {
+  "notices": 5,
+  "latest": "2026-06-12",
+  "chemicals": {
+   "Lead": 5,
+   "Cadmium": 1
+  },
+  "page": "/prop65/brands/trubar.html"
+ },
+ "Tapuya Brands": {
+  "notices": 1,
+  "latest": "2025-07-17",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "Tasman Trading": {
+  "notices": 1,
+  "latest": "2025-09-03",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "Taylor Dukes Wellness": {
+  "notices": 1,
+  "latest": "2026-09-25",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "Taylor Farms": {
+  "notices": 3,
+  "latest": "2026-10-30",
+  "chemicals": {
+   "Cadmium": 3
+  },
+  "page": "/prop65/brands/taylor-farms.html"
+ },
+ "The Genius Brand": {
+  "notices": 1,
+  "latest": "2025-02-26",
+  "chemicals": {
+   "PFOA / PFOS": 1
+  },
+  "page": null
+ },
+ "The Juice Plus+": {
+  "notices": 1,
+  "latest": "2026-07-16",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "The Juice Press": {
+  "notices": 2,
+  "latest": "2026-08-18",
+  "chemicals": {
+   "Lead": 2
+  },
+  "page": null
+ },
+ "Tralom - Sat Management": {
+  "notices": 1,
+  "latest": "2025-11-26",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "Transformation Protein": {
+  "notices": 2,
+  "latest": "2025-07-17",
+  "chemicals": {
+   "PFOA / PFOS": 1,
+   "Lead": 1
+  },
+  "page": null
+ },
+ "TruHeight": {
+  "notices": 1,
+  "latest": "2025-07-17",
+  "chemicals": {
+   "Lead": 1,
+   "PFOA / PFOS": 1
+  },
+  "page": null
+ },
+ "Truvani": {
+  "notices": 3,
+  "latest": "2026-02-10",
+  "chemicals": {
+   "Lead": 3
+  },
+  "page": "/prop65/brands/truvani.html"
+ },
+ "Unknown": {
+  "notices": 1,
+  "latest": "2026-03-11",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "Urban Remedy": {
+  "notices": 1,
+  "latest": "2026-03-26",
+  "chemicals": {
+   "Lead": 1,
+   "PFOA / PFOS": 1
+  },
+  "page": null
+ },
+ "VMI Sports": {
+  "notices": 1,
+  "latest": "2026-04-15",
+  "chemicals": {
+   "Lead": 1,
+   "PFOA / PFOS": 1
+  },
+  "page": null
+ },
+ "Val Natural Nutrition Center": {
+  "notices": 1,
+  "latest": "2026-04-24",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "Vanilla Chip": {
+  "notices": 1,
+  "latest": "2026-04-17",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "Vega": {
+  "notices": 4,
+  "latest": "2026-03-27",
+  "chemicals": {
+   "Lead": 4
+  },
+  "page": "/prop65/brands/vega.html"
+ },
+ "Veritacor Distribution": {
+  "notices": 1,
+  "latest": "2025-09-03",
+  "chemicals": {
+   "Lead": 1,
+   "PFOA / PFOS": 1
+  },
+  "page": null
+ },
+ "Vida Divina Worldwide": {
+  "notices": 1,
+  "latest": "2025-12-10",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "VitaHustle": {
+  "notices": 2,
+  "latest": "2026-01-30",
+  "chemicals": {
+   "Lead": 2
+  },
+  "page": null
+ },
+ "Vital Proteins": {
+  "notices": 3,
+  "latest": "2025-08-07",
+  "chemicals": {
+   "Lead": 3
+  },
+  "page": "/prop65/brands/vital-proteins.html"
+ },
+ "Vivo Tribe": {
+  "notices": 2,
+  "latest": "2026-08-10",
+  "chemicals": {
+   "Lead": 2
+  },
+  "page": null
+ },
+ "Wellness Natural USA": {
+  "notices": 1,
+  "latest": "2025-09-25",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "Worldwide Sport Nutritional Supplements": {
+  "notices": 1,
+  "latest": "2026-02-06",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "Xeela": {
+  "notices": 1,
+  "latest": "2026-01-23",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "You Can Beam": {
+  "notices": 1,
+  "latest": "2025-11-21",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
+ "Zen Principle": {
+  "notices": 3,
+  "latest": "2026-08-21",
+  "chemicals": {
+   "Lead": 3
+  },
+  "page": "/prop65/brands/zen-principle.html"
+ }
+}

@@ -1,0 +1,57 @@
+name: Prop 65 tracker (weekly)
+
+# Refreshes data/prop65.json from the California AG's 60-day notice search,
+# rebuilds /prop65/ pages and sitemap entries, and commits if anything changed.
+# GitHub Pages then redeploys from main as usual.
+
+on:
+  schedule:
+    - cron: "17 14 * * 1" # Mondays 14:17 UTC (7:17 PT)
+  workflow_dispatch:
+    inputs:
+      since:
+        description: "Backfill from YYYY-MM-DD (blank = last 120 days)"
+        required: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: prop65
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Scrape notices (10s between requests, per robots.txt)
+        run: |
+          if [ -n "${{ github.event.inputs.since }}" ]; then
+            python3 scripts/prop65_scrape.py --since "${{ github.event.inputs.since }}"
+          else
+            python3 scripts/prop65_scrape.py
+          fi
+
+      - name: Build pages
+        run: python3 scripts/prop65_build.py
+
+      - name: Commit if changed
+        run: |
+          # Pages carry a "last updated" date, so a run normally produces a commit;
+          # that keeps the visible check date honest even in weeks with no new notices.
+          if git diff --quiet; then
+            echo "Nothing changed."
+            exit 0
+          fi
+          git config user.name "beardednotary"
+          git config user.email "thebeardednotary@gmail.com"
+          git add data/prop65.json data/prop65-brands.json prop65 sitemap.xml
+          git commit -m "Prop 65 tracker: weekly update $(date -u +%Y-%m-%d)"
+          git push
