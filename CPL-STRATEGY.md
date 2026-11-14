@@ -6,7 +6,55 @@ future runs need to see what was already tried, rejected, or fixed.
 
 ---
 
+## 2026-11-13 (b) — CLP Clean Sixteen one-sheet: "non-detect" IS sourced (flavor-specific); Premier Prop 65 line reworded
+
+**Context:** The owner supplied CLP's Clean Sixteen one-sheet
+(`cleanlabelproject.org/wp-content/uploads/CLPSweet-16OneSheeter_061125.pdf`,
+dated 06/11/25): "These 16 protein powders stood out as **non-detect (ND) for
+Lead, Cadmium, Mercury & Arsenic**," one flavor each (Body Fortress Super
+Advanced Vanilla, Premier 100% Whey Vanilla Milkshake, GoL Certified Grass Fed
+Whey Vanilla, ON GS Vanilla Ice Cream, Dymatize ISO 100 Gourmet Vanilla, etc.).
+It also says CLP tested 160 powders from 70 brands and that 47% exceeded
+California Prop 65 limits in one serving (so the heavy-metals report's "47%"
+stat is CLP-sourced). **Entry (a) below was wrong** where it said CLP publishes
+"no per-metal results, no 'non-detect' language" — that was read off the study
+web page only.
+
+**Shipped (same day):**
+- Premier page: the upstream line "California Prop 65 limit: 0.5 µg/day — the
+  powder's 0.38 µg is below it" → "Consumer Reports' level of concern: 0.5
+  µg/day — the powder's 0.38 µg is 77% of it" (owner-approved).
+- Reversed the over-correction from (a), keeping flavor + CLP attribution:
+  heavy-metals CLP table cells → "Non-detect (ND), all 4 metals — <flavor>",
+  intro rewritten and linked to the sheet; Premier page (direct answer,
+  bullet, two tables, "What Clean Sixteen Means", FAQ, Body Fortress card and
+  decision card) now says Vanilla Milkshake is non-detect per CLP and removes
+  every "CLP publishes no per-metal figures / not a non-detect result"
+  sentence; Levels and heavy-metals Body Fortress mentions restored to
+  "Clean Sixteen, non-detect (Vanilla)". The flavor/format limits from (a)
+  stand: Chocolate Milkshake (CR's 77%) was not listed; no RTD was tested.
+
+**Item 5 (Body Fortress page) — re-scoped, not shipped:** the page's
+non-detect claims are now sourced for **Super Advanced Whey Vanilla**. What
+remains is narrower: (1) say which flavor (CLP tested five other Body Fortress
+flavors and didn't list them); (2) the page conflates CLP's Purity Award with
+the Clean Sixteen — the sheet shows no Purity Award badge on Body Fortress;
+(3) cite the sheet. Needs owner approval.
+
+**Backlog added:** RYSE page (10-21 rewrite) says CLP "doesn't publish
+individual results" and avoids "non-detect" — the sheet lists Jet-Puffed
+Marshmallow as ND; update. `rtd-protein-shakes-safety-guide-2025` says Premier
+"earned their Purity Award" (not shown on the sheet). Rule 13 corollary
+rewritten in `CPL-AUDIT-LOOP.md`.
+
+---
+
 ## 2026-11-13 — Fifth loop run: GSC via API; Premier RTD inversion and CLP "non-detect" fixed on the top pages
+
+> **Correction — see (b) above:** CLP's Clean Sixteen one-sheet does state
+> non-detect for all four metals for the 16 listed flavors. The "no per-metal
+> results" statements below were wrong and the affected page text was
+> reverted to flavor-specific "non-detect" the same day.
 
 **Context:** First run with Search Console pulled directly (new
 `cpl-gsc-perf.py`, read-only; the 10-21 refresh token had expired and the

@@ -293,9 +293,16 @@ After shipping approved items:
     another machine, via PRs), so the first audit pass read stale pages and
     nearly re-proposed a fix that had already shipped. Fetch, compare
     `HEAD..origin/main`, fast-forward if the tree is clean, then audit; fetch
-    again right before pushing. Corollary for Clean Label Project claims:
-    CLP's protein study page publishes a flavor-specific Clean Sixteen
-    listing and **no per-metal results** — "non-detect" attributed to CLP is
-    unsourced, and a listing for one flavor (e.g. Premier Vanilla Milkshake)
-    never covers another (Premier Chocolate Milkshake was tested and not
-    listed) or another format (no Premier RTD was ever tested).
+    again right before pushing. Corollary for Clean Label Project claims
+    (corrected same day): CLP's **Clean Sixteen one-sheet**
+    (`cleanlabelproject.org/wp-content/uploads/CLPSweet-16OneSheeter_061125.pdf`)
+    states its 16 products were **non-detect (ND) for lead, cadmium, mercury
+    and arsenic** — each for ONE listed flavor. The study web page shows only
+    the list, so check the sheet, not just the page, before calling a CLP
+    claim unsourced. "Non-detect" is fine when attributed to CLP and to the
+    listed flavor; it never covers another flavor (Premier Chocolate
+    Milkshake was tested and not listed — and is the flavor CR measured at
+    77%) or another format (no Premier RTD was ever tested). CLP's Purity
+    Award is a separate certification from the Clean Sixteen — don't conflate
+    them. Rule 0's "only MuscleTech was non-detect" is about CR's data and
+    still holds.
