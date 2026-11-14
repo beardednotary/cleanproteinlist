@@ -47,6 +47,16 @@ def strip_tags(s):
     return re.sub(r"\s+", " ", s)
 
 
+def is_stub(h):
+    """Meta-refresh + canonical redirect stub (GitHub Pages can't 301).
+    These intentionally carry no Article schema and no affiliate links."""
+    return bool(re.search(r'<meta[^>]+http-equiv=["\']refresh["\']', h, re.I))
+
+
+def in_blog_dir(f):
+    return os.path.basename(os.path.dirname(os.path.normpath(f))) == "blog"
+
+
 def html_files():
     out = []
     for pat in ("*.html", "blog/*.html", "blog\\*.html"):
@@ -140,7 +150,7 @@ def check_data(files):
         print(f"\n  >> {conflicts} brand(s) with conflicting figures.")
         print("     READ THE CONTEXT BEFORE FIXING. A 'conflict' is legitimate when the")
         print("     figures belong to DIFFERENT PRODUCTS from the same brand:")
-        print("        Garden of Life WHEY  = non-detect   (safe)")
+        print("        Garden of Life WHEY  = CLP Clean Sixteen (Vanilla), not CR-tested")
         print("        Garden of Life PLANT = 2.82 ug      (564% over)")
         print("     Those are two products. Do NOT merge them. That is the #1 rule.")
         print("     A real conflict is the SAME product with two different numbers.")
@@ -324,9 +334,8 @@ def check_schema(files):
         if has_visible_faq and "FAQPage" not in types:
             no_faq.append(os.path.basename(f))
 
-        in_blog_dir = os.path.normpath(f).split(os.sep)[0] == "blog" if os.sep in os.path.normpath(f) else False
         has_article_type = any(t == "Article" or t == "BlogPosting" or (isinstance(t, str) and t.endswith("Article")) for t in types)
-        if in_blog_dir and not has_article_type:
+        if in_blog_dir(f) and not is_stub(h) and not has_article_type:
             no_article.append(os.path.basename(f))
 
     if bad_json:
@@ -419,9 +428,11 @@ def check_money(files):
     print("=" * 74)
     zero = []
     for f in files:
-        if "blog" not in f:
+        if not in_blog_dir(f):       # was a substring test that also caught blog.html (the index)
             continue
         h = open(f, encoding="utf-8", errors="ignore").read()
+        if is_stub(h):               # redirect stubs are deliberately unmonetized
+            continue
         n = h.count(AFFILIATE_TAG) + len(re.findall(r"amzn\.to/", h))
         if n == 0:
             zero.append(os.path.basename(f))

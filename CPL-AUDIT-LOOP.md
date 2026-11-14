@@ -110,16 +110,30 @@ For each real conflict (not a legitimate different-product split):
 
 ## Step 3 — Pull Search Console (if available)
 
-CPL doesn't have GSC API access wired up. Ask for a pasted export, or open
-Search Console manually: Performance report (top queries, position, CTR),
-Pages report (indexing status), and compare current 28 days vs. prior 28
-days. CPL's traffic collapsed after Google's December 2025 core update
-(~3k clicks/month in Dec 2025 → ~10/day by the time this loop was built) —
-that recovery, if any, is the top-line metric to watch. Core-update recovery
-plays out over weeks to months, so don't over-read week-to-week noise.
+GSC is wired up through the API (read-only, `webmasters.readonly`, same
+OAuth client/token as the index checker — added 2026-11-13):
 
-No GSC data pasted in → skip this step explicitly in the output rather than
-guessing, and note it as a gap.
+```
+py cpl-gsc-perf.py            # Performance: latest 28d of final data vs prior 28d,
+                              # 8 x 28-day blocks, page + query movers
+py cpl-gsc-index.py --sitemap # Indexing: per-URL coverage (~10 min for ~115 URLs)
+```
+
+Both save snapshots to `gsc_reports/` (gitignored) — diff the index CSV
+against the previous one. The refresh token expires after 7 days in Testing
+mode; a run then opens a browser sign-in the site owner has to click through
+(a non-interactive agent can't, so say so rather than guessing). If the API
+is unavailable, fall back to a pasted export or the Search Console UI.
+
+Bing is still a pasted export (`cleanproteinlist.com_*_<date>.csv` from Bing
+Webmaster — PageTrafficReport, KeywordReport, SearchPerformanceOverview).
+Per Rule 10 it is the bigger channel; read it alongside GSC, never skip it.
+
+CPL's Google traffic collapsed after the December 2025 core update (~3k
+clicks/month in Dec 2025 → ~3/day by Nov 2026). Recovery plays out over
+weeks to months, so don't over-read week-to-week noise. When clicks move,
+check whether impressions moved too — a CTR-only change is not a ranking
+recovery.
 
 ## Step 4 — Propose with evidence
 
@@ -203,7 +217,12 @@ After shipping approved items:
    "Dymatize ISO 100" on 2026-08-10 — every one was already correct. If this
    rule is ever needed again, it must be scoped to only fire near an
    explicit CR-percentage/rank claim, not on any mention of the product
-   name.
+   name. **Extended 2026-11-13: don't run `cpl-repair.py --apply` at all.**
+   It has no per-rule switch (`--apply` is all-or-nothing), and two more of
+   its rules now misfire: "below detection -> 56%" fires on Body Fortress /
+   Legion sentences that merely mention ON nearby (it would assign ON's 56%
+   to them), and "7.86 -> 7.7 ug" matches the correct ratio "17.86x" (1572 /
+   88). Use its dry run as a list of places to read, then fix by hand.
 9. **`cpl-audit.py`'s conflict checkers have two known classes of false
    positive — read the context before treating either as a real bug.**
    Found and fully diagnosed 2026-08-21:
@@ -268,3 +287,15 @@ After shipping approved items:
     for prices a current retailer listing. Copy that sounds settled across
     many pages ("14 of 15", "Clean 16 certified") is usually a single
     unsourced sentence that propagated.
+13. **`git fetch` before Step 1 — the repo is edited from more than one
+    machine.** Added 2026-11-13. This run started 4 commits behind
+    `origin/main` (a Prop 65 tracker and a Premier RTD fix pushed from
+    another machine, via PRs), so the first audit pass read stale pages and
+    nearly re-proposed a fix that had already shipped. Fetch, compare
+    `HEAD..origin/main`, fast-forward if the tree is clean, then audit; fetch
+    again right before pushing. Corollary for Clean Label Project claims:
+    CLP's protein study page publishes a flavor-specific Clean Sixteen
+    listing and **no per-metal results** — "non-detect" attributed to CLP is
+    unsourced, and a listing for one flavor (e.g. Premier Vanilla Milkshake)
+    never covers another (Premier Chocolate Milkshake was tested and not
+    listed) or another format (no Premier RTD was ever tested).
