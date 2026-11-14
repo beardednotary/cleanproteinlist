@@ -34,12 +34,30 @@ web page only.
   "Clean Sixteen, non-detect (Vanilla)". The flavor/format limits from (a)
   stand: Chocolate Milkshake (CR's 77%) was not listed; no RTD was tested.
 
-**Item 5 (Body Fortress page) — re-scoped, not shipped:** the page's
-non-detect claims are now sourced for **Super Advanced Whey Vanilla**. What
-remains is narrower: (1) say which flavor (CLP tested five other Body Fortress
-flavors and didn't list them); (2) the page conflates CLP's Purity Award with
-the Clean Sixteen — the sheet shows no Purity Award badge on Body Fortress;
-(3) cite the sheet. Needs owner approval.
+**Item 5 (Body Fortress page) — re-scoped and shipped (owner: "yes"):** the
+page's non-detect claims are sourced for **Super Advanced Whey Vanilla** only.
+Shipped: Vanilla named in the meta/JSON-LD descriptions, direct answer, stat
+boxes, quick answer, results intro, FAQs (visible + JSON-LD) and conclusion;
+"Clean Label certified / Purity Award / Clean 16 certification" → Clean
+Sixteen listing (the sheet shows no Purity Award badge on Body Fortress); the
+sheet and CLP's tested-products list cited. **Same-class errors fixed on the
+page:** "Clean Label tested the chocolate flavor specifically" (CLP listed
+Vanilla; Chocolate was tested and not listed); fabricated Clean Sixteen
+criteria (BPA, pesticides, multiple batches) → CLP's own wording; "joins
+MuscleTech, Dymatize Super Mass Gainer, Momentous" → the real Clean Sixteen
+names; product-line table said other Body Fortress products weren't tested →
+five were tested and not listed; Dymatize SMG "✅ Clean 16" → no (ISO 100 is
+listed); "ONLY budget protein verified by CLP" → BulkSupplements WPI is also
+on it, Equate measured 55% in CR; **"EAS ranked #17, 245%"** (EAS is not in
+CR's data; CR #17 is Jocko Fuel 199%) removed; "infinitely safer" ×2,
+"essentially zero", "zero fetal exposure risk" reworded; "12.9x over safe
+limit" → 1,288% of CR's level of concern; broken image `alt` (unescaped
+quotes) fixed. Homepage card → "Vanilla flavor is on CLP's Clean Sixteen".
+`dateModified` / visible date / sitemap `lastmod` → 2026-11-13; all JSON-LD
+parses; `cpl-audit.py` unchanged (14 known flags, otherwise clean).
+Still open on this page: unverified prices ($0.67, "$20–25 / 2 lb"), the
+Dymatize SMG "hydrolyzed isolate" line (SMG backlog), and "equally safe as
+Momentous" (compares a CLP non-detect to a CR percentage).
 
 **Backlog added:** RYSE page (10-21 rewrite) says CLP "doesn't publish
 individual results" and avoids "non-detect" — the sheet lists Jet-Puffed
