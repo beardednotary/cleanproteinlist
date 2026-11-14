@@ -6,6 +6,145 @@ future runs need to see what was already tried, rejected, or fixed.
 
 ---
 
+## 2026-11-13 — Fifth loop run: GSC via API; Premier RTD inversion and CLP "non-detect" fixed on the top pages
+
+**Context:** First run with Search Console pulled directly (new
+`cpl-gsc-perf.py`, read-only; the 10-21 refresh token had expired and the
+owner re-authorized in the browser). The run started **4 commits behind
+`origin/main`** — a Prop 65 tracker (`/prop65/`, 27 URLs) and a Premier RTD
+fix (#1, 11-05) had been pushed from another machine — caught only because
+the live sitemap had 116 URLs vs 89 locally. Fast-forwarded and re-audited
+(→ Rule 13). Site owner approved "follow your reco exactly": items 1, 2, 3, 4,
+6, 7, 8; item 5 held.
+
+**Search data (Step 3):**
+- Google (API, final data through 11-10): 90 clicks Oct 14–Nov 10 vs 66
+  prior 28d (+36%) — the owner's "slight uptick". Impressions flat (1,370 →
+  1,318), so it's CTR, not visibility. Drivers: Levels page 0 → 16 clicks
+  (impr 10 → 218, pos 20 → 4.5, "levels protein powder lead" queries),
+  homepage 1 → 13 (brand query "clean protein list"), Fairlife +5. Premier
+  −11 (34 → 23; position held, demand fell).
+- Bing (pasted 11-14 export, window 8/14–11/11): 828 clicks Oct 15–Nov 11 vs
+  863 prior (−4%); impressions 17,699 → 14,737 (−17%), still sliding since
+  the Sept CNAME drop. ~9× Google. Bing's top pages differ from Google's:
+  lead-in-protein-powder-list 501, best-clean-creatine 421, heavy-metals
+  report 385, lead-free-ranked 205, creapure list 196, stats 185, recalls
+  183, orgain-CR 169. The Google risers are small on Bing now (fairlife 19,
+  homepage 13, levels 5, premier 3 in 90d vs 84/108/64/68 in the 6-month
+  10-16 export — different windows, but a steep fall; unexplained).
+- Index (`cpl-gsc-index.py --sitemap`, snapshot `gsc_reports/index-2026-11-13.csv`):
+  non-prop65 URLs 62 indexed / 12 crawled-not-indexed / 11 discovered / 4
+  unknown (10-21: 63/14/13/3). The 10-21 creatine hub-linking fix worked —
+  BulkSupplements, Muscle Feast, Myprotein and NOW creatine reviews all went
+  Discovered → Indexed. **Five pages dropped Indexed → Crawled-not-indexed:**
+  `dcd-dicyandiamide-creatine-contamination`, `how-to-test-protein-powder-for-lead-2025`,
+  `isopure-…`, `jocko-…`, `owyn-pro-elite-…-only-safe-plant-protein-2025`.
+  `/prop65/`: 3 of 27 indexed (8 days old). Truvani and privacy went to
+  "unknown"; Kirkland went Crawled → Discovered after its 10-21 rewrite.
+
+**Step 1–2:** `cpl-audit.py` — the same 14 known flags (Rule 9 / legit splits);
+schema/links/structure clean. `cpl-fix-data.py`: 0 safe swaps.
+`cpl-repair.py`: unsafe to `--apply` (52 Rule-8 rewrites + two more misfiring
+rules → Rule 8 extended). Real bugs were in the printed context and in the
+pages earning traffic, verified against `cpl-data.json` and CLP's protein study
+page (read 11-13: flavor-specific Clean Sixteen marker, **no per-metal results,
+no "non-detect" language**; Levels not on it; Premier Chocolate Milkshake and
+five Body Fortress flavors tested and not listed).
+
+**Shipped (6 pages + tooling), commit `6151676`:**
+1. `heavy-metals-protein-shakes-brands-2025-report` (Bing #4) — the source of
+   the propagated myths. It said "Premier Protein RTD shakes do NOT contain
+   detectable lead (Clean Label certified). Premier Protein powder has not been
+   tested" — inverted. Rewrote the RTD-vs-powder section, the "RTD Exception"
+   box (now OWYN Pro Elite, the only RTD CR cleared, 88%, 1/day), the Premier
+   Deep-Dive (cards, FAQ, bottom line), the visible + JSON-LD FAQ, red-flag,
+   learned-points and quick-pick boxes. 7 "switch to Premier Protein RTD"
+   links (ASIN B008JGIZNQ = the RTD 12-pack) → OWYN (B0764GPB51). CLP table:
+   14 "Non-detect" → "Clean Sixteen — <listed flavor>"; Premier row "100% Whey
+   RTD / RTD Shake" → 100% Whey Protein Powder (tag-only search link, no
+   verified flavor ASIN). "OWYN only safe plant" ×6 → OWYN + Truvani.
+2. `premier-protein-lead-testing` (Google #1) — on top of the 11-05 upstream
+   fix: 15 "zero lead" for OWYN/ON → 88%/56%; **OWYN shown as "CR #7 — 56%"
+   → 88%**; Muscle Milk "#17" → #9 and dropped the unsupported "2.1× less
+   lead"; a second RTD-tested table row and the "we now have a direct answer
+   / data for both" sentences the upstream fix missed; "Premier RTD is fine …
+   CR rated it safe for daily use" recommendation; CLP "non-detectable /
+   unlimited / Purity Award" (incl. the upstream-written direct answer) →
+   flavor-specific Clean Sixteen; "7 brands … zero detectable lead" → only
+   MuscleTech; "28 tested" → 23 + 5.
+3. `fairlife-protein-shakes-safety-lead-testing-2025` (Google #2) — "Stay RTD —
+   Verified Safe: Switch to Premier Protein RTD" → OWYN; table row "Premier RTD
+   ✅ Safe 1/day" → untested; OWYN "zero lead / unlimited" → 88%, 1/day; ON
+   "verified zero lead" → 56%; garbled + non-detect FAQ answers (visible and
+   JSON-LD); recommendation no longer calls Premier RTD "verified safer".
+4. `levels-protein-powder-lead-testing-safety-2026` (Google riser) — Ascent
+   NSF → Informed Sport, $2.50–3.00 → ~$0.60–1.40, "one-quarter the price" /
+   "dramatically cheaper" removed, Ascent CLP row → tested, not on Clean
+   Sixteen; CR "Prop 65 benchmarks" → CR's level of concern, two rounds;
+   "14 of 15 plant" → 9 of 10 (Oct round); dropped unsourced "fewer than 30%
+   of brands" (×6) and "organic 3× more lead"; Body Fortress "non-detect" ×4
+   → Clean Sixteen (Vanilla) and "CR: ✅" → not tested; **also fixed in the
+   same table (beyond the proposal, same class): Equate "#10 ranked" (merged-
+   round rank, Rule 2) → Jan 2026 round; Dymatize Super Mass Gainer "Purity
+   Award" → not listed (CLP lists ISO100); ON → Clean Sixteen (Vanilla Ice
+   Cream)**; "Five additional products … all passed" → Ritual 107% okay
+   occasionally. Levels' own Purity Award kept (retailer badges; CLP's
+   certification database not checked).
+6. `index.html` — Naked card "15.4× over safe limit" → 1,572% of CR's level
+   of concern.
+7. `chocolate-protein-powder-lead-contamination-2025` — "Grass Fed Whey
+   Chocolate: SAFE (Clean Label certified)" (×2) → Vanilla is on the Clean
+   Sixteen, no Chocolate result. `cpl-audit.py` hint "Garden of Life WHEY =
+   non-detect" → "CLP Clean Sixteen (Vanilla), not CR-tested". Closes 10-16
+   item 8.
+8. Tooling/docs — `cpl-gsc-perf.py` (new; snapshots to `gsc_reports/`);
+   `cpl-audit.py` skips meta-refresh stubs in the Article-schema and
+   monetization checks and no longer matches `blog.html` by substring (10
+   recurring false lines gone); `CPL-AUDIT-LOOP.md` Step 3 rewritten for the
+   API, Rule 8 extended, Rule 13 added.
+- Housekeeping: `dateModified`, visible Updated/Last Updated text and
+  `sitemap.xml` `lastmod` → 2026-11-13 on the 6 pages (homepage has no
+  visible date). All JSON-LD blocks parse; sitemap parses. Post-fix
+  `cpl-audit.py`: same 14 known data/rank flags, 0 schema / link / structure /
+  monetization issues.
+- Deployed (GitHub Pages live ~45 s after push; verified on the live pages),
+  then IndexNow HTTP 200 for 12 URLs: the 6 above plus the six 10-21 (c)
+  pages whose IndexNow was never logged (lead-poisoning, NOW Sports, CR
+  Jan-2026, Ascent, RYSE, Kirkland/Elevation).
+
+**Held / not shipped:**
+- **Item 5 — Body Fortress page premise** (39 "non-detect for all four
+  metals" claims + homepage card). CLP lists only Super Advanced Whey Vanilla
+  and publishes no per-metal results. Held until the owner confirms there's
+  no CLP certificate/COA showing non-detect. If none, rewrite to the
+  flavor-specific Clean Sixteen framing used on the other pages this run.
+- **Premier page line written upstream 11-05:** "California Prop 65 limit:
+  0.5 µg/day — the powder's 0.38 µg is below it." Compares a CR figure to
+  Prop 65 (`_README` note 2); left for the owner since they just wrote it.
+
+**Backlog surfaced this run (not fixed — next run):**
+- Same claims on other pages: Body Fortress "non-detect" on ~11 more files;
+  "zero lead" on 12; `lead-free-protein-brands-ranked` (Bing 205) has 23
+  "non-detect"; `lead-in-protein-powder-list` (Bing 501) has 5 "only safe
+  plant" + 6 "28 tested".
+- Heavy-metals report still: Dymatize Super Mass Gainer card described as a
+  "99% pure hydrolyzed isolate, dual verified CR + Clean Label, $1.25" (ISO100's
+  description — the 10-21 SMG backlog); "21 verified-safe brands" framing;
+  "47%/53% safe", "organic 3× more lead", "searches spiked 500%" related card;
+  danger cards' "15.7x safe limit" (Prop 65 groups).
+- Chocolate page lists Garden of Life Sport Organic Plant as "Chocolate, 2.82
+  µg"; `cpl-data.json` says CR tested **Vanilla** and published no µg (Rules
+  5, 7).
+- Watch: the 5 pages that fell out of Google's index (above), and why the four
+  Google-riser pages collapsed on Bing.
+- Carried from earlier runs, unchanged: methodology template on 22 pages,
+  Super Mass Gainer pricing/description, discontinued Momentous WPI, "OWYN
+  only safe" on ~32 files, Prop-65 groups 2–5, `prop-65-warning` premise.
+
+**New standing rule:** Rule 13 (see `CPL-AUDIT-LOOP.md`); Rule 8 extended.
+
+---
+
 ## 2026-10-21 (c) — Open items from (a)/(b): lead-poisoning rewrite + 4 refreshes
 
 **Context:** Worked the items held over in (b). The "light refreshes" turned
