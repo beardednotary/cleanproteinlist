@@ -979,6 +979,14 @@
   },
   "page": null
  },
+ "Mrs. Gooch's Natural Food Markets": {
+  "notices": 1,
+  "latest": "2026-11-06",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
  "Muscle Milk": {
   "notices": 1,
   "latest": "2025-07-21",
@@ -1602,10 +1610,11 @@
   "page": "/prop65/brands/truvani.html"
  },
  "Unknown": {
-  "notices": 1,
-  "latest": "2026-03-11",
+  "notices": 3,
+  "latest": "2026-11-06",
   "chemicals": {
-   "Lead": 1
+   "Lead": 1,
+   "PFOA / PFOS": 2
   },
   "page": null
  },

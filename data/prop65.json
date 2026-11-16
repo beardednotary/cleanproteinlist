@@ -6284,7 +6284,7 @@
     "Lead and lead compounds"
    ],
    "comments": "",
-   "complaints": 0,
+   "complaints": 1,
    "date": "2026-08-18",
    "flags": [],
    "judgments": 0,
@@ -6358,7 +6358,7 @@
    "judgments": 0,
    "noticing_party": "Environmental Health Advocates, Inc.",
    "pdf": "https://oag.ca.gov/system/files/prop65/notices/2026-04121.pdf",
-   "settlements": 0,
+   "settlements": 1,
    "source": "Zen Principle Organic Brown Rice Protein",
    "url": "https://oag.ca.gov/prop65/60-Day-Notice-2026-04121",
    "violators": "Relay Peak Research LLC ; Relay Peak LLC ; Amazon.com Services LLC"
@@ -6876,11 +6876,182 @@
    "source": "Bare Organics Pumpkin Protein",
    "url": "https://oag.ca.gov/prop65/60-Day-Notice-2026-05138",
    "violators": "DIYA Beauty and Wellness LLC; Walmart Inc."
+  },
+  "2026-05207": {
+   "ag": "2026-05207",
+   "chemicals": [
+    "Lead"
+   ],
+   "comments": "",
+   "complaints": 0,
+   "date": "2026-11-06",
+   "flags": [],
+   "judgments": 0,
+   "noticing_party": "Environmental Health Advocates, Inc.",
+   "pdf": "https://oag.ca.gov/system/files/prop65/notices/2026-05207.pdf",
+   "settlements": 0,
+   "source": "365 Whole Foods Market Organic Pea Protein Powder Unflavored",
+   "url": "https://oag.ca.gov/prop65/60-Day-Notice-2026-05207",
+   "violators": "Mrs. Gooch's Natural Food Markets, Inc."
+  },
+  "2026-05232": {
+   "ag": "2026-05232",
+   "chemicals": [
+    "Cadmium"
+   ],
+   "comments": "This notice amends the original notice of violation AG No. 2026-03150. This notice provides updated information for the noticed entity, General Mills, Inc.",
+   "complaints": 0,
+   "date": "2026-11-06",
+   "flags": [],
+   "judgments": 0,
+   "noticing_party": "Environmental Health Advocates, Inc.",
+   "pdf": "https://oag.ca.gov/system/files/prop65/notices/2026-05232.pdf",
+   "settlements": 0,
+   "source": "Progresso Hearty Grain Vegetable Protein Soup",
+   "url": "https://oag.ca.gov/prop65/60-Day-Notice-2026-05232",
+   "violators": "General Mills, Inc.; Food 4 Less of California, Inc."
+  },
+  "2026-05237": {
+   "ag": "2026-05237",
+   "chemicals": [
+    "Perfluorooctanoic Acid (PFOA)"
+   ],
+   "comments": "",
+   "complaints": 0,
+   "date": "2026-11-06",
+   "flags": [],
+   "judgments": 0,
+   "noticing_party": "Environmental Research Center, Inc.",
+   "pdf": "https://oag.ca.gov/system/files/prop65/notices/2026-05237.pdf",
+   "settlements": 0,
+   "source": "Ripple Vanilla with Other Natural Flavor Protein Shake",
+   "url": "https://oag.ca.gov/prop65/60-Day-Notice-2026-05237",
+   "violators": "Amazon.com, Inc.; Amazon.com Services LLC; Amazon Technologies, Inc."
+  },
+  "2026-05238": {
+   "ag": "2026-05238",
+   "chemicals": [
+    "Lead and lead compounds"
+   ],
+   "comments": "",
+   "complaints": 0,
+   "date": "2026-11-06",
+   "flags": [],
+   "judgments": 0,
+   "noticing_party": "Environmental Research Center, Inc.",
+   "pdf": "https://oag.ca.gov/system/files/prop65/notices/2026-05238.pdf",
+   "settlements": 0,
+   "source": "Legendary Foods Protein Pasta Garlic Parmesan Flavored",
+   "url": "https://oag.ca.gov/prop65/60-Day-Notice-2026-05238",
+   "violators": "Legendary Foods, LLC"
+  },
+  "2026-05241": {
+   "ag": "2026-05241",
+   "chemicals": [
+    "Perfluorooctanoic Acid (PFOA)"
+   ],
+   "comments": "",
+   "complaints": 0,
+   "date": "2026-11-06",
+   "flags": [],
+   "judgments": 0,
+   "noticing_party": "Environmental Research Center, Inc.",
+   "pdf": "https://oag.ca.gov/system/files/prop65/notices/2026-05241.pdf",
+   "settlements": 0,
+   "source": "Ripple Coffee with Other Natural Flavor Protein Shake",
+   "url": "https://oag.ca.gov/prop65/60-Day-Notice-2026-05241",
+   "violators": "Walmart Inc."
+  },
+  "2026-05299": {
+   "ag": "2026-05299",
+   "chemicals": [
+    "Lead"
+   ],
+   "comments": "",
+   "complaints": 0,
+   "date": "2026-11-12",
+   "flags": [],
+   "judgments": 0,
+   "noticing_party": "Clean Product Advocates, LLC",
+   "pdf": "https://oag.ca.gov/system/files/prop65/notices/2026-05299.pdf",
+   "settlements": 0,
+   "source": "Aloha Organic Chocolate Caramel Pecan Plant-Based Protein Bar",
+   "url": "https://oag.ca.gov/prop65/60-Day-Notice-2026-05299",
+   "violators": "Project Healthy Living, Inc.; Sprouts Farmers Market, LLC"
+  },
+  "2026-05323": {
+   "ag": "2026-05323",
+   "chemicals": [
+    "Cadmium",
+    "Lead"
+   ],
+   "comments": "",
+   "complaints": 0,
+   "date": "2026-11-13",
+   "flags": [],
+   "judgments": 0,
+   "noticing_party": "Public Health Enforcement Advocates, LLC",
+   "pdf": "https://oag.ca.gov/system/files/prop65/notices/2026-05323.pdf",
+   "settlements": 0,
+   "source": "Tortilla Style Protein Chips Hot & Spicy",
+   "url": "https://oag.ca.gov/prop65/60-Day-Notice-2026-05323",
+   "violators": "Quest Nutrition, LLC"
+  },
+  "2026-05324": {
+   "ag": "2026-05324",
+   "chemicals": [
+    "Lead"
+   ],
+   "comments": "",
+   "complaints": 0,
+   "date": "2026-11-13",
+   "flags": [],
+   "judgments": 0,
+   "noticing_party": "Public Health Enforcement Advocates, LLC",
+   "pdf": "https://oag.ca.gov/system/files/prop65/notices/2026-05324.pdf",
+   "settlements": 0,
+   "source": "Original Style Protein Chips BBQ",
+   "url": "https://oag.ca.gov/prop65/60-Day-Notice-2026-05324",
+   "violators": "Quest Nutrition, LLC"
+  },
+  "2026-05325": {
+   "ag": "2026-05325",
+   "chemicals": [
+    "Lead"
+   ],
+   "comments": "",
+   "complaints": 0,
+   "date": "2026-11-13",
+   "flags": [],
+   "judgments": 0,
+   "noticing_party": "Public Health Enforcement Advocates, LLC",
+   "pdf": "https://oag.ca.gov/system/files/prop65/notices/2026-05325.pdf",
+   "settlements": 0,
+   "source": "Tortilla Style Protein Chips Spicy Sweet Chili",
+   "url": "https://oag.ca.gov/prop65/60-Day-Notice-2026-05325",
+   "violators": "Quest Nutrition, LLC"
+  },
+  "2026-05326": {
+   "ag": "2026-05326",
+   "chemicals": [
+    "Lead"
+   ],
+   "comments": "",
+   "complaints": 0,
+   "date": "2026-11-13",
+   "flags": [],
+   "judgments": 0,
+   "noticing_party": "Public Health Enforcement Advocates, LLC",
+   "pdf": "https://oag.ca.gov/system/files/prop65/notices/2026-05326.pdf",
+   "settlements": 0,
+   "source": "Tortilla Style Protein Chips Buffalo Ranch",
+   "url": "https://oag.ca.gov/prop65/60-Day-Notice-2026-05326",
+   "violators": "Quest Nutrition, LLC"
   }
  },
  "source": "California Attorney General, Prop 65 60-Day Notice Search",
  "terms": [
   "protein"
  ],
- "updated": "2026-11-09T23:27:00+00:00"
+ "updated": "2026-11-16T23:25:27+00:00"
 }
