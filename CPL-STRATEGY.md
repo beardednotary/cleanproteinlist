@@ -6,6 +6,69 @@ future runs need to see what was already tried, rejected, or fixed.
 
 ---
 
+## 2026-11-18 (b) — CNAME check; orphan page linked + cleaned; OWYN process claims removed; Costco vs Sam's merged
+
+**CNAME (owner asked):** git shows 7 delete/create cycles of `CNAME`
+9/15–9/17 (each one drops the GitHub Pages custom domain). Bing CTR broke 9/18,
+impressions 9/25. Checked live 11-18: http→https, www→apex, and
+`beardednotary.github.io/cleanproteinlist/` all 301 to `https://cleanproteinlist.com/`;
+Let's Encrypt cert valid (SAN apex + www, renewed 11-16); apex A records =
+GitHub's 4 IPs; `www` CNAME → `beardednotary.github.io`. Nothing is still
+broken. Owner actions (outside the repo): Bing Webmaster crawl errors for
+9/15–9/20 + resubmit sitemap; GitHub "verified domain" (TXT record) so the
+domain can't be claimed during a future drop; optional apex AAAA records;
+never toggle the CNAME/custom-domain setting to troubleshoot again.
+
+**Shipped (owner: "hit up 1-3"):**
+1. `how-to-test-protein-powder-for-lead-2025` — had 0 inbound links. Before
+   linking it, fixed: sample lab-report table called 0.18 ppm "✅ Safe" via
+   0.18 × 0.03 = 0.0054 µg while the worked example below computed the same
+   0.18 ppm as 5.4 µg / "10.8x over" (table now 0.01 ppm → 0.3 µg); "<1 ppm safe
+   limit" (unsourced) → 0.5 µg/day ≈ 0.017 ppm for a 30 g scoop; "7 ppm" vs
+   "7 µg per serving" unit mix-up; arsenic "<10 µg/day" removed; "ON verified
+   safe by CR and CLP" → 56% + Vanilla Ice Cream on Clean Sixteen; Clean
+   Sixteen "non-detectable levels of all contaminants" → CLP's own wording
+   (lead, cadmium, mercury, arsenic; one flavor each); Body Fortress → Vanilla
+   only; **Informed Choice described as testing heavy metals — it's banned
+   substances only**; OWYN "Informed Choice" removed (not found on Informed
+   Choice; Dymatize SMG and Momentous NSF verified and kept); ~35×
+   "verified-safe" → "independently tested" / "cleared for daily use".
+   Linked from blog.html (+ cards for symptoms, Beyond Lead and the NSF
+   creatine guide — Bing's #7 page — none were on the index), the lead list,
+   the Prop 65 warning page, and the symptoms page.
+2. **Merge review — 1 of 11 merged.** `costco-vs-sams-club-protein-powder-2026`
+   (0 clicks on both engines, 3 months old, overlaps the Costco guide, and full
+   of known errors: ON "Purity Award", "only safe plant", Dymatize SMG as
+   "hydrolyzed whey ~110 cal") → stub + canonical to
+   `best-protein-powder-costco-2025#costco-vs-sams` (new section: neither
+   house brand is in CR's data; choose by product). Removed from sitemap,
+   blog.html and the Kirkland page. **Kept:** `kirkland-vs-elevation` (the
+   Costco guide links it as the "full breakdown" — Rule 11), and the brand
+   Q&A pages (Ryse, Ghost, Boost, NOW Sports, Isopure, Jocko) plus EBT,
+   chocolate and best-cheap: each is the site's only answer to its query and
+   several earn Bing long-tail ("ryze protein lead", "jocko molk prop 65",
+   "does isopure protein have lead"). Merging wouldn't move Google indexing.
+3. OWYN page — removed the invented process sections (premium sourcing,
+   3-stage testing, "submits to CR" — CR buys at retail, the "We test for
+   heavy metals and pass" quote, "OWYN's testing protocols cover…" FAQ, OWYN
+   "testing protocols" source). OWYN publishes none of it (searched 11-18).
+   Replaced with what's known (one CR result, Chocolate; ask for a COA).
+   Marketing-slogan table (unverified quotes attributed to Naked/Huel/GoL/Vega)
+   → CR numbers only. "Contaminated" labels on named brands → "higher lead".
+   CLP organic claim corrected to the Jan 2025 report (organic ≈ 3× non-organic
+   across 160 products, not "organic plant vs conventional plant"). Prop 65
+   "10 µg arsenic" removed. Visible FAQ "9 of the 11" → 10 of 12. Restored the
+   TOC's dead `#why-only-safe` anchor.
+
+**Backlog surfaced (not touched):**
+- `lead-in-protein-powder-list` (Bing #1): Informed Choice presented as a
+  heavy-metal certification; ON "Clean Label certified"; "assume it's unsafe".
+- `best-protein-powder-costco-2025`: 10× "Purity Award" — check ON/Levels
+  claims against CLP's sheet.
+- Site-wide "verified-safe" framing (CR "cleared for daily use"; nobody verified).
+
+---
+
 ## 2026-11-18 — Index-coverage triage: `/index.html` links fixed, Prop 65 template wording; outside merge plan checked against data
 
 **Context:** The owner brought a video/AI-citation strategy from an Opus
