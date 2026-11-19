@@ -40,7 +40,7 @@
   'use strict';
 
   // ---------------------------------------------------------------- config
-  var AMAZON = /(^|\.)amazon\.[a-z.]+$|(^|\.)amzn\.to$/i;
+  var AMAZON = /(^|\.)amazon\.[a-z.]+$|(^|\.)amzn\.to$|^link\.amazon$/i;
 
   // Placement detection — checked in order, first match wins.
   // Maps a DOM ancestor/class to a human-readable placement name.
@@ -113,7 +113,7 @@
     // 4) Fall back to the ASIN
     var asin = a.href.match(/\/dp\/([A-Z0-9]{10})/);
     if (asin) return 'ASIN:' + asin[1];
-    var shortlink = a.href.match(/amzn\.to\/(\w+)/);
+    var shortlink = a.href.match(/(?:amzn\.to|link\.amazon)\/(\w+)/);
     if (shortlink) return 'amzn:' + shortlink[1];
     return 'unknown';
   }

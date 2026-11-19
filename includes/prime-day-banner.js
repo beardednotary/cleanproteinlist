@@ -20,14 +20,18 @@
   'use strict';
 
   // ---------------------------------------------------------------- config
-  // Prime Big Deal Days 2026: Oct 6 12:01am PT → end of Oct 7 PT (PDT = UTC-7)
-  var START = Date.UTC(2026, 9, 6, 7, 1);   // months are 0-based: 9 = October
-  var END   = Date.UTC(2026, 9, 8, 7, 0);
-  var SHOW_FROM = Date.UTC(2026, 8, 30, 0, 0); // start teasing Sep 30
+  // Black Friday Week 2026: Nov 19 12:01am PT → end of Nov 30 PT (PST = UTC-8)
+  // (Prime Big Deal Days was Oct 6–7, PDT = UTC-7.)
+  var START = Date.UTC(2026, 10, 19, 8, 1);  // months are 0-based: 10 = November
+  var END   = Date.UTC(2026, 11, 1, 8, 0);   // = Dec 1 00:00 PT
+  var SHOW_FROM = Date.UTC(2026, 10, 18, 8, 0); // start teasing Nov 18
+  // Black Friday deals are open to everyone; Prime Day deals are members-only.
+  var PRIME_ONLY = false;
+  var EVENT = 'Black Friday';
 
   var DEALS_URL = '/prime-day-protein-deals.html';
   var PRIME_TRIAL_URL = 'https://www.amazon.com/amazonprime?tag=beardednotary-20';
-  var DISMISS_KEY = 'cpl_prime_bar_dismissed_2026_oct';
+  var DISMISS_KEY = 'cpl_prime_bar_dismissed_2026_bf';
 
   // -------------------------------------------------------------- gating
   var now = Date.now();
@@ -55,17 +59,19 @@
   // ---------------------------------------------------------------- copy
   var msg, cta, href, external;
   if (onDealsPage) {
-    msg = live ? 'Prime Day deals are live, but only for Prime members.'
-               : 'Prime Day deals (Oct 6–7) are for Prime members only.';
-    cta = 'Start your free Prime trial →';
+    msg = PRIME_ONLY
+      ? (live ? 'Prime Day deals are live, but only for Prime members.'
+              : 'Prime Day deals are for Prime members only.')
+      : 'Most ' + EVENT + ' deals are open to everyone. Some are Prime-exclusive.';
+    cta = PRIME_ONLY ? 'Start your free Prime trial →' : 'Try Prime free →';
     href = PRIME_TRIAL_URL;
     external = true;
   } else if (live) {
-    msg = '🔥 Prime Big Deal Days are LIVE. See which protein & creatine deals passed lab testing.';
+    msg = '🔥 Black Friday Week is LIVE. See which protein & creatine deals passed lab testing.';
     cta = 'See the deals →';
     href = DEALS_URL;
   } else {
-    msg = '⏰ Prime Big Deal Days start Oct 6. Here are the lab-tested proteins worth buying on sale.';
+    msg = '⏰ Amazon Black Friday Week starts Nov 19. Here are the lab-tested proteins worth buying on sale.';
     cta = 'See the list →';
     href = DEALS_URL;
   }
@@ -94,7 +100,7 @@
     var bar = document.createElement('div');
     bar.className = 'cpl-prime-bar';
     bar.setAttribute('role', 'region');
-    bar.setAttribute('aria-label', 'Prime Day deals');
+    bar.setAttribute('aria-label', EVENT + ' deals');
 
     var text = document.createElement('span');
     text.textContent = msg;

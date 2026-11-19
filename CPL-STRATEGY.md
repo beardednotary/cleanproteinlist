@@ -6,6 +6,46 @@ future runs need to see what was already tried, rejected, or fixed.
 
 ---
 
+## 2026-11-18 (c) — Amazon link audit: dead short links, Momentous NOT discontinued, Thorne relink, Black Friday
+
+From the owner's Amazon Linked Product report (Aug 21 – Nov 18) audit.
+
+**Momentous Whey Protein Isolate is still sold — the "discontinued" note was wrong.**
+Owner confirmed it's on Amazon (B0F144K892, `link.amazon/B0egYTAuw`, $69.99 /
+25 servings). Momentous's own help center says the product it discontinued
+(not sold since March 2025) is the **v1 100% Plant Protein**, which CR tested at
+476%. `cpl-data.json` had attached "DISCONTINUED per Momentous" to the whey
+isolate as well. Fixed the data note, removed "since discontinued" on
+`lead-poisoning-protein-powder-symptoms` (visible + FAQ JSON-LD), and added a
+Momentous card (CR Oct 2025 · 30%) to `ascent-…`'s whey list, which had left it
+out as discontinued. **Do not re-propose dropping Momentous WPI as discontinued.**
+The earlier "dropped discontinued Momentous WPI as top pick" decisions in
+this log were based on that wrong note. Whether to restore it as a top pick
+on those pages is open. Caveat: Momentous has announced an "upgraded" whey
+isolate. CR's 30% applies to the formulation CR tested.
+
+**Links.** All 21 `B09F21D98X` (old Momentous listing, 82 clicks / 4 orders)
+→ `link.amazon/B0egYTAuw`. Every old Thorne creatine link (`B0DVWTMTPX` and
+`amzn.to/3Lp8elV`, 76 clicks / 0 sales) → `link.amazon/B0dRx3XYB` (B07978VPPH,
+owner-supplied). 8 dead short links (each redirects to the Amazon homepage
+with no tag) replaced with the working link for the same product:
+3ZqVwKm / 4hZQ9kD / 3D4pO0t → 3JopAi3 (MuscleTech MG); 4fVE8h8 / 4fGqj3G →
+3Wl18B2 (Dymatize SMG), with 4fGqj3G's ON row → B0015R3AH2; bodyfortress →
+42WDFd4; golwhey → 4qJMy46; 4i2D8Hm → 49hvX0U (TL Mass Gainer). nutrabox and
+wicked are also dead but only inside HTML comments.
+`affiliate-tracker.js` now recognizes `link.amazon` hosts (they were
+untracked).
+
+**Black Friday Week (Nov 19–30).** `prime-day-protein-deals.html` (same URL),
+`prime-day-banner.js` and the Orgain swap box now show Black Friday copy. The
+banner has a `PRIME_ONLY` flag. Set it back to true for Prime Day.
+
+**New standing rule candidate:** before calling a product discontinued, check
+which product the brand actually discontinued. Here a note about one Momentous
+product spread to a different Momentous product.
+
+---
+
 ## 2026-11-18 (b) — CNAME check; orphan page linked + cleaned; OWYN process claims removed; Costco vs Sam's merged
 
 **CNAME (owner asked):** git shows 7 delete/create cycles of `CNAME`
