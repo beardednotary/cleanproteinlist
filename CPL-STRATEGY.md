@@ -6,6 +6,81 @@ future runs need to see what was already tried, rejected, or fixed.
 
 ---
 
+## 2026-11-18 — Index-coverage triage: `/index.html` links fixed, Prop 65 template wording; outside merge plan checked against data
+
+**Context:** The owner brought a video/AI-citation strategy from an Opus
+desktop chat that put a "Phase 1 site cleanup" first, based on the GSC
+Indexing report (39 discovered / 14 crawled-not-indexed / 4 redirect / 1
+canonical). Its claims were checked against the repo and a fresh 90-day GSC
+query×page pull (08-17 → 11-15) before acting:
+
+- **Confirmed, fixed:** 382 internal links in 121 files pointed home at
+  `index.html` / `../index.html` / `../../index.html` → the GSC canonical
+  issue. All now `href="/"`, including `includes/` and `scripts/prop65_build.py`
+  (so the weekly build doesn't reintroduce them). GitHub Pages can't 301, so
+  links + the existing canonical are the fix. No `dateModified`/`lastmod`
+  bumps — nav-only change, not content.
+- **Confirmed, fixed:** Prop 65 brand-page template — single-notice brands
+  read "between Jul 21, 2025 and Jul 21, 2025", "alleging lead (1)",
+  "0 of them show a settlement and 0 more…", "1 … notice have named",
+  "Premier Protein protein supplements". `fmt_date` used glibc-only `%-d`
+  (build crashed on Windows) → portable. Rebuilt; hub's rolling 12-month
+  count moved 141 → 136 (date-relative, correct). Build must run with
+  `python -X utf8` on Windows (`-I` ignores `PYTHONUTF8`; cp1252 output otherwise).
+- **Wrong — already handled:** "orphans" `vega-vs-orgain…`,
+  `body-fortress-vs-optimum-nutrition…`, `new-year-fitness-guide…` are
+  meta-refresh + canonical stubs with no inbound links (that's the 4 "redirect" rows).
+- **Not supported by data:** "five list pages compete." GA's five list titles
+  are one URL (`lead-in-protein-powder-list`) retitled 7× — stop retitling it.
+  GSC query×page: only 10 of 349 queries hit >1 page, none meaningfully
+  (Premier page pos 3.9 vs heavy-metals report pos 73). Premier Prop 65 page
+  has zero impressions — not competing with the Premier article.
+- **Premature:** merging the 24 unindexed Prop 65 brand pages. Live since
+  11-05 (13 days); Discovered-not-indexed is normal at that age. Re-check ~12-05.
+  They are thin (~590 words, ~80% boilerplate) — if still unindexed, consider
+  raising `MIN_BRAND_NOTICES` or noindexing single-notice brands at the generator.
+- **Blocked by Rule 11:** the outside plan's merge list includes
+  `costco-orgain-…-lawsuit…` — the exact page Rule 11 was written for (285 Bing
+  clicks/6 mo). No merges of crawled-not-indexed pages without the latest Bing
+  PageTrafficReport.
+
+**Shipped (owner approved):** `owyn-pro-elite-…` — "the ONLY safe plant
+protein" (~20 instances across body, FAQ, Product/Review/Article schema, CTA,
+sources) was false since CR's Jan 2026 round: Truvani Plant-Based Protein =
+"Better for daily" (93%). Rewritten to the true, narrower claim: the only
+plant-based **RTD** CR cleared; 1 of **10** plant products under CR's level of
+concern in Oct 2025 (page said "1 of 15", "all 14", "9 out of 11" — all
+wrong). Also: back-calculated µg for Orgain/Vega/Momentous/GoL labelled
+"(derived)" (README note 1); Vega 186% → 185%; "CR / Prop 65 benchmark" →
+CR level of concern (note 2); "All Plant Proteins Tested" table → "Selected…"
+with the missing KOS/Ensure/PlantFusion/Truvani/Ritual named; unsourced
+"OWYN tests every batch / proprietary sourcing" FAQ answer replaced with CR
+facts; visible date + `dateModified` + sitemap `lastmod` → 2026-11-18.
+**Still on the page, not touched (next run):** the "OWYN Difference" /
+sourcing sections assert OWYN's internal QC process with no source (Rule 12),
+and several "contaminated" labels on named competitors.
+
+**Bing (PageTrafficReport + Overview, 11-19 export, ~8/19–11/16):**
+- Bing clicks/day: 46 (8/19–9/17) → 30 → 29. CTR broke 9/18, impressions
+  fell 9/25 (874 → 518/day) and have been flat since. ~17 clicks/day lost —
+  several times all of Google. This, not Google indexing, is the biggest open loss.
+- Rule 11 applied to every Google-unindexed page. **Keep (earns on Bing):**
+  `nsf-certified-creatine-athletes-guide` (2,157 impr / 47 clicks — Bing's #7
+  page, Google "discovered"), `costco-orgain-…lawsuit` (822/25),
+  `consumer-reports-new-…-january-2026` (257/8), `beyond-lead` (162/3),
+  `dcd-…` (154/5), `lead-poisoning-…symptoms` (10/5), `momentous-creatine…` (120/1).
+  All already have 5–14 internal links, so linking isn't their problem.
+- **Zero/near-zero on both engines** (merge candidates, not yet approved):
+  `ryse`, `ghost`, `boost`, `best-cheap-…`, `kirkland-vs-elevation`, `ebt-…`,
+  `chocolate-…` (0 Bing clicks); `now-sports-whey`, `isopure`, `jocko` (≤1);
+  `costco-vs-sams` (109 impr, 0 clicks). Not thin by word count (1.5–5k words).
+- `how-to-test-protein-powder-for-lead-2025` has **0 inbound internal links**
+  — orphaned; link it before judging its content.
+- Google's #1 page (`premier-protein-lead-testing`) gets 25 impressions on
+  Bing — the two engines rank different pages; plan video/anchor content per engine.
+
+---
+
 ## 2026-11-13 (b) — CLP Clean Sixteen one-sheet: "non-detect" IS sourced (flavor-specific); Premier Prop 65 line reworded
 
 **Context:** The owner supplied CLP's Clean Sixteen one-sheet

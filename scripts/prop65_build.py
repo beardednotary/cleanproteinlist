@@ -200,7 +200,7 @@ def status_of(n: dict) -> str:
 
 def fmt_date(iso: str) -> str:
     d = dt.date.fromisoformat(iso)
-    return d.strftime("%b %-d, %Y")
+    return f"{d:%b} {d.day}, {d:%Y}"  # portable; "%-d" is glibc-only
 
 
 HEAD = """<!DOCTYPE html>
@@ -246,12 +246,12 @@ HEAD = """<!DOCTYPE html>
 <body>
     <header>
         <div class="container">
-            <a href="{up}index.html" class="logo">Clean Protein List</a>
+            <a href="/" class="logo">Clean Protein List</a>
             <button class="hamburger" id="hamburger-btn" aria-label="Menu">
                 <span></span><span></span><span></span>
             </button>
             <nav id="mobile-nav">
-                <a href="{up}index.html">Home</a>
+                <a href="/">Home</a>
                 <a href="{up}blog.html#protein-articles">Protein</a>
                 <a href="{up}blog.html#creatine-articles">Creatine</a>
                 <a href="{up}stats.html">Stats</a>
@@ -269,7 +269,7 @@ FOOT = """
         <div class="container">
             <p>&copy; 2026 Clean Protein List. Independent heavy metal testing database.</p>
             <p>
-                <a href="{up}index.html">Home</a> |
+                <a href="/">Home</a> |
                 <a href="{up}prop65/">Prop 65 Tracker</a> |
                 <a href="{up}blog.html">Articles</a> |
                 <a href="{up}about.html">About</a> |
@@ -320,9 +320,25 @@ def notice_row(n: dict, show_brand: bool) -> str:
     )
 
 
-def chem_phrase(counter: collections.Counter) -> str:
-    parts = [f"{k.lower() if k != 'PFOA / PFOS' else 'PFOA/PFOS'} ({v})" for k, v in counter.most_common()]
+def chem_phrase(counter: collections.Counter, counts: bool = True) -> str:
+    # counts=False for single-notice brands, where "lead (1) and cadmium (1)" is noise.
+    parts = [
+        (k.lower() if k != "PFOA / PFOS" else "PFOA/PFOS") + (f" ({v})" if counts else "")
+        for k, v in counter.most_common()
+    ]
     return ", ".join(parts[:-1]) + (" and " if len(parts) > 1 else "") + parts[-1]
+
+
+def status_sentence(status: collections.Counter, count: int) -> str:
+    settled, complaint = status.get("Settled", 0), status.get("Complaint filed", 0)
+    if not settled and not complaint:
+        return f"The AG database lists no court complaint or settlement for {'it' if count == 1 else 'any of them'} yet."
+    parts = []
+    if settled:
+        parts.append(f"{settled} {'shows' if settled == 1 else 'show'} a settlement")
+    if complaint:
+        parts.append(f"{complaint} {'shows' if complaint == 1 else 'show'} a court complaint")
+    return "Of these, " + " and ".join(parts) + "."
 
 
 def build_brand_page(name: str, items: list[dict], article: str | None, updated_h: str, updated_iso: str) -> str:
@@ -337,15 +353,19 @@ def build_brand_page(name: str, items: list[dict], article: str | None, updated_
     noun = "notice" if count == 1 else "notices"
     named = [("PFOA/PFOS" if k == "PFOA / PFOS" else k) for k, _ in chems.most_common() if k != "Other"]
     title = f"{name} Prop 65 Notices: {count} Alleging {' & '.join(named[:2]) or 'Listed Chemicals'} (2026)"
+    multi = count > 1
+    when = f"between {first} and {last}" if first != last else f"on {first}"
+    # "Premier Protein supplements", not "Premier Protein protein supplements"
+    subject = f"{name} supplements" if "protein" in name.lower() else f"{name} protein supplements"
     desc = (
-        f"{count} California Prop 65 60-day {noun} have named {name} protein supplements since 2025, "
-        f"alleging {chem_phrase(chems)}. Every notice, its status, and what it means."
+        f"{count} California Prop 65 60-day {noun} {'have' if multi else 'has'} named {subject} "
+        f"since 2025, alleging {chem_phrase(chems, multi)}. "
+        f"{'Every notice, its status' if multi else 'The notice, its status'}, and what it means."
     )
     answer = (
-        f"<strong>{count} California Prop 65 60-day {noun} named {esc(name)} protein supplements between "
-        f"{first} and {last}</strong>, alleging {esc(chem_phrase(chems))} without the required warning. "
-        f"{status.get('Settled', 0)} of them show a settlement and {status.get('Complaint filed', 0)} more show a "
-        f"court complaint. A notice is an allegation, not a lab result or recall."
+        f"<strong>{count} California Prop 65 60-day {noun} named {esc(subject)} "
+        f"{when}</strong>, alleging {esc(chem_phrase(chems, multi))} without the required warning. "
+        f"{status_sentence(status, count)} A notice is an allegation, not a lab result or recall."
     )
     article_link = (
         f'<p>For what independent lab testing (Consumer Reports, Clean Label Project) found, see our '
