@@ -74,6 +74,14 @@
   },
   "page": null
  },
+ "Aonic": {
+  "notices": 1,
+  "latest": "2026-11-18",
+  "chemicals": {
+   "Lead": 1
+  },
+  "page": null
+ },
  "Arbonne": {
   "notices": 2,
   "latest": "2026-10-28",
@@ -1308,6 +1316,15 @@
   },
   "page": "/prop65/brands/quest.html"
  },
+ "REBBL": {
+  "notices": 1,
+  "latest": "2026-11-18",
+  "chemicals": {
+   "Lead": 1,
+   "Cadmium": 1
+  },
+  "page": null
+ },
  "Rawnature5": {
   "notices": 1,
   "latest": "2026-07-14",
@@ -1394,6 +1411,15 @@
   "latest": "2026-07-14",
   "chemicals": {
    "Lead": 1
+  },
+  "page": null
+ },
+ "Sava Nutrition": {
+  "notices": 1,
+  "latest": "2026-11-18",
+  "chemicals": {
+   "Lead": 1,
+   "Cadmium": 1
   },
   "page": null
  },
